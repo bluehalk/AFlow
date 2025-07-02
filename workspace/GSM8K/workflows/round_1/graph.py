@@ -8,9 +8,9 @@ DatasetType = Literal["HumanEval", "MBPP", "GSM8K", "MATH", "HotpotQA", "DROP"]
 class Workflow:
     def __init__(
         self,
-        name: str,
-        llm_config,
-        dataset: DatasetType,
+        name: str, # NOTE(sjh): name = "GSM8K"
+        llm_config, # NOTE(sjh): llm_config = {"model": "gpt-4o-mini", "temperature": 0.0, "max_tokens": 1000}
+        dataset: DatasetType, # NOTE(sjh): dataset = "GSM8K"
     ) -> None:
         self.name = name
         self.dataset = dataset

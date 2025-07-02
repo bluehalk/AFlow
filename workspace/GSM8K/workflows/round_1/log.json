@@ -1,0 +1,9 @@
+[
+    {
+        "question": "A team of 4 painters worked on a mansion for 3/8ths of a day every day for 3 weeks. How many hours of work did each painter put in?",
+        "right_answer": 189.0,
+        "model_output": "There are 7 days in a week. 3 weeks is 3 x 7 = 21 days. 3/8 of a day is 3/8 x 8 = 3 hours. 3 hours x 21 days = 63 hours. 63 hours / 4 painters = 15.75 hours. The answer is 15.75.",
+        "extracted_output": 15.75,
+        "extract_answer_code": "None"
+    }
+]

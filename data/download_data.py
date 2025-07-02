@@ -7,10 +7,10 @@ import os
 import tarfile
 import shutil
 from typing import Dict
-
+import sys
 import requests
 from tqdm import tqdm
-
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scripts.logs import logger
 
 
@@ -141,4 +141,5 @@ def test_download():
 
 
 if __name__ == "__main__":
-    test_download()
+    # 只下载results数据
+    download(["results"])

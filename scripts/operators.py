@@ -75,7 +75,8 @@ class Operator:
     def _create_formatter(self, op_class, mode=None) -> Optional[BaseFormatter]:
         """Create appropriate formatter based on operation class and mode"""
         if mode == "xml_fill":
-            return XmlFormatter.from_model(op_class)
+            # 通过类方法来实例化
+            return XmlFormatter.from_model(op_class) 
         elif mode == "code_fill":
             return CodeFormatter()
         elif mode == "single_fill":

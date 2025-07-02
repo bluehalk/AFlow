@@ -13,9 +13,16 @@ from scripts.utils.common import read_json_file, write_json_file
 class DataUtils:
     def __init__(self, root_path: str):
         self.root_path = root_path
-        self.top_scores = []
-
-    def load_results(self, path: str) -> list:
+        self.top_scores = [] # 存储所有轮次的分数数据
+    
+    # 加载历史数据：从results.json读取所有轮次的性能数据
+    def load_results(self, path: str) -> list: # list: 包含所有轮次结果的列表
+        """
+        加载历史实验结果
+        Returns:
+            list: 包含所有轮次结果的列表，每个元素格式：
+                  {"round": 1, "score": 0.85, "avg_cost": 0.01, "total_cost": 0.10, "time": "..."}
+        """
         result_path = os.path.join(path, "results.json")
         if os.path.exists(result_path):
             with open(result_path, "r") as json_file:
@@ -46,10 +53,13 @@ class DataUtils:
         return unique_top_scores
 
     def select_round(self, items):
+        """
+        使用软混合概率策略选择父节点轮次进行扩展
+        """ 
         if not items:
             raise ValueError("Item list is empty.")
 
-        sorted_items = sorted(items, key=lambda x: x["score"], reverse=True)
+        sorted_items = sorted(items, key=lambda x: x["score"], reverse=True) # 降序
         scores = [item["score"] * 100 for item in sorted_items]
 
         probabilities = self._compute_probabilities(scores)
@@ -68,20 +78,29 @@ class DataUtils:
         if n == 0:
             raise ValueError("Score list is empty.")
 
+        # 📊 组件1：均匀概率分布（探索性）
+        # 每个轮次都有相等的1/n概率被选中
         uniform_prob = np.full(n, 1.0 / n, dtype=np.float64)
 
+        # 📈 组件2：基于分数的指数加权分布（利用性）
         max_score = np.max(scores)
-        shifted_scores = scores - max_score
-        exp_weights = np.exp(alpha * shifted_scores)
+        shifted_scores = scores - max_score  # 数值稳定性：避免exp溢出
+        exp_weights = np.exp(alpha * shifted_scores)  # 指数权重：exp(α × score)
 
         sum_exp_weights = np.sum(exp_weights)
         if sum_exp_weights == 0:
             raise ValueError("Sum of exponential weights is 0, cannot normalize.")
 
-        score_prob = exp_weights / sum_exp_weights
+        score_prob = exp_weights / sum_exp_weights  # 归一化概率分布
 
+        # 🎯 最终：软混合概率分布
+        # λ控制探索vs利用的平衡：
+        # - λ=1: 完全均匀（纯探索）
+        # - λ=0: 完全基于分数（纯利用）
+        # - λ=0.3: 30%探索 + 70%利用
         mixed_prob = lambda_ * uniform_prob + (1 - lambda_) * score_prob
 
+        # 确保概率和为1
         total_prob = np.sum(mixed_prob)
         if not np.isclose(total_prob, 1.0):
             mixed_prob = mixed_prob / total_prob

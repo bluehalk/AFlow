@@ -13,7 +13,7 @@ class EvaluationUtils:
         for i in range(validation_n):
             score, avg_cost, total_cost = await evaluator.graph_evaluate(
                 optimizer.dataset,
-                optimizer.graph,
+                optimizer.graph, # 之前加载的WorkFlow 类
                 {"dataset": optimizer.dataset, "llm_config": optimizer.execute_llm_config},
                 directory,
                 is_test=False,
@@ -28,6 +28,7 @@ class EvaluationUtils:
         return data
 
     async def evaluate_graph(self, optimizer, directory, validation_n, data, initial=False):
+        
         evaluator = Evaluator(eval_path=directory)
         sum_score = 0
 
@@ -44,6 +45,7 @@ class EvaluationUtils:
 
             new_data = optimizer.data_utils.create_result_data(cur_round, score, avg_cost, total_cost)
             data.append(new_data)
+            #NOTE(sjh) data 存的是之前的轮次cur_round, score, avg_cost, total_cost等
 
             result_path = optimizer.data_utils.get_results_file_path(f"{optimizer.root_path}/workflows")
             optimizer.data_utils.save_results(result_path, data)

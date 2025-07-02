@@ -17,6 +17,7 @@ class LLMConfig:
         self.key = config.get("key", None)
         self.base_url = config.get("base_url", "https://oneapi.deepwisdom.ai/v1")
         self.top_p = config.get("top_p", 1)
+        self.extra_headers = config.get("extra_headers", {})
 
 class LLMsConfig:
     """Configuration manager for multiple LLM configurations"""
@@ -73,7 +74,8 @@ class LLMsConfig:
             "temperature": config.get("temperature", 1),
             "key": config.get("api_key"),  # Map api_key to key
             "base_url": config.get("base_url", "https://oneapi.deepwisdom.ai/v1"),
-            "top_p": config.get("top_p", 1)  # Add top_p parameter
+            "top_p": config.get("top_p", 1),  # Add top_p parameter
+            "extra_headers": config.get("extra_headers", {})
         }
         
         # Create and return an LLMConfig instance with the specified configuration
@@ -188,8 +190,9 @@ class AsyncLLM:
             })
 
         message.append({"role": "user", "content": prompt})
-
+        
         response = await self.aclient.chat.completions.create(
+            extra_headers=self.config.extra_headers, 
             model=self.config.model,
             messages=message,
             temperature=self.config.temperature,
@@ -208,8 +211,8 @@ class AsyncLLM:
         )
         
         ret = response.choices[0].message.content
+        # 输出结果
         print(ret)
-        
         # You can optionally print token usage information
         print(f"Token usage: {input_tokens} input + {output_tokens} output = {input_tokens + output_tokens} total")
         print(f"Cost: ${usage_record['total_cost']:.6f} (${usage_record['input_cost']:.6f} for input, ${usage_record['output_cost']:.6f} for output)")
@@ -219,6 +222,7 @@ class AsyncLLM:
     async def call_with_format(self, prompt: str, formatter: BaseFormatter):
         """
         Call the LLM with a prompt and format the response using the provided formatter
+        NOTE(sjh) 这里调用LLM，然后调用formatter，formatter是用来验证和解析response的
         
         Args:
             prompt: The prompt to send to the LLM
@@ -237,6 +241,7 @@ class AsyncLLM:
         response = await self.__call__(formatted_prompt)
         
         # Validate and parse the response
+        # NOTE(sjh): parsed_data 就是按照xml字段拆解后的response dict
         is_valid, parsed_data = formatter.validate_response(response)
         
         if not is_valid:

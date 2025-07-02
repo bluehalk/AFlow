@@ -22,24 +22,19 @@ class Operator:
         raise NotImplementedError
 
     async def _fill_node(self, op_class, prompt, mode=None, **extra_kwargs):
-        # Create appropriate formatter based on mode
+        # 1. 创建格式化工具（根据 op_class 和 mode）
         formatter = self._create_formatter(op_class, mode)
         
         try:
-            # Use the formatter with AsyncLLM
+            # 2. 调用大模型（带或不带格式化）
             if formatter:
                 response = await self.llm.call_with_format(prompt, formatter)
             else:
-                # Fallback to direct call if no formatter is needed
                 response = await self.llm(prompt)
-                
-            # Convert to expected format based on the original implementation
-            if isinstance(response, dict):
-                return response
-            else:
-                return {"response": response}
+            
+            # 3. 统一返回格式
+            return response if isinstance(response, dict) else {"response": response}
         except FormatError as e:
-            print(f"Format error in {self.name}: {str(e)}")
             return {"error": str(e)}
     
     def _create_formatter(self, op_class, mode=None) -> Optional[BaseFormatter]:
@@ -61,7 +56,7 @@ class Custom(Operator):
 
     async def __call__(self, input, instruction):
         prompt = instruction + input
-        response = await self._fill_node(GenerateOp, prompt, mode="single_fill")
+        response = await self._fill_node(GenerateOp, prompt, mode="single_fill") # 生成op
         return response
 
 def run_code(code):

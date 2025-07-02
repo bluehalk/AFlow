@@ -1,0 +1,3 @@
+api 调用restriction：
+llama3-70b-8192: RPM	RPD	TPM	TPD
+30 14400 6000 500000

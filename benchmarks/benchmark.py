@@ -95,8 +95,10 @@ class BaseBenchmark(ABC):
         return await tqdm_asyncio.gather(*tasks, desc=f"Evaluating {self.name} problems", total=len(data))
 
     async def run_evaluation(self, agent: Callable, va_list: List[int], max_concurrent_tasks: int = 50):
+        # NOTE(sjh): va_list = [0,1,2,3,4,5,6,7,8,9] indices of the dataset
         data = await self.load_data(va_list)
         results = await self.evaluate_all_problems(data, agent, max_concurrent_tasks)
+        
         columns = self.get_result_columns()
         average_score, average_cost, total_cost = self.save_results_to_csv(results, columns)
         logger.info(f"Average score on {self.name} dataset: {average_score:.5f}")

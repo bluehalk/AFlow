@@ -1,0 +1,3 @@
+Method,Success_Rate,Accuracy,Avg_Score,Score_Std,Total_Cost,Avg_Cost_Per_Sample,Total_Time(s),Correct_Count,Failed_Count
+DirectIO,100.0%,93.0%,0.930,0.256,$0.0000,$0.000000,714.7,186/200,0
+IO_with_optimal_instructions,100.0%,87.0%,0.870,0.337,$0.0000,$0.000000,1138.5,174/200,0

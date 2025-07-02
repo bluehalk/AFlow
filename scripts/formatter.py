@@ -84,6 +84,7 @@ class XmlFormatter(BaseFormatter):
     
     def prepare_prompt(self, prompt: str) -> str:
         examples = []
+        # NOTE(sjh): self._get_field_names() = 
         for field_name in self._get_field_names():
             description = self._get_field_description(field_name)
             examples.append(f"<{field_name}>{description}</{field_name}>")
@@ -95,10 +96,18 @@ class XmlFormatter(BaseFormatter):
     
     def validate_response(self, response: str) -> Tuple[bool, dict]:
         """Validate if the response contains all required fields in XML format"""
+        # NOTE(sjh): 
+        # <thought>分析三个解决方案，A和B都认为答案是42，而C认为是35。显然42出现频率更高，A和B的答案一致，应该选择A或B中的一个。我选择A。</thought>
+        # <solution_letter>A</solution_letter>
+        # found_fields = {
+        #     "thought": "分析三个解决方案，A和B都认为答案是42...",
+        #     "solution_letter": "A"
+        # }
         try:
             pattern = r"<(\w+)>(.*?)</\1>"
             matches = re.findall(pattern, response, re.DOTALL)
             
+            #NOTE(sjh) 字段名为键，字段值为值
             found_fields = {match[0]: match[1].strip() for match in matches}
             
             for field_name in self._get_field_names():
@@ -172,8 +181,8 @@ class CodeFormatter(BaseFormatter):
             if not sanitized_code.strip():
                 return False, None
             
-            # Return the sanitized code
-            result = {"response": sanitized_code}
+            # Return the sanitized code with the "code" key for CodeGenerateOp compatibility
+            result = {"code": sanitized_code}
             return True, result
             
         except Exception as e:

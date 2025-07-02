@@ -39,16 +39,22 @@ class Evaluator:
         if dataset not in self.dataset_configs:
             raise ValueError(f"Unsupported dataset: {dataset}")
 
+        #NOTE(sjh): 这里根据是否是test指定了数据集的文件路径
         data_path = self._get_data_path(dataset, is_test)
+
         benchmark_class = self.dataset_configs[dataset]
         benchmark = benchmark_class(name=dataset, file_path=data_path, log_path=path)
 
         # Use params to configure the graph and benchmark
+        # NOTE(sjh)返回一个实例化后的Workflow对象
         configured_graph = await self._configure_graph(dataset, graph, params)
+        logger.info(f"configured_graph: {type(configured_graph)}: {configured_graph}")
+
         if is_test:
             va_list = None  # For test data, generally use None to test all
         else:
-            va_list = None  # Use None to test all Validation data, or set va_list (e.g., [1, 2, 3]) to use partial data
+            # 限制验证集样本数量 - 只使用前10个样本进行测试
+            va_list = list(range(10))  # 使用前10个样本 [0,1,2,3,4,5,6,7,8,9]
         return await benchmark.run_evaluation(configured_graph, va_list)
 
     async def _configure_graph(self, dataset, graph, params: dict):

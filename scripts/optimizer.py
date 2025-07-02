@@ -32,7 +32,7 @@ class GraphOptimize(BaseModel):
 class Optimizer:
     def __init__(
         self,
-        dataset: DatasetType,
+        dataset: DatasetType, # NOTE(sjh): DatasetType = Literal["HumanEval", "MBPP", "GSM8K", "MATH", "HotpotQA", "DROP"]
         question_type: QuestionType,
         opt_llm_config,
         exec_llm_config,
@@ -69,7 +69,7 @@ class Optimizer:
         self.convergence_utils = ConvergenceUtils(self.root_path)
 
     def optimize(self, mode: OptimizerType = "Graph"):
-        if mode == "Test":
+        if mode == "Test": # NOTE(sjh): mode = "Test" 最后测试模型
             test_n = 1  # validation datasets's execution number
             for i in range(test_n):
                 loop = asyncio.new_event_loop()
@@ -86,7 +86,7 @@ class Optimizer:
 
             while retry_count < max_retries:
                 try:
-                    score = loop.run_until_complete(self._optimize_graph())
+                    score = loop.run_until_complete(self._optimize_graph()) # 异步优化
                     break
                 except Exception as e:
                     retry_count += 1
@@ -122,10 +122,14 @@ class Optimizer:
         graph_path = f"{self.root_path}/workflows"
         data = self.data_utils.load_results(graph_path)
 
-        if self.round == 1:
-            directory = self.graph_utils.create_round_directory(graph_path, self.round)
+        if self.round == 1: 
+            directory = self.graph_utils.create_round_directory(graph_path, self.round) 
+
             # Load graph using graph_utils
+            # NOTE(sjh)这里的self.graph是Workflow类，不是Workflow对象
+            # 这里的self.graph是IO
             self.graph = self.graph_utils.load_graph(self.round, graph_path)
+
             avg_score = await self.evaluation_utils.evaluate_graph(self, directory, validation_n, data, initial=True)
 
         # Create a loop until the generated graph meets the check conditions
@@ -156,7 +160,7 @@ class Optimizer:
                 # Call the LLM with formatter
                 response = await self.optimize_llm.call_with_format(
                     graph_optimize_prompt, 
-                    graph_formatter
+                    graph_formatter 
                 )
                 
                 # If we reach here, response is properly formatted and validated
