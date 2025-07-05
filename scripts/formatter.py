@@ -130,15 +130,6 @@ class CodeFormatter(BaseFormatter):
     function_name: Optional[str] = None
     
     def prepare_prompt(self, prompt: str) -> str:
-        """
-        Prepare the prompt to instruct the LLM to return code in a proper format.
-        
-        Args:
-            prompt: The original prompt
-            
-        Returns:
-            The prompt with instructions to return code in markdown format
-        """
         # Instructions to return code in appropriate format
         code_instructions = (
             "\n\n"
@@ -159,12 +150,6 @@ class CodeFormatter(BaseFormatter):
     def validate_response(self, response: str) -> Tuple[bool, Union[Dict[str, str], str, None]]:
         """
         Extract code from response and validate it.
-        
-        Args:
-            response: The LLM response
-            
-        Returns:
-            A tuple with (is_valid, extracted_code)
         """
         try:
             # First try to extract code from markdown code blocks

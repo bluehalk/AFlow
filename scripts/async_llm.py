@@ -90,18 +90,14 @@ class LLMsConfig:
         return list(self.configs.keys())
     
 class ModelPricing:
-    """Pricing information for different models in USD per 1K tokens"""
+    """Pricing information for different models in USD per tokens"""
     PRICES = {
-        # GPT-4o models
-        "gpt-4o": {"input": 0.0025, "output": 0.01},
-        "gpt-4o-mini": {"input": 0.00015, "output": 0.0006},
-        "gpt-4o-mini-2024-07-18": {"input": 0.00015, "output": 0.0006},
-        "claude-3-5-sonnet": {"input": 0.003, "output": 0.015},
+        "openai/gpt-4o-mini": {"input": 0.15/1000000, "output": 0.6/1000000},
     }
     
     @classmethod
     def get_price(cls, model_name, token_type):
-        """Get the price per 1K tokens for a specific model and token type (input/output)"""
+        """Get the price per tokens for a specific model and token type (input/output)"""
         # Try to find exact match first
         if model_name in cls.PRICES:
             return cls.PRICES[model_name][token_type]
@@ -117,15 +113,17 @@ class ModelPricing:
 class TokenUsageTracker:
     """Tracks token usage and calculates costs"""
     def __init__(self):
-        self.total_input_tokens = 0
-        self.total_output_tokens = 0
-        self.total_cost = 0
         self.usage_history = []
-    
+        self.overall_input_tokens = 0
+        self.overall_output_tokens = 0
+        self.overall_total_tokens = 0
+        self.overall_cost = 0
+        self.call_count = 0
+        
     def add_usage(self, model, input_tokens, output_tokens):
         """Add token usage for a specific API call"""
-        input_cost = (input_tokens / 1000) * ModelPricing.get_price(model, "input")
-        output_cost = (output_tokens / 1000) * ModelPricing.get_price(model, "output")
+        input_cost = input_tokens * ModelPricing.get_price(model, "input")
+        output_cost = output_tokens * ModelPricing.get_price(model, "output")
         total_cost = input_cost + output_cost
         
         usage_record = {
@@ -141,24 +139,25 @@ class TokenUsageTracker:
                 "output_price": ModelPricing.get_price(model, "output")
             }
         }
-        
-        self.total_input_tokens += input_tokens
-        self.total_output_tokens += output_tokens
-        self.total_cost += total_cost
         self.usage_history.append(usage_record)
+        self.overall_input_tokens += input_tokens
+        self.overall_output_tokens += output_tokens
+        self.overall_total_tokens += input_tokens + output_tokens
+        self.overall_cost += total_cost
+        self.call_count += 1
         
         return usage_record
     
     def get_summary(self):
-        """Get a summary of token usage and costs"""
         return {
-            "total_input_tokens": self.total_input_tokens,
-            "total_output_tokens": self.total_output_tokens,
-            "total_tokens": self.total_input_tokens + self.total_output_tokens,
-            "total_cost": self.total_cost,
-            "call_count": len(self.usage_history),
+            "overall_input_tokens": self.overall_input_tokens,
+            "overall_output_tokens": self.overall_output_tokens,
+            "overall_total_tokens": self.overall_total_tokens,
+            "overall_cost": self.overall_cost,
+            "call_count": self.call_count,
             "history": self.usage_history
         }
+        
 
 class AsyncLLM:
     def __init__(self, config, system_msg:str = None):
@@ -222,18 +221,8 @@ class AsyncLLM:
     async def call_with_format(self, prompt: str, formatter: BaseFormatter):
         """
         Call the LLM with a prompt and format the response using the provided formatter
-        NOTE(sjh) 这里调用LLM，然后调用formatter，formatter是用来验证和解析response的
-        
-        Args:
-            prompt: The prompt to send to the LLM
-            formatter: An instance of a BaseFormatter to validate and parse the response
-            
-        Returns:
-            The formatted response data
-            
-        Raises:
-            FormatError: If the response doesn't match the expected format
-        """
+        NOTE(sjh) 这里调用LLM, 然后调用formatter. formatter是用来验证和解析response的
+        """ 
         # Prepare the prompt with formatting instructions
         formatted_prompt = formatter.prepare_prompt(prompt)
         
@@ -258,11 +247,8 @@ class AsyncLLM:
 def create_llm_instance(llm_config):
     """
     Create an AsyncLLM instance using the provided configuration
-    
     Args:
-        llm_config: Either an LLMConfig instance, a dictionary of configuration values,
-                            or a string representing the LLM name to look up in default config
-    
+        llm_config: Either an LLMConfig instance, a dictionary of configuration values, or a string representing the LLM name to look up in default config
     Returns:
         An instance of AsyncLLM configured according to the provided parameters
     """

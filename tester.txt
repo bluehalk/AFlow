@@ -1,0 +1,941 @@
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of max_aggregate
+test_error of max_aggregate
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of max_aggregate
+test_error of max_aggregate
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of max_aggregate
+sort_matrix only integer scalar arrays can be converted to a scalar index
+convert 'int' object is not iterable
+sort_matrix list indices must be integers or slices, not tuple
+test_error of list_split
+convert Input must be a list or tuple of complex numbers.
+test_error of filter_data
+test_error of odd_Equivalent
+convert Input must be a list or tuple of complex numbers.
+test_error of odd_Equivalent
+convert Input must be a list or tuple of complex numbers.
+test_error of odd_Equivalent
+test_error of extract_rear
+test_error of check_value
+test_error of check_value
+test_error of check_value
+two_unique_nums 'int' object is not iterable
+test_error of two_unique_nums
+test_error of shell_sort
+test_error of count_vowels
+test_error of count_vowels
+test_error of count_vowels
+test_error of count_vowels
+test_error of next_smallest_palindrome
+test_error of combinations_list
+common_in_nested_lists 'int' object is not iterable
+test_error of find_First_Missing
+test_error of combinations_list
+common_in_nested_lists 'int' object is not iterable
+test_error of find_First_Missing
+colon_tuplex Invalid slice indices.
+test_error of combinations_list
+test_error of combinations_list
+common_in_nested_lists 'int' object is not iterable
+test_error of find_First_Missing
+test_error of common_in_nested_lists
+colon_tuplex Invalid slice indices.
+test_error of find_First_Missing
+test_error of add_dict_to_tuple
+colon_tuplex Invalid slice indices.
+test_error of min_product_tuple
+test_error of min_product_tuple
+colon_tuplex Invalid slice indices.
+test_error of min_product_tuple
+test_error of comb_sort
+min_Jumps can only concatenate tuple (not "int") to tuple
+test_error of comb_sort
+test_error of min_product_tuple
+test_error of max_difference
+min_Jumps can only concatenate tuple (not "int") to tuple
+test_error of comb_sort
+test_error of comb_sort
+test_error of max_difference
+min_Jumps can only concatenate tuple (not "int") to tuple
+test_error of max_difference
+test_error of max_length
+test_error of max_difference
+min_Jumps can only concatenate tuple (not "int") to tuple
+test_error of max_length
+test_error of max_length
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of max_length
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of tuple_intersection
+find_combinations unsupported operand type(s) for +: 'int' and 'tuple'
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of tuple_intersection
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of even_bit_set_number
+test_error of tuple_intersection
+test_error of find_combinations
+test_error of even_bit_set_number
+test_error of find_combinations
+test_error of even_bit_set_number
+test_error of get_ludic
+test_error of even_bit_set_number
+test_error of find_combinations
+test_error of add_tuple
+test_error of get_ludic
+test_error of find_adverb_position
+test_error of get_ludic
+test_error of find_adverb_position
+test_error of find_adverb_position
+larg_nnum larg_nnum() missing 1 required positional argument: 'n'
+test_error of find_adverb_position
+larg_nnum larg_nnum() missing 1 required positional argument: 'n'
+test_error of get_ludic
+larg_nnum larg_nnum() missing 1 required positional argument: 'n'
+test_error of convert_list_dictionary
+larg_nnum larg_nnum() missing 1 required positional argument: 'n'
+test_error of count_Occurrence
+test_error of count_first_elements
+test_error of max_length_list
+test_error of find_adverbs
+test_error of count_first_elements
+test_error of remove_kth_element
+test_error of count_first_elements
+test_error of count_first_elements
+test_error of remove_kth_element
+test_error of remove_kth_element
+test_error of loss_amount
+test_error of remove_kth_element
+test_error of loss_amount
+test_error of loss_amount
+test_error of loss_amount
+test_error of polar_rect
+test_error of wind_chill
+test_error of polar_rect
+test_error of surface_Area
+test_error of polar_rect
+test_error of surface_Area
+test_error of polar_rect
+index_multiplication can't multiply sequence by non-int of type 'tuple'
+test_error of surface_Area
+wind_chill Wind velocity must be >= 0 and temperature must be between -50 and 10 degrees Celsius.
+index_multiplication can't multiply sequence by non-int of type 'tuple'
+test_error of surface_Area
+index_multiplication can't multiply sequence by non-int of type 'tuple'
+wind_chill Temperature must be between -50 and 10 degrees Celsius.
+index_multiplication can't multiply sequence by non-int of type 'tuple'
+wind_chill Temperature must be between -50 and 10 degrees Celsius.
+find_char_long expected string or bytes-like object
+find_char_long Input must be a string
+find_char_long Input must be a string
+test_error of group_tuples
+test_error of group_tuples
+find_char_long Input must be a string
+test_error of group_tuples
+test_error of group_tuples
+test_error of find_Element
+test_error of find_Element
+test_error of find_Element
+test_error of get_coordinates
+test_error of find_Element
+test_error of count_element_in_list
+test_error of get_coordinates
+test_error of get_coordinates
+test_error of get_coordinates
+test_error of positive_count
+test_error of sum_of_digits
+test_error of and_tuples
+test_error of sum_of_digits
+test_error of and_tuples
+test_error of sort_counter
+test_error of sum_of_digits
+test_error of and_tuples
+test_error of sum_of_digits
+test_error of and_tuples
+test_error of max_Product
+test_error of max_Product
+test_error of max_Product
+test_error of max_aggregate
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of max_Product
+test_error of find_solution
+test_error of text_match_wordz
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of find_solution
+test_error of find_solution
+test_error of parabola_directrix
+test_error of parabola_directrix
+test_error of parabola_directrix
+test_error of parabola_directrix
+test_error of count_Pairs
+test_error of count_Pairs
+test_error of triangle_area
+test_error of count_Pairs
+test_error of count_Pairs
+test_error of newman_prime
+test_error of newman_prime
+test_error of re_arrange_array
+test_error of re_arrange_array
+test_error of newman_prime
+test_error of re_arrange_array
+test_error of Find_Min
+test_error of newman_prime
+concatenate_tuple concatenate_tuple() missing 1 required positional argument: 'delimiter'
+test_error of re_arrange_array
+concatenate_tuple concatenate_tuple() missing 1 required positional argument: 'delimiter'
+sum 'int' object is not iterable
+concatenate_tuple concatenate_tuple() missing 1 required positional argument: 'delimiter'
+test_error of new_tuple
+sum 'int' object is not iterable
+sum 'int' object is not iterable
+concatenate_tuple concatenate_tuple() missing 1 required positional argument: 'delimiter'
+sum 'int' object is not iterable
+test_error of remove_uppercase
+test_error of filter_oddnumbers
+test_error of check_char
+test_error of get_Char
+test_error of get_Char
+test_error of get_Char
+remove_parenthesis expected string or bytes-like object
+test_error of union_elements
+test_error of remove_parenthesis
+test_error of get_Char
+test_error of remove_parenthesis
+test_error of remove_parenthesis
+test_error of largest_neg
+test_error of upper_ctr
+test_error of list_to_float
+test_error of upper_ctr
+test_error of intersection_array
+test_error of upper_ctr
+test_error of upper_ctr
+extract_singly 'int' object is not iterable
+test_error of extract_singly
+test_error of max_product
+test_error of check_occurences
+test_error of max_product
+test_error of geometric_sum
+test_error of geometric_sum
+test_error of trim_tuple
+test_error of max_product
+test_error of geometric_sum
+test_error of trim_tuple
+test_error of max_product
+test_error of geometric_sum
+test_error of sort_numeric_strings
+test_error of trim_tuple
+test_error of trim_tuple
+test_error of sort_numeric_strings
+test_error of occurance_substring
+test_error of sort_numeric_strings
+test_error of maximize_elements
+test_error of occurance_substring
+test_error of occurance_substring
+test_error of sort_numeric_strings
+test_error of extract_even
+test_error of occurance_substring
+test_error of extract_even
+test_error of extract_even
+expensive_items 1
+expensive_items 1
+expensive_items 1
+expensive_items 1
+common_in_nested_lists 'int' object is not iterable
+min_Jumps unsupported operand type(s) for +=: 'int' and 'tuple'
+test_error of combinations_list
+common_in_nested_lists 'int' object is not iterable
+test_error of combinations_list
+common_in_nested_lists 'int' object is not iterable
+test_error of combinations_list
+test_error of min_Jumps
+test_error of common_in_nested_lists
+test_error of combinations_list
+test_error of min_Jumps
+test_error of min_Jumps
+find_combinations unsupported operand type(s) for +: 'int' and 'tuple'
+test_error of even_bit_set_number
+find_combinations unsupported operand type(s) for +: 'int' and 'tuple'
+test_error of even_bit_set_number
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of even_bit_set_number
+test_error of find_combinations
+test_error of even_bit_set_number
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of find_combinations
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of re_arrange_array
+test_error of re_arrange_array
+test_error of count_first_elements
+test_error of add_dict_to_tuple
+test_error of re_arrange_array
+test_error of count_first_elements
+test_error of count_first_elements
+test_error of re_arrange_array
+test_error of count_first_elements
+test_error of max_difference
+test_error of remove_kth_element
+test_error of loss_amount
+test_error of max_difference
+test_error of loss_amount
+test_error of loss_amount
+test_error of max_length
+test_error of max_difference
+test_error of loss_amount
+test_error of remove_kth_element
+test_error of max_length
+test_error of max_difference
+test_error of max_length
+test_error of remove_kth_element
+test_error of max_length
+test_error of tuple_intersection
+test_error of remove_kth_element
+test_error of tuple_intersection
+test_error of get_ludic
+test_error of tuple_intersection
+test_error of surface_Area
+test_error of tuple_intersection
+test_error of surface_Area
+test_error of add_tuple
+test_error of surface_Area
+test_error of surface_Area
+test_error of is_num_decagonal
+test_error of filter_oddnumbers
+test_error of is_num_decagonal
+test_error of remove_uppercase
+test_error of is_num_decagonal
+test_error of is_num_decagonal
+find_char_long expected string or bytes-like object
+test_error of get_median
+find_char_long Input must be a string
+find_char_long Input must be a string
+find_char_long Input must be a string
+test_error of max_length_list
+test_error of find_adverbs
+test_error of find_Element
+test_error of find_Element
+test_error of count_element_in_list
+test_error of find_Element
+test_error of find_Element
+test_error of wind_chill
+test_error of polar_rect
+test_error of polar_rect
+test_error of wind_chill
+test_error of polar_rect
+test_error of wind_chill
+index_multiplication can't multiply sequence by non-int of type 'tuple'
+test_error of polar_rect
+test_error of wind_chill
+index_multiplication can't multiply sequence by non-int of type 'tuple'
+index_multiplication can't multiply sequence by non-int of type 'tuple'
+index_multiplication can't multiply sequence by non-int of type 'tuple'
+test_error of positive_count
+test_error of check_occurences
+test_error of trim_tuple
+test_error of list_split
+test_error of trim_tuple
+test_error of trim_tuple
+convert 'int' object is not iterable
+test_error of trim_tuple
+test_error of sort_numeric_strings
+test_error of sort_numeric_strings
+test_error of sort_numeric_strings
+convert Input must be a list or tuple of complex numbers.
+test_error of sort_numeric_strings
+convert Input must be a list or tuple of complex numbers.
+convert Input must be a list or tuple of complex numbers.
+test_error of max_aggregate
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of parabola_directrix
+test_error of parabola_directrix
+test_error of parabola_directrix
+test_error of count_vowels
+test_error of count_vowels
+test_error of count_vowels
+test_error of parabola_directrix
+test_error of count_vowels
+test_error of find_First_Missing
+test_error of Find_Min
+concatenate_tuple concatenate_tuple() missing 1 required positional argument: 'delimiter'
+test_error of find_First_Missing
+test_error of max_Product
+concatenate_tuple concatenate_tuple() missing 1 required positional argument: 'delimiter'
+test_error of max_Product
+test_error of find_First_Missing
+concatenate_tuple concatenate_tuple() missing 1 required positional argument: 'delimiter'
+sum 'int' object is not iterable
+test_error of max_Product
+test_error of find_First_Missing
+concatenate_tuple concatenate_tuple() missing 1 required positional argument: 'delimiter'
+sum 'int' object is not iterable
+test_error of max_Product
+sum 'int' object is not iterable
+sum 'int' object is not iterable
+test_error of new_tuple
+test_error of text_match_wordz
+test_error of triangle_area
+test_error of count_Pairs
+larg_nnum larg_nnum() missing 1 required positional argument: 'n'
+larg_nnum larg_nnum() missing 1 required positional argument: 'n'
+larg_nnum larg_nnum() missing 1 required positional argument: 'n'
+larg_nnum larg_nnum() missing 1 required positional argument: 'n'
+test_error of next_smallest_palindrome
+test_error of find_adverb_position
+test_error of newman_prime
+test_error of check_char
+test_error of newman_prime
+colon_tuplex Index out of bounds or invalid slice indices.
+colon_tuplex Index out of bounds or invalid slice indices.
+test_error of max_aggregate
+test_error of is_Sum_Of_Powers_Of_Two
+sort_matrix only integer scalar arrays can be converted to a scalar index
+test_error of filter_data
+sort_matrix list indices must be integers or slices, not tuple
+two_unique_nums 'int' object is not iterable
+test_error of shell_sort
+two_unique_nums Each item in the input must be a list.
+test_error of extract_rear
+two_unique_nums Each item in the input must be a list.
+two_unique_nums Each item in the input must be a list.
+test_error of check_value
+test_error of check_value
+test_error of check_value
+test_error of and_tuples
+test_error of sort_counter
+test_error of and_tuples
+test_error of and_tuples
+test_error of sum_of_digits
+test_error of combinations_list
+test_error of sum_of_digits
+test_error of combinations_list
+test_error of and_tuples
+test_error of sum_of_digits
+common_in_nested_lists 'int' object is not iterable
+test_error of common_in_nested_lists
+test_error of sum_of_digits
+test_error of combinations_list
+test_error of combinations_list
+test_error of common_in_nested_lists
+min_Jumps can only concatenate tuple (not "int") to tuple
+test_error of comb_sort
+test_error of common_in_nested_lists
+min_Jumps can only concatenate tuple (not "int") to tuple
+test_error of comb_sort
+min_Jumps can only concatenate tuple (not "int") to tuple
+test_error of comb_sort
+min_Jumps can only concatenate tuple (not "int") to tuple
+test_error of comb_sort
+find_combinations unsupported operand type(s) for +: 'int' and 'tuple'
+test_error of even_bit_set_number
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of find_combinations
+test_error of even_bit_set_number
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of find_combinations
+test_error of even_bit_set_number
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of even_bit_set_number
+test_error of find_combinations
+test_error of re_arrange_array
+test_error of re_arrange_array
+test_error of count_first_elements
+test_error of count_first_elements
+test_error of re_arrange_array
+test_error of count_first_elements
+test_error of add_dict_to_tuple
+test_error of re_arrange_array
+test_error of count_first_elements
+test_error of remove_kth_element
+test_error of max_difference
+test_error of loss_amount
+test_error of remove_kth_element
+test_error of loss_amount
+test_error of max_difference
+test_error of loss_amount
+test_error of remove_kth_element
+test_error of max_difference
+test_error of loss_amount
+test_error of max_difference
+test_error of max_length
+test_error of remove_kth_element
+test_error of max_length
+test_error of tuple_intersection
+test_error of surface_Area
+test_error of max_length
+test_error of tuple_intersection
+test_error of max_length
+test_error of tuple_intersection
+test_error of surface_Area
+test_error of get_ludic
+test_error of tuple_intersection
+test_error of surface_Area
+test_error of add_tuple
+test_error of get_ludic
+test_error of surface_Area
+test_error of get_ludic
+test_error of get_ludic
+test_error of remove_uppercase
+test_error of filter_oddnumbers
+test_error of get_median
+find_char_long expected string or bytes-like object
+sequence list index out of range
+test_error of get_median
+find_char_long Input must be a string
+sequence list index out of range
+find_char_long Input must be a string
+find_char_long Input must be a string
+sequence list index out of range
+test_error of find_adverbs
+test_error of get_median
+test_error of max_length_list
+sequence list index out of range
+test_error of find_Element
+test_error of get_median
+test_error of find_Element
+test_error of count_element_in_list
+test_error of find_Element
+test_error of find_Element
+test_error of polar_rect
+test_error of wind_chill
+test_error of polar_rect
+test_error of polar_rect
+wind_chill Wind velocity must be >= 0 and temperature must be between -50 and 10 Celsius.
+index_multiplication can't multiply sequence by non-int of type 'tuple'
+test_error of polar_rect
+index_multiplication can't multiply sequence by non-int of type 'tuple'
+index_multiplication can't multiply sequence by non-int of type 'tuple'
+wind_chill Temperature must be between -50 and 10 Celsius.
+index_multiplication can't multiply sequence by non-int of type 'tuple'
+wind_chill Temperature must be between -50 and 10 Celsius.
+test_error of trim_tuple
+test_error of trim_tuple
+test_error of positive_count
+test_error of check_occurences
+test_error of trim_tuple
+test_error of list_split
+test_error of trim_tuple
+convert 'int' object is not iterable
+test_error of sort_numeric_strings
+test_error of sort_numeric_strings
+test_error of odd_Equivalent
+convert Input must be a list or tuple of complex numbers.
+test_error of sort_numeric_strings
+test_error of odd_Equivalent
+test_error of sort_numeric_strings
+convert Input must be a list or tuple of complex numbers.
+test_error of max_aggregate
+convert Input must be a list or tuple of complex numbers.
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of parabola_directrix
+test_error of parabola_directrix
+test_error of find_Max_Num
+test_error of count_vowels
+test_error of find_Max_Num
+test_error of parabola_directrix
+test_error of find_Max_Num
+test_error of count_vowels
+test_error of find_Max_Num
+test_error of parabola_directrix
+test_error of count_vowels
+test_error of find_First_Missing
+test_error of count_vowels
+test_error of find_First_Missing
+test_error of find_First_Missing
+test_error of text_match_wordz
+test_error of max_Product
+test_error of max_Product
+test_error of max_Product
+test_error of triangle_area
+test_error of max_Product
+test_error of count_Pairs
+test_error of check_char
+test_error of newman_prime
+colon_tuplex Invalid slice indices.
+test_error of next_smallest_palindrome
+test_error of newman_prime
+colon_tuplex Invalid slice indices.
+newman_prime TimeoutError: Code execution timed out after 10 seconds
+newman_prime TimeoutError: Code execution timed out after 10 seconds
+newman_prime TimeoutError: Code execution timed out after 10 seconds
+newman_prime TimeoutError: Code execution timed out after 10 seconds
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+newman_prime TimeoutError: Code execution timed out after 10 seconds
+newman_prime TimeoutError: Code execution timed out after 10 seconds
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of remove_uppercase
+remove_parenthesis Exception: expected string or bytes-like object
+test_error of remove_uppercase
+remove_parenthesis Exception: Input must be a string
+test_error of remove_uppercase
+test_error of largest_neg
+remove_parenthesis Exception: Input must be a string
+test_error of list_to_float
+test_error of remove_uppercase
+test_error of largest_neg
+remove_parenthesis Exception: Input must be a string
+test_error of get_Char
+test_error of list_to_float
+test_error of get_Char
+test_error of list_to_float
+test_error of largest_neg
+test_error of get_Char
+test_error of largest_neg
+test_error of list_to_float
+test_error of get_Char
+test_error of upper_ctr
+test_error of upper_ctr
+test_error of intersection_array
+test_error of intersection_array
+test_error of upper_ctr
+test_error of intersection_array
+test_error of max_product
+test_error of intersection_array
+test_error of upper_ctr
+test_error of max_product
+test_error of max_product
+extract_singly Exception: 'int' object is not iterable
+test_error of check_occurences
+test_error of extract_singly
+test_error of max_product
+test_error of check_occurences
+test_error of extract_singly
+test_error of geometric_sum
+test_error of check_occurences
+test_error of geometric_sum
+test_error of extract_singly
+test_error of check_occurences
+test_error of geometric_sum
+test_error of geometric_sum
+test_error of sort_numeric_strings
+test_error of sort_numeric_strings
+test_error of sort_numeric_strings
+test_error of sort_numeric_strings
+test_error of extract_even
+test_error of maximize_elements
+test_error of extract_even
+test_error of maximize_elements
+test_error of occurance_substring
+test_error of extract_even
+test_error of occurance_substring
+test_error of occurance_substring
+babylonian_squareroot Exception: name 'math' is not defined
+test_error of extract_even
+test_error of maximize_elements
+test_error of occurance_substring
+test_error of maximize_elements
+test_error of dict_depth
+test_error of dict_depth
+expensive_items Exception: 1
+test_error of dict_depth
+babylonian_squareroot Exception: name 'math' is not defined
+expensive_items Exception: 1
+test_error of dict_depth
+babylonian_squareroot Exception: name 'math' is not defined
+expensive_items Exception: 1
+test_error of list_split
+babylonian_squareroot Exception: name 'math' is not defined
+test_error of list_split
+expensive_items Exception: 1
+test_error of list_split
+test_error of list_split
+convert Exception: 'int' object is not iterable
+colon_tuplex Exception: Invalid indices for the tuple.
+convert Exception: Input must be a list or tuple of complex numbers.
+sort_matrix Exception: only integer scalar arrays can be converted to a scalar index
+convert Exception: Input must be a list or tuple of complex numbers.
+colon_tuplex Exception: Invalid indices for the tuple.
+convert Exception: Input must be a list or tuple of complex numbers.
+test_error of combinations_list
+test_error of find_First_Missing
+colon_tuplex Exception: Invalid indices for the tuple.
+test_error of combinations_list
+test_error of find_First_Missing
+test_error of combinations_list
+colon_tuplex Exception: Invalid indices for the tuple.
+test_error of combinations_list
+test_error of find_First_Missing
+count_binary_seq Exception: name 'math' is not defined
+common_in_nested_lists Exception: 'int' object is not iterable
+test_error of find_First_Missing
+count_binary_seq Exception: name 'math' is not defined
+test_error of add_dict_to_tuple
+common_in_nested_lists Exception: 'int' object is not iterable
+count_binary_seq Exception: name 'math' is not defined
+common_in_nested_lists Exception: 'int' object is not iterable
+count_binary_seq Exception: name 'math' is not defined
+test_error of add_dict_to_tuple
+test_error of add_dict_to_tuple
+test_error of common_in_nested_lists
+test_error of add_dict_to_tuple
+min_Jumps Exception: unsupported operand type(s) for +=: 'int' and 'tuple'
+test_error of comb_sort
+test_error of filter_data
+test_error of max_difference
+test_error of comb_sort
+min_Jumps Exception: Steps must be a positive number.
+test_error of shell_sort
+test_error of comb_sort
+min_Jumps Exception: Steps must be a positive number.
+test_error of max_difference
+test_error of comb_sort
+min_Jumps Exception: Steps must be a positive number.
+test_error of max_length
+test_error of max_difference
+test_error of max_length
+test_error of max_length
+test_error of max_difference
+two_unique_nums Exception: 'int' object is not iterable
+test_error of max_length
+two_unique_nums Exception: Each item in the input must be a list.
+two_unique_nums Exception: Each item in the input must be a list.
+test_error of extract_rear
+test_error of extract_rear
+test_error of all_Bits_Set_In_The_Given_Range
+two_unique_nums Exception: Each item in the input must be a list.
+test_error of extract_rear
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of extract_rear
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of all_Bits_Set_In_The_Given_Range
+test_error of tuple_intersection
+find_combinations Exception: unsupported operand type(s) for +: 'int' and 'tuple'
+test_error of tuple_intersection
+test_error of check_value
+test_error of find_combinations
+test_error of tuple_intersection
+test_error of get_ludic
+test_error of tuple_intersection
+test_error of find_combinations
+check_value Exception: check_value() takes 1 positional argument but 2 were given
+test_error of find_combinations
+test_error of get_ludic
+check_value Exception: check_value() takes 1 positional argument but 2 were given
+check_value Exception: check_value() takes 1 positional argument but 2 were given
+test_error of get_ludic
+test_error of even_bit_set_number
+test_error of even_bit_set_number
+test_error of is_num_decagonal
+test_error of get_ludic
+test_error of even_bit_set_number
+test_error of is_num_decagonal
+test_error of even_bit_set_number
+test_error of is_num_decagonal
+test_error of is_num_decagonal
+test_error of add_tuple
+test_error of add_tuple
+test_error of and_tuples
+larg_nnum Exception: larg_nnum() missing 1 required positional argument: 'n'
+test_error of filter_oddnumbers
+test_error of and_tuples
+larg_nnum Exception: larg_nnum() missing 1 required positional argument: 'n'
+larg_nnum Exception: larg_nnum() missing 1 required positional argument: 'n'
+test_error of and_tuples
+larg_nnum Exception: larg_nnum() missing 1 required positional argument: 'n'
+test_error of and_tuples
+test_error of count_first_elements
+test_error of count_first_elements
+test_error of count_first_elements
+test_error of remove_kth_element
+test_error of loss_amount
+count_first_elements Exception: '<' not supported between instances of 'tuple' and 'int'
+test_error of loss_amount
+test_error of remove_kth_element
+test_error of loss_amount
+test_error of remove_kth_element
+test_error of loss_amount
+test_error of remove_kth_element
+test_error of surface_Area
+test_error of surface_Area
+test_error of surface_Area
+test_error of surface_Area
+test_error of count_Occurrence
+test_error of count_Occurrence
+test_error of count_Occurrence
+test_error of count_Occurrence
+test_error of convert_list_dictionary
+test_error of max_length_list
+test_error of max_length_list
+test_error of find_adverbs
+test_error of max_length_list
+test_error of convert_list_dictionary
+test_error of find_adverbs
+test_error of max_length_list
+test_error of polar_rect
+test_error of find_adverbs
+test_error of polar_rect
+test_error of wind_chill
+test_error of convert_list_dictionary
+test_error of find_adverbs
+index_multiplication Exception: can't multiply sequence by non-int of type 'tuple'
+wind_chill Exception: Wind velocity must be non-negative and temperature must be between -50 and 10 Celsius.
+test_error of polar_rect
+test_error of polar_rect
+test_error of convert_list_dictionary
+wind_chill Exception: Temperature must be between -50 and 10 Celsius.
+index_multiplication Exception: can't multiply sequence by non-int of type 'tuple'
+index_multiplication Exception: can't multiply sequence by non-int of type 'tuple'
+wind_chill Exception: Temperature must be between -50 and 10 Celsius.
+index_multiplication Exception: can't multiply sequence by non-int of type 'tuple'
+test_error of trim_tuple
+test_error of trim_tuple
+test_error of set_left_most_unset_bit
+test_error of trim_tuple
+test_error of trim_tuple
+test_error of set_left_most_unset_bit
+test_error of get_coordinates
+test_error of set_left_most_unset_bit
+test_error of get_coordinates
+test_error of re_arrange_array
+test_error of set_left_most_unset_bit
+test_error of get_coordinates
+test_error of re_arrange_array
+test_error of get_coordinates
+test_error of re_arrange_array
+test_error of group_tuples
+test_error of re_arrange_array
+find_char_long Exception: expected string or bytes-like object
+find_char_long Exception: Input must be a string
+test_error of group_tuples
+find_char_long Exception: Input must be a string
+test_error of group_tuples
+find_char_long Exception: Input must be a string
+zero_count Exception: name 'math' is not defined
+concatenate_tuple Exception: concatenate_tuple() missing 1 required positional argument: 'delimiter'
+test_error of Find_Min
+concatenate_tuple Exception: concatenate_tuple() missing 1 required positional argument: 'delimiter'
+test_error of group_tuples
+concatenate_tuple Exception: concatenate_tuple() missing 1 required positional argument: 'delimiter'
+test_error of Find_Min
+zero_count Exception: name 'math' is not defined
+concatenate_tuple Exception: concatenate_tuple() missing 1 required positional argument: 'delimiter'
+zero_count Exception: name 'math' is not defined
+zero_count Exception: name 'math' is not defined
+test_error of Find_Min
+sum Exception: 'int' object is not iterable
+sum Exception: 'int' object is not iterable
+test_error of find_Element
+test_error of Find_Min
+test_error of find_Element
+test_error of count_element_in_list
+sum Exception: 'int' object is not iterable
+test_error of find_Element
+test_error of count_element_in_list
+test_error of find_Element
+sum Exception: 'int' object is not iterable
+test_error of count_element_in_list
+test_error of new_tuple
+test_error of new_tuple
+test_error of new_tuple
+test_error of new_tuple
+test_error of positive_count
+test_error of sort_counter
+test_error of positive_count
+test_error of sort_counter
+test_error of sort_counter
+test_error of sum_of_digits
+test_error of positive_count
+test_error of sort_counter
+test_error of sum_of_digits
+test_error of positive_count
+test_error of find_adverb_position
+test_error of sum_of_digits
+test_error of find_adverb_position
+test_error of sum_of_digits
+test_error of find_adverb_position
+test_error of find_adverb_position
+test_error of max_Product
+test_error of max_Product
+test_error of max_aggregate
+test_error of max_Product
+multiply_num Exception: name 'math' is not defined
+test_error of max_aggregate
+test_error of text_match_wordz
+multiply_num Exception: name 'math' is not defined
+test_error of text_match_wordz
+test_error of max_Product
+test_error of max_aggregate
+newman_prime TimeoutError: Code execution timed out after 10 seconds
+test_error of text_match_wordz
+multiply_num Exception: name 'math' is not defined
+test_error of text_match_wordz
+test_error of max_aggregate
+test_error of is_Sum_Of_Powers_Of_Two
+multiply_num Exception: name 'math' is not defined
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of is_Sum_Of_Powers_Of_Two
+test_error of parabola_directrix
+test_error of count_Pairs
+test_error of parabola_directrix
+test_error of count_Pairs
+test_error of parabola_directrix
+newman_prime TimeoutError: Code execution timed out after 10 seconds
+test_error of parabola_directrix
+test_error of find_Max_Num
+test_error of triangle_area
+test_error of count_vowels
+test_error of find_Max_Num
+test_error of count_vowels
+test_error of find_Max_Num
+test_error of triangle_area
+test_error of count_vowels
+test_error of check_char
+test_error of find_Max_Num
+test_error of check_char
+test_error of count_vowels
+test_error of triangle_area
+test_error of check_char
+test_error of next_smallest_palindrome
+test_error of union_elements
+newman_prime TimeoutError: Code execution timed out after 10 seconds
+test_error of check_char
+test_error of triangle_area
+test_error of next_smallest_palindrome
+test_error of next_smallest_palindrome
+newman_prime TimeoutError: Code execution timed out after 10 seconds
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+newman_prime TimeoutError: Code execution timed out after 10 seconds
+newman_prime TimeoutError: Code execution timed out after 10 seconds
+test_error of newman_prime
+test_error of newman_prime
+newman_prime TimeoutError: Code execution timed out after 10 seconds
+newman_prime TimeoutError: Code execution timed out after 10 seconds
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+test_error of newman_prime
+newman_prime Code execution timed out
+newman_prime Code execution timed out

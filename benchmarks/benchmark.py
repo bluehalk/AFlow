@@ -33,17 +33,36 @@ class BaseBenchmark(ABC):
             return filtered_data
         return data
 
-    def save_results_to_csv(self, results: List[Tuple[Any, ...]], columns: List[str]):
+    def print_and_save_results_to_csv(self, results: List[Tuple[Any, ...]], columns: List[str]):
         df = pd.DataFrame(results, columns=columns)
         avg_score = df["score"].mean()
-        t_cost = df["cost"].max()
-        a_cost = t_cost / len(df) if len(df) > 0 else 0
+        total_tokens = df["total_tokens"].sum()
+        avg_tokens = df["total_tokens"].mean()
+        avg_calls = df["calls"].mean()
+        total_calls = df["calls"].sum()
+
         current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"{avg_score:.5f}_{current_time}.csv"
         output_file = os.path.join(self.log_path, filename)
         df.to_csv(output_file, index=False)
+
+        logger.info(f"Average score on {self.name} dataset: {avg_score:.5f}")
+        logger.info(f"Total tokens: {total_tokens}")
+        logger.info(f"Avg tokens:{avg_tokens}")
+        
+        # 将总token数和平均token数写入文件
+        with open(output_file, "a", encoding="utf-8") as f:
+            f.write(f"Total tokens: {total_tokens}\n") 
+            f.write(f"Total calls: {total_calls}\n")
+
+            f.write(f"Avg tokens: {avg_tokens}\n")
+            f.write(f"Avg calls: {avg_calls}\n")
+
+            f.write(f"Avg score: {avg_score}\n")
+
         logger.info(f"Results saved to {output_file}")
-        return avg_score, a_cost, t_cost
+
+        return avg_score, avg_tokens, total_tokens
 
     def log_mismatch(
         self,
@@ -84,7 +103,7 @@ class BaseBenchmark(ABC):
     def get_result_columns(self) -> List[str]:
         pass
 
-    async def evaluate_all_problems(self, data: List[dict], agent: Callable, max_concurrent_tasks: int = 50):
+    async def evaluate_all_problems(self, data: List[dict], agent: Callable, max_concurrent_tasks: int = 15):
         semaphore = asyncio.Semaphore(max_concurrent_tasks)
 
         async def sem_evaluate(problem):
@@ -94,25 +113,27 @@ class BaseBenchmark(ABC):
         tasks = [sem_evaluate(problem) for problem in data]
         return await tqdm_asyncio.gather(*tasks, desc=f"Evaluating {self.name} problems", total=len(data))
 
-    async def run_evaluation(self, agent: Callable, va_list: List[int], max_concurrent_tasks: int = 50):
+    async def run_evaluation(self, agent: Callable, va_list: List[int], max_concurrent_tasks: int = 15):
         # NOTE(sjh): va_list = [0,1,2,3,4,5,6,7,8,9] indices of the dataset
         data = await self.load_data(va_list)
-        results = await self.evaluate_all_problems(data, agent, max_concurrent_tasks)
-        
+
+        #NOTE results: list of tuples, each tuple is a result of one problem
+        results = await self.evaluate_all_problems(data, agent, max_concurrent_tasks) 
         columns = self.get_result_columns()
-        average_score, average_cost, total_cost = self.save_results_to_csv(results, columns)
-        logger.info(f"Average score on {self.name} dataset: {average_score:.5f}")
-        logger.info(f"Total Cost: {total_cost:.5f}")
-        return average_score, average_cost, total_cost
+        
+        average_score, average_tokens, total_tokens = self.print_and_save_results_to_csv(results, columns)
+        
+        # 如果是 MBPP benchmark，保存失败样本
+        if hasattr(self, 'save_failed_samples'):
+            self.save_failed_samples()
+
+        return average_score, average_tokens, total_tokens  # 返回平均分数、平均token数、总token数
     
 
     async def run_baseline(self, agent: Callable, max_concurrent_tasks: int = 50):
         data = await self.load_data()
         results = await self.evaluate_all_problems(data, agent, max_concurrent_tasks)
         columns = self.get_result_columns()
-        average_score, average_cost, total_cost = self.save_results_to_csv(results, columns)
-        logger.info(f"Average score on {self.name} dataset: {average_score:.5f}")
-        logger.info(f"Total Cost: {total_cost:.5f}")
-        logger.info(f"Avg Cost:{average_cost:.5f}")
-        return average_score, average_cost, total_cost
+        average_score, average_tokens, total_tokens = self.print_and_save_results_to_csv(results, columns)
+        return average_score, average_tokens, total_tokens
 

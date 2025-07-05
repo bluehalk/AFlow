@@ -28,7 +28,7 @@ class GraphUtils:
         graph_module_name = f"{workflows_path}.round_{round_number}.graph"
 
         try:
-            logger.info(f"graph_module_name: {graph_module_name}")
+            logger.info(f"get class from graph_module_name: {graph_module_name}")
             graph_module = __import__(graph_module_name, fromlist=[""])
             graph_class = getattr(graph_module, "Workflow")
             return graph_class

@@ -139,9 +139,15 @@ class DataUtils:
     def get_results_file_path(self, graph_path: str) -> str:
         return os.path.join(graph_path, "results.json")
 
-    def create_result_data(self, round: int, score: float, avg_cost: float, total_cost: float) -> dict:
+    def create_result_data(self, round, score, avg_tokens, total_tokens) -> dict:
         now = datetime.datetime.now()
-        return {"round": round, "score": score, "avg_cost": avg_cost, "total_cost": total_cost, "time": now}
+        return {
+            "round": int(round),
+            "score": float(score),
+            "avg_tokens": float(avg_tokens),
+            "total_tokens": float(total_tokens),
+            "time": now.isoformat()      # 建议写成字符串，避免同类问题
+        }
 
     def save_results(self, json_file_path: str, data: list):
         write_json_file(json_file_path, data, encoding="utf-8", indent=4)

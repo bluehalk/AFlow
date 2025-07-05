@@ -1,0 +1,8 @@
+inputs,prediction,expected_output,score,cost
+"Write a function to convert a given tuple of positive integers into a single integer.
+
+def tuple_to_int(nums):","def tuple_to_int(nums):
+    return int(''.join(map(str, nums)))","The solution passed all test cases.
+Correct Solution:def tuple_to_int(nums):
+    result = int(''.join(map(str,nums)))
+    return result",1.0,0.0040725

@@ -5,7 +5,7 @@
 
 import asyncio
 import time
-from typing import List, Literal, Dict
+from typing import List, Literal, Dict, Optional
 
 from pydantic import BaseModel, Field
 
@@ -43,6 +43,7 @@ class Optimizer:
         initial_round: int = 1,
         max_rounds: int = 20,
         validation_rounds: int = 5,
+        sample_indices: Optional[List[int]] = None,
     ) -> None:
         self.optimize_llm_config = opt_llm_config
         self.optimize_llm = create_llm_instance(self.optimize_llm_config)
@@ -61,6 +62,7 @@ class Optimizer:
         self.round = initial_round
         self.max_rounds = max_rounds
         self.validation_rounds = validation_rounds
+        self.sample_indices = sample_indices
 
         self.graph_utils = GraphUtils(self.root_path)
         self.data_utils = DataUtils(self.root_path)
@@ -240,10 +242,10 @@ class Optimizer:
             return None
 
     async def test(self):
-        rounds = [1]  # You can choose the rounds you want to test here.
+        rounds = [14]  # You can choose the rounds you want to test here.
         data = []
 
-        graph_path = f"{self.root_path}/workflows_test"
+        graph_path = f"{self.root_path}/graphs"
         json_file_path = self.data_utils.get_results_file_path(graph_path)
 
         data = self.data_utils.load_results(graph_path)
@@ -252,9 +254,10 @@ class Optimizer:
             directory = self.graph_utils.create_round_directory(graph_path, round)
             self.graph = self.graph_utils.load_graph(round, graph_path)
 
-            score, avg_cost, total_cost = await self.evaluation_utils.evaluate_graph_test(self, directory, is_test=True)
+            score, avg_tokens, total_tokens = await self.evaluation_utils.evaluate_graph_test(self, directory, is_test=True)
 
-            new_data = self.data_utils.create_result_data(round, score, avg_cost, total_cost)
+            new_data = self.data_utils.create_result_data(round, score, avg_tokens, total_tokens)
             data.append(new_data)
 
             self.data_utils.save_results(json_file_path, data)
+            print(f"Saved data to {json_file_path}")

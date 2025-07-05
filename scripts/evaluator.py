@@ -3,7 +3,7 @@
 # @Author  : all
 # @Desc    : Evaluation for different datasets
 
-from typing import Dict, Literal, Tuple
+from typing import Dict, Literal, Tuple, List, Optional
 
 from benchmarks.benchmark import BaseBenchmark
 from benchmarks.drop import DROPBenchmark
@@ -34,7 +34,13 @@ class Evaluator:
         }
 
     async def graph_evaluate(
-        self, dataset: DatasetType, graph, params: dict, path: str, is_test: bool = False
+        self,
+        dataset: DatasetType,
+        graph,
+        params: dict,
+        path: str,
+        is_test: bool = False,
+        sample_indices: Optional[List[int]] = None,
     ) -> Tuple[float, float, float]:
         if dataset not in self.dataset_configs:
             raise ValueError(f"Unsupported dataset: {dataset}")
@@ -48,13 +54,16 @@ class Evaluator:
         # Use params to configure the graph and benchmark
         # NOTE(sjh)返回一个实例化后的Workflow对象
         configured_graph = await self._configure_graph(dataset, graph, params)
-        logger.info(f"configured_graph: {type(configured_graph)}: {configured_graph}")
+        # logger.info(f"configured_graph: {type(configured_graph)}: {configured_graph}")
 
-        if is_test:
-            va_list = None  # For test data, generally use None to test all
+        # Determine which sample indices to evaluate
+        if sample_indices is not None:
+            va_list = list(sample_indices)
         else:
-            # 限制验证集样本数量 - 只使用前10个样本进行测试
-            va_list = list(range(10))  # 使用前10个样本 [0,1,2,3,4,5,6,7,8,9]
+            if is_test:
+                va_list = None  # 默认测试集样本数量
+            else:
+                va_list = list(range(10))  # 默认验证集前10个样本
         return await benchmark.run_evaluation(configured_graph, va_list)
 
     async def _configure_graph(self, dataset, graph, params: dict):

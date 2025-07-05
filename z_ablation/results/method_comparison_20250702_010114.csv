@@ -1,2 +1,0 @@
-Method,Success_Rate,Accuracy,Avg_Score,Score_Std,Total_Cost,Avg_Cost_Per_Sample,Total_Time(s),Correct_Count,Failed_Count
-OptimalWorkflow,100.0%,61.5%,0.615,0.488,$0.0000,$0.000000,7506.2,123/200,0

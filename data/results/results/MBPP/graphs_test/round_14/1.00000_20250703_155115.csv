@@ -1,0 +1,29 @@
+inputs,prediction,expected_output,score,cost
+"Write a function to convert a given tuple of positive integers into a single integer.
+
+def tuple_to_int(nums):","The provided solution for converting a tuple of positive integers into a single integer seems logically correct. The function uses `map` to convert each integer in the tuple to a string, joins them together, and then converts the resulting string back to an integer. However, if the function is failing tests, it could be due to the input not being a tuple or containing non-positive integers.
+
+To ensure the function works correctly, we can add input validation to check that the input is indeed a tuple of positive integers. Here's the corrected implementation:
+
+```python
+def tuple_to_int(nums):
+    # Check if the input is a tuple
+    if not isinstance(nums, tuple):
+        raise ValueError(""Input must be a tuple."")
+    
+    # Check if all elements in the tuple are positive integers
+    if not all(isinstance(num, int) and num > 0 for num in nums):
+        raise ValueError(""All elements in the tuple must be positive integers."")
+    
+    # Convert the tuple of integers to a single integer
+    return int(''.join(map(str, nums)))
+```
+
+### Changes Made:
+1. **Input Validation**: Added checks to ensure that the input is a tuple and that all elements are positive integers.
+2. **Error Handling**: Raised a `ValueError` with a descriptive message if the input does not meet the criteria.
+
+This implementation should now correctly handle the input and pass the tests.","The solution passed all test cases.
+Correct Solution:def tuple_to_int(nums):
+    result = int(''.join(map(str,nums)))
+    return result",1.0,0.0072575

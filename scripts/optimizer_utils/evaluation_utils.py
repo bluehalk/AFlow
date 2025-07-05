@@ -17,6 +17,7 @@ class EvaluationUtils:
                 {"dataset": optimizer.dataset, "llm_config": optimizer.execute_llm_config},
                 directory,
                 is_test=False,
+                sample_indices=optimizer.sample_indices,
             )
 
             new_data = optimizer.data_utils.create_result_data(optimizer.round, score, avg_cost, total_cost)
@@ -39,6 +40,7 @@ class EvaluationUtils:
                 {"dataset": optimizer.dataset, "llm_config": optimizer.execute_llm_config},
                 directory,
                 is_test=False,
+                sample_indices=optimizer.sample_indices,
             )
 
             cur_round = optimizer.round + 1 if initial is False else optimizer.round
@@ -62,4 +64,5 @@ class EvaluationUtils:
             {"dataset": optimizer.dataset, "llm_config": optimizer.execute_llm_config},
             directory,
             is_test=is_test,
+            sample_indices=optimizer.sample_indices,
         )

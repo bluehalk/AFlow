@@ -1,0 +1,49 @@
+2025-07-04 17:05:16 - Error: .
+ Solution: def is_Sum_Of_Powers_Of_Two(n):
+    if n <= 0:
+        return False
+    powers = []
+    power = 1
+    while power <= n:
+        powers.append(power)
+        power *= 2
+
+    def can_sum(target, index):
+        if target == 0:
+            return True
+        if target < 0 or index < 0:
+            return False
+        return can_sum(target - powers[index], index - 1) or can_sum(target, index - 1)
+    return can_sum(n, len(powers) - 1).
+ Test: def check():
+    assert is_Sum_Of_Powers_Of_Two(10) == True
+    assert is_Sum_Of_Powers_Of_Two(7) == False
+    assert is_Sum_Of_Powers_Of_Two(14) == True
+
+2025-07-04 17:12:24 - AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File "/home/codiplay/AFlow/benchmarks/mbpp.py", line 69, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File "/home/codiplay/AFlow/benchmarks/mbpp.py", line 43, in run_with_timeout
+    raise result[0]
+  File "/home/codiplay/AFlow/benchmarks/mbpp.py", line 27, in target
+    result.append(func())
+  File "<string>", line 3, in check
+AssertionError
+
+Solution:
+def is_Sum_Of_Powers_Of_Two(n):
+    if n <= 0:
+        return False
+    while n > 0:
+        if n & 1:
+            n -= 1
+        n >>= 1
+    return n == 0
+Test Code:
+def check():
+    assert is_Sum_Of_Powers_Of_Two(10) == True
+    assert is_Sum_Of_Powers_Of_Two(7) == False
+    assert is_Sum_Of_Powers_Of_Two(14) == True
+

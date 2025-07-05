@@ -42,7 +42,6 @@ class GSM8KBenchmark(BaseBenchmark):
         try:
             #NOTE(sjh)：得到结果
             output, cost = await self._generate_output(graph, input_text) # graph就是agent，input_text就是问题
-
             predicted_number = self.extract_number(output)
             score, extracted_output = self.calculate_score(expected_output, predicted_number)
 

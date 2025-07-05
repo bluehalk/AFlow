@@ -9,7 +9,6 @@ from typing import Dict, List
 from data.download_data import download
 from scripts.optimizer import Optimizer
 from scripts.async_llm import LLMsConfig
-from scripts.logs import logger
 
 class ExperimentConfig:
     def __init__(self, dataset: str, question_type: str, operators: List[str]):
@@ -81,15 +80,17 @@ def parse_args():
     parser.add_argument(
         "--opt_model_name",
         type=str,
-        default="claude-3-5-sonnet-20241022",
+        default="openai/gpt-4o-mini",
         help="Specifies the name of the model used for optimization tasks.",
     )
     parser.add_argument(
         "--exec_model_name",
         type=str,
-        default="gpt-4o-mini",
+        default="openai/gpt-4o-mini",
         help="Specifies the name of the model used for execution tasks.",
     )
+    parser.add_argument("--sample_indices", type=str, default=None, 
+        help="Comma-separated list of sample indices to evaluate (e.g., '0,1,2'). If not provided, default behavior is used.")
     return parser.parse_args()
 
 
@@ -98,8 +99,7 @@ if __name__ == "__main__":
 
     config = EXPERIMENT_CONFIGS[args.dataset]
 
-    models_config = LLMsConfig.default() # 从config里面提取模型信息
-
+    models_config = LLMsConfig.default()
     opt_llm_config = models_config.get(args.opt_model_name)
     if opt_llm_config is None:
         raise ValueError(
@@ -116,12 +116,11 @@ if __name__ == "__main__":
 
     download(["datasets"], force_download=args.if_force_download) # remove download initial_rounds in new version.
 
-
-    logger.info(f"opt_llm_config: {opt_llm_config}")
-    logger.info(f"exec_llm_config: {exec_llm_config}")
-    logger.info(f"dataset: {config.dataset}")
-    logger.info(f"question_type: {config.question_type}")
-    logger.info(f"operators: {config.operators}")
+    # Parse user-provided sample indices if any
+    if args.sample_indices:
+        sample_indices = [int(idx.strip()) for idx in args.sample_indices.split(',') if idx.strip()]
+    else:
+        sample_indices = None
 
     optimizer = Optimizer(
         dataset=config.dataset,
@@ -135,6 +134,7 @@ if __name__ == "__main__":
         initial_round=args.initial_round,
         max_rounds=args.max_rounds,
         validation_rounds=args.validation_rounds,
+        sample_indices=sample_indices
     )
 
     # Optimize workflow via setting the optimizer's mode to 'Graph'

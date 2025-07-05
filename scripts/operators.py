@@ -10,6 +10,7 @@ import sys
 import traceback
 from collections import Counter
 from typing import Dict, List, Tuple, Optional
+import signal
 
 from tenacity import retry, stop_after_attempt, wait_fixed
 
@@ -264,36 +265,74 @@ class Programmer(Operator):
 
         return {"code": code, "output": output}
 
+def run_test_code(test_code):
+    """在独立进程中执行测试代码"""
+    try:
+        exec(test_code, globals())
+        return "Success", "Test passed"
+    except AssertionError as e:
+        return "Error", f"AssertionError: {str(e)}"
+    except Exception as e:
+        return "Error", f"Exception: {str(e)}"
+
 class Test(Operator):
     def __init__(self, llm: AsyncLLM, name: str = "Test"):
         super().__init__(llm, name)
+        # 创建进程池，参考Programmer的实现
+        self.process_pool = concurrent.futures.ProcessPoolExecutor(max_workers=1)
 
-    def exec_code(self, solution, entry_point):
+    def __del__(self):
+        """确保进程池在对象销毁时关闭"""
+        if hasattr(self, 'process_pool'):
+            self.process_pool.shutdown(wait=True)
+
+    async def exec_code_with_timeout(self, test_code, timeout=10):
+        """异步执行代码，带超时保护，参考Programmer的实现"""
+        loop = asyncio.get_running_loop()
+        
+        try:
+            # 使用进程池执行测试代码
+            future = loop.run_in_executor(self.process_pool, run_test_code, test_code)
+            # 等待任务完成或超时
+            result = await asyncio.wait_for(future, timeout=timeout)
+            return result
+        except asyncio.TimeoutError:
+            # 取消future
+            future.cancel()
+            import gc
+            gc.collect()
+            return "Error", "Code execution timed out"
+        except concurrent.futures.process.BrokenProcessPool:
+            # 如果进程池损坏，重新创建
+            self.process_pool.shutdown(wait=False)
+            self.process_pool = concurrent.futures.ProcessPoolExecutor(max_workers=1)
+            return "Error", "Process pool broken, try again"
+        except Exception as e:
+            return "Error", f"Unknown error: {str(e)}"
+
+    async def exec_code(self, solution, entry_point):
         test_cases = extract_test_cases_from_jsonl(entry_point)
-
+        print(f"test_cases: {test_cases}")
         fail_cases = []
+        
         for test_case in test_cases:
             test_code = test_case_2_test_function(solution, test_case, entry_point)
-            try:
-                exec(test_code, globals())
-            except AssertionError as e:
-                exc_type, exc_value, exc_traceback = sys.exc_info()
-                tb_str = traceback.format_exception(exc_type, exc_value, exc_traceback)
-                with open("tester.txt", "a") as f:
-                    f.write("test_error of " + entry_point + "\n")
-                error_infomation = {
-                    "test_fail_case": {
-                        "test_case": test_case,
-                        "error_type": "AssertionError",
-                        "error_message": str(e),
-                        "traceback": tb_str,
-                    }
-                }
-                fail_cases.append(error_infomation)
-            except Exception as e:
-                with open("tester.txt", "a") as f:
-                    f.write(entry_point + " " + str(e) + "\n")
-                return {"exec_fail_case": str(e)}
+            
+            # 使用进程池执行测试代码
+            status, message = await self.exec_code_with_timeout(test_code, timeout=10)
+            
+            if status == "Error":
+                if "AssertionError" in message:
+                    # 断言失败
+                    with open("tester.txt", "a") as f:
+                        f.write("test_error of " + entry_point + "\n")
+                    fail_cases.append({"test_fail_case": {"error_message": message}})
+                else:
+                    # 超时或其他异常
+                    with open("tester.txt", "a") as f:
+                        f.write(entry_point + " " + message + "\n")
+                    return {"exec_fail_case": message}
+        
         if fail_cases != []:
             return fail_cases
         else:
@@ -307,9 +346,11 @@ class Test(Operator):
         }
         """
         for _ in range(test_loop):
-            result = self.exec_code(solution, entry_point)
+            result = await self.exec_code(solution, entry_point)
+
             if result == "no error":
                 return {"result": True, "solution": solution}
+
             elif "exec_fail_case" in result:
                 result = result["exec_fail_case"]
                 prompt = REFLECTION_ON_PUBLIC_TEST_PROMPT.format(
@@ -319,8 +360,9 @@ class Test(Operator):
                     test_fail="executed unsucessfully",
                 )
                 response = await self._fill_node(ReflectionTestOp, prompt, mode="code_fill")
-                solution = response["reflection_and_solution"]
+                solution = response["code"]
             else:
+                # import pdb; pdb.set_trace()
                 prompt = REFLECTION_ON_PUBLIC_TEST_PROMPT.format(
                     problem=problem,
                     solution=solution,
@@ -328,9 +370,9 @@ class Test(Operator):
                     test_fail=result,
                 )
                 response = await self._fill_node(ReflectionTestOp, prompt, mode="code_fill")
-                solution = response["reflection_and_solution"]
+                solution = response["code"]
 
-        result = self.exec_code(solution, entry_point)
+        result = await self.exec_code(solution, entry_point)
         if result == "no error":
             return {"result": True, "solution": solution}
         else:
