@@ -1,0 +1,596 @@
+Expected: 60, Predicted: 6                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 25, Predicted: 25.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 400, Predicted: 400.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 29, Predicted: 40                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \dfrac{25}{52}, Predicted: 0.48                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 1208, Predicted: 226                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 448, Predicted: 448                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 3.24, Predicted: 3.24                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{128}{1875}, Predicted: 0.06826666666666666                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 12, Predicted: 11.999999999999998                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 162\text{ minutes}, Predicted: 162                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 30, Predicted: 30                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 636, Predicted: 756                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 3, Predicted: 3                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 298, Predicted: 298                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 234, Predicted: 234                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{3x^2}{2}, Predicted: \frac{3}{2} x^2                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 30, Predicted: 30                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 4, Predicted: 9                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 70, Predicted: 70                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 10, Predicted: 10                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 52, Predicted: 52.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 7\pi, Predicted: 21.991148575128562                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 13, Predicted: 13                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 15, Predicted: 15                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 32, Predicted: 32.000000000000014                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 180, Predicted: 180                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \sqrt{6}, Predicted: 5.999999999999999                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 6\sqrt{7}, Predicted: 12                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 900, Predicted: 900                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 80, Predicted: 110.0                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{11}{13}, Predicted: 0.8461538461538461                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 72, Predicted: 72                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 82, Predicted: 82.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 4, Predicted: 2                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 20, Predicted: 20.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 8\sqrt{3}, Predicted: 10.392304845413264                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 133, Predicted: 39                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 64, Predicted: 64                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 96, Predicted: 96                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 23, Predicted: 23                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: -34 + 12x, Predicted: ((x - 4) + 2 * x) + 2 * (((x - 4) + 2 * x) - 5) + 3 * (x - 4)                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 17, Predicted: 17                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{2}{5}, Predicted: \frac{100}{241}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 26\pi, Predicted: 26\pi                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 10\sqrt{2}, Predicted: 10.352761804100831                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 107, Predicted: 134                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 4\sqrt{2}, Predicted: 3.061467458920718                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 10\pi, Predicted: 10\pi                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 16+12\sqrt{2}, Predicted: 4\sqrt{2} + 12 + 4\sqrt{10}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 256, Predicted: 256                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 220, Predicted: 231                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 3.7, Predicted: 3.7                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \dfrac{5}{36}, Predicted: 5/36                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 16, Predicted: 16                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: -89, Predicted: 91                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 28, Predicted: 28.00                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 87, Predicted: 103.5                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{13}, Predicted: 52/676                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{3}{5}, Predicted: 3/5                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 54000, Predicted: 54000.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 7, Predicted: 7                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 23, Predicted: 23.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 30\%, Predicted: 30.0                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 8, Predicted: 8                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 5.5, Predicted: 8.5                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 330, Predicted: 330                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 13, Predicted: 13.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: -13, Predicted: -13                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 75\%, Predicted: 55.77                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 351, Predicted: 351                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 3.25\text{ dollars}, Predicted: 3.25                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 8, Predicted: 1                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 19, Predicted: 19                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 10, Predicted: 10.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 8, Predicted: 8                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 12, Predicted: 1.3953488372093024                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 108, Predicted: 44.0                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 5,\!460, Predicted: 5460                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 3, Predicted: 2.9999999999999996                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 9, Predicted: 9                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 11 \frac{2}{3}, Predicted: 11 40                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \sqrt{6} + 3\sqrt{2}, Predicted: 6.692130429902463                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \$36, Predicted: 36.00                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 23, Predicted: 85                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 15, Predicted: 15                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{16}{27}, Predicted: 0.5925925925925926                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 14{,}916, Predicted: 15006                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{2}, Predicted: 45/90                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 68, Predicted: 68.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 8, Predicted: 8                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{1}{4}, Predicted: \frac{3}{4}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 18, Predicted: 18                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{23}{7}, Predicted: 23/7                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 4, Predicted: 4                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 6, Predicted: 6                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 1\frac{1}{10}, Predicted: 1 \frac{1}{10}                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 90, Predicted: 30                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \sqrt{6}, Predicted: </math_solution>                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{137}{111}, Predicted: \frac{137}{111}                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 27, Predicted: 27                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 100, Predicted: 100                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{270}7\text{ degrees}, Predicted: 51.428571428571416                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 20, Predicted: 20                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 4, Predicted: 4                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 12\sqrt{35}, Predicted: 70.9929573971954                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{11}, Predicted: 9/100                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 162, Predicted: 162                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 1.25, Predicted: 1.25                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 10090, Predicted: 10090                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 36, Predicted: 36.00000000000001                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 9, Predicted: 9                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{7}{20}, Predicted: 7/20                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 1.4, Predicted: 1.4000014000014                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \dfrac{1}{12}, Predicted: 0.08333333333333333                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 12\pi, Predicted: 37.69911184307752                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{427}{495}, Predicted: \frac{427}{495}                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 52, Predicted: 52                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 156^\circ, Predicted: 156.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 9604, Predicted: 9604                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 12, Predicted: 11.99999999999999                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 2, Predicted: 3                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{21}{2}\pi, Predicted: 32.98672286269283                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{5}{8}, Predicted: 5/8                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 50, Predicted: 50.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 2\sqrt{10}, Predicted: 6.324555320336759                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 16, Predicted: 4                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 54, Predicted: 53.99999999999999                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 156^\circ, Predicted: 156.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 33\sqrt{30}, Predicted: 180.7484439767048                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: m+2, Predicted: m + 2                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 60, Predicted: 60                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 27, Predicted: 27.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 7, Predicted: 7                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 53, Predicted: 53                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{2}{5}, Predicted: \frac{22}{45}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 25, Predicted: 25.000000596046455                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 50,\!625, Predicted: 202500                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 8, Predicted: 0                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{6}, Predicted: 0.16666666666666666                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 14\sqrt{15}, Predicted: 14 \sqrt{15}                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 7.2, Predicted: 5                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 49\pi, Predicted: 49\pi                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 8, Predicted: 0.0                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 50, Predicted: 25.00 \pi                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 11, Predicted: 11                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 957, Predicted: 957                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 12, Predicted: \infty                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 36, Predicted: 36                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{19}{330}, Predicted: \frac{1}{17}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 3224, Predicted: 3224                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 60, Predicted: 60                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 12, Predicted: 6                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 2, Predicted: 2                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 44, Predicted: 44                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 1, Predicted: 1                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 53, Predicted: 53                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 62, Predicted: 62                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 10, Predicted: 6                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 4, Predicted: 4                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 17, Predicted: 17                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 6, Predicted: 6                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 4, Predicted: 84                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 270, Predicted: 270                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{1}{3}, Predicted: 0.3333333333333333                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: -449, Predicted: -449                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 46, Predicted: 46                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 118^{\circ}, Predicted: 43                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 2079, Predicted: 2079                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 240, Predicted: 48                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 20, Predicted: 20                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 108, Predicted: 12                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 116, Predicted: 116                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 12\text{ and }13, Predicted: 12 \text{ and } 13                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \dfrac{17}{50}, Predicted: 34/100                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 41, Predicted: 41                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 90, Predicted: 90                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 5, Predicted: 5                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 72, Predicted: 72                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 5, Predicted: 5                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 12, Predicted: 12                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 1155, Predicted: 1155                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 100, Predicted: 100                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 6152, Predicted: 6152                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \dfrac{19}{40}, Predicted: 0.475                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 111, Predicted: 112                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 6, Predicted: 6                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 16, Predicted: 16                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 0.0011_{2}, Predicted: 0.0011                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 88, Predicted: 88                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 231, Predicted: 413                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 10, Predicted: 10                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 35, Predicted: 35                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: -221_3, Predicted: -221_3
+-221_3                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 13, Predicted: 9                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 21022, Predicted: 21022                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 31, Predicted: 32                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 8, Predicted: 8                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 9, Predicted: 8                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 11, Predicted: 20                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 8, Predicted: 8                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 226, Predicted: 226                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 1076, Predicted: 1076                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 8, Predicted: 8                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 981, Predicted: 100                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 42, Predicted: 17                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 6, Predicted: 6                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 0, Predicted: 0                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 12, Predicted: 12                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 668, Predicted: 668                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 42, Predicted: 42                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 34, Predicted: 34                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 12, Predicted: 12                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 78, Predicted: 78                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 0, Predicted: 0                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 72, Predicted: 72                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 10901, Predicted: 10901                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 3, Predicted: 3                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 25, Predicted: 25                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 43, Predicted: 35                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{3}, Predicted: \frac{30}{90}                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{152}{225}, Predicted: 0.5711                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 29, Predicted: 29                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 2, Predicted: 2                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 60, Predicted: 60                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 8{,}880, Predicted: 8880                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 129, Predicted: 129                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 129, Predicted: 129                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 4, Predicted: 4                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 102, Predicted: 102                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 12, Predicted: 12                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 503, Predicted: 504                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 203, Predicted: 29                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 7, Predicted: 7                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 8, Predicted: 8                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 36, Predicted: 36                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 35, Predicted: 35                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 5, Predicted: 5                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 5, Predicted: 5                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 11, Predicted: 14                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 314, Predicted: 657                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 715, Predicted: 715                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 12, Predicted: 12                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 1058, Predicted: 1058                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 9, Predicted: 6                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 2016, Predicted: 2016                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 9, Predicted: 4                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 12,\!000,\!085, Predicted: 15                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac19, Predicted: \frac{10}{90}                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 1950, Predicted: 1951                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 2, Predicted: 2                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 9, Predicted: 9                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 1016, Predicted: 1016                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 284, Predicted: 284                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 8, Predicted: 8                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 8, Predicted: 8                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 10,\!236, Predicted: 10236                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 82, Predicted: n                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 4, Predicted: 4                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 20, Predicted: 18                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 8 \pi, Predicted: 0                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 233, Predicted: 233                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 740, Predicted: 740                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 4018, Predicted: (4789-2216.991441762095j)                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 22, Predicted: 22                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 24, Predicted: 24                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 22, Predicted: (0, 0), (1, 0), (2, 0)                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 8+4\sqrt3, Predicted: </math_solution>                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: (4,24), Predicted: (6, 4)                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 3 + \sqrt{6}, Predicted: 2                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \text{Friday}, Predicted: \text{Monday}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 1440, Predicted: 1440                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 120^\circ, Predicted: 120                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 64, Predicted: 64.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 8, Predicted: 8                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \end{align*}Thus,
+\[\frac{\tan A}{\tan^2 A + 2} = \frac{1}{2 \sqrt{2}}.\]Then $2 \sqrt{2} \tan A = \tan^2 A + 2,$ or
+\[\tan^2 A - 2 \sqrt{2} \tan A + 2 = 0.\]This factors as $(\tan A - \sqrt{2})^2 = 0,$ so $\tan A = \sqrt{2}.$
+
+Now, constructing a right triangle where the legs are 1 and $\sqrt{2}$ and the hypotenuse is $\sqrt{3},$ we see that
+\[\sin A = \frac{\sqrt{2}}{\sqrt{3}} = \boxed{\frac{\sqrt{6}}{3}}.\], Predicted: </math_solution>                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{3}{5}, \frac{117}{125}, Predicted: 0.936, -0.936                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 6, Predicted: 6                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 11, Predicted: 11                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \begin{pmatrix} -6 \\ 9 \end{pmatrix}, Predicted: \begin{pmatrix} -6 \\ 9 \end{pmatrix}                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 13, Predicted: 13                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 7, Predicted: 7                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{1}{2}, Predicted: </math_solution>                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{4}, Predicted: \frac{6}{25}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 18, Predicted: 18                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 5, Predicted: 5                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 9, Predicted: 9                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 14, Predicted: 14                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{6}{23}, Predicted: 0.260869565217391                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 92, Predicted: 999                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \begin{pmatrix} 23/8 \\ 7/4 \end{pmatrix}, Predicted: \left( -0.12, 0.94 \right)                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 15, Predicted: 15                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 22, Predicted: 22                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 1, Predicted: -2.00000000000000                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 20x + 23y + 26z - 69 = 0, Predicted: x - 2y + z = 0                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 0, Predicted: 39076                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{4}, Predicted: \frac{1}{4}                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 100100, Predicted: 110000_b                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 840^\circ, Predicted: 840^\circ                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 66, Predicted: 76                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 27,93, Predicted: 29, 41, 50                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 432, Predicted: 431.99999999978166                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{16 \pi}{3}, Predicted: 29.84513020910308                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: -8, Predicted: 0.0                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 8x^3 - 6x - 1, Predicted: 8x^3 - 6x - 1                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \sqrt{66}, Predicted: \text{The distances do not correspond to a valid configuration.}
+\text{The distances do not correspond to a valid configuration.}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 6 - 5i, Predicted: 6.00 + -5.00i                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: -3, Predicted: -3                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 4, Predicted: 8                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{3}, Predicted: 1                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 8, Predicted: 8                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \left( -\frac{8}{3}, \frac{4}{3}, -\frac{1}{3} \right), Predicted: (-2.67, 1.33, -0.33)                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 27, Predicted: 15                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{3}{2}, Predicted: 5                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \begin{pmatrix} 1 \\ 2 \\ -3 \end{pmatrix}, Predicted: \begin{pmatrix} 4 \\ 7 \\ -11 \end{pmatrix}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \begin{pmatrix} -4\\-3 \end{pmatrix}, Predicted: \begin{pmatrix} -3 \\ -4 \end{pmatrix}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: (2,-1), Predicted: (2, -1)                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{1}{5}, Predicted: 0.1999999999999999                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 3 \pm 2 \sqrt{2}, Predicted: 5.82842712474619, 0.1715728752538097                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{9}{2}, Predicted: 3.805545655274024                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 159, Predicted: 10                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 3R^2, Predicted: \frac{a^2 + b^2 + c^2}{3} + \frac{R^2}{3}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{4}{7}, Predicted: 1/2                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \begin{pmatrix} -4/9 \\ 1/9 \\ 8/9 \end{pmatrix}, Predicted: \begin{pmatrix} -16 \\ 4 \\ 32 \end{pmatrix}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 12, Predicted: 23                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 43, Predicted: 77.99999999999993                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{5\pi}{4}, Predicted: 0, \frac{\pi}{7}, \frac{2\pi}{7}, \frac{3\pi}{7}, \frac{4\pi}{7}, \frac{5\pi}{7}, \frac{6\pi}{7}, \frac{8\pi}{7}, \frac{9\pi}{7}, \frac{10\pi}{7}, \frac{11\pi}{7}, \frac{12\pi}{7}, \frac{13\pi}{7}, \frac{14\pi}{7}, 2\pi                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 159, Predicted: 159                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: Hence,
+\[\begin{pmatrix} t \\ t \\ t - 1 \end{pmatrix} \cdot \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} = 0.\]Then $(t)(1) + (t)(1) + (t - 1)(1) = 0.$  Solving, we find $t = \frac{1}{3}.$
+
+Then $P = \left( \frac{1}{3}, \frac{1}{3}, \frac{1}{3} \right),$ and so $CP = \boxed{\frac{\sqrt{6}}{3}}.$, Predicted: </math_solution>                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 49, Predicted: 6                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \left( -\frac{5}{3}, \frac{2}{3}, \frac{19}{3} \right), Predicted: \left(-\frac{5}{3}, \frac{2}{3}, \frac{19}{3}\right)                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{9}{10}, Predicted: 2.15058798608526                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 4096 \sqrt{2}, Predicted: (final value)                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 4, Predicted: 4.000000000000001                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 7, Predicted: 9.433981132056605                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: -1,0,1, Predicted: -\sqrt[3]{2}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 4, Predicted: 2                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \begin{pmatrix} 1 & 2 \\ -3 & -5 \end{pmatrix}, Predicted: \begin{pmatrix} 3.00 & 4.00 \\ -5.00 & -7.00 \end{pmatrix}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 7, Predicted: 3                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 1, -3, Predicted: 1.00, -3.00, 1.00                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: (7,21,35), Predicted: (-1, 5, 3)                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 32R^2 - 3(a^2 + b^2 + c^2), Predicted: a^2 + b^2 + c^2 + 3R^2                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 4^\circ, 20^\circ, Predicted: 0^\circ, 12^\circ, 24^\circ                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: -\frac{4}{3}, Predicted: -\frac{8}{3}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 65536, Predicted: 16                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: We can compute that $AB = 9.$
+
+Let $C$ be a point on the intersection of both spheres, so $AC = 5 \sqrt{5}$ and $BC = 2 \sqrt{17}.$
+
+[asy]
+unitsize(0.3 cm);
+
+pair A, B, C;
+
+A = (0,0);
+B = (9,0);
+C = intersectionpoint(arc(A,5*sqrt(5),0,180),arc(B,2*sqrt(17),0,180));
+
+draw(A--B--C--cycle);
+draw(Circle(A,5*sqrt(5)));
+draw(Circle(B,2*sqrt(17)));
+
+label("$A$", A, W);
+label("$B$", B, S);
+label("$C$", C, N);
+label("$9$", (A + B)/2, S, red);
+label("$5 \sqrt{5}$", (A + C)/2, NW, red, UnFill);
+label("$2 \sqrt{17}$", (B + C)/2, E, red, UnFill);
+[/asy]
+
+By Heron's formula, we can compute that $[ABC] = 3 \sqrt{149}.$
+
+Let $D$ be the foot of the perpendicular from $C$ to $\overline{AB}.$
+
+[asy]
+unitsize(0.3 cm);
+
+pair A, B, C, D;
+
+A = (0,0);
+B = (9,0);
+C = intersectionpoint(arc(A,5*sqrt(5),0,180),arc(B,2*sqrt(17),0,180));
+D = (C.x,0);
+
+draw(A--B--C--cycle);
+draw(C--D);
+
+label("$A$", A, W);
+label("$B$", B, S);
+label("$C$", C, N);
+label("$D$", D, S);
+[/asy]
+
+Then the intersection of both spheres is the circle centered at $D$ with radius $CD.$  Thus,
+\[CD = \frac{2 [ABC]}{AB} = \frac{6 \sqrt{149}}{9} = \boxed{\frac{2 \sqrt{149}}{3}}.\], Predicted: </math_solution>                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 5, Predicted: 5.0                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 50^\circ, Predicted: 75                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \begin{pmatrix} 1/50 & 7/50 \\ 7/50 & 49/50 \end{pmatrix}, Predicted: \begin{pmatrix} \frac{1}{50} & \frac{7}{50} \\ \frac{7}{50} & \frac{49}{50} \end{pmatrix}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 11x + 6y + 5z + 86 = 0, Predicted: 67x - 162y + 47z + 408 = 0                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: [asy]
+import three;
+import solids;
+
+size(200);
+currentprojection = perspective(6,3,2);
+
+triple A, B, C, M, O;
+
+A = (sqrt(6)/4,-sqrt(6)/4,1/2);
+B = (sqrt(6)/4,sqrt(6)/4,1/2);
+C = (sqrt(15)/5,0,sqrt(10)/5);
+O = (0,0,0);
+M = (A + B)/2;
+
+draw(surface(sphere(1)),gray(0.9),nolight);
+draw((-1.2,0,0)--(1.2,0,0),Arrow3(6));
+draw((0,-1.2,0)--(0,1.2,0),Arrow3(6));
+draw((0,0,-1.2)--(0,0,1.2),Arrow3(6));
+draw(O--A);
+draw(O--B);
+draw((1,0,0)..(1/sqrt(2),0,1/sqrt(2))..(0,0,1));
+draw((1/sqrt(2),1/sqrt(2),0)..(1,0,0)..(1/sqrt(2),-1/sqrt(2),0),red);
+draw((1/sqrt(2),1/sqrt(2),0)..(Sin(75)*Cos(45),Sin(75)*Sin(45),Cos(75))..B,red);
+draw((1/sqrt(2),-1/sqrt(2),0)..(Sin(75)*Cos(45),-Sin(75)*Sin(45),Cos(75))..A,red);
+draw(O--(1/sqrt(2),1/sqrt(2),0));
+draw(O--(1/sqrt(2),-1/sqrt(2),0));
+draw(A..(sqrt(15)/5,0,sqrt(10)/5)..B,red);
+draw(A--B);
+draw(O--C);
+
+label("$x$", (1.2,0,0), SW);
+label("$y$", (0,1.2,0), E);
+label("$z$", (0,0,1.2), N);
+label("$30^\circ$", 0.2*(Sin(75)*Cos(45),Sin(75)*Sin(45),Cos(75)) + (0,0.1,0), red);
+label("$30^\circ$", 0.2*(Sin(75)*Cos(45),-Sin(75)*Sin(45),Cos(75)) + (0,-0.15,0), red);
+label("$45^\circ$", (0.4,0.15,0), red);
+label("$45^\circ$", (0.5,-0.2,0), red);
+
+dot("$A$", A, NW);
+dot("$B$", B, NE);
+dot("$C$", C, NW);
+dot("$M$", M, SW);
+[/asy]
+
+Let $M$ be the midpoint of $\overline{AB},$ so
+\[M = \left( \frac{\sqrt{6}}{4}, 0, \frac{1}{2} \right).\]Then the distance from $O$ to $M$ is $\sqrt{\frac{6}{16} + \frac{1}{4}} = \frac{\sqrt{10}}{4}.$
+
+Since $O,$ $M,$ and $C$ are collinear, we can find $C$ by dividing the coordinates of $M$ by $\frac{\sqrt{10}}{4}.$  This gives us
+\[C = \left( \frac{\frac{\sqrt{6}}{4}}{\frac{\sqrt{10}}{4}}, 0, \frac{\frac{1}{2}}{\frac{\sqrt{10}}{4}} \right) = \left( \frac{\sqrt{15}}{5}, 0, \frac{\sqrt{10}}{5} \right).\]Then $\sin \theta$ is equal to the $z$-coordinate, which is $\boxed{\frac{\sqrt{10}}{5}}.$, Predicted: 0.49999999999999994                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 4, Predicted: 6                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{9}{32}, Predicted: 0.28125                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 30, Predicted: 25                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \dfrac{91}{216}, Predicted: 0.42129629629629617                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{11}{32}, Predicted: 0.5                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{3}{2}, Predicted: 1.5                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \begin{pmatrix} -5/13 \\ 12/13 \end{pmatrix}, Predicted: 1, -2.40000000000000                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{8}{81}, Predicted: 0.0988                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{21}{64}, Predicted: 0.25                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{2}, Predicted: 1                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{9}{32}, Predicted: 0.125                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{72}, Predicted: 0.013888888853039237                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 2 + \sqrt{3}, -2 + \sqrt{3}, Predicted: -0.267949192431123, 3.73205080756888                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{2}{3}, Predicted: 0.6666666160572688                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 2, -1, Predicted: 0, 3                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 720, Predicted: 1440                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 39, Predicted: 39                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \begin{pmatrix} 1 \\ -2 \\ -1 \end{pmatrix}, Predicted: \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \left( \frac{11}{15}, \frac{11}{60}, \frac{1}{12} \right), Predicted: (0.4638, 0.3551, 0.1810)                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 1680, Predicted: 1680                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{3}{4}, -\frac{3}{4}, Predicted: 0, 1, -1                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{3}{2} + \frac{3}{2} i, Predicted: 2 + i                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{3}{4}, Predicted: 0.265625                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: D, Predicted: \frac{C^2D + D - 2D^2}{(1 + D)^2}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{13}, Predicted: 0.25                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 20, Predicted: 20                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \begin{pmatrix} 1 \\ 4 \\ 3 \end{pmatrix}, Predicted: \begin{pmatrix} 1 \\ 4 \\ 3 \end{pmatrix}                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \left( 3, \frac{11 \pi}{8}, \frac{4 \pi}{5} \right), Predicted: (3, \frac{11\pi}{8}, \frac{4\pi}{5})                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{4036082}{4036081}, Predicted: (2018041.500000126+2018040.499999878j)                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 12, Predicted: 6                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{15}, Predicted: 0.06666666666666667                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 2 \sqrt{2}, Predicted: 2\sqrt{2}                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: -3, Predicted: -3                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 20160, Predicted: 161280                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: -\frac{1}{14}, Predicted: \text{Expression in terms of known values}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 116 - 75i, Predicted: 116.0000000000 + -75.0000000000i                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: -\frac{17}{19}, Predicted: </math_solution>                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{8}, Predicted: 0.12500000000000014                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 3^{2007}, Predicted: 0                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: (-7,10), Predicted: (7, -10)                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: (2,-1), Predicted: (0, 1)                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 14, Predicted: 16                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{19}{21}, Predicted: 0.9047619047619048                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 2 - 2 \sqrt{2}, Predicted: </math_solution>                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: Since $\mathbf{b}$ and $\mathbf{c}$ are both orthogonal to $\mathbf{a},$ $\mathbf{b} \times \mathbf{c}$ is proportional to $\mathbf{a}.$  Also,
+\[\|\mathbf{b} \times \mathbf{c}\| = \|\mathbf{b}\| \|\mathbf{c}\| \sin 60^\circ = \frac{\sqrt{3}}{2}.\]Hence,
+\[|\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})| = \|\mathbf{a}\| \|\mathbf{b} \times \mathbf{c}\| = \boxed{\frac{\sqrt{3}}{2}}.\], Predicted: </math_solution>                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 3, 11, 33, Predicted: 3, 11, 33                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: y = 2x + 3, Predicted: y = 2x + 3                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: (0,1), Predicted: [0, 1]                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 2 \sqrt{3} + 3, Predicted: </math_solution>                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 28800, Predicted: 28800                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 576, Predicted: 576                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 200, Predicted: 200                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{209}{210}, Predicted: 0.9952380952380953                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 1940, Predicted: 1940                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 147, Predicted: 147                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{5}{54}, Predicted: 0.092593                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \dfrac{72}{425}, Predicted: 0.169412                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 28, Predicted: 384                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{47}{1001}, Predicted: 0.04695304695304695                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \dfrac{47}{144}, Predicted: 0.32638888888888884                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 126, Predicted: 126                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 14, Predicted: 66                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \dfrac{49}{54}, Predicted: 0.90741                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 3, Predicted: 3                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 14,\!400, Predicted: 14400                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 40, Predicted: 0                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 165, Predicted: 165                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 19, Predicted: 24.666666666666668                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{11}{16}, Predicted: 0.6875                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 5,\!866,\!608, Predicted: 5866608                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{1}{10}, Predicted: 12/120                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{20}{27}, Predicted: 20/27                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{3}{5}, Predicted: 0.40                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \dfrac{7}{20}, Predicted: 0.4750                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 512, Predicted: 512                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 25, Predicted: 25                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 1041, Predicted: 1157                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 0.076, Predicted: 0.076                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 5120, Predicted: 5120                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 48, Predicted: 48                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 31, Predicted: 26                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{82}{147}, Predicted: 0.5578                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 7, Predicted: 7                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \dfrac{1904}{6561}, Predicted: 0.290200                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{295}{396}, Predicted: 590/792                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 84, Predicted: 288                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{35}{128}, Predicted: 0.2734375                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{625}{648}, Predicted: 0.964506                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{5}{16}, Predicted: 10/64                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 96, Predicted: 96                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 14, Predicted: 44                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 5, Predicted: 5                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: -\frac{1}{16}, Predicted: -0.0625                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{2}{3}, Predicted: 24/36                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{161}{36}, Predicted: 4.472222222222222                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{1}{3}, Predicted: 0.3333333333333333                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 29700, Predicted: 1                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 10, Predicted: 20                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{9}{32}, Predicted: \frac{7}{8}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{12}, Predicted: 0.0833                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{1}{3}, Predicted: 0.3333333333333333                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{35}{128}, Predicted: 0.2734375                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 28, Predicted: 28                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{40}{243}, Predicted: 0.16461                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{80}{243}, Predicted: 0.32922                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 4, Predicted: 3                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \dfrac{5}{162}, Predicted: 0.030864197530864196                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{12}{5,\!525}, Predicted: 0.002172                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 50, Predicted: 30                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \dfrac{5}{7}, Predicted: 0.750000                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 25, Predicted: 25                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{27}{512}, Predicted: 0.052734                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \dfrac{5}{12}, Predicted: 0.4166666666666667                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 36, Predicted: 36                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{5}{8}, Predicted: 0.625                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{23}{36}, Predicted: 23/36                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: 70, Predicted: 70                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{781}{1024}, Predicted: 0.7627                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 35, Predicted: 35                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 540, Predicted: 540                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{1}{2}, Predicted: 0.2222222222222222                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 968, Predicted: 968                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \pi-2, Predicted: 1.140752                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 14, Predicted: 14                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: 16, Predicted: 16                 self.math_equal: ✅, judge_symbolic_equality: ✅
+Expected: \frac{13}{90}, Predicted: 0.142308                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: 110, Predicted: 130                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{52}{3}, Predicted: 17.333333333333332                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{2}{5}, Predicted: 0.4                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{59}{125}, Predicted: 0.472                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{1}{2}, Predicted: \frac{2}{7}                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \$15.48, Predicted: 12.98                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{73}{100}, Predicted: 73/100                 self.math_equal: ❌, judge_symbolic_equality: ✅
+Expected: \frac{1}{2}, Predicted: 0.0                 self.math_equal: ❌, judge_symbolic_equality: ❌
+Expected: \frac{3}{4}, Predicted: 0.750204                 self.math_equal: ❌, judge_symbolic_equality: ❌

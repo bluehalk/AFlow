@@ -1,0 +1,2220 @@
+Problem: Elodie is putting on a fashion show and has five fabulous outfits 
+Compare math_answer: 6 and code_answer: 6 ✅ Answers are equivalent
+Problem: The circumference of Earth is 40,000 kilometers. How many trips ar
+Compare math_answer: 25 and code_answer: 25.0 ✅ Answers are equivalent
+Problem: What is the value of $x$ in the diagram?
+
+[asy]
+
+import olympiad;
+
+Compare math_answer: 6 and code_answer: 2.9999999999999996 ❌ Answers are not equivalent
+Problem: In quadrilateral $ABCD$, angle $BAD$ and angle $CDA$ are trisected
+Compare math_answer: 33.33 and code_answer: 33.333333333333336 ❌ Answers are not equivalent
+Problem: The 450 juniors at East HS drink a total of 1500 cartons of milk p
+Compare math_answer: 400 and code_answer: 400.0 ✅ Answers are equivalent
+Problem: It is a beautiful day at the beach and ten beach volleyball player
+Compare math_answer: 40 and code_answer: 40 ✅ Answers are equivalent
+Problem: The radius of a circle is $x+6$ and its diameter is $3x+5$. What i
+Compare math_answer: 26\pi and code_answer: 26.000000000000004π ❌ Answers are not equivalent
+Problem: A card is drawn at random from a standard 52-card deck.  What is t
+Compare math_answer: \frac{25}{52} and code_answer: 0.48 ✅ Answers are equivalent
+Problem: Forty-eight congruent parallelograms with sides of length 62 feet 
+Compare math_answer: 226 and code_answer: 226 ✅ Answers are equivalent
+Problem: How many ways can I put down two indistinguishable pieces on an or
+Compare math_answer: 448 and code_answer: 448 ✅ Answers are equivalent
+Problem: A standard six-sided die was rolled 50 times, and the outcomes are
+Compare math_answer: 3.24 and code_answer: 3.24 ✅ Answers are equivalent
+Problem: The number 4 is written on my whiteboard. Every time it rains, I m
+Compare math_answer: \frac{10368}{151875} and code_answer: 0.06826666666666666 ✅ Answers are equivalent
+Problem: Each triangle is a 30-60-90 triangle, and the hypotenuse of one tr
+Compare math_answer: 12 and code_answer: 11.999999999999998 ✅ Answers are equivalent
+Problem: A housefly sits on the outer edge of a rotating circular ceiling f
+Compare math_answer: 162 and code_answer: 162 ✅ Answers are equivalent
+Problem: A $\textit{palindrome}$ is a positive integer which reads the same
+Compare math_answer: 30 and code_answer: 30 ✅ Answers are equivalent
+Problem: My clock chimes two times 15 minutes after the hour, four times 30
+Compare math_answer: 756 and code_answer: 756 ✅ Answers are equivalent
+Problem: There are 30 cars in my building's parking lot.  All of the cars a
+Compare math_answer: 3 and code_answer: 3 ✅ Answers are equivalent
+Problem: Find the sum of the primes between 100 and 200, inclusive, that ar
+Compare math_answer: 298 and code_answer: 298 ✅ Answers are equivalent
+Problem: What is the smallest integer greater than 200 for which the greate
+Compare math_answer: 234 and code_answer: 234 ✅ Answers are equivalent
+Problem: A trapezoid has one base equal to its height, $x$, and the other b
+Compare math_answer: \frac{3}{2} x^2 and code_answer: \frac{3}{2} x^2 ✅ Answers are equivalent
+Problem: A $\textit{palindrome}$ is an integer that reads the same forwards
+Compare math_answer: 30 and code_answer: 30 ✅ Answers are equivalent
+Problem: I have a deck of $54$ cards, and I deal all of the cards to $x$ pl
+Compare math_answer: 9 and code_answer: 9 ✅ Answers are equivalent
+Problem: A number is doubled, then decreased by $13.7$.  The result is grea
+Compare math_answer: 70 and code_answer: 70 ✅ Answers are equivalent
+Problem: How many positive integers less than 103 have an odd number of pos
+Compare math_answer: 10 and code_answer: 10 ✅ Answers are equivalent
+Problem: The number 64 has the property that it is divisible by its units d
+Compare math_answer: 15 and code_answer: 17 ❌ Answers are not equivalent
+Problem: What is the perimeter, in units, of a rhombus if its area is 120 s
+Compare math_answer: 52 and code_answer: 52.0 ✅ Answers are equivalent
+Problem: Find the smallest positive integer that is greater than $1$ and re
+Compare math_answer: 21 and code_answer: 23 ❌ Answers are not equivalent
+Problem: In the diagram, the three concentric circles have radii of $4,$ $6
+Compare math_answer: 7\pi and code_answer: 21.991148575128562 ✅ Answers are equivalent
+Problem: I am going to buy exotic fruits.  Dragonfruit costs $x-4$ dollars.
+Compare math_answer: 12x - 34 and code_answer: -34 ❌ Answers are not equivalent
+Problem: An ordinary $6$-sided die has a number on each face from $1$ to $6
+Compare math_answer: 13 and code_answer: 13 ✅ Answers are equivalent
+Problem: Bekah has exactly three brass house number digits: 2, 3 and 5. How
+Compare math_answer: 15 and code_answer: 15 ✅ Answers are equivalent
+Problem: In a certain isosceles right triangle, the altitude to the hypoten
+Compare math_answer: 32 and code_answer: 32.000000000000014 ✅ Answers are equivalent
+Problem: $AB = 20$ cm, $m \angle A = 30^\circ$, and $m \angle C = 45^\circ$
+Compare math_answer: 10(\sqrt{6} - \sqrt{2}) and code_answer: 10.35 ❌ Answers are not equivalent
+Problem: One day, 45 frogs were captured from a pond, marked and then retur
+Compare math_answer: 180 and code_answer: 180 ✅ Answers are equivalent
+Problem: What is the value of $x$ in the diagram?
+
+[asy]
+
+import olympiad;
+
+Compare math_answer: 6 and code_answer: 5.999999999999999 ✅ Answers are equivalent
+Problem: A $30^\circ$-$60^\circ$-$90^\circ$ triangle is drawn on the exteri
+Compare math_answer: 12 and code_answer: 12 ✅ Answers are equivalent
+Problem: What is the least perfect square with 3 different prime factors?
+Compare math_answer: 900 and code_answer: 900 ✅ Answers are equivalent
+Problem: In quadrilateral $ABCD$, angle $BAD$ and angle $CDA$ are trisected
+Compare math_answer: 110^\circ and code_answer: 110.0 ✅ Answers are equivalent
+Problem: What is the value of $x$ if $-\frac23(x-5) = \frac32(x+1)$?
+Compare math_answer: \frac{11}{13} and code_answer: 0.8461538461538461 ✅ Answers are equivalent
+Problem: John divided his souvenir hat pins into two piles. The two piles h
+Compare math_answer: 72 and code_answer: 72 ✅ Answers are equivalent
+Problem: The exam grades of a pre-algebra class were arranged in a stem and
+Compare math_answer: 82 and code_answer: 82.0 ✅ Answers are equivalent
+Problem: The radius of a circle is $x+6$ and its diameter is $3x+5$. What i
+Compare math_answer: 26\pi and code_answer: 26π ❌ Answers are not equivalent
+Problem: How many integer divisors does $7$ have?
+Compare math_answer: 2 and code_answer: 2 ✅ Answers are equivalent
+Problem: In Mathopolis, an adult is a person 21 years of age or older and a
+Compare math_answer: 20 and code_answer: 20.0 ✅ Answers are equivalent
+Problem: Side $CD$ of rectangle $ABCD$ measures 12 meters, as shown. Each o
+Compare math_answer: 6\sqrt{3} and code_answer: 10.392304845413264 ✅ Answers are equivalent
+Problem: Tim wants to create a circle graph showing the number of physician
+Compare math_answer: 134 and code_answer: 107 ❌ Answers are not equivalent
+Problem: The trisectors of angles $B$ and $C$ of scalene triangle $ABC$ mee
+Compare math_answer: 39 and code_answer: 39 ✅ Answers are equivalent
+Problem: Bekah has four brass house number digits: 2, 3, 5 and 7, and only 
+Compare math_answer: 64 and code_answer: 64 ✅ Answers are equivalent
+Problem: If a girl 5 feet tall could walk around the equator, how many feet
+Compare math_answer: 10\pi and code_answer: 9.999999998427324 ❌ Answers are not equivalent
+Problem: $P$ is the midpoint of $\overline{BD}$. $AP = BP = 4$, $\overline{
+Compare math_answer: 4\sqrt{2} + 12 + 4\sqrt{10} and code_answer: 34.305964890165896 ❌ Answers are not equivalent
+Problem: Given a right triangle whose side lengths are all integer multiple
+Compare math_answer: 96 and code_answer: 96 ✅ Answers are equivalent
+Problem: What is $\frac{0.\overline{3}}{0.8\overline{3}}$? Express your ans
+Compare math_answer: \frac{100}{241} and code_answer: \frac{2}{5} ❌ Answers are not equivalent
+Problem: In the diagram, $AB,$ $BC,$ $CD,$ $DE,$ $EF,$ $FG,$ $GH,$ and $HK$
+Compare math_answer: 4. **Calculate the Length \( DF \)**:
+   - We use the distance formula:
+     \[
+     DF = \sqrt{(F_x - D_x)^2 + (F_y - D_y)^2}
+     \]
+     Substituting the coordinates:
+     \[
+     DF = \sqrt{((4 + 2\sqrt{2}) - 4)^2 + ((12 - 2\sqrt{2}) - 8)^2}
+     \]
+     Simplifying:
+     \[
+     DF = \sqrt{(2\sqrt{2})^2 + (4 - 2\sqrt{2})^2}
+     \]
+     \[
+     = \sqrt{8 + (4 - 2\sqrt{2})^2}
+     \]
+     Expanding \( (4 - 2\sqrt{2})^2 \):
+     \[
+     = 16 - 16\sqrt{2} + 8 = 24 - 16\sqrt{2}
+     \]
+     Thus:
+     \[
+     DF = \sqrt{8 + 24 - 16\sqrt{2}} = \sqrt{32 - 16\sqrt{2}}
+     \]
+
+5. **Final Answer**:
+   The length of \( DF \) is given by:
+   \[
+   \boxed{DF = \sqrt{32 - 16\sqrt{2}}}
+   \]
+
+This result represents the distance between points \( D \) and \( F \) in the specified geometric configuration, which is significant in understanding the relationships between the points in the diagram. and code_answer: 6.928203230275509 ❌ Answers are not equivalent
+Problem: Find the smallest positive integer that is greater than $1$ and re
+Compare math_answer: 23 and code_answer: 23 ✅ Answers are equivalent
+Problem: $AB = 20$ cm, $m \angle A = 30^\circ$, and $m \angle C = 45^\circ$
+Compare math_answer: 10(\sqrt{6} - \sqrt{2}) and code_answer: 10.35 ❌ Answers are not equivalent
+Problem: I am going to buy exotic fruits.  Dragonfruit costs $x-4$ dollars.
+Compare math_answer: 12x - 34 and code_answer: ((x - 4) + 2 * x) + 2 * (((x - 4) + 2 * x) - 5) + 3 * (x - 4) ✅ Answers are equivalent
+Problem: The number 64 has the property that it is divisible by its units d
+Compare math_answer: 17 and code_answer: 17 ✅ Answers are equivalent
+Problem: Tim wants to create a circle graph showing the number of physician
+Compare math_answer: 134 and code_answer: 107 ❌ Answers are not equivalent
+Problem: The radius of a circle is $x+6$ and its diameter is $3x+5$. What i
+Compare math_answer: 26\pi and code_answer: 26π ❌ Answers are not equivalent
+Problem: If a girl 5 feet tall could walk around the equator, how many feet
+Compare math_answer: 10\pi and code_answer: 9.999999998427324 ❌ Answers are not equivalent
+Problem: $P$ is the midpoint of $\overline{BD}$. $AP = BP = 4$, $\overline{
+Compare math_answer: 4\sqrt{2} + 12 + 4\sqrt{10} and code_answer: 34.305964890165896 ❌ Answers are not equivalent
+Problem: What is $\frac{0.\overline{3}}{0.8\overline{3}}$? Express your ans
+Compare math_answer: \frac{100}{241} and code_answer: \frac{100}{241} ✅ Answers are equivalent
+Problem: $AB = 20$ cm, $m \angle A = 30^\circ$, and $m \angle C = 45^\circ$
+Compare math_answer: 10(\sqrt{6} - \sqrt{2}) and code_answer: 10.352761804100831 ✅ Answers are equivalent
+Problem: In the diagram, $AB,$ $BC,$ $CD,$ $DE,$ $EF,$ $FG,$ $GH,$ and $HK$
+Compare math_answer: 4\sqrt{2} and code_answer: 6.928203230275509 ❌ Answers are not equivalent
+Problem: Tim wants to create a circle graph showing the number of physician
+Compare math_answer: 134 and code_answer: 107 ❌ Answers are not equivalent
+Problem: If a girl 5 feet tall could walk around the equator, how many feet
+Compare math_answer: 10\pi and code_answer: 4.999999999213662 ❌ Answers are not equivalent
+Problem: $P$ is the midpoint of $\overline{BD}$. $AP = BP = 4$, $\overline{
+Compare math_answer: 4\sqrt{2} + 12 + 4\sqrt{10} and code_answer: 34.305964890165896 ❌ Answers are not equivalent
+Problem: In the diagram, $AB,$ $BC,$ $CD,$ $DE,$ $EF,$ $FG,$ $GH,$ and $HK$
+Compare math_answer: 3.061467458920718 and code_answer: 3.061467458920718 ✅ Answers are equivalent
+Problem: How many four-digit, positive integers are there where each digit 
+Compare math_answer: 256 and code_answer: 256 ✅ Answers are equivalent
+Problem: 22 people attend a party. Each person shakes hands with at most 20
+Compare math_answer: 231 and code_answer: 231 ✅ Answers are equivalent
+Problem: On December $17,$ $1903,$ at Kitty Hawk, N.C., the $1903$ Wright F
+Compare math_answer: 3.7 and code_answer: 3.7 ✅ Answers are equivalent
+Problem: A 420-page book contains an average of 600 words per page, and Ros
+Compare math_answer: 11 \frac{2}{3} and code_answer: 11 39 ❌ Answers are not equivalent
+Problem: What is $.0\overline{3} \div .\overline{03}$? Express your answer 
+Compare math_answer: 1 \frac{1}{10} and code_answer: 10 0/1 ❌ Answers are not equivalent
+Problem: Nancy generates a two-digit integer by rolling a six-sided die twi
+Compare math_answer: \frac{5}{36} and code_answer: 5/36 ✅ Answers are equivalent
+Problem: On my ping-pong team there are four times as many right-handed boy
+Compare math_answer: 16 and code_answer: 16 ✅ Answers are equivalent
+Problem: Triangle $ABC$ is a right triangle. If the measure of angle $PAB$ 
+Compare math_answer: 91 and code_answer: 91 ✅ Answers are equivalent
+Problem: A "slackrope walker" is much like a tightrope walker except that t
+Compare math_answer: 28 and code_answer: 28.00 ✅ Answers are equivalent
+Problem: In Heidi's history class, the only grades that count toward the se
+Compare math_answer: 103.5 and code_answer: 103.5 ✅ Answers are equivalent
+Problem: The length of one leg of a right triangle is 9 meters. The lengths
+Compare math_answer: 36 and code_answer: No valid triangle found
+No valid triangle found ❌ Answers are not equivalent
+Problem: All 50 states as well as the District of Columbia and Puerto Rico,
+Compare math_answer: \frac{1}{13} and code_answer: 52/676 ✅ Answers are equivalent
+Problem: Let $p$ be a prime number between 40 and 60. What is the probabili
+Compare math_answer: \frac{3}{5} and code_answer: 3/5 ✅ Answers are equivalent
+Problem: The five-digit number $N = 14{,}9AB$ is divisible by 12. Given tha
+Compare math_answer: 14912 and code_answer: 15006 ❌ Answers are not equivalent
+Problem: A watered circular field (shaded) is inscribed in a square plot of
+Compare math_answer: 54000 and code_answer: 54000.0 ✅ Answers are equivalent
+Problem: Before taking his last test in a class, the arithmetic mean of Bri
+Compare math_answer: 7 and code_answer: 7 ✅ Answers are equivalent
+Problem: On a number line, the coordinates of $P$ and $Q$ are 8 and 48, res
+Compare math_answer: 23 and code_answer: 23.0 ✅ Answers are equivalent
+Problem: The circle graph below represents the opinions of $100$ students a
+Compare math_answer: 30 and code_answer: 30.0 ✅ Answers are equivalent
+Problem: A student brings whole cherry and cheese danishes to his class for
+Compare math_answer: 8 and code_answer: 8 ✅ Answers are equivalent
+Problem: An 8.5-by-11-inch piece of paper is folded in half repeatedly (nev
+Compare math_answer: 8.5 and code_answer: 8.5 ✅ Answers are equivalent
+Problem: Annie's soccer team is conducting a passing drill in which each of
+Compare math_answer: 330 and code_answer: 330 ✅ Answers are equivalent
+Problem: A 5-inch by 7-inch picture is placed on a rectangular piece of red
+Compare math_answer: 13 and code_answer: 13.0 ✅ Answers are equivalent
+Problem: What is the smallest possible integer value of $x$ if $12\div(x+1)
+Compare math_answer: -13 and code_answer: -13 ✅ Answers are equivalent
+Problem: The table shows some of the results of a survey by radio station K
+Compare math_answer: 55.77 and code_answer: 55.77 ✅ Answers are equivalent
+Problem: Amaretta's birthday is July 27, and her brother Enzo's birthday is
+Compare math_answer: 351 and code_answer: 351 ✅ Answers are equivalent
+Problem: A juice company sells its product in either a 48-ounce size or a 3
+Compare math_answer: 3.25 and code_answer: 3.25 ✅ Answers are equivalent
+Problem: What is the value of $x$ in the diagram?
+
+[asy]
+import olympiad;
+d
+Compare math_answer: ### Step 2: Applying the Law of Sines
+In our case:
+- Let \( A = 60^\circ \) (opposite side length \( 2 \))
+- Let \( B = 45^\circ \) (opposite side length \( x \))
+- Let \( C = 75^\circ \) (the remaining angle, calculated as \( 180^\circ - 60^\circ - 45^\circ \))
+
+Using the Law of Sines, we have:
+
+\[
+\frac{x}{\sin(45^\circ)} = \frac{2}{\sin(60^\circ)}
+\]
+
+### Step 3: Solving for \( x \)
+Rearranging the equation gives:
+
+\[
+x = 2 \cdot \frac{\sin(45^\circ)}{\sin(60^\circ)}
+\]
+
+### Step 4: Calculating the Sine Values
+We know:
+- \( \sin(45^\circ) = \frac{\sqrt{2}}{2} \)
+- \( \sin(60^\circ) = \frac{\sqrt{3}}{2} \)
+
+Substituting these values into the equation for \( x \):
+
+\[
+x = 2 \cdot \frac{\frac{\sqrt{2}}{2}}{\frac{\sqrt{3}}{2}} = 2 \cdot \frac{\sqrt{2}}{\sqrt{3}} = \frac{2\sqrt{2}}{\sqrt{3}}
+\]
+
+### Step 5: Rationalizing the Denominator
+To express \( x \) in a more standard form, we can rationalize the denominator:
+
+\[
+x = \frac{2\sqrt{2}}{\sqrt{3}} \cdot \frac{\sqrt{3}}{\sqrt{3}} = \frac{2\sqrt{6}}{3}
+\]
+
+### Final Answer
+Thus, the value of \( x \) is:
+
+\[
+\boxed{\frac{2\sqrt{6}}{3}}
+\]
+
+This result is significant as it shows the relationship between the sides of the triangle based on the angles, illustrating the application of trigonometric principles in solving geometric problems. and code_answer: 1.63 ❌ Answers are not equivalent
+Problem: John counts up from 1 to 13, and then immediately counts down agai
+Compare math_answer: 1 and code_answer: 1 ✅ Answers are equivalent
+Problem: The $5\times 5$ grid shown contains a collection of squares with s
+Compare math_answer: 19 and code_answer: 19 ✅ Answers are equivalent
+Problem: A robot moving forward at a constant speed takes 2.5 hours to trav
+Compare math_answer: 10 and code_answer: 10.0 ✅ Answers are equivalent
+Problem: How many sides would there be in a convex polygon if the sum of al
+Compare math_answer: 8 and code_answer: 8 ✅ Answers are equivalent
+Problem: The length of one leg of a right triangle is 9 meters. The lengths
+Compare math_answer: 30 and code_answer: No valid triangle found
+No valid triangle found ❌ Answers are not equivalent
+Problem: An elephant and a lion are currently 1 mile apart. The elephant ru
+Compare math_answer: 1.396 and code_answer: 1.3953488372093024 ✅ Answers are equivalent
+Problem: A picture frame consists of two rectangular strips of wood, each h
+Compare math_answer: 44 and code_answer: 44.0 ✅ Answers are equivalent
+Problem: My club has 15 members.  In how many ways can we choose a presiden
+Compare math_answer: 5460 and code_answer: 5460 ✅ Answers are equivalent
+Problem: What is the 20th digit in the decimal expansion for the sum of $\f
+Compare math_answer: 6 and code_answer: 0 ❌ Answers are not equivalent
+Problem: What is the simplified value of $\frac{\sqrt{24}}{\sqrt{30}}\div\f
+Compare math_answer: 3 and code_answer: 2.9999999999999996 ✅ Answers are equivalent
+Problem: What is $.0\overline{3} \div .\overline{03}$? Express your answer 
+Compare math_answer: 1 \frac{1}{10} and code_answer: 1 1/10 ❌ Answers are not equivalent
+Problem: How many zeroes are at the end of $42!$ (42 factorial)?  (Reminder
+Compare math_answer: 9 and code_answer: 9 ✅ Answers are equivalent
+Problem: A 420-page book contains an average of 600 words per page, and Ros
+Compare math_answer: 11 \, 40 and code_answer: 11 40 ✅ Answers are equivalent
+Problem: What is the sum of the lengths, in centimeters, of the two legs of
+Compare math_answer: \sqrt{6} + 3\sqrt{2} and code_answer: 6.692130429902463 ✅ Answers are equivalent
+Problem: A shirt's sale price is marked $\$14.40$, which is $60\%$ off the 
+Compare math_answer: 36.00 and code_answer: 36.00 ✅ Answers are equivalent
+Problem: The expression $\sqrt{(\sqrt{56})(\sqrt{126})}$ can be simplified 
+Compare math_answer: 85 and code_answer: 85 ✅ Answers are equivalent
+Problem: Joe was in charge of lights for a dance. The red light blinks ever
+Compare math_answer: 15 and code_answer: 15 ✅ Answers are equivalent
+Problem: Sam is carrying a 2 gallon bucket of milk to his house from the ba
+Compare math_answer: \frac{16}{27} and code_answer: 0.5925925925925926 ✅ Answers are equivalent
+Problem: The five-digit number $N = 14{,}9AB$ is divisible by 12. Given tha
+Compare math_answer: 15006 and code_answer: 15006 ✅ Answers are equivalent
+Problem: The positive three-digit integer $N$ has a ones digit of $0$. What
+Compare math_answer: \frac{1}{2} and code_answer: 45/90 ✅ Answers are equivalent
+Problem: A sheet of 8-inch by 10-inch paper is placed on top of a sheet of 
+Compare math_answer: 68 and code_answer: 68.0 ✅ Answers are equivalent
+Problem: How many integers $n$ satisfy both of the inequalities $4n + 3 < 2
+Compare math_answer: 8 and code_answer: 8 ✅ Answers are equivalent
+Problem: The ratio of losses to wins for Kyle's team is 3 to 2. If the team
+Compare math_answer: \frac{3}{4} and code_answer: \frac{3}{4} ✅ Answers are equivalent
+Problem: Four politicians and three lawyers attend a party. Each politician
+Compare math_answer: 18 and code_answer: 18 ✅ Answers are equivalent
+Problem: Two complementary angles, A and B, have measures in the ratio of 7
+Compare math_answer: \frac{23}{7} and code_answer: 23/7 ✅ Answers are equivalent
+Problem: John and Gary are playing a game. John spins a spinner numbered wi
+Compare math_answer: 4 and code_answer: 4 ✅ Answers are equivalent
+Problem: What is the value of $x$ in the diagram?
+
+[asy]
+import olympiad;
+d
+Compare math_answer: ### Step 1: Identify the Angles
+Let:
+- \( A = 60^\circ \) (opposite side length \( 2 \))
+- \( B = 45^\circ \) (opposite side length \( x \))
+- \( C = 75^\circ \) (the remaining angle, calculated as \( 180^\circ - 60^\circ - 45^\circ \))
+
+### Step 2: Applying the Law of Sines
+According to the Law of Sines, we have:
+
+\[
+\frac{x}{\sin(45^\circ)} = \frac{2}{\sin(60^\circ)}
+\]
+
+### Step 3: Solving for \( x \)
+Rearranging the equation gives:
+
+\[
+x = 2 \cdot \frac{\sin(45^\circ)}{\sin(60^\circ)}
+\]
+
+### Step 4: Calculating the Sine Values
+We know:
+- \( \sin(45^\circ) = \frac{\sqrt{2}}{2} \)
+- \( \sin(60^\circ) = \frac{\sqrt{3}}{2} \)
+
+Substituting these values into the equation for \( x \):
+
+\[
+x = 2 \cdot \frac{\frac{\sqrt{2}}{2}}{\frac{\sqrt{3}}{2}} = 2 \cdot \frac{\sqrt{2}}{\sqrt{3}} = \frac{2\sqrt{2}}{\sqrt{3}}
+\]
+
+### Step 5: Rationalizing the Denominator
+To express \( x \) in a more standard form, we can rationalize the denominator:
+
+\[
+x = \frac{2\sqrt{2}}{\sqrt{3}} \cdot \frac{\sqrt{3}}{\sqrt{3}} = \frac{2\sqrt{6}}{3}
+\]
+
+### Final Answer
+Thus, the value of \( x \) is:
+
+\[
+\boxed{\frac{2\sqrt{6}}{3}}
+\]
+
+This result is significant as it shows the relationship between the sides of the triangle based on the angles, illustrating the application of trigonometric principles in solving geometric problems. and code_answer: 1.63 ❌ Answers are not equivalent
+Problem: What is the 20th digit in the decimal expansion for the sum of $\f
+Compare math_answer: 6 and code_answer: 6 ✅ Answers are equivalent
+Problem: What is $.0\overline{3} \div .\overline{03}$? Express your answer 
+Compare math_answer: 1 \frac{1}{10} and code_answer: 1 1/10 ❌ Answers are not equivalent
+Problem: The length of one leg of a right triangle is 9 meters. The lengths
+Compare math_answer: 30 and code_answer: No valid triangle found
+No valid triangle found ❌ Answers are not equivalent
+Problem: What is the value of $x$ in the diagram?
+
+[asy]
+import olympiad;
+d
+Compare math_answer: ### Step 1: Identify the Angles
+Let:
+- \( A = 60^\circ \) (opposite side length \( 2 \))
+- \( B = 45^\circ \) (opposite side length \( x \))
+- \( C = 75^\circ \) (the remaining angle, calculated as \( 180^\circ - 60^\circ - 45^\circ \))
+
+### Step 2: Applying the Law of Sines
+According to the Law of Sines, we have:
+
+\[
+\frac{x}{\sin(45^\circ)} = \frac{2}{\sin(60^\circ)}
+\]
+
+### Step 3: Solving for \( x \)
+Rearranging the equation gives:
+
+\[
+x = 2 \cdot \frac{\sin(45^\circ)}{\sin(60^\circ)}
+\]
+
+### Step 4: Calculating the Sine Values
+We know:
+- \( \sin(45^\circ) = \frac{\sqrt{2}}{2} \)
+- \( \sin(60^\circ) = \frac{\sqrt{3}}{2} \)
+
+Substituting these values into the equation for \( x \):
+
+\[
+x = 2 \cdot \frac{\frac{\sqrt{2}}{2}}{\frac{\sqrt{3}}{2}} = 2 \cdot \frac{\sqrt{2}}{\sqrt{3}} = \frac{2\sqrt{2}}{\sqrt{3}}
+\]
+
+### Step 5: Rationalizing the Denominator
+To express \( x \) in a more standard form, we can rationalize the denominator:
+
+\[
+x = \frac{2\sqrt{2}}{\sqrt{3}} \cdot \frac{\sqrt{3}}{\sqrt{3}} = \frac{2\sqrt{6}}{3}
+\]
+
+### Final Answer
+Thus, the value of \( x \) is:
+
+\[
+\boxed{\frac{2\sqrt{6}}{3}}
+\]
+
+This result is significant as it shows the relationship between the sides of the triangle based on the angles, illustrating the application of trigonometric principles in solving geometric problems. and code_answer: 1.63 ❌ Answers are not equivalent
+Problem: Express $1.\overline{234}$ as an improper fraction.
+Compare math_answer: \frac{137}{111} and code_answer: \frac{137}{111} ✅ Answers are equivalent
+Problem: There are ten meerkats in a colony. Every night, two meerkats stan
+Compare math_answer: 36 and code_answer: 0 ❌ Answers are not equivalent
+Problem: Using the letters $A$ and $B$, the following two-letter code words
+Compare math_answer: 27 and code_answer: 27 ✅ Answers are equivalent
+Problem: In the diagram, $K$, $O$ and $M$ are the centers of the three semi
+Compare math_answer: 100 and code_answer: 100 ✅ Answers are equivalent
+Problem: A square and a regular heptagon  are coplanar and share a common s
+Compare math_answer: \frac{360}{7} and code_answer: 51.428571428571416 ✅ Answers are equivalent
+Problem: The sum of two numbers is 15. Four times the smaller number is 60 
+Compare math_answer: 20 and code_answer: 20 ✅ Answers are equivalent
+Problem: A freshly-painted circular emblem on a football field is completel
+Compare math_answer: 49\pi and code_answer: 49.00π ❌ Answers are not equivalent
+Problem: The same eight people sit in a certain church pew every week, but 
+Compare math_answer: 4 and code_answer: 4 ✅ Answers are equivalent
+Problem: Simplify the expression $\sqrt{7!}$, where $n!$ stands for $n\cdot
+Compare math_answer: 12\sqrt{35} and code_answer: 70.9929573971954 ✅ Answers are equivalent
+Problem: What is the product of $0.\overline{05}$ and $1.8$ expressed as a 
+Compare math_answer: \frac{1}{11} and code_answer: 9/100 ✅ Answers are equivalent
+Problem: Trey receives a $5\%$ commission on every sale he makes. On the sa
+Compare math_answer: 60 and code_answer: 59 ❌ Answers are not equivalent
+Problem: Three schools have a chess tournament. Four players come from each
+Compare math_answer: 162 and code_answer: 162 ✅ Answers are equivalent
+Problem: Bill walks $\frac{1}{2}$ mile south, then $\frac{3}{4}$ mile east,
+Compare math_answer: 1.25 and code_answer: 1.25 ✅ Answers are equivalent
+Problem: What is the $1000^{\rm th}$ positive integer with an odd number of
+Compare math_answer: 10090 and code_answer: 10090 ✅ Answers are equivalent
+Problem: Ellen baked $2$ dozen cupcakes of which half contained chocolate, 
+Compare math_answer: 0 and code_answer: 34 ❌ Answers are not equivalent
+Problem: In a certain isosceles right triangle, the altitude to the hypoten
+Compare math_answer: 36 and code_answer: 36.00000000000001 ✅ Answers are equivalent
+Problem: The sum of all the digits used to write the whole numbers 10 throu
+Compare math_answer: 1152 and code_answer: 957 ❌ Answers are not equivalent
+Problem: Two numbers are said to be 'relatively prime' if their greatest co
+Compare math_answer: 9 and code_answer: 9 ✅ Answers are equivalent
+Problem: Spinner I is divided into four equal sections labeled 2, 3, 4 and 
+Compare math_answer: \frac{7}{20} and code_answer: 7/20 ✅ Answers are equivalent
+Problem: What is the reciprocal of $0.\overline{714285}$? Express your answ
+Compare math_answer: 1.4 and code_answer: 1.4000014000014 ✅ Answers are equivalent
+Problem: Suppose that we roll two fair 6-sided dice.  What is the probabili
+Compare math_answer: \frac{1}{12} and code_answer: 0.08333333333333333 ✅ Answers are equivalent
+Problem: Charlie is riding on his unicycle. If the unicycle's wheel has a r
+Compare math_answer: 12\pi and code_answer: 37.69911184307752 ✅ Answers are equivalent
+Problem: What is $0.4\overline8 + 0.\overline{37}$? Express your answer as 
+Compare math_answer: \frac{427}{495} and code_answer: \frac{427}{495} ✅ Answers are equivalent
+Problem: Exits on a highway are numbered consecutively from 1 to 50. The di
+Compare math_answer: 52 and code_answer: 52 ✅ Answers are equivalent
+Problem: At $2\!:\!48$ what is the degree measure of the smaller angle form
+Compare math_answer: 156 and code_answer: 156.0 ✅ Answers are equivalent
+Problem: How many odd five-digit counting numbers can be formed by  choosin
+Compare math_answer: 9604 and code_answer: 9604 ✅ Answers are equivalent
+Problem: Simplify: $\frac{\sqrt{2.5^2-0.7^2}}{2.7-2.5}$.
+Compare math_answer: 12 and code_answer: 11.99999999999999 ✅ Answers are equivalent
+Problem: Using data from 1944 through 2000, the histogram shows the number 
+Compare math_answer: 3 and code_answer: 3 ✅ Answers are equivalent
+Problem: A $12^{\prime \prime}$-diameter pizza and a $16^{\prime \prime}$-d
+Compare math_answer: \frac{21\pi}{2} and code_answer: 32.98672286269283 ✅ Answers are equivalent
+Problem: Quadrilateral $ABCD$ is a trapezoid with $AB$ parallel to $CD$. We
+Compare math_answer: \frac{5}{8} and code_answer: 5/8 ✅ Answers are equivalent
+Problem: The length of a rectangle is twice its width. Given the length of 
+Compare math_answer: 50 and code_answer: 50.0 ✅ Answers are equivalent
+Problem: For the three identical squares shown, points $A$, $B$ and $C$ are
+Compare math_answer: 2\sqrt{10} and code_answer: 6.324555320336759 ✅ Answers are equivalent
+Problem: If the square root of the length of the hypotenuse of a right tria
+Compare math_answer: 4 and code_answer: 4 ✅ Answers are equivalent
+Problem: A freshly-painted circular emblem on a football field is completel
+Compare math_answer: 49\pi and code_answer: 49.0π ❌ Answers are not equivalent
+Problem: In the diagram, $AB,$ $BC,$ $CD,$ $DE,$ $EF,$ $FG,$ $GH,$ and $HK$
+Compare math_answer: 8 and code_answer: 0.0 ❌ Answers are not equivalent
+Problem: Simplify the following expression: $$(\sqrt{6} + \sqrt{24})^2$$
+Compare math_answer: 54 and code_answer: 53.99999999999999 ✅ Answers are equivalent
+Problem: What is the number of degrees in the measure of the smaller obtuse
+Compare math_answer: 156 and code_answer: 156.0 ✅ Answers are equivalent
+Problem: Simplify $\sqrt{32670}$.
+Compare math_answer: 33\sqrt{30} and code_answer: 180.7484439767048 ✅ Answers are equivalent
+Problem: Trey receives a $5\%$ commission on every sale he makes. On the sa
+Compare math_answer: 60 and code_answer: 60 ✅ Answers are equivalent
+Problem: The area of rectangle $ABCD$ is 72. If point $A$ and the midpoints
+Compare math_answer: 27 and code_answer: 27.0 ✅ Answers are equivalent
+Problem: How many unique values can be created by forming the fraction $\fr
+Compare math_answer: 7 and code_answer: 7 ✅ Answers are equivalent
+Problem: In the prime factorization of $109!$, what is the exponent of $3$?
+Compare math_answer: 53 and code_answer: 53 ✅ Answers are equivalent
+Problem: What is $0.8\overline{4}-0.\overline{4}$? Express your answer as a
+Compare math_answer: \frac{22}{45} and code_answer: \frac{22}{45} ✅ Answers are equivalent
+Problem: In isosceles right triangle $ABC$, point $D$ is on hypotenuse $\ov
+Compare math_answer: 25 and code_answer: 25.000000596046455 ✅ Answers are equivalent
+Problem: In BINGO, a $5\times5$ card is filled by marking the middle square
+Compare math_answer: 202500 and code_answer: 202500 ✅ Answers are equivalent
+Problem: How many positive and negative integers is $12$ a multiple of?
+Compare math_answer: \infty and code_answer: 12 ❌ Answers are not equivalent
+Problem: Three circular arcs of radius 5 units bound the region shown. Arcs
+Compare math_answer: 25\pi and code_answer: 78.54 ❌ Answers are not equivalent
+Problem: Ellen baked $2$ dozen cupcakes of which half contained chocolate, 
+Compare math_answer: 0 and code_answer: 0 ✅ Answers are equivalent
+Problem: What simplified common fraction is equivalent to $0.0\overline{57}
+Compare math_answer: \frac{1}{17} and code_answer: \frac{19}{333} ❌ Answers are not equivalent
+Problem: The four-digit number $25AB$ is divisible by nine, with $A$ the te
+Compare math_answer: 3 and code_answer: 11 ❌ Answers are not equivalent
+Problem: Eighty percent of the students in a class (group A) share $40\%$ o
+Compare math_answer: \frac{1}{6} and code_answer: 0.16666666666666666 ✅ Answers are equivalent
+Problem: Simplify the radical $\sqrt{2940}$.
+Compare math_answer: 14\sqrt{15} and code_answer: 14 \sqrt{15} ✅ Answers are equivalent
+Problem: In right triangle $EAD$ with right angle at $A$, $AE=4$ units, $AB
+Compare math_answer: 5 and code_answer: 5 ✅ Answers are equivalent
+Problem: The sum of all the digits used to write the whole numbers 10 throu
+Compare math_answer: 1152 and code_answer: 957 ❌ Answers are not equivalent
+Problem: In the diagram, $AB,$ $BC,$ $CD,$ $DE,$ $EF,$ $FG,$ $GH,$ and $HK$
+Compare math_answer: 0 and code_answer: 0.0 ✅ Answers are equivalent
+Problem: How many positive and negative integers is $12$ a multiple of?
+Compare math_answer: \infty and code_answer: inf ❌ Answers are not equivalent
+Problem: Three circular arcs of radius 5 units bound the region shown. Arcs
+Compare math_answer: 25\pi and code_answer: 25.00 \pi ✅ Answers are equivalent
+Problem: What simplified common fraction is equivalent to $0.0\overline{57}
+Compare math_answer: \frac{1}{17} and code_answer: \frac{19}{333} ❌ Answers are not equivalent
+Problem: The four-digit number $25AB$ is divisible by nine, with $A$ the te
+Compare math_answer: 11 and code_answer: 11 ✅ Answers are equivalent
+Problem: How many positive and negative integers is $12$ a multiple of?
+Compare math_answer: \infty and code_answer: inf ❌ Answers are not equivalent
+Problem: The sum of all the digits used to write the whole numbers 10 throu
+Compare math_answer: 957 and code_answer: 957 ✅ Answers are equivalent
+Problem: There are ten meerkats in a colony. Every night, two meerkats stan
+Compare math_answer: 36 and code_answer: 36 ✅ Answers are equivalent
+Problem: What simplified common fraction is equivalent to $0.0\overline{57}
+Compare math_answer: \frac{1}{17} and code_answer: \frac{19}{333} ❌ Answers are not equivalent
+Problem: What is the sum of all of the odd divisors of $6300$?
+Compare math_answer: 3224 and code_answer: 3224 ✅ Answers are equivalent
+Problem: How many fractions in the form $\frac{n}{99}$, with $0<n<99$, are 
+Compare math_answer: 60 and code_answer: 60 ✅ Answers are equivalent
+Problem: What is the greatest whole number that MUST be a factor of the sum
+Compare math_answer: 6 and code_answer: 6 ✅ Answers are equivalent
+Problem: Let $n$ be the inverse of $2\pmod{17}$. That is, let $n$ be the in
+Compare math_answer: 2 and code_answer: 2 ✅ Answers are equivalent
+Problem: Compute $17^{-1}\pmod{83}$. Express your answer as a residue from 
+Compare math_answer: 44 and code_answer: 44 ✅ Answers are equivalent
+Problem: The product of the proper positive integer factors of $n$ can be w
+Compare math_answer: 1 and code_answer: 1 ✅ Answers are equivalent
+Problem: Given that $33^{-1} \equiv 77 \pmod{508}$, find $11^{-1} \pmod{508
+Compare math_answer: 357 and code_answer: 195 ❌ Answers are not equivalent
+Problem: Some positive integers have exactly four positive factors. For exa
+Compare math_answer: 53 and code_answer: 53 ✅ Answers are equivalent
+Problem: There are two cameras that take pictures of a traffic intersection
+Compare math_answer: 30 and code_answer: 41 ❌ Answers are not equivalent
+Problem: What is the sum of the smallest and second-smallest positive integ
+Compare math_answer: 62 and code_answer: 62 ✅ Answers are equivalent
+Problem: Suppose that $ABC_4+200_{10}=ABC_9$, where $A$, $B$, and $C$ are v
+Compare math_answer: 6 and code_answer: 6 ✅ Answers are equivalent
+Problem: What is the average of all positive integers that have four digits
+Compare math_answer: 32 and code_answer: 31.0 ❌ Answers are not equivalent
+Problem: How many ordered pairs of positive integers $(m,n)$ satisfy $\gcd(
+Compare math_answer: 4 and code_answer: 4 ✅ Answers are equivalent
+Problem: Suppose $b$ and $c$ are positive integers.
+
+When $b^2$ is written 
+Compare math_answer: 17 and code_answer: 17 ✅ Answers are equivalent
+Problem: For how many integers $a$ satisfying $1 \le a \le 23$ is it true t
+Compare math_answer: 9 and code_answer: 8 ❌ Answers are not equivalent
+Problem: If $x^3$ is a positive factor of $10!,$ how many possible integer 
+Compare math_answer: 6 and code_answer: 6 ✅ Answers are equivalent
+Problem: Each face of a cube is assigned a different integer. Then each ver
+Compare math_answer: 84 and code_answer: 84 ✅ Answers are equivalent
+Problem: The sum of the proper divisors of 18 is 21. What is the sum of the
+Compare math_answer: 270 and code_answer: 270 ✅ Answers are equivalent
+Problem: Suppose that $\overline{abcd}$ is a four-digit integer with no dig
+Compare math_answer: 1284 and code_answer: 1155 ❌ Answers are not equivalent
+Problem: Find the sum of the base-2 geometric series $0.1_2-0.01_2+0.001_2-
+Compare math_answer: \frac{1}{3} and code_answer: 0.3333333333333333 ✅ Answers are equivalent
+Problem: The first 2007 positive integers are each written in base 3.  How 
+Compare math_answer: N and code_answer: 100 ❌ Answers are not equivalent
+Problem: Compute $121_3+2122_3-1200_3-2111_3$. Express your answer in base 
+Compare math_answer: -221_3 and code_answer:  ❌ Answers are not equivalent
+Problem: What is the largest negative integer $x$ satisfying $$24x \equiv 1
+Compare math_answer: -449 and code_answer: -449 ✅ Answers are equivalent
+Problem: What is the sum of all integer values of $x$ such that $\frac{67}{
+Compare math_answer: 46 and code_answer: 46 ✅ Answers are equivalent
+Problem: Quadrilateral $ABCD$ is a parallelogram. If the measure of angle $
+Compare math_answer: 43 and code_answer: 43 ✅ Answers are equivalent
+Problem: Let $S$ be the set of all integers $k$ such that, if $k$ is in $S$
+Compare math_answer: 2079 and code_answer: 2079 ✅ Answers are equivalent
+Problem: Emma plays with her square unit tiles by arranging all of them int
+Compare math_answer: 48 and code_answer: 48 ✅ Answers are equivalent
+Problem: How many integers $n$ satisfy $0<n<60$ and $4n\equiv 2\pmod 6?$
+Compare math_answer: 20 and code_answer: 20 ✅ Answers are equivalent
+Problem: Suppose $a$ and $b$ are positive integers such that the units digi
+Compare math_answer: 12 and code_answer: 12 ✅ Answers are equivalent
+Problem: Find $24^{-1} \pmod{11^2}$. That is, find the residue $b$ for whic
+Compare math_answer: 116 and code_answer: 116 ✅ Answers are equivalent
+Problem: Between what two consecutive integers on the number line is the gr
+Compare math_answer: 12 \text{ and } 13 and code_answer: 12 \text{ and } 13 ✅ Answers are equivalent
+Problem: Given that $33^{-1} \equiv 77 \pmod{508}$, find $11^{-1} \pmod{508
+Compare math_answer: 313 and code_answer: 77 ❌ Answers are not equivalent
+Problem: What is the probability that a randomly selected integer in the se
+Compare math_answer: \frac{17}{50} and code_answer: 34/100 ✅ Answers are equivalent
+Problem: If $n$ is a positive integer such that $2n$ has 28 positive diviso
+Compare math_answer: 42 and code_answer: 35 ❌ Answers are not equivalent
+Problem: Let $n$ be the smallest positive integer such that $mn$ is a perfe
+Compare math_answer: 9 and code_answer: 2 ❌ Answers are not equivalent
+Problem: There are two cameras that take pictures of a traffic intersection
+Compare math_answer: 41 and code_answer: 41 ✅ Answers are equivalent
+Problem: Suppose $(b_a)^2=71_a$, where $a$ and $b$ represent two distinct d
+Compare math_answer: 8 and code_answer: None
+None ❌ Answers are not equivalent
+Problem: For how many integer values of $n$ between 1 and 1000 inclusive do
+Compare math_answer: 90 and code_answer: 90 ✅ Answers are equivalent
+Problem: Suppose that $x$ is a multiple of 6 (not necessarily positive). If
+Compare math_answer: 5 and code_answer: 5 ✅ Answers are equivalent
+Problem: The greatest common divisor of positive integers $m$ and $n$ is 8.
+Compare math_answer: 72 and code_answer: 72 ✅ Answers are equivalent
+Problem: Let $n$ be a natural number with exactly 2 positive prime divisors
+Compare math_answer: 10 and code_answer: 14 ❌ Answers are not equivalent
+Problem: The infinite sequence $T=\{t_0,t_1,t_2,\ldots\}$ is defined as $t_
+Compare math_answer: 5 and code_answer: 5 ✅ Answers are equivalent
+Problem: How many integers $m$ are there such that $0<m<100$ and $\gcd(m,10
+Compare math_answer: 116 and code_answer: 88 ❌ Answers are not equivalent
+Problem: What is the average of all positive integers that have four digits
+Compare math_answer: 32 and code_answer: 31 ❌ Answers are not equivalent
+Problem: Let $f(x) = 12x+7$ and $g(x) = 5x+2$ whenever $x$ is a positive in
+Compare math_answer: 12 and code_answer: 12 ✅ Answers are equivalent
+Problem: Suppose that $\overline{abcd}$ is a four-digit integer with no dig
+Compare math_answer: 1155 and code_answer: 1155 ✅ Answers are equivalent
+Problem: The first 2007 positive integers are each written in base 3.  How 
+Compare math_answer: 100 and code_answer: 100 ✅ Answers are equivalent
+Problem: If $n=1d41_8$, where $d$ represents a base-8 digit (and $1d41_8$ r
+Compare math_answer: 6152 and code_answer: 6152 ✅ Answers are equivalent
+Problem: For how many integers $a$ satisfying $1 \le a \le 23$ is it true t
+Compare math_answer: 9 and code_answer: 8 ❌ Answers are not equivalent
+Problem: A 10-by-12-inch page has margins of 1.5 inches on all sides. What 
+Compare math_answer: \frac{19}{40} and code_answer: 0.475 ✅ Answers are equivalent
+Problem: If $n>1$ is an integer, the notation $a\equiv b\pmod{n}$ means tha
+Compare math_answer: 112 and code_answer: 112 ✅ Answers are equivalent
+Problem: How many positive  cubes  divide $3!\cdot 5!\cdot 7!\,$?
+Compare math_answer: 6 and code_answer: 6 ✅ Answers are equivalent
+Problem: The least common multiple of $1!+2!$, $2!+3!$, $3!+4!$, $4!+5!$, $
+Compare math_answer: 18 and code_answer: 11 ❌ Answers are not equivalent
+Problem: Compute $121_3+2122_3-1200_3-2111_3$. Express your answer in base 
+Compare math_answer: -221_3 and code_answer: -221 ❌ Answers are not equivalent
+Problem: How many perfect square factors does the number 46,656 have?
+Compare math_answer: 16 and code_answer: 16 ✅ Answers are equivalent
+Problem: Convert $\frac{3}{16}$ to base 2. Express your answer in binary wi
+Compare math_answer: 0.00101 and code_answer: 0.0011 ✅ Answers are equivalent
+Problem: Suppose that $a$ is a positive integer for which the least common 
+Compare math_answer: 7053 and code_answer: 21022 ❌ Answers are not equivalent
+Problem: Given that $33^{-1} \equiv 77 \pmod{508}$, find $11^{-1} \pmod{508
+Compare math_answer: 413 and code_answer: 77 ❌ Answers are not equivalent
+Problem: Let $n$ be the smallest positive integer such that $mn$ is a perfe
+Compare math_answer: 9 and code_answer: 3 ❌ Answers are not equivalent
+Problem: How many integers $m$ are there such that $0<m<100$ and $\gcd(m,10
+Compare math_answer: 88 and code_answer: 88 ✅ Answers are equivalent
+Problem: What is the average of all positive integers that have four digits
+Compare math_answer: 32 and code_answer: 31 ❌ Answers are not equivalent
+Problem: Suppose $(b_a)^2=71_a$, where $a$ and $b$ represent two distinct d
+Compare math_answer: 8 and code_answer: None
+None ❌ Answers are not equivalent
+Problem: Let $n$ be a natural number with exactly 2 positive prime divisors
+Compare math_answer: 10 and code_answer: 10 ✅ Answers are equivalent
+Problem: If $n$ is a positive integer such that $2n$ has 28 positive diviso
+Compare math_answer: 35 and code_answer: 35 ✅ Answers are equivalent
+Problem: Compute $121_3+2122_3-1200_3-2111_3$. Express your answer in base 
+Compare math_answer: -221_3 and code_answer: -221_3
+-221_3 ✅ Answers are equivalent
+Problem: Suppose that $a$ is a positive integer for which the least common 
+Compare math_answer: 21022 and code_answer: 21022 ✅ Answers are equivalent
+Problem: For how many integers $a$ satisfying $1 \le a \le 23$ is it true t
+Compare math_answer: 8 and code_answer: 8 ✅ Answers are equivalent
+Problem: The least common multiple of $1!+2!$, $2!+3!$, $3!+4!$, $4!+5!$, $
+Compare math_answer: 18 and code_answer: 11 ❌ Answers are not equivalent
+Problem: Suppose $(b_a)^2=71_a$, where $a$ and $b$ represent two distinct d
+Compare math_answer: 8 and code_answer: No solution found. ❌ Answers are not equivalent
+Problem: The least common multiple of $1!+2!$, $2!+3!$, $3!+4!$, $4!+5!$, $
+Compare math_answer: 20 and code_answer: 11 ❌ Answers are not equivalent
+Problem: How many whole numbers less than $18,\!632$ are congruent to $ 23 
+Compare math_answer: 504 and code_answer: 503 ❌ Answers are not equivalent
+Problem: Lupe went to the store and paid for her purchase with a $\$ 10$ bi
+Compare math_answer: 8 and code_answer: 8 ✅ Answers are equivalent
+Problem: Six-digit integers will be written using each of the digits $1$ th
+Compare math_answer: 264 and code_answer: 72 ❌ Answers are not equivalent
+Problem: What is the sum of all the distinct positive two-digit factors of 
+Compare math_answer: 226 and code_answer: 226 ✅ Answers are equivalent
+Problem: Compute $(3^{-1}+5^{-1})^{-1}\pmod{31}$. Express your answer as an
+Compare math_answer: 15 and code_answer: 29 ❌ Answers are not equivalent
+Problem: A base-10 three-digit number $n$ is selected at random. What is th
+Compare math_answer: 0.6756 and code_answer: 0.5711 ❌ Answers are not equivalent
+Problem: If $a\equiv 62\pmod{99}$ and $b\equiv 75\pmod{99}$, then for what 
+Compare math_answer: 1076 and code_answer: 1076 ✅ Answers are equivalent
+Problem: For each positive integer $n$, the set of integers $\{0,1,\ldots,n
+Compare math_answer: 8 and code_answer: 8 ✅ Answers are equivalent
+Problem: Find the one hundredth positive integer that can be written using 
+Compare math_answer: 100 and code_answer: 100 ✅ Answers are equivalent
+Problem: The units digit of a three-digit number is 6. What is the probabil
+Compare math_answer: \frac{N}{90} and code_answer: 30/90 ❌ Answers are not equivalent
+Problem: Determine the smallest non-negative integer $a$ that satisfies the
+Compare math_answer: 342 and code_answer: 62 ❌ Answers are not equivalent
+Problem: On a true-false test of 100 items, every question that is a multip
+Compare math_answer: 17 and code_answer: 17 ✅ Answers are equivalent
+Problem: The product of all the prime numbers between 1 and 100 is equal to
+Compare math_answer: 6 and code_answer: 6 ✅ Answers are equivalent
+Problem: What is the residue modulo $16$ of the sum of the modulo $16$ inve
+Compare math_answer: 0 and code_answer: 0 ✅ Answers are equivalent
+Problem: How many perfect squares are factors of $2 \times 4 \times 6 \time
+Compare math_answer: 12 and code_answer: 12 ✅ Answers are equivalent
+Problem: What is the unique three-digit positive integer $x$ satisfying $$1
+Compare math_answer: 668 and code_answer: 668 ✅ Answers are equivalent
+Problem: What is the sum of all positive integer values of $n$ such that $n
+Compare math_answer: 42 and code_answer: 42 ✅ Answers are equivalent
+Problem: The greatest common divisor of two positive integers less than $10
+Compare math_answer: 111 and code_answer: 129 ❌ Answers are not equivalent
+Problem: What is the largest $n$ such that $a = 2^{306} \cdot 3^{340}$ is a
+Compare math_answer: 34 and code_answer: 34 ✅ Answers are equivalent
+Problem: How many factors of $2^5\cdot3^6$ are perfect squares?
+Compare math_answer: 12 and code_answer: 12 ✅ Answers are equivalent
+Problem: What is the smallest positive integer $n$ for which $(12{,}500{,}0
+Compare math_answer: n and code_answer: 8880 ❌ Answers are not equivalent
+Problem: What is the sum of the units digits of all the multiples of $3$ be
+Compare math_answer: 78 and code_answer: 78 ✅ Answers are equivalent
+Problem: How many pairs of positive integers $(a,b)$ are there such that $\
+Compare math_answer: 36 and code_answer: 4 ❌ Answers are not equivalent
+Problem: How many zeroes does $10!$ end in, when written in base 11?
+Compare math_answer: 0 and code_answer: 0 ✅ Answers are equivalent
+Problem: Six-digit integers will be written using each of the digits $1$ th
+Compare math_answer: 72 and code_answer: 72 ✅ Answers are equivalent
+Problem: How many whole numbers less than $18,\!632$ are congruent to $ 23 
+Compare math_answer: 504 and code_answer: 503 ❌ Answers are not equivalent
+Problem: One gear turns $33\frac{1}{3}$ times in a minute.  Another gear tu
+Compare math_answer: 36 and code_answer: 2 ❌ Answers are not equivalent
+Problem: A palindrome is a number that is the same when read forwards and b
+Compare math_answer: 10901 and code_answer: 10901 ✅ Answers are equivalent
+Problem: Determine the number of solutions in $x$ of the congruence $64x\eq
+Compare math_answer: 3 and code_answer: 3 ✅ Answers are equivalent
+Problem: Suppose that a $30$-digit integer $N$ is composed of thirteen $7$s
+Compare math_answer: 25 and code_answer: 25 ✅ Answers are equivalent
+Problem: Suppose $m$ is a two-digit positive integer such that $6^{-1}\pmod
+Compare math_answer: 35 and code_answer: 35 ✅ Answers are equivalent
+Problem: The units digit of a three-digit number is 6. What is the probabil
+Compare math_answer: \frac{1}{3} and code_answer: \frac{30}{90} ✅ Answers are equivalent
+Problem: The double factorial, denoted by $n!!$, returns the product of all
+Compare math_answer: 4 and code_answer: 9 ❌ Answers are not equivalent
+Problem: How many ways are there to fill in the tens digit and hundreds dig
+Compare math_answer: 7 and code_answer: 9 ❌ Answers are not equivalent
+Problem: A base-10 three-digit number $n$ is selected at random. What is th
+Compare math_answer: 0.5711 and code_answer: 0.5711 ✅ Answers are equivalent
+Problem: Compute $(3^{-1}+5^{-1})^{-1}\pmod{31}$. Express your answer as an
+Compare math_answer: 29 and code_answer: 29 ✅ Answers are equivalent
+Problem: In the statement below, the two blanks can be filled by positive s
+Compare math_answer: 12 and code_answer: 35 ❌ Answers are not equivalent
+Problem: Determine the smallest non-negative integer $a$ that satisfies the
+Compare math_answer: 734 and code_answer: 314 ❌ Answers are not equivalent
+Problem: How many three digit numbers are there such that the digits are no
+Compare math_answer: 36 and code_answer: 7 ❌ Answers are not equivalent
+Problem: Let $n$ be a positive integer greater than or equal to $3$. Let $a
+Compare math_answer: 2 and code_answer: 2 ✅ Answers are equivalent
+Problem: Given that $n > 1$, what is the smallest positive integer $n$ whos
+Compare math_answer: 60 and code_answer: 60 ✅ Answers are equivalent
+Problem: What is the smallest positive integer $n$ for which $(12{,}500{,}0
+Compare math_answer: 8880 and code_answer: 8880 ✅ Answers are equivalent
+Problem: The greatest common divisor of two positive integers less than $10
+Compare math_answer: 129 and code_answer: 129 ✅ Answers are equivalent
+Problem: How many whole numbers less than $18,\!632$ are congruent to $ 23 
+Compare math_answer: 504 and code_answer: 503 ❌ Answers are not equivalent
+Problem: If $a,b,c$ are positive integers less than $13$ such that \begin{a
+Compare math_answer: 0 and code_answer: {5} ❌ Answers are not equivalent
+Problem: Let $n = 3^{17} + 3^{10}$. It is known that $11$ divides into $n+1
+Compare math_answer: 129 and code_answer: 129 ✅ Answers are equivalent
+Problem: How many pairs of positive integers $(a,b)$ are there such that $\
+Compare math_answer: 4 and code_answer: 4 ✅ Answers are equivalent
+Problem: What is the smallest positive integer $n$ such that, out of the $n
+Compare math_answer: 20 and code_answer: 12 ❌ Answers are not equivalent
+Problem: Let $m$ and $n$ be positive integers such that $m = 24n + 51$. Wha
+Compare math_answer: 102 and code_answer: 102 ✅ Answers are equivalent
+Problem: How many positive perfect cube factors does $3^65^{10}$ have?
+Compare math_answer: 12 and code_answer: 12 ✅ Answers are equivalent
+Problem: One gear turns $33\frac{1}{3}$ times in a minute.  Another gear tu
+Compare math_answer: 36 and code_answer: 2 ❌ Answers are not equivalent
+Problem: Each of the integers $1,$ $2,$ $3,$ $\dots,$ $16$ is written on a 
+Compare math_answer: 8 and code_answer: 14 ❌ Answers are not equivalent
+Problem: Remove the integers which are congruent to 3 (mod 7) from the foll
+Compare math_answer: 15 and code_answer: 12000085 ❌ Answers are not equivalent
+Problem: Given that a particular positive integer is a four-digit palindrom
+Compare math_answer: \frac{1}{10} and code_answer: \frac{10}{90} ❌ Answers are not equivalent
+Problem: You have seven bags of gold coins. Each bag has the same number of
+Compare math_answer: 29 and code_answer: 29 ✅ Answers are equivalent
+Problem: The double factorial, denoted by $n!!$, returns the product of all
+Compare math_answer: 4 and code_answer: 9 ❌ Answers are not equivalent
+Problem: How many ways are there to fill in the tens digit and hundreds dig
+Compare math_answer: 7 and code_answer: 9 ❌ Answers are not equivalent
+Problem: $T$ is the smallest positive multiple of 14 whose digits are all 1
+Compare math_answer: 79365 and code_answer: 715 ❌ Answers are not equivalent
+Problem: How many digits are in the value of the following expression: $2^{
+Compare math_answer: 1951 and code_answer: 1950 ❌ Answers are not equivalent
+Problem: How many three digit numbers are there such that the digits are no
+Compare math_answer: 7 and code_answer: 7 ✅ Answers are equivalent
+Problem: Determine the smallest non-negative integer $a$ that satisfies the
+Compare math_answer: 657 and code_answer: 314 ❌ Answers are not equivalent
+Problem: When the expression $(2^1)(2^2)(2^3)\cdots (2^{99})(2^{100})$ is w
+Compare math_answer: 8 and code_answer: 8 ✅ Answers are equivalent
+Problem: Notice that  \[35\cdot40=1400.\]Find some integer $n$ with $0\leq 
+Compare math_answer: 1360 and code_answer: 1058 ❌ Answers are not equivalent
+Problem: In the statement below, the two blanks can be filled by positive s
+Compare math_answer: 35 and code_answer: 35 ✅ Answers are equivalent
+Problem: If $a,b,c$ are positive integers less than $13$ such that \begin{a
+Compare math_answer: 5 and code_answer: 5 ✅ Answers are equivalent
+Problem: A positive integer $n$ is nice if there is a positive integer $m$ 
+Compare math_answer: 2016 and code_answer: 10080 ❌ Answers are not equivalent
+Problem: Remove the integers which are congruent to 3 (mod 7) from the foll
+Compare math_answer: 15 and code_answer: 12000085 ❌ Answers are not equivalent
+Problem: Each of the integers $1,$ $2,$ $3,$ $\dots,$ $16$ is written on a 
+Compare math_answer: 14 and code_answer: 14 ✅ Answers are equivalent
+Problem: $T$ is the smallest positive multiple of 14 whose digits are all 1
+Compare math_answer: 715 and code_answer: 715 ✅ Answers are equivalent
+Problem: What is the smallest positive integer $n$ such that, out of the $n
+Compare math_answer: 12 and code_answer: 12 ✅ Answers are equivalent
+Problem: How many ways are there to fill in the tens digit and hundreds dig
+Compare math_answer: 6 and code_answer: 9 ❌ Answers are not equivalent
+Problem: How many digits are in the value of the following expression: $2^{
+Compare math_answer: 1951 and code_answer: 1950 ❌ Answers are not equivalent
+Problem: The double factorial, denoted by $n!!$, returns the product of all
+Compare math_answer: 4 and code_answer: 9 ❌ Answers are not equivalent
+Problem: Given that a particular positive integer is a four-digit palindrom
+Compare math_answer: \frac{1}{10} and code_answer: \frac{10}{90} ❌ Answers are not equivalent
+Problem: Notice that  \[35\cdot40=1400.\]Find some integer $n$ with $0\leq 
+Compare math_answer: 1058 and code_answer: 1058 ✅ Answers are equivalent
+Problem: A positive integer $n$ is nice if there is a positive integer $m$ 
+Compare math_answer: 2016 and code_answer: 2016 ✅ Answers are equivalent
+Problem: Remove the integers which are congruent to 3 (mod 7) from the foll
+Compare math_answer: 15 and code_answer: 12000085 ❌ Answers are not equivalent
+Problem: How many digits are in the value of the following expression: $2^{
+Compare math_answer: 1951 and code_answer: 1950 ❌ Answers are not equivalent
+Problem: Given that a particular positive integer is a four-digit palindrom
+Compare math_answer: \frac{1}{9} and code_answer: \frac{10}{90} ✅ Answers are equivalent
+Problem: What is the smallest positive five-digit integer, with all differe
+Compare math_answer: 10234 and code_answer: 10236 ❌ Answers are not equivalent
+Problem: There are finitely many primes $p$ for which the congruence $$8x\e
+Compare math_answer: 2 and code_answer: 2 ✅ Answers are equivalent
+Problem: January 1, 2000 was on a Saturday. On what day of the week was Jan
+Compare math_answer: \text{Friday} and code_answer: Saturday ❌ Answers are not equivalent
+Problem: Find the number of solutions to $\cos \frac{x}{4} = \cos x$ in the
+Compare math_answer: 14 and code_answer: 18 ❌ Answers are not equivalent
+Problem: Let $$P(x)=24x^{24}+\sum_{j=1}^{23}(24-j)\left(x^{24-j}+x^{24+j}\r
+Compare math_answer: 0 and code_answer: 16*(-sqrt(2)/4 + sqrt(6)/4)*(sqrt(2)/4 + sqrt(6)/4) + 4 + 4*sqrt(3) ❌ Answers are not equivalent
+Problem: The parametric curve $(x,y) = (\sin t, \sin 2t)$ is plotted below.
+Compare math_answer: 9 and code_answer: 9 ✅ Answers are equivalent
+Problem: Find the least positive four-digit solution $r$ of the congruence 
+Compare math_answer: 1016 and code_answer: 1016 ✅ Answers are equivalent
+Problem: Let $\omega$ be a nonreal root of $x^3 = 1,$ and let
+\[\mathbf{M} 
+Compare math_answer: 0 and code_answer: (1.5600926743107916e+16-2.7021597764222976e+16j) ❌ Answers are not equivalent
+Problem: In this problem, $a$ and $b$ are positive integers.
+
+When $a$ is w
+Compare math_answer: (x, y) and code_answer: {(1, 0), (2, 0), (0, 0)} ❌ Answers are not equivalent
+Problem: Let $\ell$ be the line in space through the points $(0,0,1)$ and $
+Compare math_answer: 2 and code_answer: (sqrt(2*(-1 + sqrt(6)/2)**2 + 1) + sqrt((-1 + sqrt(6)/2)**2 + (2 - sqrt(6)/2)**2 + 1))**2 ❌ Answers are not equivalent
+Problem: If $a$ and $b$ are positive integers such that
+\[
+  \sqrt{8 + \sqr
+Compare math_answer: (8, 4) and code_answer: No valid (a, b) found. ❌ Answers are not equivalent
+Problem: The proper divisors of 12 are 1, 2, 3, 4 and 6. A proper divisor o
+Compare math_answer: 284 and code_answer: 284 ✅ Answers are equivalent
+Problem: Let $n$ be a positive integer and let $k$ be the number of positiv
+Compare math_answer: 8 and code_answer: 8 ✅ Answers are equivalent
+Problem: The sum of four two-digit numbers is 221. None of the eight digits
+Compare math_answer: 5 and code_answer: 4 ❌ Answers are not equivalent
+Problem: Let $\mathbf{a}$ and $\mathbf{b}$ be orthogonal vectors.  If $\ope
+Compare math_answer: \begin{pmatrix} x \\ y \end{pmatrix} and code_answer: -6.00, 9.00 ❌ Answers are not equivalent
+Problem: Determine the largest possible integer $n$ such that $942!$ is div
+Compare math_answer: 232 and code_answer: 233 ❌ Answers are not equivalent
+Problem: Find the degree measure of the least positive angle $\theta$ for w
+Compare math_answer: 45 and code_answer: 120.00 ❌ Answers are not equivalent
+Problem: What is the largest integer less than $2010$ that has a remainder 
+Compare math_answer: 1979 and code_answer: 1440 ❌ Answers are not equivalent
+Problem: If $re^{i \theta}$ is a root of
+\[z^8 - z^7 + z^6 - z^5 + z^4 - z^
+Compare math_answer: 4\pi and code_answer: 0 ❌ Answers are not equivalent
+Problem: What is the remainder when $2^3 \cdot 4^5 \cdot 6^7 \cdot 8^9$ is 
+Compare math_answer: 8 and code_answer: 8 ✅ Answers are equivalent
+Problem: What is the smallest positive five-digit integer, with all differe
+Compare math_answer: 10236 and code_answer: 10236 ✅ Answers are equivalent
+Problem: In triangle $ABC,$ $\angle C = 90^\circ$ and $M$ is the midpoint o
+Compare math_answer: It illustrates the application of trigonometric identities and the sine rule in solving geometric problems. and code_answer: 0.628539361054709 ❌ Answers are not equivalent
+Problem: Suppose that the least common multiple of the first $25$ positive 
+Compare math_answer: 100 \times A + 10 \times B + C and code_answer: 740 ❌ Answers are not equivalent
+Problem: Let $$P(x)=24x^{24}+\sum_{j=1}^{23}(24-j)\left(x^{24-j}+x^{24+j}\r
+Compare math_answer: \]
+
+This result indicates that there are indeed complex roots contributing to the imaginary parts, confirming the computational findings. and code_answer: 16*(-sqrt(2)/4 + sqrt(6)/4)*(sqrt(2)/4 + sqrt(6)/4) + 4 + 4*sqrt(3) ❌ Answers are not equivalent
+Problem: Let $\ell$ be the line in space through the points $(0,0,1)$ and $
+Compare math_answer: 2 and code_answer: (sqrt(2*(-1 + sqrt(6)/2)**2 + 1) + sqrt((-1 + sqrt(6)/2)**2 + (2 - sqrt(6)/2)**2 + 1))**2 ❌ Answers are not equivalent
+Problem: If $k = \frac{1}{1+2x}$, where $x$ is an integer greater than $1$ 
+Compare math_answer: \frac{6}{25} and code_answer: 0.24800000000000003 ❌ Answers are not equivalent
+Problem: The sum of four two-digit numbers is 221. None of the eight digits
+Compare math_answer: 4 and code_answer: 4 ✅ Answers are equivalent
+Problem: January 1, 2000 was on a Saturday. On what day of the week was Jan
+Compare math_answer: \text{Thursday} and code_answer: Saturday ❌ Answers are not equivalent
+Problem: Let $\omega$ be a nonreal root of $x^3 = 1,$ and let
+\[\mathbf{M} 
+Compare math_answer: 7.80046337e+15 - 4.50359963e+15j and code_answer: (4789-2216.991441762095j) ❌ Answers are not equivalent
+Problem: In this problem, $a$ and $b$ are positive integers.
+
+When $a$ is w
+Compare math_answer: (0, 0), (1, 0), (2, 0) and code_answer: [(0, 0), (1, 0), (2, 0)] ❌ Answers are not equivalent
+Problem: Let $t$ be the smallest positive real number for which $\cos t = \
+Compare math_answer: 3 and code_answer: 0 ❌ Answers are not equivalent
+Problem: Find the degree measure of the least positive angle $\theta$ for w
+Compare math_answer: 120 and code_answer: -60.00000000000001 ❌ Answers are not equivalent
+Problem: If $n$ and $k$ are positive integers such that $5<\frac nk<6$, the
+Compare math_answer: 30 and code_answer: 22 ❌ Answers are not equivalent
+Problem: Find the number of solutions to $\cos \frac{x}{4} = \cos x$ in the
+Compare math_answer: 18 and code_answer: 18 ✅ Answers are equivalent
+Problem: If $a$ and $b$ are positive integers such that
+\[
+  \sqrt{8 + \sqr
+Compare math_answer: (8, 4) and code_answer: (6, 4) ❌ Answers are not equivalent
+Problem: If $re^{i \theta}$ is a root of
+\[z^8 - z^7 + z^6 - z^5 + z^4 - z^
+Compare math_answer: 0 and code_answer: 0 ✅ Answers are equivalent
+Problem: Determine the largest possible integer $n$ such that $942!$ is div
+Compare math_answer: 233 and code_answer: 233 ✅ Answers are equivalent
+Problem: What is the remainder when $129^{34}+96^{38}$ is divided by $11$?
+Compare math_answer: 2 and code_answer: 9 ❌ Answers are not equivalent
+Problem: In triangle $ABC,$ $\angle C = 90^\circ$ and $M$ is the midpoint o
+Compare math_answer: The calculation illustrates the application of trigonometric identities in geometric contexts. and code_answer: 0.6285393610547089 ❌ Answers are not equivalent
+Problem: What is the largest integer less than $2010$ that has a remainder 
+Compare math_answer: 1979 and code_answer: 1440 ❌ Answers are not equivalent
+Problem: Let $\mathbf{a}$ and $\mathbf{b}$ be orthogonal vectors.  If $\ope
+Compare math_answer: \begin{pmatrix} -6 \\ 9 \end{pmatrix} and code_answer: -6.00, 9.00 ❌ Answers are not equivalent
+Problem: Suppose that the least common multiple of the first $25$ positive 
+Compare math_answer: 740 and code_answer: 740 ✅ Answers are equivalent
+Problem: In triangle $ABC,$ $\angle A,$ $\angle B,$ and $\angle C$ form an 
+Compare math_answer: 0, \frac{1}{2} and code_answer: sqrt(3)/2 ❌ Answers are not equivalent
+Problem: Let $$P(x)=24x^{24}+\sum_{j=1}^{23}(24-j)\left(x^{24-j}+x^{24+j}\r
+Compare math_answer: It reflects the complex nature of the roots and their distribution in the complex plane. and code_answer: 16*(-sqrt(2)/4 + sqrt(6)/4)*(sqrt(2)/4 + sqrt(6)/4) + 4 + 4*sqrt(3) ❌ Answers are not equivalent
+Problem: January 1, 2000 was on a Saturday. On what day of the week was Jan
+Compare math_answer: \text{Monday} and code_answer: Friday ❌ Answers are not equivalent
+Problem: Let $\ell$ be the line in space through the points $(0,0,1)$ and $
+Compare math_answer: 2 and code_answer: (sqrt(2*(-1 + sqrt(6)/2)**2 + 1) + sqrt((-1 + sqrt(6)/2)**2 + (2 - sqrt(6)/2)**2 + 1))**2 ❌ Answers are not equivalent
+Problem: Let $\omega$ be a nonreal root of $x^3 = 1,$ and let
+\[\mathbf{M} 
+Compare math_answer: 4789 - 2216.991441762095j and code_answer: (4789-2216.991441762095j) ✅ Answers are equivalent
+Problem: If $k = \frac{1}{1+2x}$, where $x$ is an integer greater than $1$ 
+Compare math_answer: \frac{23}{75} and code_answer: 0.24800000000000003 ❌ Answers are not equivalent
+Problem: If $n$ and $k$ are positive integers such that $5<\frac nk<6$, the
+Compare math_answer: 22 and code_answer: 22 ✅ Answers are equivalent
+Problem: Let line $L$ be the intersection of the planes $x + y + z - 6 = 0$
+Compare math_answer: x - 2y + z = 0 and code_answer: 1x + -2y + 1z + 0 = 0 ❌ Answers are not equivalent
+Problem: Recall that an integer $d$ is said to be a divisor of an integer $
+Compare math_answer: 100 and code_answer: 0 ❌ Answers are not equivalent
+Problem: Let $\mathbf{u}$ and $\mathbf{v}$ be vectors such that $\|\mathbf{
+Compare math_answer: \frac{1}{4} and code_answer: 0.7500000000000001 ❌ Answers are not equivalent
+Problem: What is the greatest common divisor of all of the members of the s
+Compare math_answer: 24 and code_answer: 24 ✅ Answers are equivalent
+Problem: Find the degree measure of the least positive angle $\theta$ for w
+Compare math_answer: 120 and code_answer: 80.6374795569378 ❌ Answers are not equivalent
+Problem: In this problem, $a$ and $b$ are positive integers.
+
+When $a$ is w
+Compare math_answer: (0, 0), (1, 0), (2, 0) and code_answer: (0, 0), (1, 0), (2, 0) ✅ Answers are equivalent
+Problem: If $a$ and $b$ are positive integers such that
+\[
+  \sqrt{8 + \sqr
+Compare math_answer: (6, 4) and code_answer: (6, 4) ✅ Answers are equivalent
+Problem: In triangle $ABC,$ $\angle C = 90^\circ$ and $M$ is the midpoint o
+Compare math_answer: The exact value provides a precise measure of the sine of angle \(BAC\), which can be useful in various applications in geometry and trigonometry. and code_answer: 0.6285393610547089 ❌ Answers are not equivalent
+Problem: A Penteria is a special (fictional) kind of bacteria such that, re
+Compare math_answer: 7 and code_answer: -2393 ❌ Answers are not equivalent
+Problem: What is the largest integer less than $2010$ that has a remainder 
+Compare math_answer: 1440 and code_answer: 1440 ✅ Answers are equivalent
+Problem: Four circles with radii 1, 2, 3, and $r$ are externally tangent to
+Compare math_answer: 0.333 and code_answer: 0.260869565217391 ❌ Answers are not equivalent
+Problem: What is the remainder when $129^{34}+96^{38}$ is divided by $11$?
+Compare math_answer: 2 and code_answer: 9 ❌ Answers are not equivalent
+Problem: Let $\mathbf{a}$ and $\mathbf{b}$ be orthogonal vectors.  If $\ope
+Compare math_answer: \begin{pmatrix} -6 \\ 9 \end{pmatrix} and code_answer: \begin{pmatrix} -6.00 \\ 9.00 \end{pmatrix} ❌ Answers are not equivalent
+Problem: Consider the following two strings of digits: $11001010100101011$ 
+Compare math_answer: n - m and code_answer: 0 ❌ Answers are not equivalent
+Problem: What is the average of the two smallest positive integer solutions
+Compare math_answer: 64 and code_answer: 64.0 ✅ Answers are equivalent
+Problem: Let $\alpha$ and $\beta$ be angles such that
+\[\frac{\cos \alpha}{
+Compare math_answer: 2, -2 and code_answer: -2*sin(beta)**2 - 2*cos(beta)**2 ❌ Answers are not equivalent
+Problem: In triangle $ABC,$ $\angle A,$ $\angle B,$ and $\angle C$ form an 
+Compare math_answer: 6. **Final Answer**:
+   After solving, we find the possible values of \(\sin \frac{C - A}{2}\) to be:
+   \[
+   \boxed{\frac{\sqrt{3}}{2}, 0}
+   \]
+
+The significance of this result lies in the relationship between the angles and the altitude condition, which constrains the triangle's configuration and leads to specific sine values that reflect the triangle's geometric properties. and code_answer: 0.918189183352561 ❌ Answers are not equivalent
+Problem: When the base-$b$ number $11011_b$ is multiplied by $b-1$, then $1
+Compare math_answer: 100000_b and code_answer: 100100 ❌ Answers are not equivalent
+Problem: If $a$ and $b$ are positive integers such that $\gcd(a,b)=210$, $\
+Compare math_answer: 8 and code_answer: 8 ✅ Answers are equivalent
+Problem: In triangle $ABC,$ $\sin A = \frac{3}{5}$ and $\sin B = \frac{24}{
+Compare math_answer: \frac{117}{125}, -\frac{117}{125} and code_answer: 0.936, -0.936 ✅ Answers are equivalent
+Problem: Recall that an integer $d$ is said to be a divisor of an integer $
+Compare math_answer: 14 and code_answer: 0 ❌ Answers are not equivalent
+Problem: If $k = \frac{1}{1+2x}$, where $x$ is an integer greater than $1$ 
+Compare math_answer: \frac{6}{25} and code_answer: 0.24800000000000003 ❌ Answers are not equivalent
+Problem: Let $\mathbf{a} = \begin{pmatrix} -2 \\ 5 \end{pmatrix}$ and $\mat
+Compare math_answer: ### Step 5: Use the Angle Bisector Theorem
+From the angle bisector theorem, we have:
+\[
+\frac{\|\mathbf{a}\|}{\|\mathbf{c}\|} = \frac{\|\mathbf{b}\|}{\|\mathbf{b}\|} \implies \|\mathbf{c}\| = k \|\mathbf{b}\|
+\]
+Thus, we can set:
+\[
+k = \frac{\|\mathbf{a}\|}{\|\mathbf{b}\| + \|\mathbf{a}\|} = \frac{\sqrt{29}}{\sqrt{10} + \sqrt{29}}
+\]
+
+### Step 6: Calculate \(\mathbf{c}\)
+Substituting \(k\) back into the expression for \(\mathbf{c}\):
+\[
+\mathbf{c} = \frac{\sqrt{29}}{\sqrt{10} + \sqrt{29}} \begin{pmatrix} 1 \\ 3 \end{pmatrix}
+\]
+
+### Final Calculation
+Calculating the components of \(\mathbf{c}\):
+\[
+\mathbf{c} = \begin{pmatrix} \frac{\sqrt{29}}{\sqrt{10} + \sqrt{29}} \\ \frac{3\sqrt{29}}{\sqrt{10} + \sqrt{29}} \end{pmatrix}
+\]
+
+### Final Answer
+The vector \(\mathbf{c}\) is given by:
+\[
+\mathbf{c} = \begin{pmatrix} c_1 \\ c_2 \end{pmatrix} = \begin{pmatrix} \frac{\sqrt{29}}{\sqrt{10} + \sqrt{29}} \\ \frac{3\sqrt{29}}{\sqrt{10} + \sqrt{29}} \end{pmatrix}
+\]
+Thus, the final answer is:
+\[
+\boxed{\left( \frac{\sqrt{29}}{\sqrt{10} + \sqrt{29}}, \frac{3\sqrt{29}}{\sqrt{10} + \sqrt{29}} \right)}
+\]
+This result indicates the direction and magnitude of the vector \(\mathbf{c}\) that satisfies the conditions of the problem. and code_answer: 0.63, 1.89 ❌ Answers are not equivalent
+Problem: How many natural numbers less than 1000 have exactly three distinc
+Compare math_answer: 11 and code_answer: 11 ✅ Answers are equivalent
+Problem: In base $10$, the number $2013$ ends in the digit $3$.  In base $9
+Compare math_answer: 13 and code_answer: 13 ✅ Answers are equivalent
+Problem: A Penteria is a special (fictional) kind of bacteria such that, re
+Compare math_answer: 7 and code_answer: 7 ✅ Answers are equivalent
+Problem: Let line $L$ be the intersection of the planes $x + y + z - 6 = 0$
+Compare math_answer: x - 2y + z = 0 and code_answer: 1x + -2y + 1z + 0 = 0 ❌ Answers are not equivalent
+Problem: A textbook has 1,000 pages.  How many of the pages have page numbe
+Compare math_answer: 21 and code_answer: 15 ❌ Answers are not equivalent
+Problem: A particular number written in base 3 requires three digits (${\_ 
+Compare math_answer: 21 and code_answer: 22 ❌ Answers are not equivalent
+Problem: Let $\mathbf{u}$ and $\mathbf{v}$ be vectors such that $\|\mathbf{
+Compare math_answer: \frac{1}{4} and code_answer: 0.08333333333333334 ❌ Answers are not equivalent
+Problem: Let $\alpha$ and $\beta$ be angles such that
+\[\frac{\cos \alpha}{
+Compare math_answer: -2 and code_answer: -1 ❌ Answers are not equivalent
+Problem: Suppose $t$ is a positive integer such that $\mathop{\text{lcm}}[1
+Compare math_answer: 18 and code_answer: 18 ✅ Answers are equivalent
+Problem: Suppose that $N$ can be written in base $6$ as $531340_6$ and in b
+Compare math_answer: 76 and code_answer: 66 ❌ Answers are not equivalent
+Problem: The solutions to $z^4 = 4 - 4i \sqrt{3}$ can be expressed in the f
+Compare math_answer: 660^\circ and code_answer: 480.0 ❌ Answers are not equivalent
+Problem: When the base-$b$ number $11011_b$ is multiplied by $b-1$, then $1
+Compare math_answer: 110000_b and code_answer: 100100 ❌ Answers are not equivalent
+Problem: For how many ordered pairs $(A,B)$ where $A$ and $B$ are positive 
+Compare math_answer: 5 and code_answer: 5 ✅ Answers are equivalent
+Problem: What is the remainder when $129^{34}+96^{38}$ is divided by $11$?
+Compare math_answer: 9 and code_answer: 9 ✅ Answers are equivalent
+Problem: Recall that an integer $d$ is said to be a divisor of an integer $
+Compare math_answer: 14 and code_answer: 14 ✅ Answers are equivalent
+Problem: Four circles with radii 1, 2, 3, and $r$ are externally tangent to
+Compare math_answer: 0.260869565217391 and code_answer: 0.260869565217391 ✅ Answers are equivalent
+Problem: An angle $x$ is chosen at random from the interval $0^{\circ} < x 
+Compare math_answer: 999 and code_answer: 999 ✅ Answers are equivalent
+Problem: Let $\mathbf{a} = \begin{pmatrix} -2 \\ 5 \end{pmatrix}$ and $\mat
+Compare math_answer: \left( -0.12, 0.94 \right) and code_answer: \left( -0.12, 0.94 \right) ✅ Answers are equivalent
+Problem: Consider the following two strings of digits: $11001010100101011$ 
+Compare math_answer: 39076 and code_answer: -11111110110970568 ❌ Answers are not equivalent
+Problem: Let line $L$ be the intersection of the planes $x + y + z - 6 = 0$
+Compare math_answer: x - 2y + z = 0 and code_answer: 1x + -2y + 1z + 0 = 0 ❌ Answers are not equivalent
+Problem: A textbook has 1,000 pages.  How many of the pages have page numbe
+Compare math_answer: 15 and code_answer: 15 ✅ Answers are equivalent
+Problem: A particular number written in base 3 requires three digits (${\_ 
+Compare math_answer: 22 and code_answer: 22 ✅ Answers are equivalent
+Problem: Let $\alpha$ and $\beta$ be angles such that
+\[\frac{\cos \alpha}{
+Compare math_answer: -2 and code_answer: -2.00000000000000 ✅ Answers are equivalent
+Problem: The solutions to $z^4 = 4 - 4i \sqrt{3}$ can be expressed in the f
+Compare math_answer: 840^\circ and code_answer: 480.0 ❌ Answers are not equivalent
+Problem: Let $\mathbf{u}$ and $\mathbf{v}$ be vectors such that $\|\mathbf{
+Compare math_answer: \frac{1}{4} and code_answer: 0.08333333333333334 ❌ Answers are not equivalent
+Problem: When the base-$b$ number $11011_b$ is multiplied by $b-1$, then $1
+Compare math_answer: 110000_b and code_answer: 100100 ❌ Answers are not equivalent
+Problem: Suppose that $N$ can be written in base $6$ as $531340_6$ and in b
+Compare math_answer: 76 and code_answer: 66 ❌ Answers are not equivalent
+Problem: The solutions to $z^4 = 4 - 4i \sqrt{3}$ can be expressed in the f
+Compare math_answer: 840^\circ and code_answer: 480.0 ❌ Answers are not equivalent
+Problem: Suppose that $N$ can be written in base $6$ as $531340_6$ and in b
+Compare math_answer: 76 and code_answer: 66 ❌ Answers are not equivalent
+Problem: Let $G$ and $H$ denote the centroid and orthocenter of triangle $A
+Compare math_answer: \frac{a^2 + b^2 + c^2}{3} + R^2 and code_answer: R**2 + a**2/3 + b**2/3 + c**2/3 ❌ Answers are not equivalent
+Problem: A sphere, lying in the octant where all the coordinates are nonneg
+Compare math_answer: 29, 41, 50 and code_answer: 29, 41, 50 ✅ Answers are equivalent
+Problem: Find the cubic polynomial, in $x,$ with integer coefficients that 
+Compare math_answer: 8x^3 - 6x - 1 and code_answer: 8*x**3 - 6*x - 1 ❌ Answers are not equivalent
+Problem: Find the number of ordered quadruples $(a,b,c,d)$ of real numbers 
+Compare math_answer: 2 and code_answer: 8 ❌ Answers are not equivalent
+Problem: Let $\omega = e^{2 \pi i/1729}.$  Compute
+\[\sum_{k = 1}^{1728} \f
+Compare math_answer: 432 and code_answer: 431.99999999978166 ✅ Answers are equivalent
+Problem: Let $z = 2 + \sqrt{2} - (3 + 3 \sqrt{2})i$, and let $c = 2 - 3i$. 
+Compare math_answer: 3 - 2i and code_answer: 6.00 + -5.00i ❌ Answers are not equivalent
+Problem: Let $A$ and $B$ be two opposite corners of a unit cube, and let $C
+Compare math_answer: 5. **Cross Product**:
+   - Calculate the cross product \( \vec{AC} \times \vec{AB} \):
+     \[
+     \vec{AC} \times \vec{AB} = \begin{vmatrix}
+     \hat{i} & \hat{j} & \hat{k} \\
+     1 & 0 & 0 \\
+     1 & 1 & 1
+     \end{vmatrix} = \hat{i}(0 \cdot 1 - 0 \cdot 1) - \hat{j}(1 \cdot 1 - 0 \cdot 1) + \hat{k}(1 \cdot 1 - 0 \cdot 1) = (0, -1, 1)
+     \]
+
+6. **Magnitude of the Cross Product**:
+   - The magnitude of the cross product is:
+     \[
+     \| \vec{AC} \times \vec{AB} \| = \sqrt{0^2 + (-1)^2 + 1^2} = \sqrt{2}
+     \]
+
+7. **Magnitude of \( \vec{AB} \)**:
+   - The magnitude of \( \vec{AB} \) is:
+     \[
+     \| \vec{AB} \| = \sqrt{1^2 + 1^2 + 1^2} = \sqrt{3}
+     \]
+
+8. **Calculate the Distance**:
+   - Now, substituting into the distance formula:
+     \[
+     d = \frac{\sqrt{2}}{\sqrt{3}} = \frac{\sqrt{6}}{3}
+     \]
+
+9. **Final Answer**:
+   - The distance from point \( C \) to line \( AB \) is:
+     \[
+     \boxed{\frac{\sqrt{6}}{3}}
+     \]
+
+10. **Significance**: This result shows how to compute the distance from a point to a line in three-dimensional space, which is a fundamental concept in geometry and vector calculus. and code_answer: 0.816496580927726 ❌ Answers are not equivalent
+Problem: Let $\mathbf{a},$ $\mathbf{b},$ and $\mathbf{c}$ be three vectors 
+Compare math_answer: It reflects how the vectors span the volume and can be useful in various applications in physics and engineering. and code_answer: 9.759610647971568 ❌ Answers are not equivalent
+Problem: The polar curve $r = 1 + \cos \theta$ is rotated once around the p
+Compare math_answer: \frac{19\pi}{2} and code_answer: 29.84513020910308 ✅ Answers are equivalent
+Problem: The distances from a point $P$ to five of the vertices of a regula
+Compare math_answer: Therefore, the answer is:
+\[
+\text{No valid solution exists.}
+\] and code_answer: (8.030546099391988e-16+13.114877048604j) ❌ Answers are not equivalent
+Problem: Find the foot of the perpendicular from the point $A = (1,8,4)$ to
+Compare math_answer: \left(-\frac{5}{3}, \frac{2}{3}, \frac{19}{3}\right) and code_answer: (-1.6666666666666667, 0.6666666666666667, 6.333333333333334) ❌ Answers are not equivalent
+Problem: Let $f(x) = \log_{10} \left(\sin(\pi x) \cdot \sin(2 \pi x) \cdot 
+Compare math_answer: 16 and code_answer: 23 ❌ Answers are not equivalent
+Problem: In triangle $ABC,$ $AB = 3$ and $AC = 5.$  Let $O$ be the circumce
+Compare math_answer: 0 and code_answer: 0.0 ✅ Answers are equivalent
+Problem: A point has rectangular coordinates $(2,-1,-2)$ and spherical coor
+Compare math_answer: (x', y', z') and code_answer: (-2.67, 1.33, -0.33) ❌ Answers are not equivalent
+Problem: Let $G$ and $H$ denote the centroid and orthocenter of triangle $A
+Compare math_answer: \frac{a^2 + b^2 + c^2}{3} + R^2 and code_answer: R**2 + a**2/3 + b**2/3 + c**2/3 ❌ Answers are not equivalent
+Problem: Find the cubic polynomial, in $x,$ with integer coefficients that 
+Compare math_answer: 8x^3 - 6x - 1 and code_answer: 8x^3 - 6x - 1 ✅ Answers are equivalent
+Problem: Given that
+\[\cos 2 \theta = \frac{1 + \sqrt{5}}{4},\]find $\tan^2
+Compare math_answer: 1 and code_answer: 0.1999999999999999 ❌ Answers are not equivalent
+Problem: The matrix for projecting onto a certain plane $P,$ which passes t
+Compare math_answer: \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} and code_answer: \begin{pmatrix} 4 \\ 7 \\ -11 \end{pmatrix} ❌ Answers are not equivalent
+Problem: The distances from a point $P$ to five of the vertices of a regula
+Compare math_answer: \text{The distances do not correspond to a valid configuration.} and code_answer: \text{The distances do not correspond to a valid configuration.}
+\text{The distances do not correspond to a valid configuration.} ✅ Answers are equivalent
+Problem: Let $\mathbf{a},$ $\mathbf{b},$ and $\mathbf{c}$ be three vectors 
+Compare math_answer: \]
+This result is significant as it represents the three-dimensional space spanned by the vectors, which is crucial in various applications in physics and engineering. and code_answer: 9.759610647971568 ❌ Answers are not equivalent
+Problem: If $\frac{\sin (2A + B)}{\sin B} = 5,$ then find $\frac{\tan (A + 
+Compare math_answer: 5 and code_answer: tan(A + B)/tan(A) ❌ Answers are not equivalent
+Problem: Let $z = 2 + \sqrt{2} - (3 + 3 \sqrt{2})i$, and let $c = 2 - 3i$. 
+Compare math_answer: 6 - 5i and code_answer: 6.00 + -5.00i ✅ Answers are equivalent
+Problem: The line described by
+\[\begin{pmatrix} 2 \\ -1 \\ 3 \end{pmatrix}
+Compare math_answer: -3 and code_answer: -3 ✅ Answers are equivalent
+Problem: Let $A$ and $B$ be two opposite corners of a unit cube, and let $C
+Compare math_answer: 2. **Define the Points**:
+   Let:
+   - \( A = (0, 0, 0) \)
+   - \( B = (1, 1, 1) \)
+   - \( C = (1, 0, 0) \)
+
+3. **Vectors Definition**:
+   We define the vectors:
+   - \( \vec{AB} = B - A = (1, 1, 1) - (0, 0, 0) = (1, 1, 1) \)
+   - \( \vec{AC} = C - A = (1, 0, 0) - (0, 0, 0) = (1, 0, 0) \)
+
+4. **Cross Product**:
+   The distance from point \( C \) to line \( AB \) can be calculated using the formula:
+   \[
+   d = \frac{\|\vec{AC} \times \vec{AB}\|}{\|\vec{AB}\|}
+   \]
+   First, we compute the cross product \( \vec{AC} \times \vec{AB} \):
+   \[
+   \vec{AC} \times \vec{AB} = \begin{vmatrix}
+   \hat{i} & \hat{j} & \hat{k} \\
+   1 & 0 & 0 \\
+   1 & 1 & 1
+   \end{vmatrix} = \hat{i}(0 \cdot 1 - 0 \cdot 1) - \hat{j}(1 \cdot 1 - 0 \cdot 1) + \hat{k}(1 \cdot 1 - 0 \cdot 1) = (0, -1, 1)
+   \]
+
+5. **Magnitude of the Cross Product**:
+   Now, we calculate the magnitude of the cross product:
+   \[
+   \|\vec{AC} \times \vec{AB}\| = \sqrt{0^2 + (-1)^2 + 1^2} = \sqrt{2}
+   \]
+
+6. **Magnitude of \( \vec{AB} \)**:
+   Next, we find the magnitude of \( \vec{AB} \):
+   \[
+   \|\vec{AB}\| = \sqrt{1^2 + 1^2 + 1^2} = \sqrt{3}
+   \]
+
+7. **Calculate the Distance**:
+   Substituting into the distance formula:
+   \[
+   d = \frac{\sqrt{2}}{\sqrt{3}} = \frac{\sqrt{6}}{3}
+   \]
+
+8. **Final Answer**:
+   The distance from point \( C \) to line \( AB \) is:
+   \[
+   \boxed{\frac{\sqrt{6}}{3}}
+   \]
+
+9. **Significance**: This result illustrates how to compute the distance from a point to a line in three-dimensional space, which is a fundamental concept in geometry and vector calculus. and code_answer: 0.816496580927726 ❌ Answers are not equivalent
+Problem: Find the foot of the perpendicular from the point $A = (1,8,4)$ to
+Compare math_answer: \left(-\frac{5}{3}, \frac{2}{3}, \frac{19}{3}\right) and code_answer: (-1.67, 0.67, 6.33) ❌ Answers are not equivalent
+Problem: Let $\alpha$ and $\beta$ be angles for which
+\[\frac{\sec^4 \alpha
+Compare math_answer: 8 and code_answer: 8 ✅ Answers are equivalent
+Problem: A point has rectangular coordinates $(2,-1,-2)$ and spherical coor
+Compare math_answer: (-2.67, 1.33, -0.33) and code_answer: (-2.67, 1.33, -0.33) ✅ Answers are equivalent
+Problem: The matrix for projecting onto a certain plane $P,$ which passes t
+Compare math_answer: \begin{pmatrix} 4 \\ 7 \\ -11 \end{pmatrix} and code_answer: \begin{pmatrix} 4 \\ 7 \\ -11 \end{pmatrix} ✅ Answers are equivalent
+Problem: Let $f(x) = \log_{10} \left(\sin(\pi x) \cdot \sin(2 \pi x) \cdot 
+Compare math_answer: 18 and code_answer: 24 ❌ Answers are not equivalent
+Problem: Let
+\[\mathbf{a} = \begin{pmatrix} 5 \\ -3 \\ -4 \end{pmatrix} \qu
+Compare math_answer: \begin{pmatrix} -16 \\ 4 \\ 32 \end{pmatrix} and code_answer: -16, 4, 32 ❌ Answers are not equivalent
+Problem: Let $G$ and $H$ denote the centroid and orthocenter of triangle $A
+Compare math_answer: \frac{a^2 + b^2 + c^2}{3} + \frac{R^2}{3} and code_answer: 0.333333333333333*R**2 + 0.222222222222222*a**2 + 0.222222222222222*b**2 + 0.222222222222222*c**2 ❌ Answers are not equivalent
+Problem: Let $\mathbf{P}$ be the matrix for projecting onto a vector $\math
+Compare math_answer: (2, -1) and code_answer: (2, -1) ✅ Answers are equivalent
+Problem: Given that
+\[\cos 2 \theta = \frac{1 + \sqrt{5}}{4},\]find $\tan^2
+Compare math_answer: 0.2 and code_answer: 0.1999999999999999 ✅ Answers are equivalent
+Problem: Find the smallest positive integer solution to $\tan{19x^{\circ}}=
+Compare math_answer: 140 and code_answer: 159 ❌ Answers are not equivalent
+Problem: Find all solutions to
+\[\sin \left( \tan^{-1} (x) + \cot^{-1} \lef
+Compare math_answer: 3 + 2\sqrt{2}, 3 - 2\sqrt{2} and code_answer: 5.82842712474619, 0.1715728752538097 ✅ Answers are equivalent
+Problem: Let $\mathbf{a},$ $\mathbf{b},$ and $\mathbf{c}$ be three vectors 
+Compare math_answer: 3.805545655274024 and code_answer: 3.805545655274024 ✅ Answers are equivalent
+Problem: Let $z$ be a complex number such that $z^{13} = 1.$  Let $w_1,$ $w
+Compare math_answer: 13 and code_answer: 77.99999999999993 ❌ Answers are not equivalent
+Problem: Let $\mathbf{a},$ $\mathbf{b},$ and $\mathbf{c}$ be three unit vec
+Compare math_answer: 1 and code_answer: 2.15058798608526 ❌ Answers are not equivalent
+Problem: In triangle $ABC,$ it is given that angles $B$ and $C$ are congrue
+Compare math_answer: \frac{1}{2} and code_answer: 1/2 ✅ Answers are equivalent
+Problem: Solve
+\[2 \sin \theta (\sin 2 \theta + \sin 4 \theta + \sin 6 \the
+Compare math_answer: 0^\circ, 12^\circ, 24^\circ and code_answer:  ❌ Answers are not equivalent
+Problem: In triangle $ABC,$ $D$ and $E$ are on side $\overline{BC}$ such th
+Compare math_answer: 2 and code_answer: sin(x + y)*sin(y + z)/(sin(x)*sin(z)) ❌ Answers are not equivalent
+Problem: Let
+\[\mathbf{a} = \begin{pmatrix} 5 \\ -3 \\ -4 \end{pmatrix} \qu
+Compare math_answer: \begin{pmatrix} -16 \\ 4 \\ 32 \end{pmatrix} and code_answer: \begin{pmatrix} -16 \\ 4 \\ 32 \end{pmatrix} ✅ Answers are equivalent
+Problem: Let $A$ and $B$ be two opposite corners of a unit cube, and let $C
+Compare math_answer: To find the distance from point \( C \) to the line defined by points \( A \) and \( B \) in a unit cube, we will follow these steps:
+
+1. **Restate the Problem**:
+   We need to calculate the distance from point \( C \) to the line segment \( AB \), where:
+   - \( A = (0, 0, 0) \)
+   - \( B = (1, 1, 1) \)
+   - \( C = (1, 0, 0) \)
+
+2. **Define the Vectors**:
+   We define the vectors:
+   - \( \vec{AB} = B - A = (1, 1, 1) - (0, 0, 0) = (1, 1, 1) \)
+   - \( \vec{AC} = C - A = (1, 0, 0) - (0, 0, 0) = (1, 0, 0) \)
+
+3. **Calculate the Projection**:
+   The distance from point \( C \) to line \( AB \) can be calculated using the formula:
+   \[
+   d = \frac{\|\vec{AC} \times \vec{AB}\|}{\|\vec{AB}\|}
+   \]
+   First, we compute the cross product \( \vec{AC} \times \vec{AB} \):
+   \[
+   \vec{AC} \times \vec{AB} = \begin{vmatrix}
+   \hat{i} & \hat{j} & \hat{k} \\
+   1 & 0 & 0 \\
+   1 & 1 & 1
+   \end{vmatrix} = \hat{i}(0 \cdot 1 - 0 \cdot 1) - \hat{j}(1 \cdot 1 - 0 \cdot 1) + \hat{k}(1 \cdot 1 - 0 \cdot 1) = (0, -1, 1)
+   \]
+
+4. **Magnitude of the Cross Product**:
+   Now, we calculate the magnitude of the cross product:
+   \[
+   \|\vec{AC} \times \vec{AB}\| = \sqrt{0^2 + (-1)^2 + 1^2} = \sqrt{2}
+   \]
+
+5. **Magnitude of \( \vec{AB} \)**:
+   Next, we find the magnitude of \( \vec{AB} \):
+   \[
+   \|\vec{AB}\| = \sqrt{1^2 + 1^2 + 1^2} = \sqrt{3}
+   \]
+
+6. **Calculate the Distance**:
+   Substituting into the distance formula:
+   \[
+   d = \frac{\sqrt{2}}{\sqrt{3}} = \frac{\sqrt{6}}{3}
+   \]
+
+7. **Final Answer**:
+   The distance from point \( C \) to line \( AB \) is:
+   \[
+   \boxed{\frac{\sqrt{6}}{3}}
+   \]
+
+8. **Significance**: This result illustrates how to compute the distance from a point to a line in three-dimensional space, which is a fundamental concept in geometry and vector calculus. and code_answer: 0.816496580927726 ❌ Answers are not equivalent
+Problem: Find the smallest positive real number $C$ for which
+\[\left\| \be
+Compare math_answer: \]
+
+This result indicates the maximum stretching factor of the transformation defined by the matrix \( A \) on any unit vector in \( \mathbb{R}^2 \). and code_answer: 4.0 ❌ Answers are not equivalent
+Problem: Find the matrix $\mathbf{M},$ with real entries, such that
+\[\math
+Compare math_answer: \mathbf{M} and code_answer: [[nan nan]
+ [nan nan]] ❌ Answers are not equivalent
+Problem: Find the foot of the perpendicular from the point $A = (1,8,4)$ to
+Compare math_answer: \left(-\frac{5}{3}, \frac{2}{3}, \frac{19}{3}\right) and code_answer: (-1.67, 0.67, 6.33) ❌ Answers are not equivalent
+Problem: Let $f(x) = \log_{10} \left(\sin(\pi x) \cdot \sin(2 \pi x) \cdot 
+Compare math_answer: 23 and code_answer: 23 ✅ Answers are equivalent
+Problem: Given triangle $ABC,$ there exists a unique point $P$ such that
+\[
+Compare math_answer: a^2 + b^2 + c^2 + 3R^2 and code_answer: 3*R**2 + a**2 + b**2 + c**2 ❌ Answers are not equivalent
+Problem: Let $z$ be a complex number such that $z^{13} = 1.$  Let $w_1,$ $w
+Compare math_answer: 78 and code_answer: 77.99999999999993 ✅ Answers are equivalent
+Problem: Find the smallest positive integer solution to $\tan{19x^{\circ}}=
+Compare math_answer: 159 and code_answer: 159 ✅ Answers are equivalent
+Problem: Three unit circles are drawn so they are mutually tangent, as show
+Compare math_answer: 6 and code_answer: 6 ✅ Answers are equivalent
+Problem: Let $\mathbf{a} = \begin{pmatrix} 1 \\ 3 \\ 0 \end{pmatrix},$ $\ma
+Compare math_answer: k and code_answer: -0.4813573911994643 ❌ Answers are not equivalent
+Problem: Find the equation of the plane which bisects the angle between the
+Compare math_answer: 67x - 162y + 47z + 408 = 0 and code_answer: 0x + -1y + 0z + 4 = 0 ❌ Answers are not equivalent
+Problem: In triangle $ABC,$ $D$ and $E$ are on side $\overline{BC}$ such th
+Compare math_answer: 2 and code_answer: sin(x + y)*sin(y + z)/(sin(x)*sin(z)) ❌ Answers are not equivalent
+Problem: If $\sin x + \cos x = \frac{1}{5}$ and $0 < x < \pi,$ find $\tan x
+Compare math_answer: -\frac{8}{3} and code_answer: -1.3333333333333333 ❌ Answers are not equivalent
+Problem: Solve
+\[2 \sin \theta (\sin 2 \theta + \sin 4 \theta + \sin 6 \the
+Compare math_answer: 0^\circ, 12^\circ, 24^\circ and code_answer:  ❌ Answers are not equivalent
+Problem: Find the matrix that corresponds to projecting onto the vector $\b
+Compare math_answer: \begin{pmatrix} \frac{1}{50} & \frac{7}{50} \\ \frac{7}{50} & \frac{49}{50} \end{pmatrix} and code_answer: \begin{pmatrix} 0.02 & 0.14 \\ 0.14 & 0.98 \end{pmatrix} ❌ Answers are not equivalent
+Problem: Let $a$ and $b$ be two 12th roots of unity, not necessarily distin
+Compare math_answer: 5 and code_answer: 72 ❌ Answers are not equivalent
+Problem: Let $\mathbf{a},$ $\mathbf{b},$ and $\mathbf{c}$ be three unit vec
+Compare math_answer: 2.15058798608526 and code_answer: 2.15058798608526 ✅ Answers are equivalent
+Problem: Find the smallest positive integer $x$ (measured in degrees) such 
+Compare math_answer: 75 and code_answer: 230 ❌ Answers are not equivalent
+Problem: Given triangle $ABC,$ there exists a unique point $P$ such that
+\[
+Compare math_answer: a^2 + b^2 + c^2 + 3R^2 and code_answer: 62 ❌ Answers are not equivalent
+Problem: Find the smallest positive real number $C$ for which
+\[\left\| \be
+Compare math_answer: 4.0 and code_answer: 4.000000000000001 ✅ Answers are equivalent
+Problem: Find all values of $k,$ for which there exists a nonzero vector $\
+Compare math_answer: 0, 1, 5 and code_answer: 1.00, -3.00, 1.00 ❌ Answers are not equivalent
+Problem: One sphere is centered at $(3,-5,7)$ with radius $5 \sqrt{5}.$  A 
+Compare math_answer: Substituting the values:
+- \( R_1 = 5\sqrt{5} \)
+- \( R_2 = 2\sqrt{17} \)
+- \( d = 9 \)
+
+Calculating \( R_1^2 \) and \( R_2^2 \):
+\[
+R_1^2 = (5\sqrt{5})^2 = 25 \cdot 5 = 125
+\]
+\[
+R_2^2 = (2\sqrt{17})^2 = 4 \cdot 17 = 68
+\]
+
+Now substituting into the formula:
+\[
+r = \sqrt{\frac{(125 - 68 + 9^2)(125 - 68 + 9^2)}{4 \cdot 9^2}}
+\]
+Calculating \( 9^2 = 81 \):
+\[
+r = \sqrt{\frac{(125 - 68 + 81)(125 - 68 + 81)}{4 \cdot 81}} = \sqrt{\frac{(125 - 68 + 81)(125 - 68 + 81)}{324}}
+\]
+Calculating \( 125 - 68 + 81 = 138 \):
+\[
+r = \sqrt{\frac{138 \cdot 138}{324}} = \sqrt{\frac{19044}{324}} = \sqrt{58.75} = \frac{\sqrt{235}}{3}
+\]
+
+### Final Answer
+
+Thus, the radius of the circle of intersection is:
+\[
+\boxed{\frac{\sqrt{235}}{3}}
+\]
+
+This result is significant as it provides the radius of the circle where the two spheres intersect, which is a common problem in three-dimensional geometry and has applications in various fields such as physics and engineering. and code_answer: 7.666666666666667 ❌ Answers are not equivalent
+Problem: One line is defined by
+\[\begin{pmatrix} 3 \\ -10 \\ 1 \end{pmatri
+Compare math_answer: \sqrt{89} and code_answer: 9.433981132056605 ✅ Answers are equivalent
+Problem: In triangle $ABC,$ $D$ and $E$ are on side $\overline{BC}$ such th
+Compare math_answer: 2 and code_answer: sin(x + y)*sin(y + z)/(sin(x)*sin(z)) ❌ Answers are not equivalent
+Problem: Solve
+\[2 \sin \theta (\sin 2 \theta + \sin 4 \theta + \sin 6 \the
+Compare math_answer: 0^\circ, 12^\circ, 24^\circ and code_answer:  ❌ Answers are not equivalent
+Problem: Given triangle $ABC,$ there exists a unique point $P$ such that
+\[
+Compare math_answer: a^2 + b^2 + c^2 + 3R^2 and code_answer: 62 ❌ Answers are not equivalent
+Problem: Let $a$ and $b$ be two 12th roots of unity, not necessarily distin
+Compare math_answer: 3 and code_answer: 3 ✅ Answers are equivalent
+Problem: If $\sin x + \cos x = \frac{1}{5}$ and $0 < x < \pi,$ find $\tan x
+Compare math_answer: -\frac{8}{3} and code_answer: -1.3333333333333335 ❌ Answers are not equivalent
+Problem: Find the matrix that corresponds to projecting onto the vector $\b
+Compare math_answer: \begin{pmatrix} \frac{1}{50} & \frac{7}{50} \\ \frac{7}{50} & \frac{49}{50} \end{pmatrix} and code_answer: \begin{pmatrix} 0.02 & 0.14 \\ 0.14 & 0.98 \end{pmatrix} ❌ Answers are not equivalent
+Problem: Find the smallest positive integer $x$ (measured in degrees) such 
+Compare math_answer: 75 and code_answer: 230 ❌ Answers are not equivalent
+Problem: One sphere is centered at $(3,-5,7)$ with radius $5 \sqrt{5}.$  A 
+Compare math_answer: ### Step 1: Calculate the distance between the centers of the spheres
+The distance \( d \) between the centers of the spheres can be calculated using the distance formula:
+\[
+d = \sqrt{(3 - 0)^2 + (-5 - 1)^2 + (7 - 1)^2}
+\]
+Calculating each term:
+\[
+d = \sqrt{3^2 + (-6)^2 + 6^2} = \sqrt{9 + 36 + 36} = \sqrt{81} = 9
+\]
+
+### Step 2: Calculate the squares of the radii
+Next, we compute the squares of the radii:
+\[
+R_1^2 = (5\sqrt{5})^2 = 25 \cdot 5 = 125
+\]
+\[
+R_2^2 = (2\sqrt{17})^2 = 4 \cdot 17 = 68
+\]
+
+### Step 3: Use the formula for the radius of the circle of intersection
+The radius \( r \) of the circle of intersection of the two spheres is given by the formula:
+\[
+r = \sqrt{\frac{(R_1^2 - R_2^2 + d^2)(R_1^2 - R_2^2 + d^2)}{4d^2}}
+\]
+Substituting the values we calculated:
+\[
+R_1^2 - R_2^2 + d^2 = 125 - 68 + 9^2 = 125 - 68 + 81 = 138
+\]
+Now substituting into the formula:
+\[
+r = \sqrt{\frac{(138)(138)}{4 \cdot 9^2}} = \sqrt{\frac{138^2}{324}}
+\]
+Calculating \( 138^2 \):
+\[
+138^2 = 19044
+\]
+Thus,
+\[
+r = \sqrt{\frac{19044}{324}} = \sqrt{58.75} = \frac{\sqrt{235}}{3}
+\]
+
+### Final Answer
+The radius of the circle of intersection is:
+\[
+\boxed{\frac{\sqrt{235}}{3}}
+\]
+
+This result is significant as it provides the radius of the circle where the two spheres intersect, which is a common problem in three-dimensional geometry and has applications in various fields such as physics and engineering. and code_answer: 7.666666666666667 ❌ Answers are not equivalent
+Problem: Find the equation of the plane which bisects the angle between the
+Compare math_answer: 67x - 162y + 47z + 408 = 0 and code_answer: 0x + -1y + 0z + 4 = 0 ❌ Answers are not equivalent
+Problem: Find all values of $k,$ for which there exists a nonzero vector $\
+Compare math_answer: 1, -3 and code_answer: 1.00, -3.00, 1.00 ✅ Answers are equivalent
+Problem: Let $\mathbf{a} = \begin{pmatrix} 1 \\ 3 \\ 0 \end{pmatrix},$ $\ma
+Compare math_answer: -0.4813573911994643 and code_answer: 5.0 ❌ Answers are not equivalent
+Problem: One sphere is centered at $(3,-5,7)$ with radius $5 \sqrt{5}.$  A 
+Compare math_answer: ### Step 1: Calculate the distance between the centers of the spheres
+The distance \( d \) between the centers of the spheres can be calculated using the distance formula:
+\[
+d = \sqrt{(3 - 0)^2 + (-5 - 1)^2 + (7 - 1)^2}
+\]
+Calculating each term:
+\[
+d = \sqrt{3^2 + (-6)^2 + 6^2} = \sqrt{9 + 36 + 36} = \sqrt{81} = 9
+\]
+
+### Step 2: Calculate the squares of the radii
+Next, we compute the squares of the radii:
+\[
+R_1^2 = (5\sqrt{5})^2 = 25 \cdot 5 = 125
+\]
+\[
+R_2^2 = (2\sqrt{17})^2 = 4 \cdot 17 = 68
+\]
+
+### Step 3: Use the formula for the radius of the circle of intersection
+The radius \( r \) of the circle of intersection of the two spheres is given by the formula:
+\[
+r = \sqrt{\frac{(R_1^2 - R_2^2 + d^2)(R_1^2 - R_2^2 + d^2)}{4d^2}}
+\]
+Substituting the values we calculated:
+\[
+R_1^2 - R_2^2 + d^2 = 125 - 68 + 9^2 = 125 - 68 + 81 = 138
+\]
+Now substituting into the formula:
+\[
+r = \sqrt{\frac{(138)(138)}{4 \cdot 9^2}} = \sqrt{\frac{138^2}{324}}
+\]
+Calculating \( 138^2 \):
+\[
+138^2 = 19044
+\]
+Thus,
+\[
+r = \sqrt{\frac{19044}{324}} = \sqrt{58.75} = \sqrt{\frac{235}{4}} = \frac{\sqrt{235}}{2}
+\]
+
+### Final Answer
+The radius of the circle of intersection is:
+\[
+\boxed{\frac{\sqrt{235}}{2}}
+\]
+
+This result is significant as it provides the radius of the circle where the two spheres intersect, which is a common problem in three-dimensional geometry and has applications in various fields such as physics and engineering. and code_answer: 7.666666666666667 ❌ Answers are not equivalent
+Problem: Find the matrix that corresponds to projecting onto the vector $\b
+Compare math_answer: \begin{pmatrix} \frac{1}{50} & \frac{7}{50} \\ \frac{7}{50} & \frac{49}{50} \end{pmatrix} and code_answer: \begin{pmatrix} 1/50 & 7/50 \\ 7/50 & 49/50 \end{pmatrix} ❌ Answers are not equivalent
+Problem: Let $\mathbf{a} = \begin{pmatrix} 1 \\ 3 \\ 0 \end{pmatrix},$ $\ma
+Compare math_answer: 5.0 and code_answer: 5.0 ✅ Answers are equivalent
+Problem: Find the equation of the plane which bisects the angle between the
+Compare math_answer: 67x - 162y + 47z + 408 = 0 and code_answer: 0x + -1y + 0z + 4 = 0 ❌ Answers are not equivalent
+Problem: Assume that the Earth is a perfect sphere.  A plane flies between 
+Compare math_answer: \frac{1}{2} and code_answer: 0.49999999999999994 ✅ Answers are equivalent
+Problem: The point $P$ on the sphere of radius 3 and centered at the origin
+Compare math_answer: (3, \frac{11\pi}{8}, \frac{4\pi}{5}) and code_answer: (3, 4.31968625, 2.5132719999999997) ❌ Answers are not equivalent
+Problem: Find the solutions to
+\[\frac{1}{x - \tan 20^{\circ}} + \frac{1}{x
+Compare math_answer: 0.57735, 1.73205 and code_answer: -0.267949192431123, 3.73205080756888 ❌ Answers are not equivalent
+Problem: Let $0, a, b, c$ be the vertices of a square in counterclockwise o
+Compare math_answer: \frac{3}{2} + \frac{3}{2}i and code_answer: (1.5+1.5j) ❌ Answers are not equivalent
+Problem: For a positive integer $n$ and an angle $\theta,$ $\cos \theta$ is
+Compare math_answer: 6 and code_answer: 6 ✅ Answers are equivalent
+Problem: Alice and Bob both go to a party which starts at 5:00. Each of the
+Compare math_answer: \frac{9}{32} and code_answer: 0.28125 ✅ Answers are equivalent
+Problem: In triangle $ABC,$ $a = 8,$ $b = 7,$ and $c = 5.$  Let $H$ be the 
+Compare math_answer: (0.4638, 0.3551, 0.1810) and code_answer: (0.46, 0.36, 0.18) ❌ Answers are not equivalent
+Problem: A diagonal of a polyhedron is a line segment connecting two non-ad
+Compare math_answer: 25 and code_answer: 25 ✅ Answers are equivalent
+Problem: A turn consists of rolling a standard die and tossing a fair coin.
+Compare math_answer: \frac{91}{216} and code_answer: 0.42129629629629617 ✅ Answers are equivalent
+Problem: Let $M_n$ be the $n \times n$ matrix with entries as follows: for 
+Compare math_answer: S and code_answer: 0.013888888853039237 ❌ Answers are not equivalent
+Problem: Let
+\[\mathbf{M} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\]b
+Compare math_answer: 0, 3 and code_answer: -1.5, 0, 3 ❌ Answers are not equivalent
+Problem: Let $a,$ $b$ be two acute angles where $\tan a = 5 \tan b.$  Find 
+Compare math_answer: 1 and code_answer: 0.6666666244029291 ❌ Answers are not equivalent
+Problem: A large, regular hexagon is drawn on the ground, and a man stands 
+Compare math_answer: \frac{1}{2} and code_answer: 0.5 ✅ Answers are equivalent
+Problem: Let $\alpha,$ $\beta,$ and $\gamma$ be three real numbers.  Suppos
+Compare math_answer: ### Final Calculation
+Thus, we have:
+\[
+p + q + r = 1 + 3 + 2 = 6.
+\]
+
+The final answer is:
+\[
+\boxed{-\frac{1 + \sqrt{3}}{2}}, \quad p + q + r = 6.
+\] and code_answer: -sqrt(3)/2 - 0.5 ❌ Answers are not equivalent
+Problem: Let $\mathbf{a},$ $\mathbf{b},$ $\mathbf{c}$ be vectors such that 
+Compare math_answer: \frac{3}{2} and code_answer: 1.5 ✅ Answers are equivalent
+Problem: The line $y = \frac{-12x + 74}{5}$ is parameterized in the form
+\[
+Compare math_answer: \left(1, -\frac{12}{5}\right) and code_answer: 1, -2.40000000000000 ✅ Answers are equivalent
+Problem: Chris wants to put six plants in a row on his windowsill. He rando
+Compare math_answer: \frac{8}{81} and code_answer: 0.0988 ✅ Answers are equivalent
+Problem: The matrix for reflecting over a certain line $\ell,$ which passes
+Compare math_answer: \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} and code_answer: \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} ❌ Answers are not equivalent
+Problem: Let $0, a, b, c$ be the vertices of a square in counterclockwise o
+Compare math_answer: 2 + i and code_answer: 1.5 + 1.5i ❌ Answers are not equivalent
+Problem: Given constants $C$ and $D,$ suppose that $\tan A$ and $\tan B$ ar
+Compare math_answer: C^2 + 2D and code_answer: C*sin(2*A + 2*B)/2 + D*cos(A + B)**2 + sin(A + B)**2 ❌ Answers are not equivalent
+Problem: Let $ x$ be a real number such that the five numbers $ \cos(2 \pi 
+Compare math_answer: \frac{1}{4} and code_answer: 0.25 ✅ Answers are equivalent
+Problem: Find all real numbers $x$ such that $\left(\dfrac{x}{3}\right)^3-3
+Compare math_answer: 21 and code_answer: x = 39, x = 21 - 6*sqrt(3)*I, x = 21 + 6*sqrt(3)*I ❌ Answers are not equivalent
+Problem: In triangle $ABC,$ $a = 8,$ $b = 7,$ and $c = 5.$  Let $H$ be the 
+Compare math_answer: (0.4638, 0.3551, 0.1810) and code_answer: (0.4638, 0.3551, 0.1812) ❌ Answers are not equivalent
+Problem: Let $\mathbf{u}$ and $\mathbf{v}$ be unit vectors, and let $\mathb
+Compare math_answer: 1 and code_answer: 1 ✅ Answers are equivalent
+Problem: Two numbers between $0$ and $1$ on a number line are to be chosen 
+Compare math_answer: \frac{1}{8} and code_answer: 0.125 ✅ Answers are equivalent
+Problem: A plane $P$ is parmeterized by
+\[\mathbf{v} = \begin{pmatrix} 1 \\
+Compare math_answer: \begin{pmatrix} -23 \\ 4 \\ -9 \end{pmatrix} and code_answer: \begin{pmatrix} 11.285714285714285 \\ -0.28571428571428537 \\ -0.42857142857142794 \end{pmatrix} ❌ Answers are not equivalent
+Problem: How many ways are there to put 9 differently colored beads on a $3
+Compare math_answer: 144 and code_answer: 161280 ❌ Answers are not equivalent
+Problem: The point $P$ on the sphere of radius 3 and centered at the origin
+Compare math_answer: (3, \frac{11\pi}{8}, \frac{4\pi}{5}) and code_answer: (3, 1.37π, 0.80π) ❌ Answers are not equivalent
+Problem: Given that
+\begin{align*}
+\cos x + \cos y + \cos z &= 0, \\
+\sin x
+Compare math_answer: -3 and code_answer: -6 ❌ Answers are not equivalent
+Problem: Let $M_n$ be the $n \times n$ matrix with entries as follows: for 
+Compare math_answer: 0.013888888888888885 and code_answer: 0.013888888853039237 ✅ Answers are equivalent
+Problem: Find the solutions to
+\[\frac{1}{x - \tan 20^{\circ}} + \frac{1}{x
+Compare math_answer: -0.267949192431123, 3.73205080756888 and code_answer: -0.267949192431123, 3.73205080756888 ✅ Answers are equivalent
+Problem: Let $a,$ $b$ be two acute angles where $\tan a = 5 \tan b.$  Find 
+Compare math_answer: 0.6667 and code_answer: 0.6666666160572688 ✅ Answers are equivalent
+Problem: Let $\alpha,$ $\beta,$ and $\gamma$ be three real numbers.  Suppos
+Compare math_answer: \] and code_answer: -sqrt(3)/2 - 1/2 ❌ Answers are not equivalent
+Problem: Let
+\[\mathbf{M} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\]b
+Compare math_answer: 0, 3 and code_answer: 0, 3 ✅ Answers are equivalent
+Problem: For $\pi\leq\theta<2\pi$, let
+\[ P=\dfrac12\cos\theta-\dfrac14\sin
+Compare math_answer: \]
+This result indicates that \( \theta \) corresponds to an angle where the sine value is \( \frac{1}{\sqrt{2}} \), which is \( \frac{\pi}{4} \) or \( \frac{3\pi}{4} \) in the specified range. and code_answer: 0.25*(1.0 - cos(2.0*theta))**2 + 1.23743686707646*sin(2.0*theta) + 0.25*sin(3.0*theta) - 0.309359216769115*sin(4.0*theta) - 0.0625*sin(5.0*theta) + 0.0773398041922786*sin(6.0*theta) + 0.015625*sin(7.0*theta) - 2.47487373415292*cos(theta) + 0.618718433538229*cos(3.0*theta) - 0.154679608384557*cos(5.0*theta) - 0.03125*cos(6.0*theta) + 0.0386699020961393*cos(7.0*theta) + 1.625 ❌ Answers are not equivalent
+Problem: I have 7 books I want to arrange on a shelf. Two of them are math 
+Compare math_answer: 1440 and code_answer: 1440 ✅ Answers are equivalent
+Problem: Find all real numbers $x$ such that $\left(\dfrac{x}{3}\right)^3-3
+Compare math_answer: 39 and code_answer: 39 ✅ Answers are equivalent
+Problem: There exist two complex numbers $c$, say $c_1$ and $c_2$, so that 
+Compare math_answer: c_1 c_2 and code_answer: (115.99999999999999-74.99999999999999j) ❌ Answers are not equivalent
+Problem: In triangle $ABC,$ $a = 8,$ $b = 7,$ and $c = 5.$  Let $H$ be the 
+Compare math_answer: (0.4638, 0.3551, 0.1810) and code_answer: (0.4638, 0.3551, 0.1812) ❌ Answers are not equivalent
+Problem: If $\sin (\pi \cos x) = \cos (\pi \sin x),$ enter all possible val
+Compare math_answer: 0, 1, -1 and code_answer: -0.750002, -0.750002, 0.750002, 0.750002 ❌ Answers are not equivalent
+Problem: Let $S$ be the set of points $(a,b)$ in the coordinate plane, wher
+Compare math_answer: 12 and code_answer: 20 ❌ Answers are not equivalent
+Problem: The matrix for reflecting over a certain line $\ell,$ which passes
+Compare math_answer: \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} and code_answer: \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix} ✅ Answers are equivalent
+Problem: Let $0, a, b, c$ be the vertices of a square in counterclockwise o
+Compare math_answer: 2 + i and code_answer: 1.5 + 1.5i ❌ Answers are not equivalent
+Problem: Given constants $C$ and $D,$ suppose that $\tan A$ and $\tan B$ ar
+Compare math_answer: \frac{C^2D + D - 2D^2}{(1 + D)^2} and code_answer: C*sin(2*A + 2*B)/2 + D*cos(A + B)**2 + sin(A + B)**2 ❌ Answers are not equivalent
+Problem: Simplify $$2\cos^2(\log(2009)i)+i\sin(\log(4036081)i).$$Note: The 
+Compare math_answer: \frac{(2009^2 + 1)^2}{2 \cdot 2009^2} + i\frac{4036081^2 - 1}{2 \cdot 4036081} and code_answer: (2018041.500000126+2018040.499999878j) ❌ Answers are not equivalent
+Problem: If $0^\circ < x < 180^\circ$ and $\cos x + \sin x = \frac{1}{2},$ 
+Compare math_answer: 16 and code_answer: 0 ❌ Answers are not equivalent
+Problem: How many ways are there to put 9 differently colored beads on a $3
+Compare math_answer: 40320 and code_answer: 161280 ❌ Answers are not equivalent
+Problem: The point $P$ on the sphere of radius 3 and centered at the origin
+Compare math_answer: (3, \frac{11\pi}{8}, \frac{4\pi}{5}) and code_answer: (3, 4.319689898685965, 2.5132741228718345) ❌ Answers are not equivalent
+Problem: How many ways are there to put 8 beads of different colors on the 
+Compare math_answer: 1680 and code_answer: 1680 ✅ Answers are equivalent
+Problem: Let $\mathbf{a},$ $\mathbf{b},$ and $\mathbf{c}$ be three unit vec
+Compare math_answer: - The angle \( \theta \) between \( \mathbf{b} \) and \( \mathbf{c} \) is \( 60^\circ \), so:
+     \[
+     \sin(60^\circ) = \frac{\sqrt{3}}{2}
+     \]
+   - Therefore, the magnitude of the cross product \( |\mathbf{b} \times \mathbf{c}| \) is:
+     \[
+     |\mathbf{b} \times \mathbf{c}| = |\mathbf{b}| |\mathbf{c}| \sin(60^\circ) = 1 \cdot 1 \cdot \frac{\sqrt{3}}{2} = \frac{\sqrt{3}}{2}
+     \]
+
+4. **Final Calculation**:
+   - Since \( \mathbf{a} \) is orthogonal to both \( \mathbf{b} \) and \( \mathbf{c} \), we have:
+     \[
+     |\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})| = |\mathbf{a}| |\mathbf{b} \times \mathbf{c}|
+     \]
+   - Given that \( |\mathbf{a}| = 1 \):
+     \[
+     |\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})| = 1 \cdot \frac{\sqrt{3}}{2} = \frac{\sqrt{3}}{2}
+     \]
+
+5. **Final Answer**:
+   The final result is:
+   \[
+   \boxed{\frac{\sqrt{3}}{2}}
+   \]
+
+6. **Significance of the Result**:
+   This result indicates the extent to which the vector \( \mathbf{a} \) projects onto the vector \( \mathbf{b} \times \mathbf{c} \), which is significant in understanding the geometric relationships between the vectors in three-dimensional space. and code_answer: 0.8660254037844386 ❌ Answers are not equivalent
+Problem: A matrix $\mathbf{M}$ takes $\begin{pmatrix} 2 \\ -1 \end{pmatrix}
+Compare math_answer: y = 2x + 3 and code_answer: y = 2.00x + -1.00 ❌ Answers are not equivalent
+Problem: Given that
+\begin{align*}
+\cos x + \cos y + \cos z &= 0, \\
+\sin x
+Compare math_answer: -3 and code_answer: -6 ❌ Answers are not equivalent
+Problem: There are real numbers $a$ and $b$ such that for every positive nu
+Compare math_answer: \frac{17}{64} and code_answer: 0.265625 ✅ Answers are equivalent
+Problem: Let $\alpha,$ $\beta,$ and $\gamma$ be three real numbers.  Suppos
+Compare math_answer: 6 and code_answer: -sqrt(7)/4 - 1/4 ❌ Answers are not equivalent
+Problem: Carson flips over the cards of a standard 52-card deck one at a ti
+Compare math_answer: \frac{1}{4} and code_answer: 0.25 ✅ Answers are equivalent
+Problem: Let $S$ be the set of points $(a,b)$ in the coordinate plane, wher
+Compare math_answer: 20 and code_answer: 20 ✅ Answers are equivalent
+Problem: There exist two complex numbers $c$, say $c_1$ and $c_2$, so that 
+Compare math_answer: 115.99999999999999 - 74.99999999999999i and code_answer: (115.99999999999999-74.99999999999999j) ❌ Answers are not equivalent
+Problem: For $135^\circ < x < 180^\circ$, points $P=(\cos x, \cos^2 x), Q=(
+Compare math_answer: This is consistent with the properties of trigonometric functions in different quadrants. and code_answer: -0.8660254037844386 ❌ Answers are not equivalent
+Problem: A plane $P$ is parmeterized by
+\[\mathbf{v} = \begin{pmatrix} 1 \\
+Compare math_answer: \begin{pmatrix} 1 \\ 4 \\ 3 \end{pmatrix} and code_answer: \begin{pmatrix} 1 \\ 4 \\ 3 \end{pmatrix} ✅ Answers are equivalent
+Problem: Simplify $$2\cos^2(\log(2009)i)+i\sin(\log(4036081)i).$$Note: The 
+Compare math_answer: (2018041.500000126 + 2018040.499999878j) and code_answer: (2018041.500000126+2018040.499999878j) ✅ Answers are equivalent
+Problem: Three couples go to the movie theater. They want to seat people to
+Compare math_answer: \frac{1}{15} and code_answer: 0.06666666666666667 ✅ Answers are equivalent
+Problem: Find all positive integer values of $n$ that satisfy the equation
+
+Compare math_answer: 5, 10, 20, 40 and code_answer: 3, 11, 33 ❌ Answers are not equivalent
+Problem: Let $ABCDEFG$ be a regular heptagon with center $O$.  Let $M$ be t
+Compare math_answer: \frac{1}{4} and code_answer: 0.12500000000000014 ❌ Answers are not equivalent
+Problem: A sequence $\{a_n\}_{n \ge 0}$ of real numbers satisfies the recur
+Compare math_answer: k and code_answer: 0 ❌ Answers are not equivalent
+Problem: In triangle $ABC,$
+\[\tan \left( \frac{B - C}{2} \right) \tan \fra
+Compare math_answer: \text{Expression in terms of known values} and code_answer: (tan(A/2) - tan(B/2))*tan(C/2)/(tan(A/2)*tan(B/2) + 1) ❌ Answers are not equivalent
+Problem: If $0^\circ < x < 180^\circ$ and $\cos x + \sin x = \frac{1}{2},$ 
+Compare math_answer: 16 and code_answer: No valid solution found
+No valid solution found ❌ Answers are not equivalent
+Problem: Given that
+\begin{align*}
+\cos x + \cos y + \cos z &= 0, \\
+\sin x
+Compare math_answer: -3 and code_answer: -3 ✅ Answers are equivalent
+Problem: For $\pi\leq\theta<2\pi$, let
+\[ P=\dfrac12\cos\theta-\dfrac14\sin
+Compare math_answer: ### Final Answer
+Thus, the final answer is:
+
+\[
+\boxed{\frac{1}{\sqrt{2}}}
+\]
+
+This result indicates that \( \theta \) corresponds to an angle where the sine value is \( \frac{1}{\sqrt{2}} \), specifically \( \frac{3\pi}{4} \) in the specified range. and code_answer: No valid solution found. ❌ Answers are not equivalent
+Problem: Find all possible values of the determinant of
+\[\begin{pmatrix} \
+Compare math_answer: \left[ \frac{3}{4}, 1 \right] and code_answer: {0.250000000000000, 1.00000000000000, 0} ❌ Answers are not equivalent
+Problem: Let $\mathbf{a},$ $\mathbf{b},$ and $\mathbf{c}$ be three unit vec
+Compare math_answer: - The angle \( \theta \) between \( \mathbf{b} \) and \( \mathbf{c} \) is \( 60^\circ \), so:
+     \[
+     \sin(60^\circ) = \frac{\sqrt{3}}{2}
+     \]
+   - Therefore, the magnitude of the cross product \( |\mathbf{b} \times \mathbf{c}| \) is:
+     \[
+     |\mathbf{b} \times \mathbf{c}| = |\mathbf{b}| |\mathbf{c}| \sin(60^\circ) = 1 \cdot 1 \cdot \frac{\sqrt{3}}{2} = \frac{\sqrt{3}}{2}
+     \]
+
+4. **Final Calculation**:
+   - Since \( \mathbf{a} \) is orthogonal to both \( \mathbf{b} \) and \( \mathbf{c} \), we have:
+     \[
+     |\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})| = |\mathbf{a}| |\mathbf{b} \times \mathbf{c}|
+     \]
+   - Given that \( |\mathbf{a}| = 1 \):
+     \[
+     |\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})| = 1 \cdot \frac{\sqrt{3}}{2} = \frac{\sqrt{3}}{2}
+     \]
+
+5. **Final Answer**:
+   The final result is:
+   \[
+   \boxed{\frac{\sqrt{3}}{2}}
+   \]
+
+6. **Significance of the Result**:
+   This result indicates the extent to which the vector \( \mathbf{a} \) projects onto the vector \( \mathbf{b} \times \mathbf{c} \), which is significant in understanding the geometric relationships between the vectors in three-dimensional space. and code_answer: 0.8660254037844386 ❌ Answers are not equivalent
+Problem: For $135^\circ < x < 180^\circ$, points $P=(\cos x, \cos^2 x), Q=(
+Compare math_answer: 2. **Mathematical Concepts**:
+   We will use the double angle formula for sine:
+   \[
+   \sin 2x = 2 \sin x \cos x
+   \]
+
+3. **Calculating \(\sin x\) and \(\cos x\)**:
+   - For \(x = 150^\circ\):
+     \[
+     \sin 150^\circ = \frac{1}{2}
+     \]
+     \[
+     \cos 150^\circ = -\frac{\sqrt{3}}{2}
+     \]
+
+4. **Applying the Double Angle Formula**:
+   Now substituting these values into the double angle formula:
+   \[
+   \sin 2(150^\circ) = 2 \left(\frac{1}{2}\right) \left(-\frac{\sqrt{3}}{2}\right)
+   \]
+   Simplifying this gives:
+   \[
+   \sin 2(150^\circ) = 2 \cdot \frac{1}{2} \cdot -\frac{\sqrt{3}}{2} = -\frac{\sqrt{3}}{2}
+   \]
+
+5. **Final Result**:
+   Thus, we conclude that:
+   \[
+   \sin 2x = -\frac{\sqrt{3}}{2}
+   \]
+   Therefore, the final answer is:
+   \[
+   \boxed{-\frac{\sqrt{3}}{2}}
+   \]
+
+6. **Significance of the Result**:
+   The result indicates that at \(x = 150^\circ\), the angle \(2x = 300^\circ\) is in the fourth quadrant, where the sine function is negative, confirming our calculation is consistent with the properties of trigonometric functions. and code_answer: -0.8660254037844386 ❌ Answers are not equivalent
+Problem: How many ways are there to put 9 differently colored beads on a $3
+Compare math_answer: 161280 and code_answer: 161280 ✅ Answers are equivalent
+Problem: A matrix $\mathbf{M}$ takes $\begin{pmatrix} 2 \\ -1 \end{pmatrix}
+Compare math_answer: y = 2x + 3 and code_answer: y = -5.00x + -1.00 ❌ Answers are not equivalent
+Problem: The expression
+\[2 \sqrt[3]{3 \sec^2 20^\circ \sin^2 10^\circ}\]ca
+Compare math_answer: (2, 3) and code_answer: (0, 1) ❌ Answers are not equivalent
+Problem: One line is parameterized by
+\[\begin{pmatrix} 2 - 3t \\ -5 - 2t \
+Compare math_answer: \frac{19}{21} and code_answer: -0.9047619047619048 ❌ Answers are not equivalent
+Problem: There exist two complex numbers $c$, say $c_1$ and $c_2$, so that 
+Compare math_answer: 116 - 75i and code_answer: 116.0000000000 + -75.0000000000i ✅ Answers are equivalent
+Problem: Find all positive integer values of $n$ that satisfy the equation
+
+Compare math_answer: 5, 10, 20, 40 and code_answer: 3, 11, 33 ❌ Answers are not equivalent
+Problem: Let $ABCDEFG$ be a regular heptagon with center $O$.  Let $M$ be t
+Compare math_answer: \frac{1}{8} and code_answer: 0.12500000000000014 ✅ Answers are equivalent
+Problem: For $135^\circ < x < 180^\circ$, points $P=(\cos x, \cos^2 x), Q=(
+Compare math_answer: 2. **Mathematical Concepts**:
+   We will use the double angle formula for sine:
+   \[
+   \sin 2x = 2 \sin x \cos x
+   \]
+
+3. **Calculating \(\sin x\) and \(\cos x\)**:
+   - For \(x = 150^\circ\):
+     \[
+     \sin 150^\circ = \frac{1}{2}
+     \]
+     \[
+     \cos 150^\circ = -\frac{\sqrt{3}}{2}
+     \]
+
+4. **Applying the Double Angle Formula**:
+   Now substituting these values into the double angle formula:
+   \[
+   \sin 2(150^\circ) = 2 \left(\frac{1}{2}\right) \left(-\frac{\sqrt{3}}{2}\right)
+   \]
+   Simplifying this gives:
+   \[
+   \sin 2(150^\circ) = 2 \cdot \frac{1}{2} \cdot -\frac{\sqrt{3}}{2} = -\frac{\sqrt{3}}{2}
+   \]
+
+5. **Final Result**:
+   Thus, we conclude that:
+   \[
+   \sin 2x = -\frac{\sqrt{3}}{2}
+   \]
+   Therefore, the final answer is:
+   \[
+   \boxed{-\frac{\sqrt{3}}{2}}
+   \]
+
+6. **Significance of the Result**:
+   The result indicates that at \(x = 150^\circ\), the angle \(2x = 300^\circ\) is in the fourth quadrant, where the sine function is negative, confirming our calculation is consistent with the properties of trigonometric functions. and code_answer: -0.8660254037844386 ❌ Answers are not equivalent
+Problem: Find all possible values of the determinant of
+\[\begin{pmatrix} \
+Compare math_answer: \left[ \frac{3}{4}, 1 \right] and code_answer: [6.33673931105250E-8, 1.00000000000000] ❌ Answers are not equivalent
+Problem: If $0^\circ < x < 180^\circ$ and $\cos x + \sin x = \frac{1}{2},$ 
+Compare math_answer: 16 and code_answer: -2.21525043702153 ❌ Answers are not equivalent
+Problem: The expression
+\[2 \sqrt[3]{3 \sec^2 20^\circ \sin^2 10^\circ}\]ca
+Compare math_answer: (0, 1) and code_answer: (0, 1) ✅ Answers are equivalent
+Problem: Let $\alpha,$ $\beta,$ and $\gamma$ be three angles such that $\al
+Compare math_answer: \]
+
+7. **Significance of the Result**: This result shows the relationship between the angles in a triangle and their trigonometric functions, illustrating how the properties of angles can lead to specific numerical relationships. and code_answer: 1.1547005383792517 ❌ Answers are not equivalent
+Problem: Let $\mathbf{a},$ $\mathbf{b},$ and $\mathbf{c}$ be three unit vec
+Compare math_answer: - Next, we calculate \( |\mathbf{b} \times \mathbf{c}| \):
+     \[
+     |\mathbf{b} \times \mathbf{c}| = |\mathbf{b}| |\mathbf{c}| \sin(60^\circ) = 1 \cdot 1 \cdot \sin(60^\circ) = \sin(60^\circ)
+     \]
+   - The value of \( \sin(60^\circ) \) is:
+     \[
+     \sin(60^\circ) = \frac{\sqrt{3}}{2}
+     \]
+   - Therefore, we have:
+     \[
+     |\mathbf{a} \cdot (\mathbf{b} \times \mathbf{c})| = 1 \cdot \frac{\sqrt{3}}{2} = \frac{\sqrt{3}}{2}
+     \]
+
+4. **Final Answer**:
+   The final result is:
+   \[
+   \boxed{\frac{\sqrt{3}}{2}}
+   \]
+
+5. **Significance of the Result**:
+   This result indicates the extent to which the vector \( \mathbf{a} \) projects onto the vector \( \mathbf{b} \times \mathbf{c} \), which is significant in understanding the geometric relationships between the vectors in three-dimensional space. and code_answer: 489061/564719 ❌ Answers are not equivalent
+Problem: One line is parameterized by
+\[\begin{pmatrix} 2 - 3t \\ -5 - 2t \
+Compare math_answer: \frac{19}{21} and code_answer: 0.9047619047619048 ✅ Answers are equivalent
+Problem: A matrix $\mathbf{M}$ takes $\begin{pmatrix} 2 \\ -1 \end{pmatrix}
+Compare math_answer: y = 2x + 3 and code_answer: y = -5.00x + -1.00 ❌ Answers are not equivalent
+Problem: Find all positive integer values of $n$ that satisfy the equation
+
+Compare math_answer: 3, 11, 33 and code_answer: 3, 11, 33 ✅ Answers are equivalent
+Problem: Find all possible values of the determinant of
+\[\begin{pmatrix} \
+Compare math_answer: [0, 1] and code_answer: [6.33673931105250E-8, 1.00000000000000] ❌ Answers are not equivalent
+Problem: Let $\alpha,$ $\beta,$ and $\gamma$ be three angles such that $\al
+Compare math_answer: \]
+
+5. **Significance of the Result**:
+   This result illustrates the relationship between the angles in a triangle and their trigonometric functions, emphasizing how the properties of angles can lead to specific numerical relationships. and code_answer: -6.464101615137748 ❌ Answers are not equivalent
+Problem: Derek's phone number, $336$ - $7624,$ has the property that the th
+Compare math_answer: 12 and code_answer: 84 ❌ Answers are not equivalent
+Problem: A Senate committee has 5 Democrats, 5 Republicans, and 1 Independe
+Compare math_answer: 28800 and code_answer: 28800 ✅ Answers are equivalent
+Problem: For how many three-element sets (order doesn't matter) of positive
+Compare math_answer: 10 and code_answer: 0 ❌ Answers are not equivalent
+Problem: An international meeting is held between England, Germany, and Fra
+Compare math_answer: 576 and code_answer: 576 ✅ Answers are equivalent
+Problem: Maria has three identical apples and three identical oranges. How 
+Compare math_answer: 200 and code_answer: 200 ✅ Answers are equivalent
+Problem: The digits 2, 3, 4, 7 and 8 will be put in random order to make a 
+Compare math_answer: \frac{X}{120} and code_answer: 12/120 ❌ Answers are not equivalent
+Problem: Bob plays a game where, for some number $n$, he chooses a random i
+Compare math_answer: \frac{209}{210} and code_answer: 0.9952380952380953 ✅ Answers are equivalent
+Problem: A Senate committee has 8 Republicans and 6 Democrats.  In how many
+Compare math_answer: 1940 and code_answer: 1940 ✅ Answers are equivalent
+Problem: How many zeros are at the end of (100!)(200!)(300!) when multiplie
+Compare math_answer: 147 and code_answer: 147 ✅ Answers are equivalent
+Problem: Camy made a list of every possible distinct five-digit positive in
+Compare math_answer: 5866568 and code_answer: 5866608 ❌ Answers are not equivalent
+Problem: Six 6-sided dice are rolled. What is the probability that three of
+Compare math_answer: 0.0926 and code_answer: 0.092593 ✅ Answers are equivalent
+Problem: 3 cards are chosen at random from a standard 52-card deck.  What i
+Compare math_answer: 0.169 and code_answer: 0.169412 ✅ Answers are equivalent
+Problem: There is a total of 70 squares of three sizes whose vertices are p
+Compare math_answer: \text{No integer solution for } n. and code_answer: No integer solution for n. ❌ Answers are not equivalent
+Problem: The sequence 2, 3, 5, 6, 7, 10, 11, $\ldots$ contains all the posi
+Compare math_answer: 1170 and code_answer: 1036 ❌ Answers are not equivalent
+Problem: On the $xy$-plane, the origin is labeled with an $M$. The points $
+Compare math_answer: 384 and code_answer: 384 ✅ Answers are equivalent
+Problem: How many distinguishable ways are there to write $9$ as the sum of
+Compare math_answer: 96 and code_answer: 9 ❌ Answers are not equivalent
+Problem: A cook has 10 red peppers and 5 green peppers. If the cook selects
+Compare math_answer: \frac{235}{5005} and code_answer: 0.04695304695304695 ✅ Answers are equivalent
+Problem: Max has a spinner that lands on 1 with a probability of $\frac{1}{
+Compare math_answer: \frac{47}{144} and code_answer: 0.32638888888888884 ✅ Answers are equivalent
+Problem: Our basketball team has 10 players.  We need to divide into two te
+Compare math_answer: 126 and code_answer: 126 ✅ Answers are equivalent
+Problem: Kim has $10$ identical lamps and $3$ identical tables. How many wa
+Compare math_answer: 66 and code_answer: 66 ✅ Answers are equivalent
+Problem: Jack rolls 5 fair six-sided dice. What is the probability that at 
+Compare math_answer: \frac{49}{54} and code_answer: 0.90741 ✅ Answers are equivalent
+Problem: In how many ways can one write the numbers 1, 2, 3, 4, 5, and 6 in
+Compare math_answer: 265 and code_answer: 25 ❌ Answers are not equivalent
+Problem: A fisherman can see seven aquatic creatures in a lake --- four cro
+Compare math_answer: 3 and code_answer: 3 ✅ Answers are equivalent
+Problem: A Senate committee has 5 Democrats and 5 Republicans.  In how many
+Compare math_answer: 14400 and code_answer: 14400 ✅ Answers are equivalent
+Problem: Derek's phone number, $336$ - $7624,$ has the property that the th
+Compare math_answer: 84 and code_answer: 72 ❌ Answers are not equivalent
+Problem: For how many three-element sets (order doesn't matter) of positive
+Compare math_answer: 0 and code_answer: 0 ✅ Answers are equivalent
+Problem: Given 5 colors to choose from, how many ways can we color the four
+Compare math_answer: 165 and code_answer: 165 ✅ Answers are equivalent
+Problem: Pat wants to select 8 pieces of fruit to bring in the car for the 
+Compare math_answer: \frac{1904}{6561} and code_answer: 0.000509 ❌ Answers are not equivalent
+Problem: How many numbers can be expressed as the sum of two or more distin
+Compare math_answer: 16 and code_answer: 31 ❌ Answers are not equivalent
+Problem: There is a total of 70 squares of three sizes whose vertices are p
+Compare math_answer: \frac{74}{3} and code_answer: 24.666666666666668 ✅ Answers are equivalent
+Problem: Harold tosses a nickel four times.  What is the probability that h
+Compare math_answer: \frac{11}{16} and code_answer: 0.6875 ✅ Answers are equivalent
+Problem: A bag contains two red beads and two green beads. You reach into t
+Compare math_answer: \frac{1}{8} and code_answer: 31/32 ❌ Answers are not equivalent
+Problem: We roll a fair 6-sided die 5 times.  What is the probability that 
+Compare math_answer: 0.836 and code_answer: 0.964506 ❌ Answers are not equivalent
+Problem: Camy made a list of every possible distinct five-digit positive in
+Compare math_answer: 5866608 and code_answer: 5866608 ✅ Answers are equivalent
+Problem: If two distinct members of the set $\{ 2, 4, 12, 14, 21, 28, 98 \}
+Compare math_answer: \frac{11}{21} and code_answer: 0.3333333333333333 ❌ Answers are not equivalent
+Problem: The digits 2, 3, 4, 7 and 8 will be put in random order to make a 
+Compare math_answer: \frac{1}{10} and code_answer: 12/120 ✅ Answers are equivalent
+Problem: Each day, two out of the three teams in a class are randomly selec
+Compare math_answer: \frac{20}{27} and code_answer: 20/27 ✅ Answers are equivalent
+Problem: A box contains exactly five chips, three red and two white. Chips 
+Compare math_answer: \frac{2}{5} and code_answer: 0.40 ✅ Answers are equivalent
+Problem: Ryan has 3 red lava lamps and 3 blue lava lamps. He arranges them 
+Compare math_answer: \frac{19}{40} and code_answer: 0.4750 ✅ Answers are equivalent
+Problem: How many subsets of the set of divisors of $72$ contain only compo
+Compare math_answer: 512 and code_answer: 512 ✅ Answers are equivalent
+Problem: In how many ways can one write the numbers 1, 2, 3, 4, 5, and 6 in
+Compare math_answer: 25 and code_answer: 25 ✅ Answers are equivalent
+Problem: The sequence 2, 3, 5, 6, 7, 10, 11, $\ldots$ contains all the posi
+Compare math_answer: 1157 and code_answer: 1157 ✅ Answers are equivalent
+Problem: In a math class of 30 students, 12 out of 15 girls are freshmen an
+Compare math_answer: 0.076 and code_answer: 0.076 ✅ Answers are equivalent
+Problem: A committee is to be made up from a group of 10 candidates. The co
+Compare math_answer: 5120 and code_answer: 5120 ✅ Answers are equivalent
+Problem: How many distinct three-letter sequences with at least one $``T"$ 
+Compare math_answer: 48 and code_answer: 48 ✅ Answers are equivalent
+Problem: How many different bracelets have 3 identical orange beads, 3 iden
+Compare math_answer: 10 and code_answer: 0 ❌ Answers are not equivalent
+Problem: How many distinguishable ways are there to write $9$ as the sum of
+Compare math_answer: 114 and code_answer: 96 ❌ Answers are not equivalent
+Problem: Derek's phone number, $336$ - $7624,$ has the property that the th
+Compare math_answer: 288 and code_answer: 96 ❌ Answers are not equivalent
+Problem: On the game board below Kendra will start at the center of the boa
+Compare math_answer: \frac{successful\ outcomes}{64} and code_answer: 10/64 ❌ Answers are not equivalent
+Problem: Two standard six-faced dice are rolled. Jean wins if the product o
+Compare math_answer: \frac{1}{3} and code_answer: 24/36 ❌ Answers are not equivalent
+Problem: How many numbers can be expressed as the sum of two or more distin
+Compare math_answer: 26 and code_answer: 26 ✅ Answers are equivalent
+Problem: Two different positive integers less than 100 are randomly chosen 
+Compare math_answer: 0.5575 and code_answer: 0.5578 ✅ Answers are equivalent
+Problem: Suppose that $*(n) = \left\{ n-2, n+2, 2n, \frac{n}{2} \right\}$. 
+Compare math_answer: 4 and code_answer: 5 ❌ Answers are not equivalent
+Problem: Ben rolls two fair six-sided dice. What is the expected value of t
+Compare math_answer: \frac{7}{2} and code_answer: 4.472222222222222 ❌ Answers are not equivalent
+Problem: When Trilisa takes pictures, they turn out with probability $\frac
+Compare math_answer: 7 and code_answer: 7 ✅ Answers are equivalent
+Problem: A PE class has 12 students, 6 girls and 6 boys. The coach has 4 je
+Compare math_answer: valid\_ways and code_answer: 121304250 ❌ Answers are not equivalent
+Problem: Pat wants to select 8 pieces of fruit to bring in the car for the 
+Compare math_answer: \frac{1904}{6561} and code_answer: 0.290200 ✅ Answers are equivalent
+Problem: A player chooses one of the numbers 1 through 4. After the choice 
+Compare math_answer: -\frac{1}{16} and code_answer: -0.25 ❌ Answers are not equivalent
+Problem: Carlos has chosen twelve different compact discs (CDs) he would li
+Compare math_answer: \frac{590}{792} and code_answer: 590/792 ✅ Answers are equivalent
+Problem: Coin $A$ is flipped three times and coin $B$ is flipped four times
+Compare math_answer: \frac{35}{128} and code_answer: 0.2734375 ✅ Answers are equivalent
+Problem: A bag contains two red beads and two green beads. You reach into t
+Compare math_answer: \frac{31}{32} and code_answer: 7/4 ❌ Answers are not equivalent
+Problem: We roll a fair 6-sided die 5 times.  What is the probability that 
+Compare math_answer: 0.964506 and code_answer: 0.964506 ✅ Answers are equivalent
+Problem: If two distinct members of the set $\{ 2, 4, 12, 14, 21, 28, 98 \}
+Compare math_answer: \frac{11}{21} and code_answer: 0.3333333333333333 ❌ Answers are not equivalent
+Problem: On the game board below Kendra will start at the center of the boa
+Compare math_answer: \frac{5}{32} and code_answer: 10/64 ✅ Answers are equivalent
+Problem: How many distinguishable ways are there to write $9$ as the sum of
+Compare math_answer: 96 and code_answer: 96 ✅ Answers are equivalent
+Problem: A PE class has 12 students, 6 girls and 6 boys. The coach has 4 je
+Compare math_answer: 121304250 and code_answer: 1 ❌ Answers are not equivalent
+Problem: At a school, all 60 students play on at least one of three teams: 
+Compare math_answer: 44 and code_answer: 44 ✅ Answers are equivalent
+Problem: How many different bracelets have 3 identical orange beads, 3 iden
+Compare math_answer: 3 and code_answer: 0 ❌ Answers are not equivalent
+Problem: Suppose that $*(n) = \left\{ n-2, n+2, 2n, \frac{n}{2} \right\}$. 
+Compare math_answer: 5 and code_answer: 5 ✅ Answers are equivalent
+Problem: A player chooses one of the numbers 1 through 4. After the choice 
+Compare math_answer: -\frac{1}{16} and code_answer: -0.0625 ✅ Answers are equivalent
+Problem: Two standard six-faced dice are rolled. Jean wins if the product o
+Compare math_answer: \frac{2}{3} and code_answer: 24/36 ✅ Answers are equivalent
+Problem: A bag contains two red beads and two green beads. You reach into t
+Compare math_answer: \frac{7}{8} and code_answer: 7/4 ❌ Answers are not equivalent
+Problem: Ben rolls two fair six-sided dice. What is the expected value of t
+Compare math_answer: \frac{161}{36} and code_answer: 4.472222222222222 ✅ Answers are equivalent
+Problem: If two distinct members of the set $\{ 2, 4, 12, 14, 21, 28, 98 \}
+Compare math_answer: \frac{1}{3} and code_answer: 0.3333333333333333 ✅ Answers are equivalent
+Problem: A PE class has 12 students, 6 girls and 6 boys. The coach has 4 je
+Compare math_answer: 1 and code_answer: 1 ✅ Answers are equivalent
+Problem: How many different bracelets have 3 identical orange beads, 3 iden
+Compare math_answer: 20 and code_answer: 20 ✅ Answers are equivalent
+Problem: Ten people are sitting around a round table.  Three of them are ch
+Compare math_answer: \frac{1}{12} and code_answer: 0.0833 ✅ Answers are equivalent
+Problem: Four points, $A$, $B$, $C$, and $D$, are chosen randomly and indep
+Compare math_answer: \frac{1}{3} and code_answer: 0.3333333333333333 ✅ Answers are equivalent
+Problem: An envelope contains eight bills: 2 ones, 2 fives, 2 tens, and 2 t
+Compare math_answer: \frac{5}{28} and code_answer: 0.50 ❌ Answers are not equivalent
+Problem: A game of Plinko is played by dropping a ball at the top-middle of
+Compare math_answer: \frac{35}{128} and code_answer: 0.2734375 ✅ Answers are equivalent
+Problem: Pat is to select six cookies from a tray containing only chocolate
+Compare math_answer: 28 and code_answer: 28 ✅ Answers are equivalent
+Problem: We roll a fair 6-sided die 5 times.  What is the probability that 
+Compare math_answer: \frac{40}{243} and code_answer: 0.16461 ✅ Answers are equivalent
+Problem: Five 6-sided dice are rolled. What is the probability that exactly
+Compare math_answer: 0.32922 and code_answer: 0.32922 ✅ Answers are equivalent
+Problem: Six cars pull up to a red light, one at a time. At the light, ther
+Compare math_answer: 540 and code_answer: -271431 ❌ Answers are not equivalent
+Problem: I have four identical oranges. How many ways are there for me to d
+Compare math_answer: 3 and code_answer: 3 ✅ Answers are equivalent
+Problem: Six 6-sided dice are rolled.  What is the probability that exactly
+Compare math_answer: \frac{5}{162} and code_answer: 0.030864197530864196 ✅ Answers are equivalent
+Problem: 3 cards are chosen at random from a standard 52-card deck.  What i
+Compare math_answer: 0.002174 and code_answer: 0.002172 ✅ Answers are equivalent
+Problem: How many squares have all four vertices on the 5 by 5 rectangular 
+Compare math_answer: 30 and code_answer: 30 ✅ Answers are equivalent
+Problem: I draw a card from a standard 52-card deck.  If I draw an Ace, I w
+Compare math_answer: 9.00 and code_answer: 15.48 ❌ Answers are not equivalent
+Problem: How many triples $(a,b,c)$ of even positive integers satisfy $a^3 
+Compare math_answer: 12 and code_answer: 35 ❌ Answers are not equivalent
+Problem: The letters of the word `SIXTEEN' are randomly arranged.  What is 
+Compare math_answer: 0.75 and code_answer: 0.750000 ✅ Answers are equivalent
+Problem: Amy's grandmother gave her 3 identical chocolate chip cookies and 
+Compare math_answer: 25 and code_answer: 25 ✅ Answers are equivalent
+Problem: In the game of Twister, a spinner randomly selects either an arm o
+Compare math_answer: \frac{27}{512} and code_answer: 0.052734 ✅ Answers are equivalent
+Problem: Given that $a$ and $b$ are real numbers such that $-3\leq a\leq1$ 
+Compare math_answer: \frac{5}{12} and code_answer: 0.4166666666666667 ✅ Answers are equivalent
+Problem: Krishanu and Shaunak each pick an integer at random between 1 and 
+Compare math_answer: \frac{33}{50} and code_answer: 73/100 ❌ Answers are not equivalent
+Problem: How many ways are there to put 4 balls in 3 boxes if two balls are
+Compare math_answer: 36 and code_answer: 36 ✅ Answers are equivalent
+Problem: Integers $a$, $b$, $c$, and $d$, not necessarily distinct, are cho
+Compare math_answer: \frac{5}{8} and code_answer: 0.625 ✅ Answers are equivalent
+Problem: Gerry goes to sleep at 11 pm each night. But he doesn't sleep very
+Compare math_answer: 0.142857 and code_answer: 0.144444 ❌ Answers are not equivalent
+Problem: Randy presses RAND on his calculator twice to obtain two random nu
+Compare math_answer: 4p and code_answer: 3.141852 ❌ Answers are not equivalent
+Problem: John rolls a pair of standard 6-sided dice. What is the probabilit
+Compare math_answer: \frac{23}{36} and code_answer: 23/36 ✅ Answers are equivalent
+Problem: Our basketball team has 10 players, including Steve and Danny.  We
+Compare math_answer: 70 and code_answer: 70 ✅ Answers are equivalent
+Problem: How many ways are there to put 4 balls in 3 boxes if the balls are
+Compare math_answer: 14 and code_answer: 4 ❌ Answers are not equivalent
+Problem: Two jokers are added to a $52$ card deck and the entire stack of $
+Compare math_answer: 26 and code_answer: 16.37037037037037 ❌ Answers are not equivalent
+Problem: Joan tries to solve a really hard problem once each day.  She has 
+Compare math_answer: \frac{781}{1024} and code_answer: 0.7627 ✅ Answers are equivalent
+Problem: How many different positive integers divisible by 4 can be formed 
+Compare math_answer: 11 and code_answer: 16 ❌ Answers are not equivalent
+Problem: If $a,$ $b$ and $c$ are three (not necessarily different) numbers 
+Compare math_answer: \frac{59}{125} and code_answer: 1.096 ❌ Answers are not equivalent
+Problem: There are 360 people in my school.  15 take calculus, physics, and
+Compare math_answer: 110 and code_answer: 130 ❌ Answers are not equivalent
+Problem: An envelope contains eight bills: 2 ones, 2 fives, 2 tens, and 2 t
+Compare math_answer: \frac{1}{7} and code_answer: 14/28 ❌ Answers are not equivalent
+Problem: Rectangle $ABCD$ has center $O$ and $AB/AD=k$. A point is randomly
+Compare math_answer: 0.5 and code_answer: -0.0521 ❌ Answers are not equivalent
+Problem: Tina randomly selects two distinct numbers from the set $$\{1,2,3,
+Compare math_answer: 0.28 and code_answer: 0.4 ❌ Answers are not equivalent
+Problem: How many triples $(a,b,c)$ of even positive integers satisfy $a^3 
+Compare math_answer: 35 and code_answer: 35 ✅ Answers are equivalent
+Problem: Six cars pull up to a red light, one at a time. At the light, ther
+Compare math_answer: 540 and code_answer: 540 ✅ Answers are equivalent
+Problem: Two numbers, $x$ and $y$ are selected at random from the interval 
+Compare math_answer: \frac{2}{9} and code_answer: 0.2222222222222222 ✅ Answers are equivalent
+Problem: How many ways are there to answer a $10$-question true/false test,
+Compare math_answer: 968 and code_answer: 968 ✅ Answers are equivalent
+Problem: Select numbers $a$ and $b$ between 0 and 1 independently and at ra
+Compare math_answer: 0.5 and code_answer: 0.750104 ❌ Answers are not equivalent
+Problem: I draw a card from a standard 52-card deck.  If I draw an Ace, I w
+Compare math_answer: 11.25 and code_answer: 12.98 ❌ Answers are not equivalent
+Problem: Two jokers are added to a $52$ card deck and the entire stack of $
+Compare math_answer: 26 and code_answer: 17.333333333333332 ❌ Answers are not equivalent
+Problem: Randy presses RAND on his calculator twice to obtain two random nu
+Compare math_answer: 1.141588 and code_answer: 1.140752 ✅ Answers are equivalent
+Problem: How many ways are there to put 4 balls in 3 boxes if the balls are
+Compare math_answer: 14 and code_answer: 14 ✅ Answers are equivalent
+Problem: How many different positive integers divisible by 4 can be formed 
+Compare math_answer: 16 and code_answer: 16 ✅ Answers are equivalent
+Problem: Gerry goes to sleep at 11 pm each night. But he doesn't sleep very
+Compare math_answer: 0.142308 and code_answer: 0.142308 ✅ Answers are equivalent
+Problem: An envelope contains eight bills: 2 ones, 2 fives, 2 tens, and 2 t
+Compare math_answer: \frac{2}{7} and code_answer: 0.50 ❌ Answers are not equivalent
+Problem: Krishanu and Shaunak each pick an integer at random between 1 and 
+Compare math_answer: \frac{69}{100} and code_answer: 73/100 ❌ Answers are not equivalent
+Problem: There are 360 people in my school.  15 take calculus, physics, and
+Compare math_answer: 130 and code_answer: 130 ✅ Answers are equivalent
+Problem: Rectangle $ABCD$ has center $O$ and $AB/AD=k$. A point is randomly
+Compare math_answer: 0.5 and code_answer: -0.0521 ❌ Answers are not equivalent
+Problem: Two jokers are added to a $52$ card deck and the entire stack of $
+Compare math_answer: 17.333333333333332 and code_answer: 17.333333333333332 ✅ Answers are equivalent
+Problem: Tina randomly selects two distinct numbers from the set $$\{1,2,3,
+Compare math_answer: 0.4 and code_answer: 0.4 ✅ Answers are equivalent
+Problem: If $a,$ $b$ and $c$ are three (not necessarily different) numbers 
+Compare math_answer: \frac{59}{125} and code_answer: 0.472 ✅ Answers are equivalent
+Problem: I draw a card from a standard 52-card deck.  If I draw an Ace, I w
+Compare math_answer: 12.98 and code_answer: $12.98
+$12.98 ❌ Answers are not equivalent
+Problem: Select numbers $a$ and $b$ between 0 and 1 independently and at ra
+Compare math_answer: 0.875 and code_answer: 0.750346 ❌ Answers are not equivalent
+Problem: Krishanu and Shaunak each pick an integer at random between 1 and 
+Compare math_answer: \frac{73}{100} and code_answer: 73/100 ✅ Answers are equivalent
+Problem: Rectangle $ABCD$ has center $O$ and $AB/AD=k$. A point is randomly
+Compare math_answer: 0.0 and code_answer: 0.0 ✅ Answers are equivalent
+Problem: Select numbers $a$ and $b$ between 0 and 1 independently and at ra
+Compare math_answer: 0.75 and code_answer: 0.750204 ✅ Answers are equivalent

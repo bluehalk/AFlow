@@ -91,12 +91,46 @@ def parse_args():
     )
     parser.add_argument("--sample_indices", type=str, default=None, 
         help="Comma-separated list of sample indices to evaluate (e.g., '0,1,2'). If not provided, default behavior is used.")
+    parser.add_argument(
+        "--custom_data_path",
+        type=str,
+        default=None,
+        help="Path to custom JSONL file to load data from (e.g., 'z_ablation/results/MBPP/graphs/DirectIO/failed_samples_20250705_225900.jsonl')"
+    )
+    parser.add_argument(
+        "--graph_path",
+        type=str,
+        default=None,
+        help="Path to custom graph to load data from (e.g., 'z_ablation/results/MBPP/graphs/agentsimulate')"
+    )
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="Enable debug mode.",
+    )
+    parser.add_argument(
+        "--batch_size",
+        type=int,
+        default=None,
+        help="Batch size for saving results. If not specified, saves only at the end. Set to a positive integer to enable batch saving (e.g., --batch_size 10).",
+    )
     return parser.parse_args()
 
 
 if __name__ == "__main__":
+    
     args = parse_args()
-
+    if args.debug:  
+        print("🔄 开始调试...")
+        import debugpy
+        try:
+            # 5678 is the default attach port in the VS Code debug configurations. Unless a host and port are specified, host defaults to 127.0.0.1
+            debugpy.listen(("localhost", 9501))
+            print("Waiting for debugger attach")
+            debugpy.wait_for_client()
+        except Exception as e:
+            pass
+    
     config = EXPERIMENT_CONFIGS[args.dataset]
 
     models_config = LLMsConfig.default()
@@ -134,7 +168,10 @@ if __name__ == "__main__":
         initial_round=args.initial_round,
         max_rounds=args.max_rounds,
         validation_rounds=args.validation_rounds,
-        sample_indices=sample_indices
+        sample_indices=sample_indices,
+        custom_data_path=args.custom_data_path,
+        graph_path=args.graph_path,
+        batch_size=args.batch_size
     )
 
     # Optimize workflow via setting the optimizer's mode to 'Graph'

@@ -27,11 +27,9 @@ In the "thought" field, provide a detailed explanation of your thought process. 
 """
 
 PYTHON_CODE_VERIFIER_PROMPT = """
-You are a professional Python programmer. Your task is to write complete, self-contained code based on a given mathematical problem and output the answer. The code should include all necessary imports and dependencies, and be ready to run without additional setup or environment configuration.
+You are a professional Python programmer. Your task is to write complete, self-contained code based on a given mathematical problem and output the answer in the required format.
 
 Problem description: {problem}
-Other analysis: {analysis}
-{feedback}
 
 Your code should:
 1. Implement the calculation steps described in the problem.
@@ -40,7 +38,7 @@ Your code should:
 
 Please ensure your code is efficient, well-commented, and follows Python best practices. The output should be limited to basic data types such as strings, integers, and floats. It is prohibited to transmit images or other file formats. The code output is intended for a text-based language model.
 """
-
+# 4. The return value should be the final answer, and must be formatted in \\boxed{{}} LaTeX notation.
 
 REFLECTION_ON_PUBLIC_TEST_PROMPT = """
 Given a code problem and a python code solution which failed to pass test or execute, you need to analyze the reason for the failure and propose a better code solution.: 
@@ -86,4 +84,109 @@ solution: {solution}
 feedback: {feedback}
 
 Ensure the output code is self-contained, and without any additional text or test cases.
+"""
+
+
+
+# DUAL_ANSWER_GENERATION_PROMPT = """
+# You are an expert mathematician and professional Python programmer, integrated into a single, holistic mind. Your task is to solve the given problem by leveraging both perspectives simultaneously.
+
+# **Problem**: {problem}
+
+# **Instructions**:
+# 1.  **Perspective 1: Mathematical Reasoning**: First, lay out your step-by-step mathematical derivation and solution.
+# 2.  **Perspective 2: Computational Verification**: Second, write the Python code that solves the same problem.
+# 3.  **Final Synthesis & Self-Correction**: Finally, critically compare your two answers. If they are inconsistent, analyze the discrepancy, correct the error (in either the math or the code), and provide a single, final, verified answer.
+
+# **Output Format**:
+# <math_reasoning>Present your answer in \\boxed{{}} notation</math_reasoning>
+# <python_code>Define a `solve()` function that returns the final result.</python_code>
+# <final_synthesis>
+# [Your analysis of consistency. If inconsistent, explain the error and correction.]
+# </final_synthesis>
+# <final_answer>
+# [Your final, verified answer.]
+# </final_answer>
+# """
+
+
+
+
+
+
+# RECHECK_PROMPT = ""
+# You are a professional Python programmer. Your task is to write complete, self-contained code based on a given mathematical problem and output the answer. The code should include all necessary imports and dependencies, and be ready to run without additional setup or environment configuration.
+
+# Problem description: {problem}
+# Other analysis: {analysis}
+# {feedback}
+
+# Your code should:
+# 1. Implement the calculation steps described in the problem.
+# 2. Define a function named `solve` that performs the calculation and returns the result. The `solve` function should not require any input parameters; instead, it should obtain all necessary inputs from within the function or from globally defined variables.
+# 3. `solve` function return the final calculation result.
+
+# Please ensure your code is efficient, well-commented, and follows Python best practices. The output should be limited to basic data types such as strings, integers, and floats. It is prohibited to transmit images or other file formats. The code output is intended for a text-based language model.
+# """
+
+
+# **Analysis focus:**
+# 1. Review your mathematical reasoning for any errors or inconsistencies
+# 2. Check if your code correctly implements the mathematical approach
+# 3. Verify if you understood the problem requirements correctly
+# 4. Check the output format of both mathematical answer and code output
+
+# - If you identify an error in your mathematical reasoning, provide the corrected solution
+# - If you find an issue with your code implementation, fix the verification code  
+# - If the problem understanding was incorrect, provide the proper solution
+
+
+# - If you identify an error in your mathematical reasoning, provide the corrected solution
+# - If you find an issue with your code implementation, fix the verification code  
+# - If the problem understanding was incorrect, provide the proper solution
+
+RECHECK_PROMPT = """
+Cross-validation detected inconsistency between your answers:
+- Mathematical answer: {math_answer}
+- Code verification result: {code_answer}
+
+Please critically analyze the root cause of the different answers.
+Neither method is inherently more trustworthy - both can contain errors and should be verified against each other.
+
+Please respond in the standard format:
+<analysis>
+[analysis]
+</analysis>
+
+<python_code>
+[python code]
+</python_code>
+
+<math_solution>
+[math solution]
+</math_solution>
+"""
+
+
+
+
+VERIFICATION_PROMPT = """
+You are a mathematical verification expert. Your task is to determine if the mathematical answer and code output represent the same mathematical result, regardless of which one is correct.
+
+Problem: {problem}
+Complete Solution: {answer}
+
+Mathematical answer: {math_answer}
+Code verification result: {code_answer}
+
+Your job is ONLY to check cross-validation consistency, not correctness. Consider these equivalence patterns:
+• Numerical formats: 0.75 ≡ 3/4 ≡ "three quarters"
+• Equation forms: ax + by + cz = d ≡ (a, b, c, d) as coefficients  
+• Precision variations: 0.750574 ≡ 0.75 (computational vs analytical)
+• Data types: "42" ≡ 42 ≡ 42.0
+
+If the mathematical answer and code output represent the same mathematical entity (even in different formats), respond "YES".
+If they represent different mathematical entities, respond "NO".
+
+Response: YES or NO
 """

@@ -1,21 +1,16 @@
 import inspect
 import re
-from math import isclose
 from typing import Any, Callable, List, Tuple
-
-import regex
-from sympy import N, simplify
-from sympy.parsing.latex import parse_latex
-from sympy.parsing.sympy_parser import parse_expr
+import os
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_fixed
 
 from benchmarks.benchmark import BaseBenchmark
 from scripts.logs import logger
-
+from scripts.utils.math_equivalence import judge_symbolic_equality
 
 class MATHBenchmark(BaseBenchmark):
-    def __init__(self, name: str, file_path: str, log_path: str):
-        super().__init__(name, file_path, log_path)
+    def __init__(self, name: str, file_path: str, log_path: str, **kwargs):
+        super().__init__(name, file_path, log_path, **kwargs)
 
     def extract_model_answer(self, text: str) -> str:
         pattern = r"\\boxed{((?:[^{}]|{[^{}]*})*)}"
@@ -31,9 +26,18 @@ class MATHBenchmark(BaseBenchmark):
     def calculate_score(self, expected_output: str, prediction: str) -> Tuple[int, str]:
         expected_answer = self.extract_model_answer(expected_output)
         predicted_answer = self.extract_model_answer(prediction)
+        log_dir = os.environ.get('EXPERIMENT_DIR', self.log_path)
+        log_path = os.path.join(log_dir, "score_calculation_log.txt")
 
-        if self.math_equal(predicted_answer, expected_answer):
-            return 1, predicted_answer
+        judge_1 = self.math_equal(predicted_answer, expected_answer)
+        judge_2 = judge_symbolic_equality(predicted_answer, expected_answer)
+
+        with open(log_path, "a") as f:
+            f.write(f"Expected: {expected_answer}, Predicted: {predicted_answer} \
+                self.math_equal: {'✅' if judge_1 is True else '❌'}, judge_symbolic_equality: {'✅' if judge_2 is True else '❌'}\n")
+
+        if judge_1 or judge_2:
+            return 1, predicted_answer  
         else:
             return 0, predicted_answer
 
@@ -106,32 +110,31 @@ class MATHBenchmark(BaseBenchmark):
         except OSError:
             return "no code"
 
-    @retry(stop=stop_after_attempt(5), wait=wait_fixed(1), retry=retry_if_exception_type(Exception), reraise=True)
+    @retry(stop=stop_after_attempt(2), wait=wait_fixed(1), retry=retry_if_exception_type(Exception), reraise=True)
     async def _generate_output(self, graph, input_text):
         return await graph(input_text)
 
-    async def evaluate_problem(self, problem: dict, graph: Callable) -> Tuple[str, str, str, int, float]:
+    async def evaluate_problem(self, problem: dict, graph: Callable) -> Tuple[str, str, str, int, float, float, float, int]:
         input_text = problem["problem"]
-        expected_output = problem["solution"]
+        # try:
+        output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+        uni_score, extracted_output = self.calculate_score(problem["solution"], output)
 
-        try:
-            output, cost = await self._generate_output(graph, input_text)
-            uni_score, extracted_output = self.calculate_score(expected_output, output)
+        if uni_score == 0:
+            self.log_mismatch(
+                problem=input_text,
+                expected_output=problem["solution"],
+                prediction=output,
+                extracted_output=extracted_output,
+                extract_answer_code=self.get_function_code(self.extract_model_answer),
+                **{k: v for k, v in problem.items() if k != 'problem'}
+            )
 
-            if uni_score == 0:
-                self.log_mismatch(
-                    input_text,
-                    expected_output,
-                    output,
-                    extracted_output,
-                    extract_answer_code=self.get_function_code(self.extract_model_answer),
-                )
+        return input_text, output, problem["solution"], uni_score, input_tokens, output_tokens, input_tokens + output_tokens, calls
 
-            return input_text, output, expected_output, uni_score, cost
-
-        except Exception as e:
-            logger.info(f"Maximum retries reached. Skipping this sample. Error: {e}")
-            return input_text, str(e), expected_output, 0.0, 0.0
+        # except Exception as e:
+        #     logger.info(f"Maximum retries reached. Skipping this sample. Error: {e}")
+        #     return input_text, str(e), problem["solution"], 0.0, 0.0, 0.0, 0.0, 0.0
 
     def get_result_columns(self) -> List[str]:
-        return ["question", "prediction", "expected_output", "score", "cost"]
+        return ["question", "prediction", "expected_output", "score", "input_tokens", "output_tokens", "total_tokens", "calls"]

@@ -13,7 +13,6 @@ from tqdm import tqdm
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from scripts.logs import logger
 
-
 def download_file(url: str, filename: str) -> None:
     """Download a file from the given URL and show progress."""
     response = requests.get(url, stream=True)

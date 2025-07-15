@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/run.py", line 10, in <module>
+    from scripts.optimizer import Optimizer
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/scripts/optimizer.py", line 18, in <module>
+    from scripts.async_llm import create_llm_instance
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/scripts/async_llm.py", line 200
+    response = await self.aclient.chat.completions.create(
+    ^
+IndentationError: expected an indented block

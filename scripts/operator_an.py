@@ -9,6 +9,9 @@ from pydantic import BaseModel, Field
 class GenerateOp(BaseModel):
     response: str = Field(default="", description="Your solution for this problem")
 
+class DualAnswerGenerateOp(BaseModel):
+    math_answer: str = Field(default="", description="Your complete mathematical solution with final answer in \\boxed{{}} notation")
+    code: str = Field(default="", description="Your complete Python code solution")
 
 class CodeGenerateOp(BaseModel):
     code: str = Field(default="", description="Your complete code solution for this problem")
@@ -52,3 +55,6 @@ class ReviewOp(BaseModel):
 
 class ReviseOp(BaseModel):
     solution: str = Field(default="", description="Based on the feedback, revised solution for this problem")
+
+class OneshotCustomOp(BaseModel):
+    answer: str = Field(default="", description="Your response for this problem")

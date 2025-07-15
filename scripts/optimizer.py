@@ -44,6 +44,9 @@ class Optimizer:
         max_rounds: int = 20,
         validation_rounds: int = 5,
         sample_indices: Optional[List[int]] = None,
+        custom_data_path: Optional[str] = None,  # 新增参数
+        graph_path: Optional[str] = None,
+        batch_size: Optional[int] = None,  # 新增batch_size参数
     ) -> None:
         self.optimize_llm_config = opt_llm_config
         self.optimize_llm = create_llm_instance(self.optimize_llm_config)
@@ -63,7 +66,9 @@ class Optimizer:
         self.max_rounds = max_rounds
         self.validation_rounds = validation_rounds
         self.sample_indices = sample_indices
-
+        self.custom_data_path = custom_data_path  # 存储自定义数据路径
+        self.graph_path = graph_path
+        self.batch_size = batch_size  # 存储batch_size参数
         self.graph_utils = GraphUtils(self.root_path)
         self.data_utils = DataUtils(self.root_path)
         self.experience_utils = ExperienceUtils(self.root_path)
@@ -76,7 +81,7 @@ class Optimizer:
             for i in range(test_n):
                 loop = asyncio.new_event_loop()
                 asyncio.set_event_loop(loop)
-                score = loop.run_until_complete(self.test())
+                score = loop.run_until_complete(self.test_arbitrary_graph(self.graph_path)) 
             return None
 
         for opt_round in range(self.max_rounds):
@@ -257,7 +262,27 @@ class Optimizer:
             score, avg_tokens, total_tokens = await self.evaluation_utils.evaluate_graph_test(self, directory, is_test=True)
 
             new_data = self.data_utils.create_result_data(round, score, avg_tokens, total_tokens)
-            data.append(new_data)
+            data.append(new_data)   
 
             self.data_utils.save_results(json_file_path, data)
             print(f"Saved data to {json_file_path}")
+
+    async def test_arbitrary_graph(self, graph_path):
+        print("="*100)
+        print("😀正在运行test_arbitrary_graph...")
+        print("="*100)
+        
+        # graph_path = "z_ablation/results/MBPP/graphs/agentsimulate"
+        data = self.data_utils.load_results(graph_path)
+        json_file_path = graph_path + "/results.json"
+        self.graph = self.graph_utils.load_graph(None, None, graph_path)
+
+        score, avg_tokens, input_tokens, output_tokens, total_tokens = await self.evaluation_utils.evaluate_graph_test(self, graph_path, is_test=True)
+
+        new_data = self.data_utils.create_result_data(1, score, avg_tokens, input_tokens, output_tokens, total_tokens)
+        data.append(new_data)       
+
+        self.data_utils.save_results(json_file_path, data)
+        print(f"Saved data to {json_file_path}")
+
+        return 0.0

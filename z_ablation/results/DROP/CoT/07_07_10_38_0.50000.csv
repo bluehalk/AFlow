@@ -1,0 +1,12 @@
+inputs,prediction,expected_output,score,input_tokens,output_tokens,total_tokens,calls
+"Passage: In the spring of 2000, Walkertons system typically drew most of its water from one well at a time, alternating unevenly between wells 5, 6, and 7. Well 7 was turned off between March 10 and May 2, ran alone from May 2 through May 9 before turning off again, and was then used again between May 15 and May 19. From May 9 to May 13, Well 5 provided the bulk of Walkertons water, supplemented from May 10–13 by Well 6. Though Well 7 ran without chlorination between May 3 and May 9, expert evaluation of well 7s pumping schedule and lack of physical vulnerabilities to contamination concluded that it was highly unlikely to have been involved in the outbreak. Well 6, which records indicate was out of service beginning May 13, was similarly determined to have been unlikely to have been the source of contamination based on its location and characteristics.
+Question: How many wells were the Walkertons alternating between?
+Answer:",Three wells,3,0.0,670,99,769,2
+"Passage: In the county, the population was spread out with 26.20% under the age of 18, 9.30% from 18 to 24, 26.50% from 25 to 44, 23.50% from 45 to 64, and 14.60% who were 65 years of age or older.  The median age was 37 years. For every 100 females there were 95.90 males.  For every 100 females age 18 and over, there were 92.50 males.
+Question: Which age group is smaller: 25 to 44 or 45 to 64?
+Answer:",45 to 64,45 to 64|23.50%,1.0,517,118,635,2
+Tokens: 1187 + 217 = 1404
+Total calls: 4
+Avg tokens: 702.00000
+Avg calls: 2.00000
+Avg score: 0.50000

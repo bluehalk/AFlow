@@ -1,0 +1,19 @@
+2025-07-13 08:34:30 - INFO - Skipping datasets as data/datasets already exists.
+====================================================================================================
+😀正在运行test_arbitrary_graph...
+====================================================================================================
+2025-07-13 08:34:30 - INFO - get class from graph_module_name: z_ablation.results.MATH.round_5.graph
+Traceback (most recent call last):
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/run.py", line 181, in <module>
+    optimizer.optimize("Test")
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/scripts/optimizer.py", line 84, in optimize
+    score = loop.run_until_complete(self.test_arbitrary_graph(self.graph_path))
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/scripts/optimizer.py", line 280, in test_arbitrary_graph
+    score, avg_tokens, input_tokens, output_tokens, total_tokens = await self.evaluation_utils.evaluate_graph_test(self, graph_path, is_test=True)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/scripts/optimizer_utils/evaluation_utils.py", line 65, in evaluate_graph_test
+    return await evaluator.graph_evaluate(
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/scripts/evaluator.py", line 57, in graph_evaluate
+    benchmark = benchmark_class(name=dataset, file_path=data_path, log_path=path, batch_size=batch_size)
+TypeError: __init__() got an unexpected keyword argument 'batch_size'

@@ -1,0 +1,7 @@
+question,prediction,expected_output,score,input_tokens,output_tokens,total_tokens,calls
+We roll a fair 6-sided die 5 times.  What is the probability that we get a 6 in at most 2 of the rolls?,\frac{625}{648},"The number of ways to roll exactly 2 6's is $\binom{5}{2}5^3$, since there are $\binom{5}{2}$ choices for which of the two dice are 6, and there are 5 choices for each of the other 3 dice. Similarly, the number of ways to roll exactly 1 6 is $\binom{5}{1}5^4$, and the number of ways to roll no 6's is $\binom{5}{0}5^5$. So the probability is \[\frac{\binom{5}{2}5^3+\binom{5}{1}5^4+\binom{5}{0}5^5}{6^5}=\boxed{\frac{625}{648}}.\]",1,85,1093,1178,1
+Tokens: 85 + 1093 = 1178
+Total calls: 1
+Avg tokens: 1178.00000
+Avg calls: 1.00000
+Avg score: 1.00000

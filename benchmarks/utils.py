@@ -65,3 +65,5 @@ def log_mismatch(problem, expected_output, prediction, predicted_number, path):
 
     # Write the data back to log.json file
     write_json_file(log_file, data, encoding="utf-8", indent=4)
+
+

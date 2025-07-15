@@ -1,0 +1,7 @@
+
+        Average score on MATH dataset: 0.58436
+        Tokens: 1302967 + 1105587 = 2408554
+        Total calls: 1161
+        Avg tokens: 4955.87243
+        Avg calls: 2.38889
+        

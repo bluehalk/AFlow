@@ -1,0 +1,79 @@
+inputs,prediction,error_message,correct_solution,score,input_tokens,output_tokens,total_tokens,calls
+"Write a function to find the nth newman–shanks–williams prime number.
+
+def newman_prime(n): 
+","def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+def newman_prime(n):
+    if n < 1:
+        return None
+    newman_primes = []
+    k = 1
+    while len(newman_primes) < n:
+        newman_number = 2 ** k - 1
+        if is_prime(newman_number):
+            newman_primes.append(newman_number)
+        k += 1
+    return newman_primes[-1]
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+def newman_prime(n):
+    if n < 1:
+        return None
+    newman_primes = []
+    k = 1
+    while len(newman_primes) < n:
+        newman_number = 2 ** k - 1
+        if is_prime(newman_number):
+            newman_primes.append(newman_number)
+        k += 1
+    return newman_primes[-1]
+Test Code:
+def check():
+    assert newman_prime(3) == 7
+    assert newman_prime(4) == 17
+    assert newman_prime(5) == 41
+
+","def newman_prime(n): 
+	if n == 0 or n == 1: 
+		return 1
+	return 2 * newman_prime(n - 1) + newman_prime(n - 2)
+",0.0,58,156,214,1
+"Write a function to convert a given tuple of positive integers into a single integer.
+
+def tuple_to_int(nums):
+","def tuple_to_int(nums):
+    return int(''.join(map(str, nums)))
+","The solution passed all test cases.
+","def tuple_to_int(nums):
+    result = int(''.join(map(str,nums)))
+    return result
+",1.0,55,21,76,1
+Total tokens: 290
+Total calls: 2
+Avg tokens: 145.0
+Avg calls: 1.0
+Avg score: 0.5

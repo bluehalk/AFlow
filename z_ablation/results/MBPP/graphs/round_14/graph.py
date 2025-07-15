@@ -31,15 +31,12 @@ class Workflow:
         
         solutions = []
         for _ in range(3):  # Generate 3 solutions
-            # print("="*100)
-            # print(f"==Generate solution {_}==")
             solution = await custom_code_generate(problem=problem, entry_point=entry_point, instruction=prompt.CODE_GENERATE_PROMPT)
             solutions.append(solution['code'])
         
         best_solution = await sc_ensemble(solutions=solutions, problem=problem)
 
-        test_result = await test(problem=problem, solution=best_solution['response'], entry_point=entry_point)
-        # print(test_result) # result, solution
+        # test_result = await test(problem=problem, solution=best_solution['response'], entry_point=entry_point)
 
         # 获取这个样本的token统计
         usage_summary = llm.usage_tracker.get_summary()
@@ -47,20 +44,16 @@ class Workflow:
         output_tokens = usage_summary['overall_output_tokens']
         call_count = usage_summary['call_count']
 
-        if test_result['result']:
-            # print("="*100, "test success", "="*100)
-            return test_result['solution'], input_tokens, output_tokens, call_count
-        else:
-            # print("="*100, "test failed", "="*100)
-            # If the test fails, try to fix the solution
-            fixed_solution = await custom(input=f"Problem: {problem}\nFailed solution: {best_solution['response']}\nError: {test_result['solution']}", instruction=prompt.FIX_CODE_PROMPT)
-            # print("="*100, "fixed_solution", "="*100)
-            # print(fixed_solution)
+        # if test_result['result']:
+        #     return test_result['solution'], input_tokens, output_tokens, call_count
+        # else:
+        #     # If the test fails, try to fix the solution
+        #     fixed_solution = await custom(input=f"Problem: {problem}\nFailed solution: {best_solution['response']}\nError: {test_result['solution']}", instruction=prompt.FIX_CODE_PROMPT)
             
-            # 获取最终的token统计（包括修复步骤）
-            final_usage = llm.usage_tracker.get_summary()
-            final_input_tokens = final_usage['overall_input_tokens']
-            final_output_tokens = final_usage['overall_output_tokens']
-            final_call_count = final_usage['call_count']
+        #     # 获取最终的token统计（包括修复步骤）
+        #     final_usage = llm.usage_tracker.get_summary()
+        #     final_input_tokens = final_usage['overall_input_tokens']
+        #     final_output_tokens = final_usage['overall_output_tokens']
+        #     final_call_count = final_usage['call_count']
             
-            return fixed_solution['response'], final_input_tokens, final_output_tokens, final_call_count
+        return best_solution['response'], input_tokens, output_tokens, call_count

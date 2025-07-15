@@ -1,0 +1,39 @@
+=== 失败案例交集分析 ===
+
+失败文件1: z_ablation/results/MATH/round_5/experiments/A_Mathemation/20250712_193626/failed_samples_20250712_193626.jsonl
+失败文件2: z_ablation/results/MATH/round_5/experiments/A_Programmer/20250713_003219/failed_samples_20250713_003219.jsonl
+
+A_Mathemation失败案例数: 223
+A_Programmer失败案例数: 219
+A_Mathemation唯一失败案例数: 223
+A_Programmer唯一失败案例数: 219
+
+失败案例交集数量: 141
+失败案例并集数量: 301
+仅A_Mathemation失败: 82
+仅A_Programmer失败: 78
+
+验证关系:
+总问题数: 486
+成功交集数: 185
+失败交集数: 141
+成功交集 + 失败交集 = 326
+验证结果: 失败
+
+=== 两者都失败的问题示例 ===
+1. $AB = 20$ cm, $m \angle A = 30^\circ$, and $m \angle C = 45^\circ$. Express the number of centimeters in the length of $\overline{BC}$ in simplest radical form. [asy]
+import olympiad; size(200); impor...
+2. A $30^\circ$-$60^\circ$-$90^\circ$ triangle is drawn on the exterior of an equilateral triangle so the hypotenuse of the right triangle is one side of the equilateral triangle. If the shorter leg of t...
+3. A PE class has 12 students, 6 girls and 6 boys. The coach has 4 jerseys in each of 3 colors to mark 3 teams for a soccer tournament. If the coach wants at least one girl and at least one boy on each t...
+4. A bag contains two red beads and two green beads. You reach into the bag and pull out a bead, replacing it with a red bead regardless of the color you pulled out.  What is the probability that all bea...
+5. A box contains exactly five chips, three red and two white. Chips are randomly removed one at a time without replacement until all the red chips are drawn or all the white chips are drawn. What is the...
+6. A line passing through the point $(1,1,1)$ intersects the line defined by
+\[\begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} + t \begin{pmatrix} 2 \\ 3 \\ 4 \end{pmatrix}\]at $P,$ and intersects the line def...
+7. A picture frame consists of two rectangular strips of wood, each having a width of 1 inch on all sides.  If the area of the inner light gray strip is 100 $\text{in}^2$, then compute the area of the ou...
+8. A point has rectangular coordinates $(2,-1,-2)$ and spherical coordinates $(\rho, \theta, \phi).$  Find the rectangular coordinates of the point with spherical coordinates $(\rho, \theta, 2 \phi).$
+9. A positive integer $n$ is nice if there is a positive integer $m$ with exactly four positive divisors (including $1$ and $m$) such that the sum of the four divisors is equal to $n.$ Find the sum of al...
+10. A sequence $(z_n)$ of complex numbers satisfies the following properties:
+
+$z_1$ and $z_2$ are not real.
+$z_{n+2}=z_{n+1}^2z_n$ for all integers $n\geq 1$.
+$\dfrac{z_{n+3}}{z_n^2}$ is real for all int...

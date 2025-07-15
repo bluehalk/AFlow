@@ -1,0 +1,32 @@
+2025-07-13 03:11:53 - INFO - Skipping datasets as data/datasets already exists.
+====================================================================================================
+😀正在运行test_arbitrary_graph...
+====================================================================================================
+2025-07-13 03:11:53 - INFO - get class from graph_module_name: z_ablation.results.MATH.round_5.graph
+Evaluating MATH problems:   0%|          | 0/4 [00:00<?, ?it/s]2025-07-13 03:11:59 - INFO - 
+🔄 开始测试问题: Find the smallest positive integer that is greater than $1$ and relatively prime to the product of the first 20 positive integers.  Reminder: two numbers are relatively prime if their greatest common divisor is 1.
+
+2025-07-13 03:11:59 - INFO - ```python
+import math
+from functools import reduce
+
+def solve():
+    # Calculate the product of the first 20 positive integers (20!)
+    factorial_20 = reduce(lambda x, y: x * y, range(1, 21))
+    
+    # Start checking from the smallest positive integer greater than 1
+    n = 2
+    
+    # Find the smallest integer greater than 1 that is relatively prime to 20!
+    while True:
+        if math.gcd(n, factorial_20) == 1:
+            return n
+        n += 1
+
+# Call the solve function and print the result
+result = solve()
+print(result)
+```
+2025-07-13 03:11:59 - INFO - Token usage: 245 input + 137 output = 382 total
+2025-07-13 03:11:59 - INFO - Cost: $0.000119 ($0.000037 for input, $0.000082 for output)
+2025-07-13 03:11:59 - INFO - Code solution: 23

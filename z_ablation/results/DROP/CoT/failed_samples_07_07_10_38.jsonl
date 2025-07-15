@@ -1,0 +1,13 @@
+[
+    {
+        "context": "Passage: In the spring of 2000, Walkertons system typically drew most of its water from one well at a time, alternating unevenly between wells 5, 6, and 7. Well 7 was turned off between March 10 and May 2, ran alone from May 2 through May 9 before turning off again, and was then used again between May 15 and May 19. From May 9 to May 13, Well 5 provided the bulk of Walkertons water, supplemented from May 10–13 by Well 6. Though Well 7 ran without chlorination between May 3 and May 9, expert evaluation of well 7s pumping schedule and lack of physical vulnerabilities to contamination concluded that it was highly unlikely to have been involved in the outbreak. Well 6, which records indicate was out of service beginning May 13, was similarly determined to have been unlikely to have been the source of contamination based on its location and characteristics.\nQuestion: How many wells were the Walkertons alternating between?\nAnswer:",
+        "completion": " 3",
+        "ref_text": "3",
+        "id": 6491,
+        "problem": "Passage: In the spring of 2000, Walkertons system typically drew most of its water from one well at a time, alternating unevenly between wells 5, 6, and 7. Well 7 was turned off between March 10 and May 2, ran alone from May 2 through May 9 before turning off again, and was then used again between May 15 and May 19. From May 9 to May 13, Well 5 provided the bulk of Walkertons water, supplemented from May 10–13 by Well 6. Though Well 7 ran without chlorination between May 3 and May 9, expert evaluation of well 7s pumping schedule and lack of physical vulnerabilities to contamination concluded that it was highly unlikely to have been involved in the outbreak. Well 6, which records indicate was out of service beginning May 13, was similarly determined to have been unlikely to have been the source of contamination based on its location and characteristics.\nQuestion: How many wells were the Walkertons alternating between?\nAnswer:",
+        "right_answer": "3",
+        "model_output": "Three wells",
+        "extracted_output": "Three wells",
+        "extract_answer_code": "None"
+    }
+]

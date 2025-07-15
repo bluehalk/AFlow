@@ -7,3 +7,11 @@ optimized
 *.pyc
 /workspace
 *.json
+
+# CSV交集分析器产生的文件
+intersection_summary_*.txt
+both_correct_*.csv
+only_file1_correct_*.csv
+only_file2_correct_*.csv
+both_wrong_*.csv
+analysis/csv_intersection_analyzer/

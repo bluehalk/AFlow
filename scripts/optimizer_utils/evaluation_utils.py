@@ -18,6 +18,8 @@ class EvaluationUtils:
                 directory,
                 is_test=False,
                 sample_indices=optimizer.sample_indices,
+                custom_data_path=optimizer.custom_data_path,
+                batch_size=optimizer.batch_size,
             )
 
             new_data = optimizer.data_utils.create_result_data(optimizer.round, score, avg_cost, total_cost)
@@ -41,6 +43,8 @@ class EvaluationUtils:
                 directory,
                 is_test=False,
                 sample_indices=optimizer.sample_indices,
+                custom_data_path=optimizer.custom_data_path,
+                batch_size=optimizer.batch_size,
             )
 
             cur_round = optimizer.round + 1 if initial is False else optimizer.round
@@ -65,4 +69,6 @@ class EvaluationUtils:
             directory,
             is_test=is_test,
             sample_indices=optimizer.sample_indices,
+            custom_data_path=optimizer.custom_data_path,
+            batch_size=optimizer.batch_size,
         )

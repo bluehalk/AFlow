@@ -1,0 +1,12 @@
+judge_symbolic_equality: predicted_answer: 162, expected_answer: 162\text{ minutes}
+judge_symbolic_equality: predicted_answer: 36, expected_answer: \$36
+judge_symbolic_equality: predicted_answer: \frac{411}{333}, expected_answer: \frac{137}{111}
+judge_symbolic_equality: predicted_answer: 1 \frac{1}{10}, expected_answer: 1\frac{1}{10}
+judge_symbolic_equality: predicted_answer: \frac{1}{12}, expected_answer: \dfrac{1}{12}
+judge_symbolic_equality: predicted_answer: 37.69911184307752, expected_answer: 12\pi
+judge_symbolic_equality: predicted_answer: m + 2, expected_answer: m+2
+judge_symbolic_equality: predicted_answer: 156, expected_answer: 156^\circ
+judge_symbolic_equality: predicted_answer: 12 \text{ and } 13, expected_answer: 12\text{ and }13
+judge_symbolic_equality: predicted_answer: \frac{17}{50}, expected_answer: \dfrac{17}{50}
+judge_symbolic_equality: predicted_answer: \frac{19}{40}, expected_answer: \dfrac{19}{40}
+judge_symbolic_equality: predicted_answer: 8\pi, expected_answer: 8 \pi

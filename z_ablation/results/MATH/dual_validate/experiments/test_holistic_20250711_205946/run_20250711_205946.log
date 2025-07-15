@@ -1,0 +1,86 @@
+2025-07-11 20:59:46 - INFO - Skipping datasets as data/datasets already exists.
+====================================================================================================
+😀正在运行test_arbitrary_graph...
+====================================================================================================
+2025-07-11 20:59:46 - INFO - get class from graph_module_name: z_ablation.results.MATH.dual_validate.graph
+Evaluating MATH problems:   0%|          | 0/1 [00:00<?, ?it/s]Evaluating MATH problems: 100%|██████████| 1/1 [00:20<00:00, 20.12s/it]Evaluating MATH problems: 100%|██████████| 1/1 [00:20<00:00, 20.12s/it]
+🔄 开始测试问题: We roll a fair 6-sided die 5 times.  What is the probability that we get a 6 in at most 2 of the rolls?
+2025-07-11 20:59:46 - INFO - Running in Holistic Thinking mode...
+To solve the problem of finding the probability of rolling a 6 at most 2 times when rolling a fair 6-sided die 5 times, we can model this situation using the binomial probability formula.
+
+### Step 1: Define the parameters
+- Let \( n = 5 \) (the number of rolls).
+- Let \( p = \frac{1}{6} \) (the probability of rolling a 6 on a single roll).
+- Let \( k \) be the number of times we roll a 6.
+
+We want to find the probability of getting a 6 at most 2 times, which means we need to calculate \( P(X \leq 2) \), where \( X \) is the number of times a 6 is rolled.
+
+### Step 2: Use the binomial probability formula
+The probability of getting exactly \( k \) successes (rolling a 6) in \( n \) trials (rolls) is given by the binomial probability formula:
+
+\[
+P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}
+\]
+
+where \( \binom{n}{k} \) is the binomial coefficient, calculated as:
+
+\[
+\binom{n}{k} = \frac{n!}{k!(n-k)!}
+\]
+
+### Step 3: Calculate \( P(X \leq 2) \)
+We need to calculate \( P(X = 0) \), \( P(X = 1) \), and \( P(X = 2) \), and then sum these probabilities.
+
+1. **Calculate \( P(X = 0) \)**:
+   \[
+   P(X = 0) = \binom{5}{0} \left(\frac{1}{6}\right)^0 \left(\frac{5}{6}\right)^5 = 1 \cdot 1 \cdot \left(\frac{5}{6}\right)^5 = \left(\frac{5}{6}\right)^5
+   \]
+
+   \[
+   P(X = 0) = \left(\frac{5}{6}\right)^5 \approx 0.401877572
+   \]
+
+2. **Calculate \( P(X = 1) \)**:
+   \[
+   P(X = 1) = \binom{5}{1} \left(\frac{1}{6}\right)^1 \left(\frac{5}{6}\right)^4 = 5 \cdot \frac{1}{6} \cdot \left(\frac{5}{6}\right)^4
+   \]
+
+   \[
+   P(X = 1) = 5 \cdot \frac{1}{6} \cdot \left(\frac{5}{6}\right)^4 \approx 5 \cdot \frac{1}{6} \cdot 0.482253086 = 0.401877572
+   \]
+
+3. **Calculate \( P(X = 2) \)**:
+   \[
+   P(X = 2) = \binom{5}{2} \left(\frac{1}{6}\right)^2 \left(\frac{5}{6}\right)^3 = 10 \cdot \left(\frac{1}{6}\right)^2 \cdot \left(\frac{5}{6}\right)^3
+   \]
+
+   \[
+   P(X = 2) = 10 \cdot \frac{1}{36} \cdot \left(\frac{5}{6}\right)^3 \approx 10 \cdot \frac{1}{36} \cdot 0.578703703 = 0.160752688
+   \]
+
+### Step 4: Sum the probabilities
+Now we sum the probabilities for \( k = 0, 1, 2 \):
+
+\[
+P(X \leq 2) = P(X = 0) + P(X = 1) + P(X = 2)
+\]
+
+\[
+P(X \leq 2) \approx 0.401877572 + 0.401877572 + 0.160752688 \approx 0.964507832
+\]
+
+### Final Answer
+Thus, the probability of rolling a 6 at most 2 times in 5 rolls of a fair 6-sided die is approximately:
+
+\[
+\boxed{0.9645}
+\]
+Token usage: 85 input + 944 output = 1029 total
+Cost: $0.000579 ($0.000013 for input, $0.000566 for output)
+2025-07-11 21:00:06 - INFO - Holistic fields extracted: dict_keys([])
+2025-07-11 21:00:06 - INFO - Final determined answer: 0.9645
+2025-07-11 21:00:06 - INFO - Average score on MATH dataset: 1.00000
+2025-07-11 21:00:06 - INFO - Tokens: 85 + 944 = 1029
+2025-07-11 21:00:06 - INFO - Avg tokens:1029.0
+2025-07-11 21:00:06 - INFO - Results saved to z_ablation/results/MATH/dual_validate/experiments/test_holistic_20250711_205946/20250711_205946_1.00000.csv
+Saved data to z_ablation/results/MATH/dual_validate/results.json

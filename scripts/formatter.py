@@ -90,8 +90,11 @@ class XmlFormatter(BaseFormatter):
             examples.append(f"<{field_name}>{description}</{field_name}>")
 
         example_str = "\n".join(examples)
-        
-        instructions = prompt + f"\n# Response format (must be strictly followed) (do not include any other formats except for the given XML format):\n{example_str}"
+        if isinstance(prompt, list):
+            instructions = prompt
+            instructions[-1]['content'] += f"\n# Response format (must be strictly followed) (do not include any other formats except for the given XML format):\n{example_str}"
+        else:
+            instructions = prompt + f"\n# Response format (must be strictly followed) (do not include any other formats except for the given XML format):\n{example_str}"
         return instructions
     
     def validate_response(self, response: str) -> Tuple[bool, dict]:
@@ -176,7 +179,7 @@ class CodeFormatter(BaseFormatter):
     
     def _extract_code_from_markdown(self, text: str) -> str:
         """
-        Extract code from markdown code blocks in the response.
+        Extract the last code block from markdown code blocks in the response.
         
         Args:
             text: The text containing possible markdown code blocks
@@ -188,17 +191,26 @@ class CodeFormatter(BaseFormatter):
         python_pattern = r"```python\s*([\s\S]*?)\s*```"
         python_matches = re.findall(python_pattern, text)
         
+        # print("="*100, "python_matches", "="*100)
+        # print(python_matches)
+        # print(python_matches[-1])
+        # print("="*100, "python_matches", "="*100)
+
         if python_matches:
-            # Join all Python code blocks
-            return "\n\n".join(python_matches)
+            # Return only the last Python code block
+            return python_matches[-1]
         
         # If no Python blocks found, look for generic code blocks (``` ... ```)
         generic_pattern = r"```\s*([\s\S]*?)\s*```"
         generic_matches = re.findall(generic_pattern, text)
         
+        # print("="*100, "generic_matches", "="*100)
+        # print(generic_matches)
+        # print("="*100, "generic_matches", "="*100)
+
         if generic_matches:
-            # Join all generic code blocks
-            return "\n\n".join(generic_matches)
+            # Return only the last generic code bloc
+            return generic_matches[-1]
         
         # No code blocks found
         return ""

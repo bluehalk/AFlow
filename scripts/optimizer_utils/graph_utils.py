@@ -23,10 +23,14 @@ class GraphUtils:
         os.makedirs(directory, exist_ok=True)
         return directory
 
-    def load_graph(self, round_number: int, workflows_path: str):
-        workflows_path = workflows_path.replace("\\", ".").replace("/", ".")
-        graph_module_name = f"{workflows_path}.round_{round_number}.graph"
-
+    def load_graph(self, round_number: int, workflows_path: str, spedfied_path: str = None):
+        if spedfied_path is None:
+            workflows_path = workflows_path.replace("\\", ".").replace("/", ".")
+            graph_module_name = f"{workflows_path}.round_{round_number}.graph"
+        else:
+            workflows_path = spedfied_path.replace("\\", ".").replace("/", ".")
+            graph_module_name = f"{workflows_path}.graph"
+            
         try:
             logger.info(f"get class from graph_module_name: {graph_module_name}")
             graph_module = __import__(graph_module_name, fromlist=[""])

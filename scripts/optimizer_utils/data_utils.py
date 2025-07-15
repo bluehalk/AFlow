@@ -139,12 +139,14 @@ class DataUtils:
     def get_results_file_path(self, graph_path: str) -> str:
         return os.path.join(graph_path, "results.json")
 
-    def create_result_data(self, round, score, avg_tokens, total_tokens) -> dict:
+    def create_result_data(self, round, score, avg_tokens, input_tokens, output_tokens, total_tokens) -> dict:
         now = datetime.datetime.now()
         return {
             "round": int(round),
             "score": float(score),
             "avg_tokens": float(avg_tokens),
+            "input_tokens": float(input_tokens),
+            "output_tokens": float(output_tokens),
             "total_tokens": float(total_tokens),
             "time": now.isoformat()      # 建议写成字符串，避免同类问题
         }

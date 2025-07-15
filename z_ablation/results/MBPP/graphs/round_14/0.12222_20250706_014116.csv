@@ -1,0 +1,3903 @@
+inputs,prediction,error_message,correct_solution,score,input_tokens,output_tokens,total_tokens,calls
+"Write a function to find all possible combinations of the elements of a given list.
+
+def combinations_list(list1):
+","from itertools import combinations
+def combinations_list(list1):
+    result = []
+    for r in range(len(list1) + 1):
+        comb = combinations(list1, r)
+        result.extend(comb)
+    return result
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+from itertools import combinations
+def combinations_list(list1):
+    result = []
+    for r in range(len(list1) + 1):
+        comb = combinations(list1, r)
+        result.extend(comb)
+    return result
+Test Code:
+def check():
+    assert combinations_list(['orange', 'red', 'green', 'blue'])==[[], ['orange'], ['red'], ['red', 'orange'], ['green'], ['green', 'orange'], ['green', 'red'], ['green', 'red', 'orange'], ['blue'], ['blue', 'orange'], ['blue', 'red'], ['blue', 'red', 'orange'], ['blue', 'green'], ['blue', 'green', 'orange'], ['blue', 'green', 'red'], ['blue', 'green', 'red', 'orange']]
+    assert combinations_list(['red', 'green', 'blue', 'white', 'black', 'orange'])==[[], ['red'], ['green'], ['green', 'red'], ['blue'], ['blue', 'red'], ['blue', 'green'], ['blue', 'green', 'red'], ['white'], ['white', 'red'], ['white', 'green'], ['white', 'green', 'red'], ['white', 'blue'], ['white', 'blue', 'red'], ['white', 'blue', 'green'], ['white', 'blue', 'green', 'red'], ['black'], ['black', 'red'], ['black', 'green'], ['black', 'green', 'red'], ['black', 'blue'], ['black', 'blue', 'red'], ['black', 'blue', 'green'], ['black', 'blue', 'green', 'red'], ['black', 'white'], ['black', 'white', 'red'], ['black', 'white', 'green'], ['black', 'white', 'green', 'red'], ['black', 'white', 'blue'], ['black', 'white', 'blue', 'red'], ['black', 'white', 'blue', 'green'], ['black', 'white', 'blue', 'green', 'red'], ['orange'], ['orange', 'red'], ['orange', 'green'], ['orange', 'green', 'red'], ['orange', 'blue'], ['orange', 'blue', 'red'], ['orange', 'blue', 'green'], ['orange', 'blue', 'green', 'red'], ['orange', 'white'], ['orange', 'white', 'red'], ['orange', 'white', 'green'], ['orange', 'white', 'green', 'red'], ['orange', 'white', 'blue'], ['orange', 'white', 'blue', 'red'], ['orange', 'white', 'blue', 'green'], ['orange', 'white', 'blue', 'green', 'red'], ['orange', 'black'], ['orange', 'black', 'red'], ['orange', 'black', 'green'], ['orange', 'black', 'green', 'red'], ['orange', 'black', 'blue'], ['orange', 'black', 'blue', 'red'], ['orange', 'black', 'blue', 'green'], ['orange', 'black', 'blue', 'green', 'red'], ['orange', 'black', 'white'], ['orange', 'black', 'white', 'red'], ['orange', 'black', 'white', 'green'], ['orange', 'black', 'white', 'green', 'red'], ['orange', 'black', 'white', 'blue'], ['orange', 'black', 'white', 'blue', 'red'], ['orange', 'black', 'white', 'blue', 'green'], ['orange', 'black', 'white', 'blue', 'green', 'red']]
+    assert combinations_list(['red', 'green', 'black', 'orange'])==[[], ['red'], ['green'], ['green', 'red'], ['black'], ['black', 'red'], ['black', 'green'], ['black', 'green', 'red'], ['orange'], ['orange', 'red'], ['orange', 'green'], ['orange', 'green', 'red'], ['orange', 'black'], ['orange', 'black', 'red'], ['orange', 'black', 'green'], ['orange', 'black', 'green', 'red']]
+
+","def combinations_list(list1):
+    if len(list1) == 0:
+        return [[]]
+    result = []
+    for el in combinations_list(list1[1:]):
+        result += [el, el+[list1[0]]]
+    return result
+",0.0,672,341,1013,4
+"Write a function to find the minimum product from the pairs of tuples within a given list.
+
+def min_product_tuple(list1):
+","from typing import List, Tuple
+def min_product_tuple(list1: List[Tuple[int, int]]) -> int:
+    min_product = float('inf')
+    for (a, b) in list1:
+        product = a * b
+        if product < min_product:
+            min_product = product
+    return min_product
+","The solution passed all test cases.
+","def min_product_tuple(list1):
+    result_min = min([abs(x * y) for x, y in list1] )
+    return result_min
+",1.0,747,439,1186,4
+"Write a function to sort a list of elements.
+
+def comb_sort(nums):
+","def comb_sort(nums):
+    import math
+    gap = len(nums)
+    shrink = 1.3
+    sorted = False
+    while not sorted:
+        gap = max(1, int(gap / shrink))
+        sorted = True
+        for i in range(len(nums) - gap):
+            if nums[i] > nums[i + gap]:
+                (nums[i], nums[i + gap]) = (nums[i + gap], nums[i])
+                sorted = False
+    return nums
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def comb_sort(nums):
+    import math
+    gap = len(nums)
+    shrink = 1.3
+    sorted = False
+    while not sorted:
+        gap = max(1, int(gap / shrink))
+        sorted = True
+        for i in range(len(nums) - gap):
+            if nums[i] > nums[i + gap]:
+                (nums[i], nums[i + gap]) = (nums[i + gap], nums[i])
+                sorted = False
+    return nums
+Test Code:
+def check():
+    assert comb_sort([5, 15, 37, 25, 79]) == [5, 15, 25, 37, 79]
+    assert comb_sort([41, 32, 15, 19, 22]) == [15, 19, 22, 32, 41]
+    assert comb_sort([99, 15, 13, 47]) == [13, 15, 47, 99]
+
+","def comb_sort(nums):
+    shrink_fact = 1.3
+    gaps = len(nums)
+    swapped = True
+    i = 0
+    while gaps > 1 or swapped:
+        gaps = int(float(gaps) / shrink_fact)
+        swapped = False
+        i = 0
+        while gaps + i < len(nums):
+            if nums[i] > nums[i+gaps]:
+                nums[i], nums[i+gaps] = nums[i+gaps], nums[i]
+                swapped = True
+            i += 1
+    return nums
+",0.0,814,624,1438,4
+"Write a function to caluclate the area of a tetrahedron.
+import math
+def area_tetrahedron(side):
+","import math
+def area_tetrahedron(side):
+    area = math.sqrt(2) * side ** 2
+    return area
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+import math
+def area_tetrahedron(side):
+    area = math.sqrt(2) * side ** 2
+    return area
+Test Code:
+def check():
+    assert area_tetrahedron(3)==15.588457268119894
+    assert area_tetrahedron(20)==692.8203230275509
+    assert area_tetrahedron(10)==173.20508075688772
+
+","import math
+def area_tetrahedron(side):
+  area = math.sqrt(3)*(side*side)
+  return area
+",0.0,623,267,890,4
+"Write a python function to find the smallest missing number from a sorted list of natural numbers.
+
+def find_First_Missing(array,start=0,end=None):
+","def find_First_Missing(array, start=0, end=None):
+    if end is None:
+        end = len(array) - 1
+    if not array:
+        return 1
+    if array[0] > 1:
+        return 1
+    while start <= end:
+        mid = (start + end) // 2
+        if array[mid] == mid + 1:
+            start = mid + 1
+        else:
+            end = mid - 1
+    return start + 1
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def find_First_Missing(array, start=0, end=None):
+    if end is None:
+        end = len(array) - 1
+    if not array:
+        return 1
+    if array[0] > 1:
+        return 1
+    while start <= end:
+        mid = (start + end) // 2
+        if array[mid] == mid + 1:
+            start = mid + 1
+        else:
+            end = mid - 1
+    return start + 1
+Test Code:
+def check():
+    assert find_First_Missing([0,1,2,3]) == 4
+    assert find_First_Missing([0,1,2,6,9]) == 3
+    assert find_First_Missing([2,3,5,8,9]) == 0
+
+","def find_First_Missing(array,start=0,end=None):
+    if end is None:
+      end = len(array) - 1   
+    if (start > end): 
+        return end + 1
+    if (start != array[start]): 
+        return start; 
+    mid = int((start + end) / 2) 
+    if (array[mid] == mid): 
+        return find_First_Missing(array,mid+1,end) 
+    return find_First_Missing(array,start,mid) 
+",0.0,879,832,1711,4
+"Write a function to check for the number of jumps required of given length to reach a point of form (d, 0) from origin in a 2d plane.
+
+def min_Jumps(steps, d): 
+","def min_Jumps(steps, d):
+    if d <= 0:
+        return 0
+    jumps = d // steps
+    if d % steps != 0:
+        jumps += 1
+    return jumps
+","TypeError: unsupported operand type(s) for //: 'int' and 'tuple'
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+  File ""<string>"", line 4, in min_Jumps
+TypeError: unsupported operand type(s) for //: 'int' and 'tuple'
+
+Solution:
+def min_Jumps(steps, d):
+    if d <= 0:
+        return 0
+    jumps = d // steps
+    if d % steps != 0:
+        jumps += 1
+    return jumps
+Test Code:
+def check():
+    assert min_Jumps((3,4),11)==3.5
+    assert min_Jumps((3,4),0)==0
+    assert min_Jumps((11,14),11)==1
+
+","def min_Jumps(steps, d): 
+    (a, b) = steps
+    temp = a 
+    a = min(a, b) 
+    b = max(temp, b) 
+    if (d >= b): 
+        return (d + b - 1) / b 
+    if (d == 0): 
+        return 0
+    if (d == a): 
+        return 1
+    else:
+        return 2
+",0.0,762,524,1286,4
+"Write a python function which takes a list of lists, where each sublist has two elements, and returns a list of two lists where the first list has the first element of each sublist and the second one has the second.
+
+def merge(lst):  
+","def merge(lst):
+    first_elements = []
+    second_elements = []
+    for sublist in lst:
+        first_elements.append(sublist[0])
+        second_elements.append(sublist[1])
+    return [first_elements, second_elements]
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 4, in check
+AssertionError
+
+Solution:
+def merge(lst):
+    first_elements = []
+    second_elements = []
+    for sublist in lst:
+        first_elements.append(sublist[0])
+        second_elements.append(sublist[1])
+    return [first_elements, second_elements]
+Test Code:
+def check():
+    assert merge([['x', 'y'], ['a', 'b'], ['m', 'n']]) == [['x', 'a', 'm'], ['y', 'b', 'n']]
+    assert merge([[1, 2], [3, 4], [5, 6], [7, 8]]) == [[1, 3, 5, 7], [2, 4, 6, 8]]
+    assert merge([['x', 'y','z' ], ['a', 'b','c'], ['m', 'n','o']]) == [['x', 'a', 'm'], ['y', 'b', 'n'],['z', 'c','o']]
+
+","def merge(lst):  
+    return [list(ele) for ele in list(zip(*lst))] 
+",0.0,792,429,1221,4
+"Write a python function to check whether all the bits are unset in the given range or not.
+
+def all_Bits_Set_In_The_Given_Range(n,l,r):  
+","def all_Bits_Set_In_The_Given_Range(n, l, r):
+    mask = (1 << r - l + 1) - 1 << l
+    return n & mask == 0
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def all_Bits_Set_In_The_Given_Range(n, l, r):
+    mask = (1 << r - l + 1) - 1 << l
+    return n & mask == 0
+Test Code:
+def check():
+    assert all_Bits_Set_In_The_Given_Range(4,1,2) == True
+    assert all_Bits_Set_In_The_Given_Range(17,2,4) == True
+    assert all_Bits_Set_In_The_Given_Range(39,4,6) == False
+
+","def all_Bits_Set_In_The_Given_Range(n,l,r):  
+    num = (((1 << r) - 1) ^ ((1 << (l - 1)) - 1)) 
+    new_num = n & num
+    if (new_num == 0): 
+        return True
+    return False
+",0.0,736,564,1300,4
+"Write a function to calculate a dog's age in dog's years.
+
+def dog_age(h_age):
+","def dog_age(h_age):
+    """"""
+    Convert human age to dog years.
+    
+    Parameters:
+    h_age (int): The age of the dog in human years.
+    
+    Returns:
+    int: The equivalent age of the dog in dog years.
+    """"""
+    if h_age < 0:
+        raise ValueError('Age cannot be negative')
+    if h_age <= 2:
+        dog_years = h_age * 10.5
+    else:
+        dog_years = 21 + (h_age - 2) * 4
+    return int(dog_years)
+","The solution passed all test cases.
+","def dog_age(h_age):
+ if h_age < 0:
+ 	exit()
+ elif h_age <= 2:
+	 d_age = h_age * 10.5
+ else:
+	 d_age = 21 + (h_age - 2)*4
+ return d_age
+",1.0,906,644,1550,4
+"Write a python function to set all even bits of a given number.
+
+def even_bit_set_number(n): 
+","def even_bit_set_number(n):
+    mask = 2863311530
+    result = n | mask
+    return result
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def even_bit_set_number(n):
+    mask = 2863311530
+    result = n | mask
+    return result
+Test Code:
+def check():
+    assert even_bit_set_number(10) == 10
+    assert even_bit_set_number(20) == 30
+    assert even_bit_set_number(30) == 30
+
+","def even_bit_set_number(n): 
+    count = 0;res = 0;temp = n 
+    while(temp > 0): 
+        if (count % 2 == 1): 
+            res |= (1 << count)
+        count+=1
+        temp >>= 1
+    return (n | res) 
+",0.0,612,284,896,4
+"Write a python function to check whether the count of divisors is even. https://www.w3resource.com/python-exercises/basic/python-basic-1-exercise-24.php
+import math 
+def count_divisors(n) : 
+","import math
+def count_divisors(n):
+    """"""Check whether the count of divisors of n is even.""""""
+    if n <= 0:
+        return False
+    divisor_count = 0
+    for i in range(1, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            divisor_count += 1
+            if i != n // i:
+                divisor_count += 1
+    return divisor_count % 2 == 0
+","The solution passed all test cases.
+","import math 
+def count_divisors(n) : 
+    count = 0
+    for i in range(1, (int)(math.sqrt(n)) + 2) : 
+        if (n % i == 0) : 
+            if( n // i == i) : 
+                count = count + 1
+            else : 
+                count = count + 2
+    return count % 2 == 0
+",1.0,909,642,1551,4
+"Write a function to find the combinations of sums with tuples in the given tuple list. https://www.geeksforgeeks.org/python-combinations-of-sum-with-tuples-in-tuple-list/
+from itertools import combinations 
+def find_combinations(test_list):
+","from itertools import combinations
+def find_combinations(test_list):
+    result = []
+    for r in range(1, len(test_list) + 1):
+        for combo in combinations(test_list, r):
+            combo_sum = sum(combo)
+            result.append((combo, combo_sum))
+    return result
+","TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+  File ""<string>"", line 6, in find_combinations
+TypeError: unsupported operand type(s) for +: 'int' and 'tuple'
+
+Solution:
+from itertools import combinations
+def find_combinations(test_list):
+    result = []
+    for r in range(1, len(test_list) + 1):
+        for combo in combinations(test_list, r):
+            combo_sum = sum(combo)
+            result.append((combo, combo_sum))
+    return result
+Test Code:
+def check():
+    assert find_combinations([(2, 4), (6, 7), (5, 1), (6, 10)]) == [(8, 11), (7, 5), (8, 14), (11, 8), (12, 17), (11, 11)]
+    assert find_combinations([(3, 5), (7, 8), (6, 2), (7, 11)]) == [(10, 13), (9, 7), (10, 16), (13, 10), (14, 19), (13, 13)]
+    assert find_combinations([(4, 6), (8, 9), (7, 3), (8, 12)]) == [(12, 15), (11, 9), (12, 18), (15, 12), (16, 21), (15, 15)]
+
+","from itertools import combinations 
+def find_combinations(test_list):
+  res = [(b1 + a1, b2 + a2) for (a1, a2), (b1, b2) in combinations(test_list, 2)]
+  return (res) 
+",0.0,833,439,1272,4
+"Write a function to find minimum k records from tuple list. https://www.geeksforgeeks.org/python-find-minimum-k-records-from-tuple-list/ - in this case a verbatim copy of test cases
+
+def min_k(test_list, K):
+","def min_k(test_list, K):
+    sorted_list = sorted(test_list, key=lambda x: x[0])
+    return sorted_list[:K]
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 4, in check
+AssertionError
+
+Solution:
+def min_k(test_list, K):
+    sorted_list = sorted(test_list, key=lambda x: x[0])
+    return sorted_list[:K]
+Test Code:
+def check():
+    assert min_k([('Manjeet', 10), ('Akshat', 4), ('Akash', 2), ('Nikhil', 8)], 2) == [('Akash', 2), ('Akshat', 4)]
+    assert min_k([('Sanjeev', 11), ('Angat', 5), ('Akash', 3), ('Nepin', 9)], 3) == [('Akash', 3), ('Angat', 5), ('Nepin', 9)]
+    assert min_k([('tanmay', 14), ('Amer', 11), ('Ayesha', 9), ('SKD', 16)], 1) == [('Ayesha', 9)]
+
+","def min_k(test_list, K):
+  res = sorted(test_list, key = lambda x: x[1])[:K]
+  return (res) 
+",0.0,846,605,1451,4
+"Write a function to find the number of elements that occurs before the tuple element in the given tuple.
+
+def count_first_elements(test_tup):
+","def count_first_elements(test_tup):
+    element_count = {}
+    for (index, element) in enumerate(test_tup):
+        count_before = index
+        if element not in element_count:
+            element_count[element] = count_before
+    return element_count
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def count_first_elements(test_tup):
+    element_count = {}
+    for (index, element) in enumerate(test_tup):
+        count_before = index
+        if element not in element_count:
+            element_count[element] = count_before
+    return element_count
+Test Code:
+def check():
+    assert count_first_elements((1, 5, 7, (4, 6), 10) ) == 3
+    assert count_first_elements((2, 9, (5, 7), 11) ) == 2
+    assert count_first_elements((11, 15, 5, 8, (2, 3), 8) ) == 4
+
+","def count_first_elements(test_tup):
+  for count, ele in enumerate(test_tup):
+    if isinstance(ele, tuple):
+      break
+  return (count) 
+",0.0,804,584,1388,4
+"Write a function to get a colon of a tuple.
+from copy import deepcopy
+def colon_tuplex(tuplex,m,n):
+","from copy import deepcopy
+def colon_tuplex(tuplex, m, n):
+    """"""
+    This function returns a sub-tuple from the given tuple 'tuplex' 
+    that includes elements from index 'm' to index 'n' (exclusive).
+    
+    Parameters:
+    tuplex (tuple): The input tuple from which to extract the sub-tuple.
+    m (int): The starting index of the sub-tuple (inclusive).
+    n (int): The ending index of the sub-tuple (exclusive).
+    
+    Returns:
+    tuple: A sub-tuple containing elements from index m to n.
+    """"""
+    if m < 0 or n > len(tuplex) or m >= n:
+        raise IndexError('Invalid index range.')
+    sub_tuplex = tuplex[m:n]
+    return sub_tuplex
+","IndexError: Invalid index range.
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+  File ""<string>"", line 16, in colon_tuplex
+IndexError: Invalid index range.
+
+Solution:
+from copy import deepcopy
+def colon_tuplex(tuplex, m, n):
+    """"""
+    This function returns a sub-tuple from the given tuple 'tuplex' 
+    that includes elements from index 'm' to index 'n' (exclusive).
+    
+    Parameters:
+    tuplex (tuple): The input tuple from which to extract the sub-tuple.
+    m (int): The starting index of the sub-tuple (inclusive).
+    n (int): The ending index of the sub-tuple (exclusive).
+    
+    Returns:
+    tuple: A sub-tuple containing elements from index m to n.
+    """"""
+    if m < 0 or n > len(tuplex) or m >= n:
+        raise IndexError('Invalid index range.')
+    sub_tuplex = tuplex[m:n]
+    return sub_tuplex
+Test Code:
+def check():
+    assert colon_tuplex((""HELLO"", 5, [], True) ,2,50)==(""HELLO"", 5, [50], True)
+    assert colon_tuplex((""HELLO"", 5, [], True) ,2,100)==((""HELLO"", 5, [100],True))
+    assert colon_tuplex((""HELLO"", 5, [], True) ,2,500)==(""HELLO"", 5, [500], True)
+
+","from copy import deepcopy
+def colon_tuplex(tuplex,m,n):
+  tuplex_colon = deepcopy(tuplex)
+  tuplex_colon[m].append(n)
+  return tuplex_colon
+",0.0,1019,716,1735,4
+"Write a python function which takes a list and returns a list with the same elements, but the k'th element removed.
+
+def remove_kth_element(list1, L):
+","def remove_kth_element(list1, k):
+    """"""
+    Removes the k'th element from the list.
+
+    Parameters:
+    list1 (list): The input list from which the element will be removed.
+    k (int): The index of the element to remove (0-based index).
+
+    Returns:
+    list: A new list with the k'th element removed.
+    """"""
+    if k < 0 or k >= len(list1):
+        return list1
+    return list1[:k] + list1[k + 1:]
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def remove_kth_element(list1, k):
+    """"""
+    Removes the k'th element from the list.
+
+    Parameters:
+    list1 (list): The input list from which the element will be removed.
+    k (int): The index of the element to remove (0-based index).
+
+    Returns:
+    list: A new list with the k'th element removed.
+    """"""
+    if k < 0 or k >= len(list1):
+        return list1
+    return list1[:k] + list1[k + 1:]
+Test Code:
+def check():
+    assert remove_kth_element([1,1,2,3,4,4,5,1],3)==[1, 1, 3, 4, 4, 5, 1]
+    assert remove_kth_element([0, 0, 1, 2, 3, 4, 4, 5, 6, 6, 6, 7, 8, 9, 4, 4],4)==[0, 0, 1, 3, 4, 4, 5, 6, 6, 6, 7, 8, 9, 4, 4]
+    assert remove_kth_element([10, 10, 15, 19, 18, 18, 17, 26, 26, 17, 18, 10],5)==[10,10,15,19, 18, 17, 26, 26, 17, 18, 10]
+
+","def remove_kth_element(list1, L):
+    return  list1[:L-1] + list1[L:]
+",0.0,863,579,1442,4
+"Write a function to find the maximum difference between available pairs in the given tuple list.
+
+def max_difference(test_list):
+","def max_difference(test_list):
+    max_value = float('-inf')
+    min_value = float('inf')
+    for tup in test_list:
+        current_max = max(tup)
+        current_min = min(tup)
+        max_value = max(max_value, current_max)
+        min_value = min(min_value, current_min)
+    max_diff = max_value - min_value
+    return max_diff
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def max_difference(test_list):
+    max_value = float('-inf')
+    min_value = float('inf')
+    for tup in test_list:
+        current_max = max(tup)
+        current_min = min(tup)
+        max_value = max(max_value, current_max)
+        min_value = min(min_value, current_min)
+    max_diff = max_value - min_value
+    return max_diff
+Test Code:
+def check():
+    assert max_difference([(3, 5), (1, 7), (10, 3), (1, 2)]) == 7
+    assert max_difference([(4, 6), (2, 17), (9, 13), (11, 12)]) == 15
+    assert max_difference([(12, 35), (21, 27), (13, 23), (41, 22)]) == 23
+
+","def max_difference(test_list):
+  temp = [abs(b - a) for a, b in test_list]
+  res = max(temp)
+  return (res) 
+",0.0,767,513,1280,4
+"Write a function that gives loss amount on a sale if the given amount has loss else return 0.
+
+def loss_amount(actual_cost,sale_amount): 
+","def loss_amount(actual_cost, sale_amount):
+    """"""
+    Calculate the loss amount on a sale.
+    
+    Parameters:
+    actual_cost (float): The actual cost of the item.
+    sale_amount (float): The amount at which the item was sold.
+    
+    Returns:
+    float: The loss amount if there is a loss, otherwise 0.
+    """"""
+    if sale_amount < actual_cost:
+        return actual_cost - sale_amount
+    else:
+        return 0.0
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def loss_amount(actual_cost, sale_amount):
+    """"""
+    Calculate the loss amount on a sale.
+    
+    Parameters:
+    actual_cost (float): The actual cost of the item.
+    sale_amount (float): The amount at which the item was sold.
+    
+    Returns:
+    float: The loss amount if there is a loss, otherwise 0.
+    """"""
+    if sale_amount < actual_cost:
+        return actual_cost - sale_amount
+    else:
+        return 0.0
+Test Code:
+def check():
+    assert loss_amount(1500,1200)==0
+    assert loss_amount(100,200)==100
+    assert loss_amount(2000,5000)==3000
+
+","def loss_amount(actual_cost,sale_amount): 
+  if(sale_amount > actual_cost):
+    amount = sale_amount - actual_cost
+    return amount
+  else:
+    return 0
+",0.0,866,510,1376,4
+"Write a function to find the list of maximum length in a list of lists.
+
+def max_length(list1):
+","def max_length(list1):
+    if not list1:
+        return []
+    max_len = 0
+    max_lists = []
+    for sublist in list1:
+        current_len = len(sublist)
+        if current_len > max_len:
+            max_len = current_len
+            max_lists = [sublist]
+        elif current_len == max_len:
+            max_lists.append(sublist)
+    return max_lists
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def max_length(list1):
+    if not list1:
+        return []
+    max_len = 0
+    max_lists = []
+    for sublist in list1:
+        current_len = len(sublist)
+        if current_len > max_len:
+            max_len = current_len
+            max_lists = [sublist]
+        elif current_len == max_len:
+            max_lists.append(sublist)
+    return max_lists
+Test Code:
+def check():
+    assert max_length([[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]])==(3, [13, 15, 17])
+    assert max_length([[1], [5, 7], [10, 12, 14,15]])==(4, [10, 12, 14,15])
+    assert max_length([[5], [15,20,25]])==(3, [15,20,25])
+
+","def max_length(list1):
+    max_length = max(len(x) for x in  list1 )  
+    max_list = max((x) for x in   list1)
+    return(max_length, max_list)
+",0.0,789,623,1412,4
+"Write a python function to find the surface area of a square pyramid with a given base edge and height.
+
+def surface_Area(b,s): 
+","import math
+def surface_Area(b, s):
+    """"""
+    Calculate the surface area of a square pyramid.
+
+    Parameters:
+    b (float): The length of the base edge of the pyramid.
+    s (float): The height of the pyramid.
+
+    Returns:
+    float: The surface area of the square pyramid.
+    """"""
+    base_area = b ** 2
+    slant_height = math.sqrt((b / 2) ** 2 + s ** 2)
+    triangular_area = 2 * b * slant_height
+    total_surface_area = base_area + triangular_area
+    return total_surface_area
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+import math
+def surface_Area(b, s):
+    """"""
+    Calculate the surface area of a square pyramid.
+
+    Parameters:
+    b (float): The length of the base edge of the pyramid.
+    s (float): The height of the pyramid.
+
+    Returns:
+    float: The surface area of the square pyramid.
+    """"""
+    base_area = b ** 2
+    slant_height = math.sqrt((b / 2) ** 2 + s ** 2)
+    triangular_area = 2 * b * slant_height
+    total_surface_area = base_area + triangular_area
+    return total_surface_area
+Test Code:
+def check():
+    assert surface_Area(3,4) == 33
+    assert surface_Area(4,5) == 56
+    assert surface_Area(1,2) == 5
+
+","def surface_Area(b,s): 
+    return 2 * b * s + pow(b,2) 
+",0.0,942,693,1635,4
+"Write a function to find number of lists present in the given tuple.
+
+def find_lists(Input): 
+","def find_lists(Input):
+    list_count = 0
+    for element in Input:
+        if isinstance(element, list):
+            list_count += 1
+    return list_count
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 4, in check
+AssertionError
+
+Solution:
+def find_lists(Input):
+    list_count = 0
+    for element in Input:
+        if isinstance(element, list):
+            list_count += 1
+    return list_count
+Test Code:
+def check():
+    assert find_lists(([1, 2, 3, 4], [5, 6, 7, 8])) == 2
+    assert find_lists(([1, 2], [3, 4], [5, 6]))  == 3
+    assert find_lists(([9, 8, 7, 6, 5, 4, 3, 2, 1])) == 1
+
+","def find_lists(Input): 
+	if isinstance(Input, list): 
+		return 1
+	else: 
+		return len(Input) 
+",0.0,634,344,978,4
+"Write a function to get all lucid numbers smaller than or equal to a given integer.
+
+def get_ludic(n):
+","def get_ludic(n):
+
+    def is_lucid(num):
+        digits = str(num)
+        return len(digits) == len(set(digits))
+    lucid_numbers = []
+    for i in range(1, n + 1):
+        if is_lucid(i):
+            lucid_numbers.append(i)
+    return lucid_numbers
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def get_ludic(n):
+
+    def is_lucid(num):
+        digits = str(num)
+        return len(digits) == len(set(digits))
+    lucid_numbers = []
+    for i in range(1, n + 1):
+        if is_lucid(i):
+            lucid_numbers.append(i)
+    return lucid_numbers
+Test Code:
+def check():
+    assert get_ludic(10) == [1, 2, 3, 5, 7]
+    assert get_ludic(25) == [1, 2, 3, 5, 7, 11, 13, 17, 23, 25]
+    assert get_ludic(45) == [1, 2, 3, 5, 7, 11, 13, 17, 23, 25, 29, 37, 41, 43]
+
+","def get_ludic(n):
+	ludics = []
+	for i in range(1, n + 1):
+		ludics.append(i)
+	index = 1
+	while(index != len(ludics)):
+		first_ludic = ludics[index]
+		remove_index = index + first_ludic
+		while(remove_index < len(ludics)):
+			ludics.remove(ludics[remove_index])
+			remove_index = remove_index + first_ludic - 1
+		index += 1
+	return ludics
+",0.0,802,582,1384,4
+"Write a function to find the tuple intersection of elements in the given tuple list irrespective of their order.
+
+def tuple_intersection(test_list1, test_list2):
+","def tuple_intersection(test_list1, test_list2):
+    set1 = set(test_list1)
+    set2 = set(test_list2)
+    intersection = set1.intersection(set2)
+    return tuple(intersection)
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def tuple_intersection(test_list1, test_list2):
+    set1 = set(test_list1)
+    set2 = set(test_list2)
+    intersection = set1.intersection(set2)
+    return tuple(intersection)
+Test Code:
+def check():
+    assert tuple_intersection([(3, 4), (5, 6), (9, 10), (4, 5)] , [(5, 4), (3, 4), (6, 5), (9, 11)]) == {(4, 5), (3, 4), (5, 6)}
+    assert tuple_intersection([(4, 1), (7, 4), (11, 13), (17, 14)] , [(1, 4), (7, 4), (16, 12), (10, 13)]) == {(4, 7), (1, 4)}
+    assert tuple_intersection([(2, 1), (3, 2), (1, 3), (1, 4)] , [(11, 2), (2, 3), (6, 2), (1, 3)]) == {(1, 3), (2, 3)}
+
+","def tuple_intersection(test_list1, test_list2):
+  res = set([tuple(sorted(ele)) for ele in test_list1]) & set([tuple(sorted(ele)) for ele in test_list2])
+  return (res)
+",0.0,709,469,1178,4
+"Write a function to add the given tuple to the given list.
+
+def add_tuple(test_list, test_tup):
+","def add_tuple(test_list, test_tup):
+    test_list.append(test_tup)
+    return test_list
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def add_tuple(test_list, test_tup):
+    test_list.append(test_tup)
+    return test_list
+Test Code:
+def check():
+    assert add_tuple([5, 6, 7], (9, 10)) == [5, 6, 7, 9, 10]
+    assert add_tuple([6, 7, 8], (10, 11)) == [6, 7, 8, 10, 11]
+    assert add_tuple([7, 8, 9], (11, 12)) == [7, 8, 9, 11, 12]
+
+","def add_tuple(test_list, test_tup):
+  test_list += test_tup
+  return test_list
+",0.0,604,174,778,4
+"Write a function to filter odd numbers.
+
+def filter_oddnumbers(nums):
+","def filter_oddnumbers(nums):
+    """"""
+    This function filters out odd numbers from a list of integers.
+    
+    Parameters:
+    nums (list): A list of integers to be filtered.
+    
+    Returns:
+    list: A list containing only the even numbers from the input list.
+    """"""
+    return [num for num in nums if num % 2 == 0]
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def filter_oddnumbers(nums):
+    """"""
+    This function filters out odd numbers from a list of integers.
+    
+    Parameters:
+    nums (list): A list of integers to be filtered.
+    
+    Returns:
+    list: A list containing only the even numbers from the input list.
+    """"""
+    return [num for num in nums if num % 2 == 0]
+Test Code:
+def check():
+    assert filter_oddnumbers([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])==[1,3,5,7,9]
+    assert filter_oddnumbers([10,20,45,67,84,93])==[45,67,93]
+    assert filter_oddnumbers([5,7,9,8,6,4,3])==[5,7,9,3]
+
+","def filter_oddnumbers(nums):
+ odd_nums = list(filter(lambda x: x%2 != 0, nums))
+ return odd_nums
+",0.0,739,408,1147,4
+"Write a python function to count the occurence of all elements of list in a tuple.
+from collections import Counter 
+def count_Occurrence(tup, lst): 
+","from collections import Counter
+def count_Occurrence(tup, lst):
+    tup_counter = Counter(tup)
+    occurrences = {}
+    for element in lst:
+        occurrences[element] = tup_counter.get(element, 0)
+    return occurrences
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+from collections import Counter
+def count_Occurrence(tup, lst):
+    tup_counter = Counter(tup)
+    occurrences = {}
+    for element in lst:
+        occurrences[element] = tup_counter.get(element, 0)
+    return occurrences
+Test Code:
+def check():
+    assert count_Occurrence(('a', 'a', 'c', 'b', 'd'),['a', 'b'] ) == 3
+    assert count_Occurrence((1, 2, 3, 1, 4, 6, 7, 1, 4),[1, 4, 7]) == 6
+    assert count_Occurrence((1,2,3,4,5,6),[1,2]) == 2
+
+","from collections import Counter 
+def count_Occurrence(tup, lst): 
+    count = 0
+    for item in tup: 
+        if item in lst: 
+            count+= 1 
+    return count  
+",0.0,724,508,1232,4
+"Write a function to convert more than one list to nested dictionary.
+
+def convert_list_dictionary(l1, l2, l3):
+","def convert_list_dictionary(l1, l2, l3):
+    nested_dict = {}
+    for i in range(len(l1)):
+        nested_dict[l1[i]] = {}
+        if i < len(l2):
+            nested_dict[l1[i]]['value1'] = l2[i]
+        if i < len(l3):
+            nested_dict[l1[i]]['value2'] = l3[i]
+    return nested_dict
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def convert_list_dictionary(l1, l2, l3):
+    nested_dict = {}
+    for i in range(len(l1)):
+        nested_dict[l1[i]] = {}
+        if i < len(l2):
+            nested_dict[l1[i]]['value1'] = l2[i]
+        if i < len(l3):
+            nested_dict[l1[i]]['value2'] = l3[i]
+    return nested_dict
+Test Code:
+def check():
+    assert convert_list_dictionary([""S001"", ""S002"", ""S003"", ""S004""],[""Adina Park"", ""Leyton Marsh"", ""Duncan Boyle"", ""Saim Richards""] ,[85, 98, 89, 92])==[{'S001': {'Adina Park': 85}}, {'S002': {'Leyton Marsh': 98}}, {'S003': {'Duncan Boyle': 89}}, {'S004': {'Saim Richards': 92}}]
+    assert convert_list_dictionary([""abc"",""def"",""ghi"",""jkl""],[""python"",""program"",""language"",""programs""],[100,200,300,400])==[{'abc':{'python':100}},{'def':{'program':200}},{'ghi':{'language':300}},{'jkl':{'programs':400}}]
+    assert convert_list_dictionary([""A1"",""A2"",""A3"",""A4""],[""java"",""C"",""C++"",""DBMS""],[10,20,30,40])==[{'A1':{'java':10}},{'A2':{'C':20}},{'A3':{'C++':30}},{'A4':{'DBMS':40}}]
+
+","def convert_list_dictionary(l1, l2, l3):
+     result = [{x: {y: z}} for (x, y, z) in zip(l1, l2, l3)]
+     return result
+",0.0,900,645,1545,4
+"Write a function to find the nth number in the newman conway sequence.
+
+def sequence(n): 
+","def sequence(n):
+    if n == 1 or n == 2:
+        return n
+    seq = [0, 1, 2]
+    for i in range(3, n + 1):
+        next_value = seq[seq[i - 1]] + seq[i - 2]
+        seq.append(next_value)
+    return seq[n]
+","IndexError: list index out of range
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+  File ""<string>"", line 6, in sequence
+IndexError: list index out of range
+
+Solution:
+def sequence(n):
+    if n == 1 or n == 2:
+        return n
+    seq = [0, 1, 2]
+    for i in range(3, n + 1):
+        next_value = seq[seq[i - 1]] + seq[i - 2]
+        seq.append(next_value)
+    return seq[n]
+Test Code:
+def check():
+    assert sequence(10) == 6
+    assert sequence(2) == 1
+    assert sequence(3) == 2
+
+","def sequence(n): 
+	if n == 1 or n == 2: 
+		return 1
+	else: 
+		return sequence(sequence(n-1)) + sequence(n-sequence(n-1))
+",0.0,791,598,1389,4
+"Write a function to find the first adverb ending with ly and its positions in a given string.
+import re
+def find_adverbs(text):
+","import re
+def find_adverbs(text):
+    adverbs = re.findall('\\b\\w+ly\\b', text)
+    if adverbs:
+        first_adverb = adverbs[0]
+        positions = [m.start() for m in re.finditer(re.escape(first_adverb), text)]
+        return (first_adverb, positions)
+    else:
+        return (None, [])
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+import re
+def find_adverbs(text):
+    adverbs = re.findall('\\b\\w+ly\\b', text)
+    if adverbs:
+        first_adverb = adverbs[0]
+        positions = [m.start() for m in re.finditer(re.escape(first_adverb), text)]
+        return (first_adverb, positions)
+    else:
+        return (None, [])
+Test Code:
+def check():
+    assert find_adverbs(""Clearly, he has no excuse for such behavior."") == '0-7: Clearly'
+    assert find_adverbs(""Please handle the situation carefuly"") == '28-36: carefuly'
+    assert find_adverbs(""Complete the task quickly"") == '18-25: quickly'
+
+","import re
+def find_adverbs(text):
+  for m in re.finditer(r""\w+ly"", text):
+    return ('%d-%d: %s' % (m.start(), m.end(), m.group(0)))
+",0.0,791,574,1365,4
+"Write a function to find the list with maximum length.
+
+def max_length_list(input_list):
+","def max_length_list(input_list):
+    if not input_list:
+        return None
+    max_length = 0
+    max_list = None
+    for lst in input_list:
+        if isinstance(lst, list):
+            if len(lst) > max_length:
+                max_length = len(lst)
+                max_list = lst
+    return max_list
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def max_length_list(input_list):
+    if not input_list:
+        return None
+    max_length = 0
+    max_list = None
+    for lst in input_list:
+        if isinstance(lst, list):
+            if len(lst) > max_length:
+                max_length = len(lst)
+                max_list = lst
+    return max_list
+Test Code:
+def check():
+    assert max_length_list([[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]])==(3, [13, 15, 17])
+    assert max_length_list([[1,2,3,4,5],[1,2,3,4],[1,2,3],[1,2],[1]])==(5,[1,2,3,4,5])
+    assert max_length_list([[3,4,5],[6,7,8,9],[10,11,12]])==(4,[6,7,8,9])
+
+","def max_length_list(input_list):
+    max_length = max(len(x) for x in input_list )   
+    max_list = max(input_list, key = lambda i: len(i))    
+    return(max_length, max_list)
+",0.0,727,650,1377,4
+"Write a function to perform index wise multiplication of tuple elements in the given two tuples.
+
+def index_multiplication(test_tup1, test_tup2):
+","def index_multiplication(test_tup1, test_tup2):
+    result = tuple((a * b for (a, b) in zip(test_tup1, test_tup2)))
+    return result
+","TypeError: can't multiply sequence by non-int of type 'tuple'
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+  File ""<string>"", line 2, in index_multiplication
+  File ""<string>"", line 2, in <genexpr>
+TypeError: can't multiply sequence by non-int of type 'tuple'
+
+Solution:
+def index_multiplication(test_tup1, test_tup2):
+    result = tuple((a * b for (a, b) in zip(test_tup1, test_tup2)))
+    return result
+Test Code:
+def check():
+    assert index_multiplication(((1, 3), (4, 5), (2, 9), (1, 10)),((6, 7), (3, 9), (1, 1), (7, 3)) ) == ((6, 21), (12, 45), (2, 9), (7, 30))
+    assert index_multiplication(((2, 4), (5, 6), (3, 10), (2, 11)),((7, 8), (4, 10), (2, 2), (8, 4)) ) == ((14, 32), (20, 60), (6, 20), (16, 44))
+    assert index_multiplication(((3, 5), (6, 7), (4, 11), (3, 12)),((8, 9), (5, 11), (3, 3), (9, 5)) ) == ((24, 45), (30, 77), (12, 33), (27, 60))
+
+","def index_multiplication(test_tup1, test_tup2):
+  res = tuple(tuple(a * b for a, b in zip(tup1, tup2))
+   for tup1, tup2 in zip(test_tup1, test_tup2))
+  return (res) 
+",0.0,734,343,1077,4
+"Write a function to convert polar coordinates to rectangular coordinates.
+import cmath
+def polar_rect(x,y):
+","import cmath
+def polar_rect(r, theta):
+    """"""
+    Convert polar coordinates to rectangular coordinates.
+    
+    Parameters:
+    r (float): The radius (distance from origin).
+    theta (float): The angle in radians.
+    
+    Returns:
+    tuple: A tuple containing the rectangular coordinates (x, y).
+    """"""
+    x = r * cmath.cos(theta)
+    y = r * cmath.sin(theta)
+    return (x, y)
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+import cmath
+def polar_rect(r, theta):
+    """"""
+    Convert polar coordinates to rectangular coordinates.
+    
+    Parameters:
+    r (float): The radius (distance from origin).
+    theta (float): The angle in radians.
+    
+    Returns:
+    tuple: A tuple containing the rectangular coordinates (x, y).
+    """"""
+    x = r * cmath.cos(theta)
+    y = r * cmath.sin(theta)
+    return (x, y)
+Test Code:
+def check():
+    assert polar_rect(3,4)==((5.0, 0.9272952180016122), (-2+2.4492935982947064e-16j))
+    assert polar_rect(4,7)==((8.06225774829855, 1.0516502125483738), (-2+2.4492935982947064e-16j))
+    assert polar_rect(15,17)==((22.67156809750927, 0.8478169733934057), (-2+2.4492935982947064e-16j))
+
+","import cmath
+def polar_rect(x,y):
+ cn = complex(x,y)
+ cn=cmath.polar(cn)
+ cn1 = cmath.rect(2, cmath.pi)
+ return (cn,cn1)
+",0.0,807,413,1220,4
+"Write a function to calculate the wind chill index rounded to the next integer given the wind velocity in km/h and a temperature in celsius.
+import math
+def wind_chill(v,t):
+","import math
+def wind_chill(v, t):
+    """"""
+    Calculate the wind chill index rounded to the next integer.
+    
+    Parameters:
+    v (float): Wind velocity in km/h
+    t (float): Temperature in Celsius
+    
+    Returns:
+    int: Wind chill index rounded up to the next integer
+    """"""
+    wind_chill_index = 13.12 + 0.6215 * t - 11.37 * v ** 0.16 + 0.3965 * t * v ** 0.16
+    return math.ceil(wind_chill_index)
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+import math
+def wind_chill(v, t):
+    """"""
+    Calculate the wind chill index rounded to the next integer.
+    
+    Parameters:
+    v (float): Wind velocity in km/h
+    t (float): Temperature in Celsius
+    
+    Returns:
+    int: Wind chill index rounded up to the next integer
+    """"""
+    wind_chill_index = 13.12 + 0.6215 * t - 11.37 * v ** 0.16 + 0.3965 * t * v ** 0.16
+    return math.ceil(wind_chill_index)
+Test Code:
+def check():
+    assert wind_chill(120,35)==40
+    assert wind_chill(40,20)==19
+    assert wind_chill(10,8)==6
+
+","import math
+def wind_chill(v,t):
+ windchill = 13.12 + 0.6215*t -  11.37*math.pow(v, 0.16) + 0.3965*t*math.pow(v, 0.16)
+ return int(round(windchill, 0))
+",0.0,963,556,1519,4
+"Write a function that takes in positive integers m and n and finds the number of possible sequences of length n, such that each element is a positive integer and is greater than or equal to twice the previous element but less than or equal to m.
+
+def get_total_number_of_sequences(m,n): 
+","def get_total_number_of_sequences(m, n):
+    memo = {}
+
+    def count_sequences(last, length):
+        if length == 0:
+            return 1
+        if (last, length) in memo:
+            return memo[last, length]
+        total_count = 0
+        start = max(2 * last, 1)
+        for next_elem in range(start, m + 1):
+            total_count += count_sequences(next_elem, length - 1)
+        memo[last, length] = total_count
+        return total_count
+    total_sequences = 0
+    for first_elem in range(1, m + 1):
+        total_sequences += count_sequences(first_elem, n - 1)
+    return total_sequences
+","The solution passed all test cases.
+","def get_total_number_of_sequences(m,n): 
+	T=[[0 for i in range(n+1)] for i in range(m+1)] 
+	for i in range(m+1): 
+		for j in range(n+1): 
+			if i==0 or j==0: 
+				T[i][j]=0
+			elif i<j: 
+				T[i][j]=0
+			elif j==1: 
+				T[i][j]=i 
+			else: 
+				T[i][j]=T[i-1][j]+T[i//2][j-1] 
+	return T[m][n]
+",1.0,1121,957,2078,4
+"Write a function to find common first element in given list of tuple.
+
+def group_tuples(Input): 
+","def group_tuples(Input):
+    first_elements = set()
+    common_first_elements = set()
+    for tup in Input:
+        if tup:
+            first_elem = tup[0]
+            if first_elem in first_elements:
+                common_first_elements.add(first_elem)
+            else:
+                first_elements.add(first_elem)
+    return list(common_first_elements)
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def group_tuples(Input):
+    first_elements = set()
+    common_first_elements = set()
+    for tup in Input:
+        if tup:
+            first_elem = tup[0]
+            if first_elem in first_elements:
+                common_first_elements.add(first_elem)
+            else:
+                first_elements.add(first_elem)
+    return list(common_first_elements)
+Test Code:
+def check():
+    assert group_tuples([('x', 'y'), ('x', 'z'), ('w', 't')]) == [('x', 'y', 'z'), ('w', 't')]
+    assert group_tuples([('a', 'b'), ('a', 'c'), ('d', 'e')]) == [('a', 'b', 'c'), ('d', 'e')]
+    assert group_tuples([('f', 'g'), ('f', 'g'), ('h', 'i')]) == [('f', 'g', 'g'), ('h', 'i')]
+
+","def group_tuples(Input): 
+	out = {} 
+	for elem in Input: 
+		try: 
+			out[elem[0]].extend(elem[1:]) 
+		except KeyError: 
+			out[elem[0]] = list(elem) 
+	return [tuple(values) for values in out.values()] 
+",0.0,737,609,1346,4
+"Write a function to compute the sum of digits of each number of a given list.
+
+def sum_of_digits(nums):
+","def sum_of_digits(nums):
+    """"""
+    Compute the sum of digits for each number in the given list.
+
+    Args:
+    nums (list of int): A list of integers.
+
+    Returns:
+    list of int: A list containing the sum of digits for each number.
+    """"""
+    sum_digits_list = []
+    for num in nums:
+        digit_sum = sum((int(digit) for digit in str(abs(num))))
+        sum_digits_list.append(digit_sum)
+    return sum_digits_list
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def sum_of_digits(nums):
+    """"""
+    Compute the sum of digits for each number in the given list.
+
+    Args:
+    nums (list of int): A list of integers.
+
+    Returns:
+    list of int: A list containing the sum of digits for each number.
+    """"""
+    sum_digits_list = []
+    for num in nums:
+        digit_sum = sum((int(digit) for digit in str(abs(num))))
+        sum_digits_list.append(digit_sum)
+    return sum_digits_list
+Test Code:
+def check():
+    assert sum_of_digits([10,2,56])==14
+    assert sum_of_digits([[10,20,4,5,'b',70,'a']])==19
+    assert sum_of_digits([10,20,-4,5,-70])==19
+
+","def sum_of_digits(nums):
+    return sum(int(el) for n in nums for el in str(n) if el.isdigit())
+",0.0,723,496,1219,4
+"Write a function to sort a dictionary by value.
+from collections import Counter
+def sort_counter(dict1):
+","from collections import Counter
+def sort_counter(dict1):
+    sorted_dict = dict(sorted(dict1.items(), key=lambda item: item[1]))
+    return sorted_dict
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+from collections import Counter
+def sort_counter(dict1):
+    sorted_dict = dict(sorted(dict1.items(), key=lambda item: item[1]))
+    return sorted_dict
+Test Code:
+def check():
+    assert sort_counter({'Math':81, 'Physics':83, 'Chemistry':87})==[('Chemistry', 87), ('Physics', 83), ('Math', 81)]
+    assert sort_counter({'Math':400, 'Physics':300, 'Chemistry':250})==[('Math', 400), ('Physics', 300), ('Chemistry', 250)]
+    assert sort_counter({'Math':900, 'Physics':1000, 'Chemistry':1250})==[('Chemistry', 1250), ('Physics', 1000), ('Math', 900)]
+
+","from collections import Counter
+def sort_counter(dict1):
+ x = Counter(dict1)
+ sort_counter=x.most_common()
+ return sort_counter
+",0.0,628,248,876,4
+"Write a python function to set the left most unset bit.
+
+def set_left_most_unset_bit(n): 
+","def set_left_most_unset_bit(n):
+    position = 0
+    temp = n
+    while temp > 0:
+        if temp & 1 == 0:
+            break
+        temp >>= 1
+        position += 1
+    if temp == 0:
+        position = n.bit_length()
+    result = n | 1 << position
+    return result
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def set_left_most_unset_bit(n):
+    position = 0
+    temp = n
+    while temp > 0:
+        if temp & 1 == 0:
+            break
+        temp >>= 1
+        position += 1
+    if temp == 0:
+        position = n.bit_length()
+    result = n | 1 << position
+    return result
+Test Code:
+def check():
+    assert set_left_most_unset_bit(10) == 14
+    assert set_left_most_unset_bit(12) == 14
+    assert set_left_most_unset_bit(15) == 15
+
+","def set_left_most_unset_bit(n): 
+    if not (n & (n + 1)): 
+        return n 
+    pos, temp, count = 0, n, 0 
+    while temp: 
+        if not (temp & 1): 
+            pos = count      
+        count += 1; temp>>=1
+    return (n | (1 << (pos))) 
+",0.0,743,540,1283,4
+"Write a function to extract all the adjacent coordinates of the given coordinate tuple.
+
+def get_coordinates(test_tup): 
+","def get_coordinates(test_tup):
+    adjacent_coords = []
+    movements = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    for move in movements:
+        new_coord = (test_tup[0] + move[0], test_tup[1] + move[1])
+        adjacent_coords.append(new_coord)
+    return adjacent_coords
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def get_coordinates(test_tup):
+    adjacent_coords = []
+    movements = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    for move in movements:
+        new_coord = (test_tup[0] + move[0], test_tup[1] + move[1])
+        adjacent_coords.append(new_coord)
+    return adjacent_coords
+Test Code:
+def check():
+    assert get_coordinates((3, 4)) == [[2, 3], [2, 4], [2, 5], [3, 3], [3, 4], [3, 5], [4, 3], [4, 4], [4, 5]]
+    assert get_coordinates((4, 5)) ==[[3, 4], [3, 5], [3, 6], [4, 4], [4, 5], [4, 6], [5, 4], [5, 5], [5, 6]]
+    assert get_coordinates((5, 6)) == [[4, 5], [4, 6], [4, 7], [5, 5], [5, 6], [5, 7], [6, 5], [6, 6], [6, 7]]
+
+","def adjac(test_tup): 
+  if not ele: 
+     yield sub 
+  else: 
+     yield from [idx for j in range(ele[0] - 1, ele[0] + 2) 
+                for idx in adjac(ele[1:], sub + [j])] 
+def get_coordinates(test_tup):
+  return list(adjac(test_tup))
+",0.0,790,507,1297,4
+"Write a function to trim each tuple by k in the given tuple list.
+
+def trim_tuple(test_list, K):
+","def trim_tuple(test_list, K):
+    return [t[K:len(t) - K] for t in test_list]
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def trim_tuple(test_list, K):
+    return [t[K:len(t) - K] for t in test_list]
+Test Code:
+def check():
+    assert trim_tuple([(5, 3, 2, 1, 4), (3, 4, 9, 2, 1),(9, 1, 2, 3, 5), (4, 8, 2, 1, 7)], 2) == '[(2,), (9,), (2,), (2,)]'
+    assert trim_tuple([(5, 3, 2, 1, 4), (3, 4, 9, 2, 1), (9, 1, 2, 3, 5), (4, 8, 2, 1, 7)], 1) == '[(3, 2, 1), (4, 9, 2), (1, 2, 3), (8, 2, 1)]'
+    assert trim_tuple([(7, 8, 4, 9), (11, 8, 12, 4),(4, 1, 7, 8), (3, 6, 9, 7)], 1) == '[(8, 4), (8, 12), (1, 7), (6, 9)]'
+
+","def trim_tuple(test_list, K):
+  res = []
+  for ele in test_list:
+    N = len(ele)
+    res.append(tuple(list(ele)[K: N - K]))
+  return (str(res)) 
+",0.0,614,385,999,4
+"Write a function to create the next bigger number by rearranging the digits of a given number.
+
+def rearrange_bigger(n):
+","def rearrange_bigger(n):
+    digits = list(str(n))
+    length = len(digits)
+    i = length - 2
+    while i >= 0 and digits[i] >= digits[i + 1]:
+        i -= 1
+    if i == -1:
+        return -1
+    j = length - 1
+    while digits[j] <= digits[i]:
+        j -= 1
+    (digits[i], digits[j]) = (digits[j], digits[i])
+    digits = digits[:i + 1] + digits[i + 1:][::-1]
+    return int(''.join(digits))
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 3, in check
+AssertionError
+
+Solution:
+def rearrange_bigger(n):
+    digits = list(str(n))
+    length = len(digits)
+    i = length - 2
+    while i >= 0 and digits[i] >= digits[i + 1]:
+        i -= 1
+    if i == -1:
+        return -1
+    j = length - 1
+    while digits[j] <= digits[i]:
+        j -= 1
+    (digits[i], digits[j]) = (digits[j], digits[i])
+    digits = digits[:i + 1] + digits[i + 1:][::-1]
+    return int(''.join(digits))
+Test Code:
+def check():
+    assert rearrange_bigger(12)==21
+    assert rearrange_bigger(10)==False
+    assert rearrange_bigger(102)==120
+
+","def rearrange_bigger(n):
+    nums = list(str(n))
+    for i in range(len(nums)-2,-1,-1):
+        if nums[i] < nums[i+1]:
+            z = nums[i:]
+            y = min(filter(lambda x: x > z[0], z))
+            z.remove(y)
+            z.sort()
+            nums[i:] = [y] + z
+            return int("""".join(nums))
+    return False
+",0.0,947,807,1754,4
+"Write a function to find the nth newman–shanks–williams prime number.
+
+def newman_prime(n): 
+","def newman_prime(n):
+    import sympy
+
+    def is_nsw_prime(p):
+        if p < 5:
+            return False
+        if not sympy.isprime(p):
+            return False
+        for a in range(0, 100):
+            for b in range(0, 100):
+                if 2 ** a * 3 ** b + 1 == p:
+                    return True
+                if 2 ** a * 3 ** b + 1 > p:
+                    break
+        return False
+    nsw_primes = []
+    candidate = 5
+    while len(nsw_primes) < n:
+        if is_nsw_prime(candidate):
+            nsw_primes.append(candidate)
+        candidate += 1
+    return nsw_primes[-1]
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def newman_prime(n):
+    import sympy
+
+    def is_nsw_prime(p):
+        if p < 5:
+            return False
+        if not sympy.isprime(p):
+            return False
+        for a in range(0, 100):
+            for b in range(0, 100):
+                if 2 ** a * 3 ** b + 1 == p:
+                    return True
+                if 2 ** a * 3 ** b + 1 > p:
+                    break
+        return False
+    nsw_primes = []
+    candidate = 5
+    while len(nsw_primes) < n:
+        if is_nsw_prime(candidate):
+            nsw_primes.append(candidate)
+        candidate += 1
+    return nsw_primes[-1]
+Test Code:
+def check():
+    assert newman_prime(3) == 7
+    assert newman_prime(4) == 17
+    assert newman_prime(5) == 41
+
+","def newman_prime(n): 
+	if n == 0 or n == 1: 
+		return 1
+	return 2 * newman_prime(n - 1) + newman_prime(n - 2)
+",0.0,1002,997,1999,4
+"Write a function to count bidirectional tuple pairs.
+
+def count_bidirectional(test_list):
+","def count_bidirectional(test_list):
+    unique_pairs = set()
+    for (a, b) in test_list:
+        unique_pairs.add((a, b))
+        unique_pairs.add((b, a))
+    return len(unique_pairs) // 2
+test_list = [(1, 2), (2, 1), (3, 4), (4, 3), (5, 6)]
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 3, in check
+AssertionError
+
+Solution:
+def count_bidirectional(test_list):
+    unique_pairs = set()
+    for (a, b) in test_list:
+        unique_pairs.add((a, b))
+        unique_pairs.add((b, a))
+    return len(unique_pairs) // 2
+test_list = [(1, 2), (2, 1), (3, 4), (4, 3), (5, 6)]
+Test Code:
+def check():
+    assert count_bidirectional([(5, 6), (1, 2), (6, 5), (9, 1), (6, 5), (2, 1)] ) == 3
+    assert count_bidirectional([(5, 6), (1, 3), (6, 5), (9, 1), (6, 5), (2, 1)] ) == 2
+    assert count_bidirectional([(5, 6), (1, 2), (6, 5), (9, 2), (6, 5), (2, 1)] ) == 4
+
+","def count_bidirectional(test_list):
+  res = 0
+  for idx in range(0, len(test_list)):
+    for iidx in range(idx + 1, len(test_list)):
+      if test_list[iidx][0] == test_list[idx][1] and test_list[idx][1] == test_list[iidx][0]:
+        res += 1
+  return res
+",0.0,773,669,1442,4
+"Write a python function to find a pair with highest product from a given array of integers.
+
+def max_Product(arr): 
+","def max_Product(arr):
+    if len(arr) < 2:
+        return None
+    max1 = max2 = float('-inf')
+    for num in arr:
+        if num > max1:
+            max2 = max1
+            max1 = num
+        elif num > max2:
+            max2 = num
+    return max1 * max2
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def max_Product(arr):
+    if len(arr) < 2:
+        return None
+    max1 = max2 = float('-inf')
+    for num in arr:
+        if num > max1:
+            max2 = max1
+            max1 = num
+        elif num > max2:
+            max2 = num
+    return max1 * max2
+Test Code:
+def check():
+    assert max_Product([1,2,3,4,7,0,8,4]) == (7,8)
+    assert max_Product([0,-1,-2,-4,5,0,-6]) == (-4,-6)
+    assert max_Product([1,2,3]) == (2,3)
+
+","def max_Product(arr): 
+    arr_len = len(arr) 
+    if (arr_len < 2): 
+        return (""No pairs exists"")           
+    x = arr[0]; y = arr[1]      
+    for i in range(0,arr_len): 
+        for j in range(i + 1,arr_len): 
+            if (arr[i] * arr[j] > x * y): 
+                x = arr[i]; y = arr[j] 
+    return x,y    
+",0.0,767,510,1277,4
+"Write a python function to find element at a given index after number of rotations.
+
+def find_Element(arr,ranges,rotations,index) :  
+","def find_Element(arr, ranges, rotations, index):
+    effective_rotations = rotations % len(arr)
+    new_index = (index - effective_rotations + len(arr)) % len(arr)
+    return arr[new_index]
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def find_Element(arr, ranges, rotations, index):
+    effective_rotations = rotations % len(arr)
+    new_index = (index - effective_rotations + len(arr)) % len(arr)
+    return arr[new_index]
+Test Code:
+def check():
+    assert find_Element([1,2,3,4,5],[[0,2],[0,3]],2,1) == 3
+    assert find_Element([1,2,3,4],[[0,1],[0,2]],1,2) == 3
+    assert find_Element([1,2,3,4,5,6],[[0,1],[0,2]],1,1) == 1
+
+","def find_Element(arr,ranges,rotations,index) :  
+    for i in range(rotations - 1,-1,-1 ) : 
+        left = ranges[i][0] 
+        right = ranges[i][1] 
+        if (left <= index and right >= index) : 
+            if (index == left) : 
+                index = right 
+            else : 
+                index = index - 1 
+    return arr[index] 
+",0.0,692,340,1032,4
+"Write a python function to check whether the given number can be represented as sum of non-zero powers of 2 or not.
+
+def is_Sum_Of_Powers_Of_Two(n): 
+","def is_Sum_Of_Powers_Of_Two(n):
+    if n <= 0:
+        return False
+    sum_of_powers = 0
+    power = 1
+    while sum_of_powers < n:
+        sum_of_powers += power
+        power *= 2
+    return sum_of_powers == n
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def is_Sum_Of_Powers_Of_Two(n):
+    if n <= 0:
+        return False
+    sum_of_powers = 0
+    power = 1
+    while sum_of_powers < n:
+        sum_of_powers += power
+        power *= 2
+    return sum_of_powers == n
+Test Code:
+def check():
+    assert is_Sum_Of_Powers_Of_Two(10) == True
+    assert is_Sum_Of_Powers_Of_Two(7) == False
+    assert is_Sum_Of_Powers_Of_Two(14) == True
+
+","def is_Sum_Of_Powers_Of_Two(n): 
+    if (n % 2 == 1): 
+        return False
+    else: 
+        return True
+",0.0,819,629,1448,4
+"Write a function to calculate the maximum aggregate from the list of tuples.
+from collections import defaultdict
+def max_aggregate(stdata):
+","from collections import defaultdict
+def max_aggregate(stdata):
+    aggregate_sums = defaultdict(int)
+    for (key, value) in stdata:
+        aggregate_sums[key] += value
+    max_sum = max(aggregate_sums.values(), default=0)
+    return max_sum
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+from collections import defaultdict
+def max_aggregate(stdata):
+    aggregate_sums = defaultdict(int)
+    for (key, value) in stdata:
+        aggregate_sums[key] += value
+    max_sum = max(aggregate_sums.values(), default=0)
+    return max_sum
+Test Code:
+def check():
+    assert max_aggregate([('Juan Whelan',90),('Sabah Colley',88),('Peter Nichols',7),('Juan Whelan',122),('Sabah Colley',84)])==('Juan Whelan', 212)
+    assert max_aggregate([('Juan Whelan',50),('Sabah Colley',48),('Peter Nichols',37),('Juan Whelan',22),('Sabah Colley',14)])==('Juan Whelan', 72)
+    assert max_aggregate([('Juan Whelan',10),('Sabah Colley',20),('Peter Nichols',30),('Juan Whelan',40),('Sabah Colley',50)])==('Sabah Colley', 70)
+
+","from collections import defaultdict
+def max_aggregate(stdata):
+    temp = defaultdict(int)
+    for name, marks in stdata:
+        temp[name] += marks
+    return max(temp.items(), key=lambda x: x[1])
+",0.0,724,455,1179,4
+"Write a function to find the directrix of a parabola.
+
+def parabola_directrix(a, b, c): 
+","def parabola_directrix(a, b, c):
+    """"""
+    Calculate the directrix of a parabola given its coefficients.
+    
+    The standard form of a parabola is y = ax^2 + bx + c.
+    The directrix of the parabola can be found using the formula:
+    Directrix = (4p) + k, where p is the distance from the vertex to the focus,
+    and k is the y-coordinate of the vertex.
+    
+    The vertex (h, k) of the parabola can be found using:
+    h = -b / (2a)
+    k = c - (b^2 / (4a))
+    
+    The distance p is given by:
+    p = 1 / (4a)
+    
+    Parameters:
+    a (float): Coefficient of x^2
+    b (float): Coefficient of x
+    c (float): Constant term
+    
+    Returns:
+    float: The y-coordinate of the directrix of the parabola.
+    """"""
+    h = -b / (2 * a)
+    k = c - b ** 2 / (4 * a)
+    p = 1 / (4 * a)
+    directrix = k - p
+    return directrix
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def parabola_directrix(a, b, c):
+    """"""
+    Calculate the directrix of a parabola given its coefficients.
+    
+    The standard form of a parabola is y = ax^2 + bx + c.
+    The directrix of the parabola can be found using the formula:
+    Directrix = (4p) + k, where p is the distance from the vertex to the focus,
+    and k is the y-coordinate of the vertex.
+    
+    The vertex (h, k) of the parabola can be found using:
+    h = -b / (2a)
+    k = c - (b^2 / (4a))
+    
+    The distance p is given by:
+    p = 1 / (4a)
+    
+    Parameters:
+    a (float): Coefficient of x^2
+    b (float): Coefficient of x
+    c (float): Constant term
+    
+    Returns:
+    float: The y-coordinate of the directrix of the parabola.
+    """"""
+    h = -b / (2 * a)
+    k = c - b ** 2 / (4 * a)
+    p = 1 / (4 * a)
+    directrix = k - p
+    return directrix
+Test Code:
+def check():
+    assert parabola_directrix(5,3,2)==-198
+    assert parabola_directrix(9,8,4)==-2336
+    assert parabola_directrix(2,4,6)==-130
+
+","def parabola_directrix(a, b, c): 
+  directrix=((int)(c - ((b * b) + 1) * 4 * a ))
+  return directrix
+",0.0,1147,787,1934,4
+"Write a function that returns integers x and y that satisfy ax + by = n as a tuple, or return None if no solution exists.
+
+def find_solution(a, b, n):
+","def find_solution(a, b, n):
+    for x in range(n // a + 1):
+        remaining = n - a * x
+        if remaining % b == 0:
+            y = remaining // b
+            return (x, y)
+    return None
+","The solution passed all test cases.
+","def find_solution(a, b, n):
+	i = 0
+	while i * a <= n:
+		if (n - (i * a)) % b == 0: 
+			return (i, (n - (i * a)) // b)
+		i = i + 1
+	return None
+",1.0,762,404,1166,4
+"Write a function that matches a word containing 'z'.
+import re
+def text_match_wordz(text):
+","import re
+def text_match_wordz(text):
+    pattern = '\\b\\w*z\\w*\\b'
+    matches = re.findall(pattern, text)
+    return matches
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+import re
+def text_match_wordz(text):
+    pattern = '\\b\\w*z\\w*\\b'
+    matches = re.findall(pattern, text)
+    return matches
+Test Code:
+def check():
+    assert text_match_wordz(""pythonz."")==True
+    assert text_match_wordz(""xyz."")==True
+    assert text_match_wordz(""  lang  ."")==False
+
+","import re
+def text_match_wordz(text):
+        patterns = '\w*z.\w*'
+        if re.search(patterns,  text):
+                return True
+        else:
+                return False
+",0.0,638,232,870,4
+"Write a python function which takes a list of integers and counts the number of possible unordered pairs where both elements are unequal.
+
+def count_Pairs(arr,n): 
+","def count_Pairs(arr, n):
+    unique_elements = set(arr)
+    unique_count = len(unique_elements)
+    if unique_count < 2:
+        return 0
+    return unique_count * (unique_count - 1) // 2
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def count_Pairs(arr, n):
+    unique_elements = set(arr)
+    unique_count = len(unique_elements)
+    if unique_count < 2:
+        return 0
+    return unique_count * (unique_count - 1) // 2
+Test Code:
+def check():
+    assert count_Pairs([1,2,1],3) == 2
+    assert count_Pairs([1,1,1,1],4) == 0
+    assert count_Pairs([1,2,3,4,5],5) == 10
+
+","def count_Pairs(arr,n): 
+    cnt = 0; 
+    for i in range(n): 
+        for j in range(i + 1,n): 
+            if (arr[i] != arr[j]): 
+                cnt += 1; 
+    return cnt; 
+",0.0,727,488,1215,4
+"Write a function to merge three lists into a single sorted list.
+import heapq
+def merge_sorted_list(num1,num2,num3):
+","import heapq
+def merge_sorted_list(num1, num2, num3):
+    merged_list = num1 + num2 + num3
+    return sorted(merged_list)
+","The solution passed all test cases.
+","import heapq
+def merge_sorted_list(num1,num2,num3):
+  num1=sorted(num1)
+  num2=sorted(num2)
+  num3=sorted(num3)
+  result = heapq.merge(num1,num2,num3)
+  return list(result)
+",1.0,666,244,910,4
+"Write a python function to find the area of the largest triangle that can be inscribed in a semicircle with a given radius.
+
+def triangle_area(r) :  
+","import math
+def triangle_area(r):
+    """"""
+    Calculate the area of the largest triangle that can be inscribed in a semicircle with a given radius.
+    
+    Parameters:
+    r (float): The radius of the semicircle.
+    
+    Returns:
+    float: The area of the largest inscribed triangle.
+    """"""
+    base = 2 * r
+    height = r
+    area = 0.5 * base * height
+    return area
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+import math
+def triangle_area(r):
+    """"""
+    Calculate the area of the largest triangle that can be inscribed in a semicircle with a given radius.
+    
+    Parameters:
+    r (float): The radius of the semicircle.
+    
+    Returns:
+    float: The area of the largest inscribed triangle.
+    """"""
+    base = 2 * r
+    height = r
+    area = 0.5 * base * height
+    return area
+Test Code:
+def check():
+    assert triangle_area(-1) == None
+    assert triangle_area(0) == 0
+    assert triangle_area(2) == 4
+
+","def triangle_area(r) :  
+    if r < 0 : 
+        return None
+    return r * r 
+",0.0,737,644,1381,4
+"Write a function to replace whitespaces with an underscore and vice versa in a given string.
+
+def replace_spaces(text):
+","def replace_spaces(text):
+    translation_table = str.maketrans({' ': '_', '_': ' '})
+    return text.translate(translation_table)
+","The solution passed all test cases.
+","def replace_spaces(text):
+  return """".join("" "" if c == ""_"" else (""_"" if c == "" "" else c) for c in text)
+",1.0,648,365,1013,4
+"Write a function to find the ration of positive numbers in an array of integers.
+from array import array
+def positive_count(nums):
+","from array import array
+def positive_count(nums):
+    """"""
+    This function calculates the ratio of positive numbers in an array of integers.
+    
+    Parameters:
+    nums (array): An array of integers.
+    
+    Returns:
+    float: The ratio of positive numbers to the total number of numbers in the array.
+    """"""
+    if len(nums) == 0:
+        return 0.0
+    positive_count = sum((1 for num in nums if num > 0))
+    total_count = len(nums)
+    return positive_count / total_count
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+from array import array
+def positive_count(nums):
+    """"""
+    This function calculates the ratio of positive numbers in an array of integers.
+    
+    Parameters:
+    nums (array): An array of integers.
+    
+    Returns:
+    float: The ratio of positive numbers to the total number of numbers in the array.
+    """"""
+    if len(nums) == 0:
+        return 0.0
+    positive_count = sum((1 for num in nums if num > 0))
+    total_count = len(nums)
+    return positive_count / total_count
+Test Code:
+def check():
+    assert positive_count([0, 1, 2, -1, -5, 6, 0, -3, -2, 3, 4, 6, 8])==0.54
+    assert positive_count([2, 1, 2, -1, -5, 6, 4, -3, -2, 3, 4, 6, 8])==0.69
+    assert positive_count([2, 4, -6, -9, 11, -12, 14, -5, 17])==0.56
+
+","from array import array
+def positive_count(nums):
+    n = len(nums)
+    n1 = 0
+    for x in nums:
+        if x > 0:
+            n1 += 1
+        else:
+          None
+    return round(n1/n,2)
+",0.0,830,608,1438,4
+"Write a function to count those characters which have vowels as their neighbors in the given string.
+
+def count_vowels(test_str):
+","def count_vowels(test_str):
+    vowels = set('aeiouAEIOU')
+    count = 0
+    for i in range(len(test_str)):
+        if i > 0 and test_str[i - 1] in vowels or (i < len(test_str) - 1 and test_str[i + 1] in vowels):
+            count += 1
+    return count
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def count_vowels(test_str):
+    vowels = set('aeiouAEIOU')
+    count = 0
+    for i in range(len(test_str)):
+        if i > 0 and test_str[i - 1] in vowels or (i < len(test_str) - 1 and test_str[i + 1] in vowels):
+            count += 1
+    return count
+Test Code:
+def check():
+    assert count_vowels('bestinstareels') == 7
+    assert count_vowels('partofthejourneyistheend') == 12
+    assert count_vowels('amazonprime') == 5
+
+","def count_vowels(test_str):
+  res = 0
+  vow_list = ['a', 'e', 'i', 'o', 'u']
+  for idx in range(1, len(test_str) - 1):
+    if test_str[idx] not in vow_list and (test_str[idx - 1] in vow_list or test_str[idx + 1] in vow_list):
+      res += 1
+  if test_str[0] not in vow_list and test_str[1] in vow_list:
+    res += 1
+  if test_str[-1] not in vow_list and test_str[-2] in vow_list:
+    res += 1
+  return (res) 
+",0.0,787,501,1288,4
+"Write a function to concatenate each element of tuple by the delimiter.
+
+def concatenate_tuple(test_tup):
+","def concatenate_tuple(test_tup, delimiter):
+    return delimiter.join(test_tup)
+result = concatenate_tuple(('Hello', 'World', 'Python'), ' ')
+","TypeError: concatenate_tuple() missing 1 required positional argument: 'delimiter'
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+TypeError: concatenate_tuple() missing 1 required positional argument: 'delimiter'
+
+Solution:
+def concatenate_tuple(test_tup, delimiter):
+    return delimiter.join(test_tup)
+Test Code:
+def check():
+    assert concatenate_tuple((""ID"", ""is"", 4, ""UTS"") ) == 'ID-is-4-UTS'
+    assert concatenate_tuple((""QWE"", ""is"", 4, ""RTY"") ) == 'QWE-is-4-RTY'
+    assert concatenate_tuple((""ZEN"", ""is"", 4, ""OP"") ) == 'ZEN-is-4-OP'
+
+","def concatenate_tuple(test_tup):
+    delim = ""-""
+    res = ''.join([str(ele) + delim for ele in test_tup])
+    res = res[ : len(res) - len(delim)]
+    return (str(res)) 
+",0.0,606,315,921,4
+"Write a function that takes in an array and an integer n, and re-arranges the first n elements of the given array so that all negative elements appear before positive ones, and where the relative order among negative and positive elements is preserved.
+
+def re_arrange_array(arr, n):
+","def re_arrange_array(arr, n):
+    negative = []
+    positive = []
+    for i in range(n):
+        if arr[i] < 0:
+            negative.append(arr[i])
+        else:
+            positive.append(arr[i])
+    rearranged = negative + positive
+    arr[:n] = rearranged
+    return arr
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def re_arrange_array(arr, n):
+    negative = []
+    positive = []
+    for i in range(n):
+        if arr[i] < 0:
+            negative.append(arr[i])
+        else:
+            positive.append(arr[i])
+    rearranged = negative + positive
+    arr[:n] = rearranged
+    return arr
+Test Code:
+def check():
+    assert re_arrange_array([-1, 2, -3, 4, 5, 6, -7, 8, 9], 9) == [-1, -3, -7, 4, 5, 6, 2, 8, 9]
+    assert re_arrange_array([12, -14, -26, 13, 15], 5) == [-14, -26, 12, 13, 15]
+    assert re_arrange_array([10, 24, 36, -42, -39, -78, 85], 7) == [-42, -39, -78, 10, 24, 36, 85]
+
+","def re_arrange_array(arr, n):
+  j=0
+  for i in range(0, n):
+    if (arr[i] < 0):
+      temp = arr[i]
+      arr[i] = arr[j]
+      arr[j] = temp
+      j = j + 1
+  return arr
+",0.0,874,502,1376,4
+"Write a python function to find the sublist having minimum length.
+
+def Find_Min(lst): 
+","def Find_Min(lst):
+    min_length = float('inf')
+    result_sublist = []
+    for start in range(len(lst)):
+        for end in range(start + 1, len(lst) + 1):
+            sublist = lst[start:end]
+            if sublist and len(sublist) < min_length:
+                min_length = len(sublist)
+                result_sublist = sublist
+    return result_sublist
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def Find_Min(lst):
+    min_length = float('inf')
+    result_sublist = []
+    for start in range(len(lst)):
+        for end in range(start + 1, len(lst) + 1):
+            sublist = lst[start:end]
+            if sublist and len(sublist) < min_length:
+                min_length = len(sublist)
+                result_sublist = sublist
+    return result_sublist
+Test Code:
+def check():
+    assert Find_Min([[1],[1,2],[1,2,3]]) == [1]
+    assert Find_Min([[1,1],[1,1,1],[1,2,7,8]]) == [1,1]
+    assert Find_Min([['x'],['x','y'],['x','y','z']]) == ['x']
+
+","def Find_Min(lst): 
+    return min(lst, key=len) 
+",0.0,783,614,1397,4
+"Write a python function to find the sum of common divisors of two given numbers.
+
+def sum(a,b): 
+","def sum_of_common_divisors(a, b):
+
+    def gcd(x, y):
+        while y:
+            (x, y) = (y, x % y)
+        return x
+    common_divisor = gcd(a, b)
+    total_sum = 0
+    for i in range(1, common_divisor + 1):
+        if common_divisor % i == 0:
+            total_sum += i
+    return total_sum
+","ValueError: Function sum is not defined in the solution.
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 97, in check_solution
+    raise ValueError(f""Function {entry_point} is not defined in the solution."")
+ValueError: Function sum is not defined in the solution.
+
+Solution:
+
+Test Code:
+def check():
+    assert sum(10,15) == 6
+    assert sum(100,150) == 93
+    assert sum(4,6) == 3
+
+","def sum(a,b): 
+    sum = 0
+    for i in range (1,min(a,b)): 
+        if (a % i == 0 and b % i == 0): 
+            sum += i 
+    return sum
+",0.0,858,664,1522,4
+"Write a python function to count minimum number of swaps required to convert one binary number represented as a string to another.
+
+def min_Swaps(str1,str2) : 
+","def min_Swaps(str1, str2):
+    if len(str1) != len(str2):
+        return -1
+    count_0_to_1 = 0
+    count_1_to_0 = 0
+    for i in range(len(str1)):
+        if str1[i] == '0' and str2[i] == '1':
+            count_0_to_1 += 1
+        elif str1[i] == '1' and str2[i] == '0':
+            count_1_to_0 += 1
+    return max(count_0_to_1, count_1_to_0)
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 3, in check
+AssertionError
+
+Solution:
+def min_Swaps(str1, str2):
+    if len(str1) != len(str2):
+        return -1
+    count_0_to_1 = 0
+    count_1_to_0 = 0
+    for i in range(len(str1)):
+        if str1[i] == '0' and str2[i] == '1':
+            count_0_to_1 += 1
+        elif str1[i] == '1' and str2[i] == '0':
+            count_1_to_0 += 1
+    return max(count_0_to_1, count_1_to_0)
+Test Code:
+def check():
+    assert min_Swaps(""1101"",""1110"") == 1
+    assert min_Swaps(""111"",""000"") == ""Not Possible""
+    assert min_Swaps(""111"",""110"") == ""Not Possible""
+
+","def min_Swaps(str1,str2) : 
+    count = 0
+    for i in range(len(str1)) :  
+        if str1[i] != str2[i] : 
+            count += 1
+    if count % 2 == 0 : 
+        return (count // 2) 
+    else : 
+        return (""Not Possible"") 
+",0.0,988,882,1870,4
+"Write a function to remove uppercase substrings from a given string.
+import re
+def remove_uppercase(str1):
+","import re
+def remove_uppercase(str1):
+    return re.sub('\\b[A-Z]+\\b', '', str1).strip()
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+import re
+def remove_uppercase(str1):
+    return re.sub('\\b[A-Z]+\\b', '', str1).strip()
+Test Code:
+def check():
+    assert remove_uppercase('cAstyoUrFavoRitETVshoWs') == 'cstyoravoitshos'
+    assert remove_uppercase('wAtchTheinTernEtrAdIo') == 'wtchheinerntrdo'
+    assert remove_uppercase('VoicESeaRchAndreComMendaTionS') == 'oiceachndreomendaion'
+
+","import re
+def remove_uppercase(str1):
+  return re.sub('[A-Z]', '', str1)
+",0.0,620,213,833,4
+"Write a function to find the first adverb and their positions in a given sentence.
+import re
+def find_adverb_position(text):
+","import re
+def find_adverb_position(text):
+    adverb_pattern = '\\b\\w+ly\\b'
+    matches = re.finditer(adverb_pattern, text)
+    adverb_info = []
+    for match in matches:
+        adverb_info.append((match.group(), match.start()))
+        break
+    return adverb_info
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+import re
+def find_adverb_position(text):
+    adverb_pattern = '\\b\\w+ly\\b'
+    matches = re.finditer(adverb_pattern, text)
+    adverb_info = []
+    for match in matches:
+        adverb_info.append((match.group(), match.start()))
+        break
+    return adverb_info
+Test Code:
+def check():
+    assert find_adverb_position(""clearly!! we can see the sky"")==(0, 7, 'clearly')
+    assert find_adverb_position(""seriously!! there are many roses"")==(0, 9, 'seriously')
+    assert find_adverb_position(""unfortunately!! sita is going to home"")==(0, 13, 'unfortunately')
+
+","import re
+def find_adverb_position(text):
+ for m in re.finditer(r""\w+ly"", text):
+    return (m.start(), m.end(), m.group(0))
+",0.0,774,635,1409,4
+"Write a function to remove lowercase substrings from a given string.
+import re
+def remove_lowercase(str1):
+","import re
+def remove_lowercase(str1):
+    result = re.sub('\\b[a-z]+\\b', '', str1)
+    return ' '.join(result.split())
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+import re
+def remove_lowercase(str1):
+    result = re.sub('\\b[a-z]+\\b', '', str1)
+    return ' '.join(result.split())
+Test Code:
+def check():
+    assert remove_lowercase(""PYTHon"")==('PYTH')
+    assert remove_lowercase(""FInD"")==('FID')
+    assert remove_lowercase(""STRinG"")==('STRG')
+
+","import re
+def remove_lowercase(str1):
+ return re.sub('[a-z]', '', str1)
+",0.0,634,317,951,4
+"Write a function to check whether the given string starts and ends with the same character or not.
+import re  
+def check_char(string): 
+","def check_char(string):
+    if not string:
+        return False
+    return string[0] == string[-1]
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def check_char(string):
+    if not string:
+        return False
+    return string[0] == string[-1]
+Test Code:
+def check():
+    assert check_char(""abba"") == ""Valid""
+    assert check_char(""a"") == ""Valid""
+    assert check_char(""abcd"") == ""Invalid""
+
+","import re  
+regex = r'^[a-z]$|^([a-z]).*\1$'
+def check_char(string): 
+	if(re.search(regex, string)): 
+		return ""Valid"" 
+	else: 
+		return ""Invalid"" 
+",0.0,631,236,867,4
+"Write a python function to find the character made by adding the ASCII value of all the characters of the given string modulo 26.
+
+def get_Char(strr):  
+","def get_Char(strr):
+    ascii_sum = 0
+    for char in strr:
+        ascii_sum += ord(char)
+    char_index = ascii_sum % 26
+    result_char = chr(char_index + ord('a'))
+    return result_char
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def get_Char(strr):
+    ascii_sum = 0
+    for char in strr:
+        ascii_sum += ord(char)
+    char_index = ascii_sum % 26
+    result_char = chr(char_index + ord('a'))
+    return result_char
+Test Code:
+def check():
+    assert get_Char(""abc"") == ""f""
+    assert get_Char(""gfg"") == ""t""
+    assert get_Char(""ab"") == ""c""
+
+","def get_Char(strr):  
+    summ = 0
+    for i in range(len(strr)): 
+        summ += (ord(strr[i]) - ord('a') + 1)  
+    if (summ % 26 == 0): 
+        return ord('z') 
+    else: 
+        summ = summ % 26
+        return chr(ord('a') + summ - 1)
+",0.0,744,498,1242,4
+"Write a python function to count the upper case characters in a given string.
+
+def upper_ctr(str):
+","def upper_ctr(s):
+    """"""
+    Count the number of uppercase characters in a given string.
+
+    Parameters:
+    s (str): The input string to be analyzed.
+
+    Returns:
+    int: The count of uppercase characters in the string.
+    """"""
+    upper_case_count = 0
+    for char in s:
+        if char.isupper():
+            upper_case_count += 1
+    return upper_case_count
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def upper_ctr(s):
+    """"""
+    Count the number of uppercase characters in a given string.
+
+    Parameters:
+    s (str): The input string to be analyzed.
+
+    Returns:
+    int: The count of uppercase characters in the string.
+    """"""
+    upper_case_count = 0
+    for char in s:
+        if char.isupper():
+            upper_case_count += 1
+    return upper_case_count
+Test Code:
+def check():
+    assert upper_ctr('PYthon') == 1
+    assert upper_ctr('BigData') == 1
+    assert upper_ctr('program') == 0
+
+","def upper_ctr(str):
+    upper_ctr = 0
+    for i in range(len(str)):
+          if str[i] >= 'A' and str[i] <= 'Z': upper_ctr += 1
+          return upper_ctr
+",0.0,772,538,1310,4
+"Write a function to remove the parenthesis and what is inbetween them from a string.
+import re
+def remove_parenthesis(items):
+","import re
+def remove_parenthesis(items):
+    return re.sub('\\(.*?\\)', '', items).strip()
+","TypeError: expected string or bytes-like object
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+  File ""<string>"", line 3, in remove_parenthesis
+  File ""/opt/miniconda3/envs/aflow/lib/python3.9/re.py"", line 210, in sub
+    return _compile(pattern, flags).sub(repl, string, count)
+TypeError: expected string or bytes-like object
+
+Solution:
+import re
+def remove_parenthesis(items):
+    return re.sub('\\(.*?\\)', '', items).strip()
+Test Code:
+def check():
+    assert remove_parenthesis([""python (chrome)""])==(""python"")
+    assert remove_parenthesis([""string(.abc)""])==(""string"")
+    assert remove_parenthesis([""alpha(num)""])==(""alpha"")
+
+","import re
+def remove_parenthesis(items):
+ for item in items:
+    return (re.sub(r"" ?\([^)]+\)"", """", item))
+",0.0,624,190,814,4
+"Write a function to convert all possible convertible elements in a list of lists to floats.
+
+def list_to_float(test_list):
+","def list_to_float(test_list):
+    for i in range(len(test_list)):
+        for j in range(len(test_list[i])):
+            try:
+                test_list[i][j] = float(test_list[i][j])
+            except (ValueError, TypeError):
+                pass
+    return test_list
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def list_to_float(test_list):
+    for i in range(len(test_list)):
+        for j in range(len(test_list[i])):
+            try:
+                test_list[i][j] = float(test_list[i][j])
+            except (ValueError, TypeError):
+                pass
+    return test_list
+Test Code:
+def check():
+    assert list_to_float( [(""3"", ""4""), (""1"", ""26.45""), (""7.32"", ""8""), (""4"", ""8"")] ) == [(3.0, 4.0), (1.0, 26.45), (7.32, 8.0), (4.0, 8.0)]
+    assert list_to_float( [(""4"", ""4""), (""2"", ""27""), (""4.12"", ""9""), (""7"", ""11"")] ) == [(4.0, 4.0), (2.0, 27.0), (4.12, 9.0), (7.0, 11.0)]
+    assert list_to_float( [(""6"", ""78""), (""5"", ""26.45""), (""1.33"", ""4""), (""82"", ""13"")] ) == [(6.0, 78.0), (5.0, 26.45), (1.33, 4.0), (82.0, 13.0)]
+
+","def list_to_float(test_list):
+  res = []
+  for tup in test_list:
+    temp = []
+    for ele in tup:
+      if ele.isalpha():
+        temp.append(ele)
+      else:
+        temp.append(float(ele))
+    res.append((temp[0],temp[1])) 
+  return res
+",0.0,735,442,1177,4
+"Write a python function to find the largest negative number from the given list.
+
+def largest_neg(list1): 
+","def largest_neg(list1):
+    largest_negative = None
+    for number in list1:
+        if number < 0:
+            if largest_negative is None or number > largest_negative:
+                largest_negative = number
+    return largest_negative
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def largest_neg(list1):
+    largest_negative = None
+    for number in list1:
+        if number < 0:
+            if largest_negative is None or number > largest_negative:
+                largest_negative = number
+    return largest_negative
+Test Code:
+def check():
+    assert largest_neg([1,2,3,-4,-6]) == -6
+    assert largest_neg([1,2,3,-8,-9]) == -9
+    assert largest_neg([1,2,3,4,-1]) == -1
+
+","def largest_neg(list1): 
+    max = list1[0] 
+    for x in list1: 
+        if x < max : 
+             max = x  
+    return max
+",0.0,678,423,1101,4
+"Write a function to find the intersection of two arrays.
+
+def intersection_array(array_nums1,array_nums2):
+","def intersection_array(array_nums1, array_nums2):
+    set1 = set(array_nums1)
+    set2 = set(array_nums2)
+    intersection = set1.intersection(set2)
+    return list(intersection)
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def intersection_array(array_nums1, array_nums2):
+    set1 = set(array_nums1)
+    set2 = set(array_nums2)
+    intersection = set1.intersection(set2)
+    return list(intersection)
+Test Code:
+def check():
+    assert intersection_array([1, 2, 3, 5, 7, 8, 9, 10],[1, 2, 4, 8, 9])==[1, 2, 8, 9]
+    assert intersection_array([1, 2, 3, 5, 7, 8, 9, 10],[3,5,7,9])==[3,5,7,9]
+    assert intersection_array([1, 2, 3, 5, 7, 8, 9, 10],[10,20,30,40])==[10]
+
+","def intersection_array(array_nums1,array_nums2):
+ result = list(filter(lambda x: x in array_nums1, array_nums2)) 
+ return result
+",0.0,662,329,991,4
+"Write a function that takes two lists and returns true if they have at least one common element.
+
+def common_element(list1, list2):
+","def common_element(list1, list2):
+    set1 = set(list1)
+    for element in list2:
+        if element in set1:
+            return True
+    return False
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 3, in check
+AssertionError
+
+Solution:
+def common_element(list1, list2):
+    set1 = set(list1)
+    for element in list2:
+        if element in set1:
+            return True
+    return False
+Test Code:
+def check():
+    assert common_element([1,2,3,4,5], [5,6,7,8,9])==True
+    assert common_element([1,2,3,4,5], [6,7,8,9])==None
+    assert common_element(['a','b','c'], ['d','b','e'])==True
+
+","def common_element(list1, list2):
+     result = False
+     for x in list1:
+         for y in list2:
+             if x == y:
+                 result = True
+                 return result
+",0.0,672,363,1035,4
+"Write a function to find the maximum product formed by multiplying numbers of an increasing subsequence of that array.
+
+def max_product(arr):   
+","def max_product(arr):
+    from functools import reduce
+    from operator import mul
+    n = len(arr)
+    if n == 0:
+        return 0
+    max_product_at = [0] * n
+    for i in range(n):
+        max_product_at[i] = arr[i]
+        for j in range(i):
+            if arr[j] < arr[i]:
+                max_product_at[i] = max(max_product_at[i], max_product_at[j] * arr[i])
+    return max(max_product_at)
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def max_product(arr):
+    from functools import reduce
+    from operator import mul
+    n = len(arr)
+    if n == 0:
+        return 0
+    max_product_at = [0] * n
+    for i in range(n):
+        max_product_at[i] = arr[i]
+        for j in range(i):
+            if arr[j] < arr[i]:
+                max_product_at[i] = max(max_product_at[i], max_product_at[j] * arr[i])
+    return max(max_product_at)
+Test Code:
+def check():
+    assert max_product([3, 100, 4, 5, 150, 6]) == 3000
+    assert max_product([4, 42, 55, 68, 80]) == 50265600
+    assert max_product([10, 22, 9, 33, 21, 50, 41, 60]) == 2460
+
+","def max_product(arr):   
+  n = len(arr)
+  mpis = arr[:]
+  for i in range(n): 
+    current_prod = arr[i]
+    j = i + 1
+    while j < n:
+      if arr[j-1] > arr[j]: 
+        break
+      current_prod *= arr[j]
+      if current_prod > mpis[j]:
+        mpis[j] = current_prod 
+      j = j + 1
+  return max(mpis)
+",0.0,844,642,1486,4
+"Write a function that takes in a list of tuples and returns a dictionary mapping each unique tuple to the number of times it occurs in the list.
+from collections import Counter 
+def check_occurences(test_list):
+","from collections import Counter
+def check_occurences(test_list):
+    occurrences = Counter(test_list)
+    return dict(occurrences)
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+from collections import Counter
+def check_occurences(test_list):
+    occurrences = Counter(test_list)
+    return dict(occurrences)
+Test Code:
+def check():
+    assert check_occurences([(3, 1), (1, 3), (2, 5), (5, 2), (6, 3)] ) == {(1, 3): 2, (2, 5): 2, (3, 6): 1}
+    assert check_occurences([(4, 2), (2, 4), (3, 6), (6, 3), (7, 4)] ) == {(2, 4): 2, (3, 6): 2, (4, 7): 1}
+    assert check_occurences([(13, 2), (11, 23), (12, 25), (25, 12), (16, 23)] ) == {(2, 13): 1, (11, 23): 1, (12, 25): 2, (16, 23): 1}
+
+","from collections import Counter 
+def check_occurences(test_list):
+  res = dict(Counter(tuple(ele) for ele in map(sorted, test_list)))
+  return  (res) 
+",0.0,692,258,950,4
+"Write a function to calculate the geometric sum of n-1. https://www.w3resource.com/python-exercises/data-structures-and-algorithms/python-recursion-exercise-9.php
+
+def geometric_sum(n):
+","def geometric_sum(n):
+    if n == 0:
+        return 0
+    else:
+        return 1 / 2 ** n + geometric_sum(n - 1)
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def geometric_sum(n):
+    if n == 0:
+        return 0
+    else:
+        return 1 / 2 ** n + geometric_sum(n - 1)
+Test Code:
+def check():
+    assert geometric_sum(7) == 1.9921875
+    assert geometric_sum(4) == 1.9375
+    assert geometric_sum(8) == 1.99609375
+
+","def geometric_sum(n):
+  if n < 0:
+    return 0
+  else:
+    return 1 / (pow(2, n)) + geometric_sum(n - 1)
+",0.0,724,376,1100,4
+"Write a function to sort a given list of strings of numbers numerically. https://www.geeksforgeeks.org/python-sort-numeric-strings-in-a-list/
+
+def sort_numeric_strings(nums_str):
+","def sort_numeric_strings(nums_str):
+    return sorted(nums_str, key=int)
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def sort_numeric_strings(nums_str):
+    return sorted(nums_str, key=int)
+Test Code:
+def check():
+    assert sort_numeric_strings( ['4','12','45','7','0','100','200','-12','-500'])==[-500, -12, 0, 4, 7, 12, 45, 100, 200]
+    assert sort_numeric_strings(['2','3','8','4','7','9','8','2','6','5','1','6','1','2','3','4','6','9','1','2'])==[1, 1, 1, 2, 2, 2, 2, 3, 3, 4, 4, 5, 6, 6, 6, 7, 8, 8, 9, 9]
+    assert sort_numeric_strings(['1','3','5','7','1', '3','13', '15', '17','5', '7 ','9','1', '11'])==[1, 1, 1, 3, 3, 5, 5, 7, 7, 9, 11, 13, 15, 17]
+
+","def sort_numeric_strings(nums_str):
+    result = [int(x) for x in nums_str]
+    result.sort()
+    return result
+",0.0,682,370,1052,4
+"Write a function to remove uneven elements in the nested mixed tuple.
+
+def extract_even(test_tuple): 
+","def extract_even(test_tuple):
+    even_elements = []
+    for element in test_tuple:
+        if isinstance(element, tuple):
+            even_elements.extend(extract_even(element))
+        elif isinstance(element, int) and element % 2 == 0:
+            even_elements.append(element)
+    return even_elements
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def extract_even(test_tuple):
+    even_elements = []
+    for element in test_tuple:
+        if isinstance(element, tuple):
+            even_elements.extend(extract_even(element))
+        elif isinstance(element, int) and element % 2 == 0:
+            even_elements.append(element)
+    return even_elements
+Test Code:
+def check():
+    assert extract_even((4, 5, (7, 6, (2, 4)), 6, 8)) == (4, (6, (2, 4)), 6, 8)
+    assert extract_even((5, 6, (8, 7, (4, 8)), 7, 9)) == (6, (8, (4, 8)))
+    assert extract_even((5, 6, (9, 8, (4, 6)), 8, 10)) == (6, (8, (4, 6)), 8, 10)
+
+","def even_ele(test_tuple, even_fnc): 
+	res = tuple() 
+	for ele in test_tuple: 
+		if isinstance(ele, tuple): 
+			res += (even_ele(ele, even_fnc), ) 
+		elif even_fnc(ele): 
+			res += (ele, ) 
+	return res 
+def extract_even(test_tuple):
+  res = even_ele(test_tuple, lambda x: x % 2 == 0)
+  return (res) 
+",0.0,748,563,1311,4
+"Write a function to maximize the given two tuples.
+
+def maximize_elements(test_tup1, test_tup2):
+","def maximize_elements(test_tup1, test_tup2):
+    return tuple((max(a, b) for (a, b) in zip(test_tup1, test_tup2)))
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def maximize_elements(test_tup1, test_tup2):
+    return tuple((max(a, b) for (a, b) in zip(test_tup1, test_tup2)))
+Test Code:
+def check():
+    assert maximize_elements(((1, 3), (4, 5), (2, 9), (1, 10)), ((6, 7), (3, 9), (1, 1), (7, 3))) == ((6, 7), (4, 9), (2, 9), (7, 10))
+    assert maximize_elements(((2, 4), (5, 6), (3, 10), (2, 11)), ((7, 8), (4, 10), (2, 2), (8, 4))) == ((7, 8), (5, 10), (3, 10), (8, 11))
+    assert maximize_elements(((3, 5), (6, 7), (4, 11), (3, 12)), ((8, 9), (5, 11), (3, 3), (9, 5))) == ((8, 9), (6, 11), (4, 11), (9, 12))
+
+","def maximize_elements(test_tup1, test_tup2):
+  res = tuple(tuple(max(a, b) for a, b in zip(tup1, tup2))
+   for tup1, tup2 in zip(test_tup1, test_tup2))
+  return (res) 
+",0.0,658,383,1041,4
+"Write a function that takes in a list and an element and inserts the element before each element in the list, and returns the resulting list.
+
+def insert_element(list,element):
+","def insert_element(lst, element):
+    result = []
+    for item in lst:
+        result.append(element)
+        result.append(item)
+    return result
+","The solution passed all test cases.
+","def insert_element(list,element):
+ list = [v for elt in list for v in (element, elt)]
+ return list
+",1.0,676,290,966,4
+"Write a function to find the depth of a dictionary.
+
+def dict_depth(d):
+","def dict_depth(d):
+    if not isinstance(d, dict):
+        return 0
+    max_depth = 0
+    for value in d.values():
+        current_depth = dict_depth(value)
+        max_depth = max(max_depth, current_depth)
+    return max_depth + 1
+","The solution passed all test cases.
+","def dict_depth(d):
+    if isinstance(d, dict):
+        return 1 + (max(map(dict_depth, d.values())) if d else 0)
+    return 0
+",1.0,664,436,1100,4
+"Write a function that takes in a list and an integer n and splits a list for every nth element, returning a list of the resulting lists.
+
+def list_split(S, step):
+","def list_split(S, step):
+    result = []
+    for i in range(0, len(S), step):
+        result.append(S[i:i + step])
+    return result
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def list_split(S, step):
+    result = []
+    for i in range(0, len(S), step):
+        result.append(S[i:i + step])
+    return result
+Test Code:
+def check():
+    assert list_split(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'],3)==[['a', 'd', 'g', 'j', 'm'], ['b', 'e', 'h', 'k', 'n'], ['c', 'f', 'i', 'l']]
+    assert list_split([1,2,3,4,5,6,7,8,9,10,11,12,13,14],3)==[[1,4,7,10,13], [2,5,8,11,14], [3,6,9,12]]
+    assert list_split(['python','java','C','C++','DBMS','SQL'],2)==[['python', 'C', 'DBMS'], ['java', 'C++', 'SQL']]
+
+","def list_split(S, step):
+    return [S[i::step] for i in range(step)]
+",0.0,698,332,1030,4
+"Write a function to find the occurrence and position of the substrings within a string. Return None if there is no match.
+import re
+def occurance_substring(text,pattern):
+","import re
+def occurance_substring(text, pattern):
+    matches = [(match.start(), match.group()) for match in re.finditer(pattern, text)]
+    if not matches:
+        return None
+    return matches
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+import re
+def occurance_substring(text, pattern):
+    matches = [(match.start(), match.group()) for match in re.finditer(pattern, text)]
+    if not matches:
+        return None
+    return matches
+Test Code:
+def check():
+    assert occurance_substring('python programming, python language','python')==('python', 0, 6)
+    assert occurance_substring('python programming,programming language','programming')==('programming', 7, 18)
+    assert occurance_substring('python programming,programming language','language')==('language', 31, 39)
+    assert occurance_substring('c++ programming, c++ language','python')==None
+
+","import re
+def occurance_substring(text,pattern):
+ for match in re.finditer(pattern, text):
+    s = match.start()
+    e = match.end()
+    return (text[s:e], s, e)
+",0.0,737,355,1092,4
+"Write a function to determine if the sum of the divisors of two integers are the same.
+import math 
+def are_equivalent(num1, num2)
+","import math
+def are_equivalent(num1, num2):
+
+    def sum_of_divisors(n):
+        total = 0
+        for i in range(1, int(math.sqrt(n)) + 1):
+            if n % i == 0:
+                total += i
+                if i != n // i:
+                    total += n // i
+        return total
+    sum1 = sum_of_divisors(num1)
+    sum2 = sum_of_divisors(num2)
+    return sum1 == sum2
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 4, in check
+AssertionError
+
+Solution:
+import math
+def are_equivalent(num1, num2):
+
+    def sum_of_divisors(n):
+        total = 0
+        for i in range(1, int(math.sqrt(n)) + 1):
+            if n % i == 0:
+                total += i
+                if i != n // i:
+                    total += n // i
+        return total
+    sum1 = sum_of_divisors(num1)
+    sum2 = sum_of_divisors(num2)
+    return sum1 == sum2
+Test Code:
+def check():
+    assert are_equivalent(36, 57) == False
+    assert are_equivalent(2, 4) == False
+    assert are_equivalent(23, 47) == True
+
+","import math 
+def div_sum(n): 
+  total = 1
+  i = 2
+
+  while i * i <= n:
+    if (n % i == 0):
+      total = (total + i + math.floor(n / i))
+    i += 1
+
+  return total
+
+def are_equivalent(num1, num2): 
+    return div_sum(num1) == div_sum(num2); 
+",0.0,901,582,1483,4
+"Write a python function to convert complex numbers to polar coordinates.
+import cmath  
+def convert(numbers):    
+","import cmath
+def convert(numbers):
+    """"""
+    Convert a list of complex numbers to their polar coordinates.
+    
+    Parameters:
+    numbers (list): A list of complex numbers.
+    
+    Returns:
+    list: A list of tuples containing the magnitude and phase of each complex number.
+    """"""
+    polar_coordinates = []
+    for number in numbers:
+        (magnitude, phase) = cmath.polar(number)
+        polar_coordinates.append((magnitude, phase))
+    return polar_coordinates
+","TypeError: 'int' object is not iterable
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+  File ""<string>"", line 13, in convert
+TypeError: 'int' object is not iterable
+
+Solution:
+import cmath
+def convert(numbers):
+    """"""
+    Convert a list of complex numbers to their polar coordinates.
+    
+    Parameters:
+    numbers (list): A list of complex numbers.
+    
+    Returns:
+    list: A list of tuples containing the magnitude and phase of each complex number.
+    """"""
+    polar_coordinates = []
+    for number in numbers:
+        (magnitude, phase) = cmath.polar(number)
+        polar_coordinates.append((magnitude, phase))
+    return polar_coordinates
+Test Code:
+def check():
+    assert convert(1) == (1.0, 0.0)
+    assert convert(4) == (4.0,0.0)
+    assert convert(5) == (5.0,0.0)
+
+","import cmath  
+def convert(numbers):    
+  num = cmath.polar(numbers)  
+  return (num) 
+",0.0,787,499,1286,4
+"Write a function to find the nth nonagonal number.
+
+def is_nonagonal(n): 
+","def is_nonagonal(n):
+    if n < 1:
+        return None
+    nonagonal_number = n * (7 * n - 5) // 2
+    return nonagonal_number
+","The solution passed all test cases.
+","def is_nonagonal(n): 
+	return int(n * (7 * n - 5) / 2) 
+",1.0,643,447,1090,4
+"The input is given as - a dictionary with a student name as a key and a tuple of float (student_height, student_weight) as a value, - minimal height, - minimal weight. Write a function to filter students that have height and weight above the minimum.
+
+def filter_data(students,h,w):
+","def filter_data(students, h, w):
+    filtered_students = {}
+    for (name, (height, weight)) in students.items():
+        if height > h and weight > w:
+            filtered_students[name] = (height, weight)
+    return filtered_students
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def filter_data(students, h, w):
+    filtered_students = {}
+    for (name, (height, weight)) in students.items():
+        if height > h and weight > w:
+            filtered_students[name] = (height, weight)
+    return filtered_students
+Test Code:
+def check():
+    assert filter_data({'Cierra Vega': (6.2, 70), 'Alden Cantrell': (5.9, 65), 'Kierra Gentry': (6.0, 68), 'Pierre Cox': (5.8, 66)},6.0,70)=={'Cierra Vega': (6.2, 70)}
+    assert filter_data({'Cierra Vega': (6.2, 70), 'Alden Cantrell': (5.9, 65), 'Kierra Gentry': (6.0, 68), 'Pierre Cox': (5.8, 66)},5.9,67)=={'Cierra Vega': (6.2, 70),'Kierra Gentry': (6.0, 68)}
+    assert filter_data({'Cierra Vega': (6.2, 70), 'Alden Cantrell': (5.9, 65), 'Kierra Gentry': (6.0, 68), 'Pierre Cox': (5.8, 66)},5.7,64)=={'Cierra Vega': (6.2, 70),'Alden Cantrell': (5.9, 65),'Kierra Gentry': (6.0, 68),'Pierre Cox': (5.8, 66)}
+
+","def filter_data(students,h,w):
+    result = {k: s for k, s in students.items() if s[0] >=h and s[1] >=w}
+    return result    
+",0.0,858,449,1307,4
+"Write a python function to remove duplicate numbers from a given number of lists.
+
+def two_unique_nums(nums):
+","def two_unique_nums(nums):
+    unique_numbers = set()
+    for num_list in nums:
+        unique_numbers.update(num_list)
+    return list(unique_numbers)
+","TypeError: 'int' object is not iterable
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+  File ""<string>"", line 4, in two_unique_nums
+TypeError: 'int' object is not iterable
+
+Solution:
+def two_unique_nums(nums):
+    unique_numbers = set()
+    for num_list in nums:
+        unique_numbers.update(num_list)
+    return list(unique_numbers)
+Test Code:
+def check():
+    assert two_unique_nums([1,2,3,2,3,4,5]) == [1, 4, 5]
+    assert two_unique_nums([1,2,3,2,4,5]) == [1, 3, 4, 5]
+    assert two_unique_nums([1,2,3,4,5]) == [1, 2, 3, 4, 5]
+
+","def two_unique_nums(nums):
+  return [i for i in nums if nums.count(i)==1]
+",0.0,644,382,1026,4
+"Write a function to extract only the rear index element of each string in the given tuple.
+
+def extract_rear(test_tuple):
+","def extract_rear(test_tuple):
+    return tuple((s[-1] for s in test_tuple))
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+def extract_rear(test_tuple):
+    return tuple((s[-1] for s in test_tuple))
+Test Code:
+def check():
+    assert extract_rear(('Mers', 'for', 'Vers') ) == ['s', 'r', 's']
+    assert extract_rear(('Avenge', 'for', 'People') ) == ['e', 'r', 'e']
+    assert extract_rear(('Gotta', 'get', 'go') ) == ['a', 't', 'o']
+
+","def extract_rear(test_tuple):
+  res = list(sub[len(sub) - 1] for sub in test_tuple)
+  return (res) 
+",0.0,648,314,962,4
+"Write a function to convert the given snake case string to camel case string.
+import re
+def snake_to_camel(word):
+","import re
+def snake_to_camel(word):
+    parts = word.split('_')
+    camel_case = parts[0] + ''.join((part.capitalize() for part in parts[1:]))
+    return camel_case
+","AssertionError: 
+Traceback:
+Traceback (most recent call last):
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 106, in check_solution
+    result = self.run_with_timeout(check, 15)
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 74, in run_with_timeout
+    raise result[0]  # 重新抛出捕获的异常
+  File ""/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/mbpp.py"", line 44, in target
+    result.append(func())  # 执行函数并保存结果
+  File ""<string>"", line 2, in check
+AssertionError
+
+Solution:
+import re
+def snake_to_camel(word):
+    parts = word.split('_')
+    camel_case = parts[0] + ''.join((part.capitalize() for part in parts[1:]))
+    return camel_case
+Test Code:
+def check():
+    assert snake_to_camel('android_tv') == 'AndroidTv'
+    assert snake_to_camel('google_pixel') == 'GooglePixel'
+    assert snake_to_camel('apple_watch') == 'AppleWatch'
+
+","import re
+def snake_to_camel(word):
+  return ''.join(x.capitalize() or '_' for x in word.split('_'))
+",0.0,666,345,1011,4
+"Write a function to calculate the sum of perrin numbers.
+
+def cal_sum(n): 
+","def cal_sum(n):
+    if n < 0:
+        return 0
+    elif n == 0:
+        return 3
+    elif n == 1:
+        return 0
+    elif n == 2:
+        return 2
+    (p0, p1, p2) = (3, 0, 2)
+    total_sum = p0 + p1 + p2
+    for i in range(3, n + 1):
+        p_next = p0 + p1
+        total_sum += p_next
+        (p0, p1, p2) = (p1, p2, p_next)
+    return total_sum
+","The solution passed all test cases.
+","def cal_sum(n): 
+	a = 3
+	b = 0
+	c = 2
+	if (n == 0): 
+		return 3
+	if (n == 1): 
+		return 3
+	if (n == 2): 
+		return 5
+	sum = 5
+	while (n > 2): 
+		d = a + b 
+		sum = sum + d 
+		a = b 
+		b = c 
+		c = d 
+		n = n-1
+	return sum
+",1.0,915,745,1660,4
+Total tokens: 113435
+Total calls: 360
+Avg tokens: 1260.388888888889
+Avg calls: 4.0
+Avg score: 0.12222222222222222

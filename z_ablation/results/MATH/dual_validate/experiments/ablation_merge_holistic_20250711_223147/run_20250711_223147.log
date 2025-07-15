@@ -1,0 +1,1380 @@
+2025-07-11 22:31:48 - INFO - Skipping datasets as data/datasets already exists.
+====================================================================================================
+😀正在运行test_arbitrary_graph...
+====================================================================================================
+2025-07-11 22:31:48 - INFO - get class from graph_module_name: z_ablation.results.MATH.dual_validate.graph
+Evaluating MATH problems:   0%|          | 0/486 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/run.py", line 174, in <module>
+    optimizer.optimize("Test")
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/scripts/optimizer.py", line 82, in optimize
+    score = loop.run_until_complete(self.test_arbitrary_graph(self.graph_path))
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/asyncio/base_events.py", line 647, in run_until_complete
+    return future.result()
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/scripts/optimizer.py", line 278, in test_arbitrary_graph
+    score, avg_tokens, input_tokens, output_tokens, total_tokens = await self.evaluation_utils.evaluate_graph_test(self, graph_path, is_test=True)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/scripts/optimizer_utils/evaluation_utils.py", line 63, in evaluate_graph_test
+    return await evaluator.graph_evaluate(
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/scripts/evaluator.py", line 68, in graph_evaluate
+    return await benchmark.run_evaluation(configured_graph, va_list)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 158, in run_evaluation
+    results = await self.evaluate_all_problems(data, agent, max_concurrent_tasks)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 150, in evaluate_all_problems
+    return await tqdm_asyncio.gather(*tasks, desc=f"Evaluating {self.name} problems", total=len(data))
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 79, in gather
+    res = [await f for f in cls.as_completed(ifs, loop=loop, timeout=timeout,
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 79, in <listcomp>
+    res = [await f for f in cls.as_completed(ifs, loop=loop, timeout=timeout,
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/asyncio/tasks.py", line 611, in _wait_for_one
+    return f.result()  # May raise f.exception().
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Evaluating MATH problems:   0%|          | 0/486 [00:02<?, ?it/s]
+Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-4' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-5' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-6' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-9' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-11' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-13' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-14' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-15' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-17' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-19' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-20' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-21' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-22' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-23' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-24' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-25' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-26' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-27' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-29' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-30' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-31' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-32' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-33' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-34' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-35' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-36' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-37' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-38' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-39' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-40' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-41' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-42' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-43' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-44' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-45' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-46' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-47' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-48' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-49' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-50' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-51' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-52' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-53' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-54' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-55' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-56' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-57' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-58' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-59' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-60' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-61' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-62' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-63' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-64' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-65' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-66' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-67' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-68' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-69' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-70' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-71' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-72' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-73' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-74' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-75' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-76' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-77' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-78' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-79' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-80' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-81' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-82' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-83' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-84' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-85' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-86' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-87' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-88' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-89' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-90' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-91' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-92' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-93' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-94' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-95' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-96' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-97' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output
+    return await graph(input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/dual_validate/graph.py", line 32, in __call__
+    logger.info(f"🔄 开始测试问题: {problem}")
+NameError: name 'logger' is not defined
+Task exception was never retrieved
+future: <Task finished name='Task-98' coro=<tqdm_asyncio.gather.<locals>.wrap_awaitable() done, defined at /opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py:75> exception=NameError("name 'logger' is not defined")>
+Traceback (most recent call last):
+  File "/opt/miniconda3/envs/aflow/lib/python3.9/site-packages/tqdm/asyncio.py", line 76, in wrap_awaitable
+    return i, await f
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/benchmark.py", line 147, in sem_evaluate
+    return await self.evaluate_problem(problem, agent)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 116, in evaluate_problem
+    output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
+  File "/Users/codiplay/Documents/ustc_workspace/AFlow/benchmarks/math.py", line 111, in _generate_output

@@ -1,0 +1,25 @@
+judge_symbolic_equality: predicted_answer: \frac{5}{162}, expected_answer: \dfrac{5}{162}
+judge_symbolic_equality: predicted_answer: \frac{12}{5525}, expected_answer: \frac{12}{5,\!525}
+judge_symbolic_equality: predicted_answer: 15.48, expected_answer: \$15.48
+judge_symbolic_equality: predicted_answer: \frac{5}{12}, expected_answer: \dfrac{5}{12}
+judge_symbolic_equality: predicted_answer: 10236, expected_answer: 10,\!236
+judge_symbolic_equality: predicted_answer: 0.472, expected_answer: \frac{59}{125}
+judge_symbolic_equality: predicted_answer: 0.329218, expected_answer: \frac{80}{243}
+judge_symbolic_equality: predicted_answer: 162, expected_answer: 162\text{ minutes}
+judge_symbolic_equality: predicted_answer: \left(-\frac{5}{3}, \frac{2}{3}, \frac{19}{3}\right), expected_answer: \left( -\frac{5}{3}, \frac{2}{3}, \frac{19}{3} \right)
+judge_symbolic_equality: predicted_answer: \frac{25}{52}, expected_answer: \dfrac{25}{52}
+judge_symbolic_equality: predicted_answer: (2, -1), expected_answer: (2,-1)
+judge_symbolic_equality: predicted_answer: 1 \frac{1}{10}, expected_answer: 1\frac{1}{10}
+judge_symbolic_equality: predicted_answer: 0.125, expected_answer: \frac{1}{8}
+judge_symbolic_equality: predicted_answer: 2\sqrt{2}, expected_answer: 2 \sqrt{2}
+judge_symbolic_equality: predicted_answer: 1.5, expected_answer: \frac{3}{2}
+judge_symbolic_equality: predicted_answer: 156, expected_answer: 156^\circ
+judge_symbolic_equality: predicted_answer: (3, \frac{11\pi}{8}, \frac{4\pi}{5}), expected_answer: \left( 3, \frac{11 \pi}{8}, \frac{4 \pi}{5} \right)
+judge_symbolic_equality: predicted_answer: \frac{1}{12}, expected_answer: \dfrac{1}{12}
+judge_symbolic_equality: predicted_answer: \frac{91}{216}, expected_answer: \dfrac{91}{216}
+judge_symbolic_equality: predicted_answer: 12 \text{ and } 13, expected_answer: 12\text{ and }13
+judge_symbolic_equality: predicted_answer: \frac{17}{50}, expected_answer: \dfrac{17}{50}
+judge_symbolic_equality: predicted_answer: \frac{19}{40}, expected_answer: \dfrac{19}{40}
+judge_symbolic_equality: predicted_answer: \frac{936}{5525}, expected_answer: \dfrac{72}{425}
+judge_symbolic_equality: predicted_answer: 0.6875, expected_answer: \frac{11}{16}
+judge_symbolic_equality: predicted_answer: 0.7626953125, expected_answer: \frac{781}{1024}

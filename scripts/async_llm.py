@@ -5,7 +5,7 @@
 
 from openai import AsyncOpenAI
 from scripts.formatter import BaseFormatter, FormatError
-
+from scripts.logs import logger
 import yaml
 from pathlib import Path
 from typing import Dict, Optional, Any
@@ -17,6 +17,7 @@ class LLMConfig:
         self.key = config.get("key", None)
         self.base_url = config.get("base_url", "https://oneapi.deepwisdom.ai/v1")
         self.top_p = config.get("top_p", 1)
+        self.max_tokens = config.get("max_tokens", 4096)  # Add max_tokens
         self.extra_headers = config.get("extra_headers", {})
 
 class LLMsConfig:
@@ -75,6 +76,7 @@ class LLMsConfig:
             "key": config.get("api_key"),  # Map api_key to key
             "base_url": config.get("base_url", "https://oneapi.deepwisdom.ai/v1"),
             "top_p": config.get("top_p", 1),  # Add top_p parameter
+            "max_tokens": config.get("max_tokens", 4096), # Add max_tokens
             "extra_headers": config.get("extra_headers", {})
         }
         
@@ -180,23 +182,38 @@ class AsyncLLM:
         self.sys_msg = system_msg
         self.usage_tracker = TokenUsageTracker()
         
-    async def __call__(self, prompt):
+    async def __call__(self, prompt, problem=""):
         message = []
         if self.sys_msg is not None:
             message.append({
                 "content": self.sys_msg,
                 "role": "system"
             })
-
-        message.append({"role": "user", "content": prompt})
         
-        response = await self.aclient.chat.completions.create(
-            extra_headers=self.config.extra_headers, 
-            model=self.config.model,
-            messages=message,
-            temperature=self.config.temperature,
-            top_p = self.config.top_p,
-        )
+        if isinstance(prompt, list):
+            message.extend(prompt)
+        else:
+            message.append({"role": "user", "content": prompt})
+        
+        # logger.info(message)
+        try:
+            response = await self.aclient.chat.completions.create(
+                extra_headers=self.config.extra_headers, 
+                model=self.config.model,
+                messages=message,
+                temperature=self.config.temperature,
+                top_p = self.config.top_p,
+                    max_tokens=self.config.max_tokens, # Pass max_tokens
+                )
+        except Exception as e:
+            logger.error(f"API call failed: {str(e)}")
+            # 如果是JSON解析错误，可能是网络问题，返回一个默认响应
+            if "JSONDecodeError" in str(e) or "Expecting value" in str(e):
+                logger.error("Network or API service issue detected")
+                return "API service temporarily unavailable. Please try again later."
+            # 对于其他异常，也返回默认响应而不是重新抛出
+            logger.error(f"Unexpected API error: {str(e)}")
+            return f"API error occurred: {str(e)}"
 
         # Extract token usage from response
         input_tokens = response.usage.prompt_tokens
@@ -211,33 +228,40 @@ class AsyncLLM:
         
         ret = response.choices[0].message.content
         # 输出结果
-        print(ret)
+        # import pdb; pdb.set_trace()
+        logger.info(ret)
         # You can optionally print token usage information
-        print(f"Token usage: {input_tokens} input + {output_tokens} output = {input_tokens + output_tokens} total")
-        print(f"Cost: ${usage_record['total_cost']:.6f} (${usage_record['input_cost']:.6f} for input, ${usage_record['output_cost']:.6f} for output)")
+        logger.info(f"Token usage: {input_tokens} input + {output_tokens} output = {input_tokens + output_tokens} total")
+        logger.info(f"Cost: ${usage_record['total_cost']:.6f} (${usage_record['input_cost']:.6f} for input, ${usage_record['output_cost']:.6f} for output)")
         
         return ret
     
-    async def call_with_format(self, prompt: str, formatter: BaseFormatter):
+    async def call_with_format(self, prompt: str, formatter: BaseFormatter, problem: str = ""):
         """
         Call the LLM with a prompt and format the response using the provided formatter
         NOTE(sjh) 这里调用LLM, 然后调用formatter. formatter是用来验证和解析response的
         """ 
-        # Prepare the prompt with formatting instructions
-        formatted_prompt = formatter.prepare_prompt(prompt)
+        try:
+            # Prepare the prompt with formatting instructions
+            formatted_prompt = formatter.prepare_prompt(prompt)
+            # Call the LLM
+            response = await self.__call__(formatted_prompt, problem)
         
-        # Call the LLM
-        response = await self.__call__(formatted_prompt)
-        
-        # Validate and parse the response
-        # NOTE(sjh): parsed_data 就是按照xml字段拆解后的response dict
-        is_valid, parsed_data = formatter.validate_response(response)
-        
-        if not is_valid:
-            error_message = formatter.format_error_message()
-            raise FormatError(f"{error_message}. Raw response: {response}")
-        
-        return parsed_data
+            # Validate and parse the response
+            # NOTE(sjh): parsed_data 就是按照xml字段拆解后的response dict
+            is_valid, parsed_data = formatter.validate_response(response)
+            
+            if not is_valid:
+                error_message = formatter.format_error_message()
+                logger.error(f"Format error: {error_message}. Raw response: {response}")
+                # 返回一个默认的响应而不是抛出异常
+                return {"error": f"Format error: {error_message}"}
+            
+            return parsed_data
+        except Exception as e:
+            logger.error(f"call_with_format failed: {str(e)}")
+            # 返回一个默认的响应而不是抛出异常
+            return {"error": f"API call failed: {str(e)}"}
     
     def get_usage_summary(self):
         """Get a summary of token usage and costs"""

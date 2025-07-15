@@ -41,34 +41,35 @@ class Evaluator:
         path: str,
         is_test: bool = False,
         sample_indices: Optional[List[int]] = None,
+        custom_data_path: Optional[str] = None,
+        batch_size: Optional[int] = None,
     ) -> Tuple[float, float, float]:
         if dataset not in self.dataset_configs:
             raise ValueError(f"Unsupported dataset: {dataset}")
 
-        #NOTE(sjh): 这里根据是否是test指定了数据集的文件路径
-        data_path = self._get_data_path(dataset, is_test)
+        if custom_data_path:
+            data_path = custom_data_path
+        else:
+            data_path = self._get_data_path(dataset, is_test)
 
         benchmark_class = self.dataset_configs[dataset]
-        benchmark = benchmark_class(name=dataset, file_path=data_path, log_path=path)
+        # 传递batch_size参数，如果为None则使用默认值
+        benchmark = benchmark_class(name=dataset, file_path=data_path, log_path=path, batch_size=batch_size)
 
         # Use params to configure the graph and benchmark
         # NOTE(sjh)返回一个实例化后的Workflow对象
         configured_graph = await self._configure_graph(dataset, graph, params)
-        # logger.info(f"configured_graph: {type(configured_graph)}: {configured_graph}")
 
-        # Determine which sample indices to evaluate
         if sample_indices is not None:
             va_list = list(sample_indices)
         else:
             if is_test:
-                va_list = None  # 默认测试集样本数量
+                va_list = None
             else:
-                va_list = list(range(10))  # 默认验证集前10个样本
+                va_list = list(range(10))
         return await benchmark.run_evaluation(configured_graph, va_list)
 
     async def _configure_graph(self, dataset, graph, params: dict):
-        # Here you can configure the graph based on params
-        # For example: set LLM configuration, dataset configuration, etc.
         dataset_config = params.get("dataset", {})
         llm_config = params.get("llm_config", {})
         return graph(name=dataset, llm_config=llm_config, dataset=dataset_config)

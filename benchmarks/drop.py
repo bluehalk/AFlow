@@ -48,7 +48,7 @@ class DROPBenchmark(BaseBenchmark):
         f1 = (2 * precision * recall) / (precision + recall)
         return f1, prediction
 
-    @retry(stop=stop_after_attempt(5), wait=wait_fixed(1), retry=retry_if_exception_type(Exception), reraise=True)
+    @retry(stop=stop_after_attempt(2), wait=wait_fixed(1), retry=retry_if_exception_type(Exception), reraise=True)
     async def _generate_output(self, graph, input_text):
         return await graph(input_text)
 
@@ -58,7 +58,7 @@ class DROPBenchmark(BaseBenchmark):
         answers = expected_output.split("|")
 
         try:
-            output, cost = await self._generate_output(graph, input_text)
+            output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
             f1_scores = []
 
             for answer in answers:
@@ -71,13 +71,13 @@ class DROPBenchmark(BaseBenchmark):
             uni_score = max(f1_scores)
 
             if uni_score < 0.3:
-                self.log_mismatch(input_text, expected_output, output, output)
+                self.log_mismatch(problem=input_text, expected_output=expected_output, prediction=output, extracted_output=output, **{k: v for k, v in problem.items() if k != 'problem'})
 
-            return input_text, output, expected_output, uni_score, cost
+            return input_text, output, expected_output, uni_score, input_tokens, output_tokens, input_tokens + output_tokens, calls
 
         except Exception as e:
             logger.info(f"Maximum retries reached. Skipping this sample. Error: {e}")
-            return input_text, str(e), expected_output, 0.0, 0.0
+            return input_text, str(e), expected_output, 0.0, 0.0, 0.0, 0.0, 0.0
 
     def get_result_columns(self) -> List[str]:
-        return ["inputs", "prediction", "expected_output", "score", "cost"]
+        return ["inputs", "prediction", "expected_output", "score", "input_tokens", "output_tokens", "total_tokens", "calls"]

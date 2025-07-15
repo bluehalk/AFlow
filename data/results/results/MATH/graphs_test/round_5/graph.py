@@ -1,8 +1,8 @@
 from typing import Literal
-import metagpt.ext.aflow.scripts.optimized.MATH.graphs.template.operator as operator
-import metagpt.ext.aflow.scripts.optimized.MATH.graphs.round_5.prompt as prompt_custom
-from metagpt.provider.llm_provider_registry import create_llm_instance
-from metagpt.utils.cost_manager import CostManager
+from scripts.operators import Custom, Programmer, ScEnsemble
+from .prompt import REFINE_ANSWER_PROMPT, DETAILED_SOLUTION_PROMPT, GENERATE_SOLUTION_PROMPT
+from scripts.async_llm import create_llm_instance
+
 
 DatasetType = Literal["HumanEval", "MBPP", "GSM8K", "MATH", "HotpotQA", "DROP"]
 
@@ -15,24 +15,30 @@ class Workflow:
     ) -> None:
         self.name = name
         self.dataset = dataset
-        self.llm = create_llm_instance(llm_config)
-        self.llm.cost_manager = CostManager()
-        self.custom = operator.Custom(self.llm)
-        self.programmer = operator.Programmer(self.llm)
-        self.sc_ensemble = operator.ScEnsemble(self.llm)
-
+        self.llm_config = llm_config
     async def __call__(self, problem: str):
         """
         Implementation of the graph
         """
+        llm = create_llm_instance(self.llm_config)
+        custom = Custom(llm)
+        programmer = Programmer(llm)
+        sc_ensemble = ScEnsemble(llm)
+
+        llm.usage_tracker.overall_input_tokens = 0
+        llm.usage_tracker.overall_output_tokens = 0
+        llm.usage_tracker.call_count = 0
+        llm.usage_tracker.usage_history = []
+
+
         # Use Programmer to generate and execute Python code
-        code_solution = await self.programmer(problem=problem)
+        code_solution = await programmer(problem=problem)
         
         # Use Custom to refine and format the answer
-        refined_solution = await self.custom(input=problem + f"\nCode output: {code_solution['output']}", instruction=prompt_custom.REFINE_ANSWER_PROMPT)
+        refined_solution = await custom(input=problem + f"\nCode output: {code_solution['output']}", instruction=REFINE_ANSWER_PROMPT)
         
         # Generate a detailed step-by-step solution using Custom
-        detailed_solution = await self.custom(input=problem, instruction=prompt_custom.DETAILED_SOLUTION_PROMPT)
+        detailed_solution = await custom(input=problem, instruction=DETAILED_SOLUTION_PROMPT)
         
         # Generate multiple solutions using Custom
         solutions = [
@@ -40,11 +46,17 @@ class Workflow:
             detailed_solution['response']
         ]
         for _ in range(2):
-            solution = await self.custom(input=problem, instruction=prompt_custom.GENERATE_SOLUTION_PROMPT)
+            solution = await custom(input=problem, instruction=GENERATE_SOLUTION_PROMPT)
             solutions.append(solution['response'])
         
         # Use ScEnsemble to select the best solution
-        final_solution = await self.sc_ensemble(solutions=solutions, problem=problem)
+        final_solution = await sc_ensemble(solutions=solutions, problem=problem)
         
-        return final_solution['response'], self.llm.cost_manager.total_cost
+        usage_summary = llm.usage_tracker.get_summary() 
+        input_tokens = usage_summary['overall_input_tokens']
+        output_tokens = usage_summary['overall_output_tokens']
+        call_count = usage_summary['call_count']
+
+
+        return final_solution['response'], input_tokens, output_tokens, call_count
                     

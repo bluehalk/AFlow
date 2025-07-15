@@ -1,51 +1,27 @@
-# import os
-# from groq import Groq
+import requests
+import json
+import re
+def validate_response(response: str):
+  # try:
+      # print("response", response)
+  pattern = r"<(\w+)>(.*?)</\1>"
+  matches = re.findall(pattern, response, re.DOTALL)
 
-# client = Groq(
-#     api_key="",
-# )
+  #NOTE(sjh) 字段名为键，字段值为值
+  found_fields = {match[0]: match[1].strip() for match in matches}
+  # print("found_fields", found_fields)
 
-# chat_completion = client.chat.completions.create(
-#     messages=[
-#         {
-#             "role": "user",
-#             "content": "Explain the importance of fast language models",
-#         }
-#     ],
-#     model="llama-3.3-70b-versatile",
-#     stream=False,
-# )
+  # math_answer是必需的，code是可选的
+  # if "math_answer" not in found_fields or not found_fields["math_answer"]:
+      # return False, {"error": "Missing math_answer field"}
 
-# print(chat_completion.choices[0].message.content)
+  return found_fields
+  # except Exception:
+      # return False, None
 
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Softmax function with temperature
-def softmax_with_temperature(logits, temperature=1.0):
-    """Compute softmax values for each class in logits, with a temperature scaling."""
-    logits = np.array(logits)
-    # Apply temperature scaling
-    scaled_logits = logits / temperature
-    exp_values = np.exp(scaled_logits)
-    return exp_values / np.sum(exp_values)
-
-# Example logits (e.g., output from a model)
-logits = [2.0, 1.0, 0.1]
-
-# Temperature values to test
-temperatures = [0.1, 0.5, 1.0, 2.0, 10.0]
-
-# Plot the probability distributions for different temperatures
-plt.figure(figsize=(10, 6))
-
-for temp in temperatures:
-    probs = softmax_with_temperature(logits, temperature=temp)
-    plt.plot(probs, label=f"Temperature = {temp}")
-
-plt.title("Softmax Output with Different Temperatures")
-plt.xlabel("Classes")
-plt.ylabel("Probability")
-plt.legend()
-plt.grid(True)
-plt.show()
+str = "<math_reasoning>1</math_reasoning>agjalgjaljgal<python_code>2</python_code><final_synthesis>3</final_synthesis><final_answer>4</final_answer>"
+res = validate_response(str)
+if res:
+  print(res)
+else:
+  print("error")
