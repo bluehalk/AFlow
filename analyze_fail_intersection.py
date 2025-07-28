@@ -51,8 +51,10 @@ def load_jsonl(file_path):
 
 def analyze_fail_intersection():
     # 文件路径
-    fail_file1 = "z_ablation/results/MATH/round_5/experiments/A_Mathemation/20250712_193626/failed_samples_20250712_193626.jsonl"
-    fail_file2 = "z_ablation/results/MATH/round_5/experiments/A_Programmer/20250713_003219/failed_samples_20250713_003219.jsonl"
+    fail_file1 = \
+    "z_ablation/results/MATH/round_5/experiments/A_SPP/20250722_174415/batch_09_score_0.639_07_22_17_56.csv"
+    fail_file2 = \
+    "z_ablation/results/MATH/round_5/experiments/A_SPP/20250722_180542/batch_09_score_0.500_07_22_18_22.csv"
     
     print("=== 分析失败案例交集 ===\n")
     

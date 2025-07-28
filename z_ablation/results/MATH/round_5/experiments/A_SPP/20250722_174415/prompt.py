@@ -231,7 +231,7 @@ Finish collaboration!
 Final answer: 6 * (1 + 1) + 12 = 24
 
 ---
-Now, identify the participants and collaboratively solve the following task step by step. Remember to present your final solution with the prefix "Final answer:", enclosed in \\boxed{} LaTeX notation.
+Now, identify the participants and collaboratively solve the following task step by step. Remember to present your final solution with the prefix "Final answer:", enclosed in \\boxed{} LaTeX notation..
 
 Task: {input}
 '''
@@ -313,6 +313,7 @@ Problems that confuse the brightest minds,
 Transforming our future, we await.
 
 ---
-Now, identify the participants and collaboratively solve the following task step by step. Remember to present your final solution with the prefix "Final answer:", enclosed in \\boxed{} LaTeX notation.
+Now, identify the participants and collaboratively solve the following task step by step. Remember to provide the final solution with the following format "Final answer: The house number here.".
+
 Task:
 '''

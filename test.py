@@ -1,27 +1,9 @@
-import requests
-import json
-import re
-def validate_response(response: str):
-  # try:
-      # print("response", response)
-  pattern = r"<(\w+)>(.*?)</\1>"
-  matches = re.findall(pattern, response, re.DOTALL)
+import pandas as pd
 
-  #NOTE(sjh) 字段名为键，字段值为值
-  found_fields = {match[0]: match[1].strip() for match in matches}
-  # print("found_fields", found_fields)
+df = pd.read_csv('/Users/codiplay/Documents/ustc_workspace/AFlow/z_ablation/results/MATH/round_5/experiments/A_Merge/20250714_161524/batch_00_score_0.520_07_14_16_16.csv')
 
-  # math_answer是必需的，code是可选的
-  # if "math_answer" not in found_fields or not found_fields["math_answer"]:
-      # return False, {"error": "Missing math_answer field"}
+# 删除包含统计项的行
+df_cleaned = df[~df['question'].str.contains('Total calls|Avg calls|Batch', na=False)]
 
-  return found_fields
-  # except Exception:
-      # return False, None
-
-str = "<math_reasoning>1</math_reasoning>agjalgjaljgal<python_code>2</python_code><final_synthesis>3</final_synthesis><final_answer>4</final_answer>"
-res = validate_response(str)
-if res:
-  print(res)
-else:
-  print("error")
+# 保存为干净的 CSV
+df_cleaned.to_csv('cleaned_file.csv', index=False)

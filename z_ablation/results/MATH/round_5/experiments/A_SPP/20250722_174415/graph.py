@@ -1,6 +1,6 @@
 from typing import Literal
 from scripts.operators import Custom, Programmer, ScEnsemble, MathCodeDualVerifier
-from .prompt import MERGE_PROMPT, RECHECK_PROMPT, RECHECK_PROMPT_WITH_JUDGEMENT, JUDGER_PROMPT, SPP_PROMPT_LESS, SPP_PROMPT
+from .prompt import MERGE_PROMPT, RECHECK_PROMPT, RECHECK_PROMPT_WITH_JUDGEMENT, JUDGER_PROMPT, SPP_PROMPT_LESS
 from scripts.async_llm import create_llm_instance
 from scripts.logs import logger
 
@@ -34,7 +34,7 @@ class Workflow:
         # refined_solution = await custom(input=problem + f"\nCode: {code_solution['code']}\n Code output: {code_solution['output']}", instruction=REFINE_ANSWER_PROMPT)
         
         # detailed_solution = await math_code_dual_verifier(problem=problem)
-        solution = await custom(input=problem, instruction=SPP_PROMPT)
+        solution = await custom(input=problem, instruction=SPP_PROMPT_LESS)
         
         # solutions = [
         #     refined_solution['response'],

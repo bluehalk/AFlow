@@ -1,7 +1,8 @@
 import inspect
+import os
 import re
 from typing import Any, Callable, List, Tuple
-import os
+
 from tenacity import retry, retry_if_exception_type, stop_after_attempt, wait_fixed
 
 from benchmarks.benchmark import BaseBenchmark
@@ -18,7 +19,7 @@ class MATHBenchmark(BaseBenchmark):
         if boxed_matches:
             return boxed_matches[-1].strip()
 
-        sentence_end_pattern = r"(?<!\d)[.!?]\s+"
+        sentence_end_pattern = r"(?<!\\d)[.!?]\\s+"
         sentences = re.split(sentence_end_pattern, text)
         sentences = [s.strip() for s in sentences if s.strip()]
         return sentences[-1] if sentences else ""
@@ -33,13 +34,13 @@ class MATHBenchmark(BaseBenchmark):
         judge_2 = judge_symbolic_equality(predicted_answer, expected_answer)
 
         with open(log_path, "a") as f:
-            f.write(f"Expected: {expected_answer}, Predicted: {predicted_answer} \
-                self.math_equal: {'✅' if judge_1 is True else '❌'}, judge_symbolic_equality: {'✅' if judge_2 is True else '❌'}\n")
+            f.write(
+                f"Expected: {expected_answer}, Predicted: {predicted_answer} "
+                f"self.math_equal: {'✅' if judge_1 else '❌'}, "
+                f"judge_symbolic_equality: {'✅' if judge_2 else '❌'}\n"
+            )
 
-        if judge_1 or judge_2:
-            return 1, predicted_answer  
-        else:
-            return 0, predicted_answer
+        return (1, predicted_answer) if judge_1 or judge_2 else (0, predicted_answer)
 
     def math_equal(self, prediction: Any, reference: Any) -> bool:
         if str(prediction) == str(reference):
@@ -64,6 +65,7 @@ class MATHBenchmark(BaseBenchmark):
         return self.parse_digits(num) is not None
 
     def parse_digits(self, num):
+        import regex
         num = regex.sub(",", "", str(num))
         try:
             return float(num)
@@ -79,6 +81,11 @@ class MATHBenchmark(BaseBenchmark):
         return None
 
     def symbolic_equal(self, a, b):
+        from sympy import simplify, N
+        from sympy.parsing.latex import parse_latex
+        from sympy.parsing.sympy_parser import parse_expr
+        from math import isclose
+
         def _parse(s):
             for f in [parse_latex, parse_expr]:
                 try:
@@ -101,12 +108,12 @@ class MATHBenchmark(BaseBenchmark):
                 return True
         except:
             pass
+
         return False
 
     def get_function_code(self, func):
         try:
-            source_code = inspect.getsource(func)
-            return source_code
+            return inspect.getsource(func)
         except OSError:
             return "no code"
 
@@ -114,9 +121,8 @@ class MATHBenchmark(BaseBenchmark):
     async def _generate_output(self, graph, input_text):
         return await graph(input_text)
 
-    async def evaluate_problem(self, problem: dict, graph: Callable) -> Tuple[str, str, str, int, float, float, float, int]:
+    async def evaluate_problem(self, problem: dict, graph: Callable) -> Tuple[str, str, int, str, float, float, float, int]:
         input_text = problem["problem"]
-        # try:
         output, input_tokens, output_tokens, calls = await self._generate_output(graph, input_text)
         uni_score, extracted_output = self.calculate_score(problem["solution"], output)
 
@@ -130,11 +136,25 @@ class MATHBenchmark(BaseBenchmark):
                 **{k: v for k, v in problem.items() if k != 'problem'}
             )
 
-        return input_text, output, problem["solution"], uni_score, input_tokens, output_tokens, input_tokens + output_tokens, calls
-
-        # except Exception as e:
-        #     logger.info(f"Maximum retries reached. Skipping this sample. Error: {e}")
-        #     return input_text, str(e), problem["solution"], 0.0, 0.0, 0.0, 0.0, 0.0
+        return (
+            input_text,
+            problem["solution"],
+            uni_score,
+            output,
+            input_tokens,
+            output_tokens,
+            input_tokens + output_tokens,
+            calls
+        )
 
     def get_result_columns(self) -> List[str]:
-        return ["question", "prediction", "expected_output", "score", "input_tokens", "output_tokens", "total_tokens", "calls"]
+        return [
+            "problem",
+            "solution",
+            "score",
+            "prediction",
+            "input_tokens",
+            "output_tokens",
+            "total_tokens",
+            "calls"
+        ]

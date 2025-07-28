@@ -1,0 +1,15 @@
+通用CSV交集分析摘要
+========================================
+分析时间: 2025-07-15 17:02:43
+
+文件数: 2
+  - z_ablation/results/MATH/round_5/experiments/A_Merge/20250714_161524/batch_02_score_0.540_07_14_16_17.csv
+  - z_ablation/results/MATH/round_5/experiments/A_Merge/20250714_161524/batch_04_score_0.300_07_14_16_19.csv
+
+交集问题数: 2
+并集问题数: 110
+
+全都正确: 0
+任意正确: 0
+全部错误: 2
+补集（不在所有文件中）: 108

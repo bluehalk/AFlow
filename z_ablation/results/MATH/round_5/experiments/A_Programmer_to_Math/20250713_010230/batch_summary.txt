@@ -1,0 +1,61 @@
+Batch 1/10
+Avg score: 0.660
+Tokens: 33162 + 44227 = 77389
+Total calls: 100
+Avg tokens: 1547.780
+Avg calls: 2.000
+
+Batch 2/10
+Avg score: 0.700
+Tokens: 31377 + 45571 = 76948
+Total calls: 101
+Avg tokens: 1538.960
+Avg calls: 2.020
+Batch 3/10
+Avg score: 0.720
+Tokens: 34145 + 48528 = 82673
+Total calls: 106
+Avg tokens: 1653.460
+Avg calls: 2.120
+Batch 4/10
+Avg score: 0.780
+Tokens: 29591 + 57137 = 86728
+Total calls: 102
+Avg tokens: 1734.560
+Avg calls: 2.040
+Batch 5/10
+Avg score: 0.700
+Tokens: 30390 + 59488 = 89878
+Total calls: 104
+Avg tokens: 1797.560
+Avg calls: 2.080
+Batch 6/10
+Avg score: 0.520
+Tokens: 33712 + 69495 = 103207
+Total calls: 107
+Avg tokens: 2064.140
+Avg calls: 2.140
+Batch 7/10
+Avg score: 0.240
+Tokens: 41328 + 72119 = 113447
+Total calls: 120
+Avg tokens: 2268.940
+Avg calls: 2.400
+Batch 8/10
+Avg score: 0.380
+Tokens: 40928 + 66755 = 107683
+Total calls: 118
+Avg tokens: 2153.660
+Avg calls: 2.360
+Batch 9/10
+Avg score: 0.580
+Tokens: 35056 + 54209 = 89265
+Total calls: 101
+Avg tokens: 1785.300
+Avg calls: 2.020
+Batch 10/10
+Avg score: 0.583
+Tokens: 22699 + 39245 = 61944
+Total calls: 72
+Avg tokens: 1720.667
+Avg calls: 2.000

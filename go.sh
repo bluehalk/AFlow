@@ -3,7 +3,7 @@ set -e
 
 # 生成时间戳
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-tag="A_Consistent_Merge"
+tag="A_SPP"
 graph_path="z_ablation/results/MATH/round_5"
 # 创建统一的实验文件夹
 EXPERIMENT_DIR="${graph_path}/experiments/${tag}/${TIMESTAMP}"

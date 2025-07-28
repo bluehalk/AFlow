@@ -268,9 +268,6 @@ class Optimizer:
             print(f"Saved data to {json_file_path}")
 
     async def test_arbitrary_graph(self, graph_path):
-        print("="*100)
-        print("😀正在运行test_arbitrary_graph...")
-        print("="*100)
         
         # graph_path = "z_ablation/results/MBPP/graphs/agentsimulate"
         data = self.data_utils.load_results(graph_path)
